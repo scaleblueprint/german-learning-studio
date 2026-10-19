@@ -1,6 +1,6 @@
 # AmberTheory German Studio — teacher-led prototype
 
-A portable, buildless static prototype demonstrating a student A1 learning flow and a teacher coaching workspace. All source required for the demo is in `dist/`; no build tooling or credentials are needed.
+A portable, buildless static prototype demonstrating a student A1 learning flow, a teacher coaching workspace and a teacher-created Experience Studio. All source required for the demo is in `dist/`; no build tooling or credentials are needed.
 
 For an easily shareable, single-file demonstration, open `german-studio-demo.html` (generated with `node tools/bundle.mjs`). All app logic and styles are embedded in that file; German pronunciation uses built-in browser speech services.
 
@@ -15,11 +15,23 @@ Create a **Static Site** in the user's new Render workspace, connect a repositor
 ## Demo behavior and limitations
 
 - The header switches between **Student** and **Teacher** experiences.
-- Student lesson completion, quiz scores, text submissions and teacher reviews are saved to `localStorage` in the **same browser**. "Reset demo" clears only that demo state.
+- Teachers can select a **role-play**, **writing mission**, or **speaking rehearsal** template, customise a learning goal, instructions, German example and success criteria, and save a draft or publish it to the demo learner.
+- The **Student** view displays published missions. The learner can write and submit a response; the Teacher Studio review queue can return feedback. The speaking format uses local rehearsal with a written response, not an audio upload.
+- Student lesson completion, quiz scores, created experiences, text submissions and teacher reviews are saved to `localStorage` in the **same browser**. "Reset demo" clears only that demo state and returns to the starting examples.
 - Teacher roster entries and summary statistics (other than the current demo learner) are **fictional seed data**. They are not actual student accounts.
 - Pronunciation playback uses the browser's installed German text-to-speech voice. The optional microphone exercise records locally and is not uploaded to the teacher.
 - No authentication, cloud database, real enrolments, multi-user synchronization, booking or live video calls are included. These must be implemented before an actual class uses it.
 - All lesson explanations, quiz items, dialogues and English glosses are original demonstration material and require subject-matter review before classroom release.
+
+### Suggested Experience Studio walkthrough
+
+1. Switch to **Teacher** and open the **Experience Studio** section.
+2. Select **Role-play**, **Writing mission**, or **Speaking rehearsal** to populate the builder.
+3. Personalise the teaching instructions and success criteria, then **Publish to demo learner** (or save as a draft).
+4. Switch to **Student**, open the mission under **Practice with a purpose**, and submit a German response.
+5. Return to **Teacher**, add feedback to the new mission entry, and switch back to Student to read it.
+
+This demonstrates the workflow only. Publication does not notify students or synchronize anything between devices.
 
 ## Open resources and attribution
 
