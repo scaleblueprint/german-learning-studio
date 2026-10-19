@@ -106,7 +106,7 @@ assertHas('You are the customer');
 click({review:sessionWork.id});
 click({route:'student'});
 click({openSession:'sample-cafe-session'});
-click({jumpSessionStep:'5'});
+assertHas('Well done — session complete!');
 assertHas('Teacher note:');
 assertHas('Well done — clear and correct.');
 click({route:'teacher'});
