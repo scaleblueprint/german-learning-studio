@@ -63,6 +63,8 @@ fakeLocation.hash='';
 winListeners.hashchange();
 click({route:'teacher'});
 assertHas('Guide every learner.');
+assertHas('Role-play · First Steps');
+assert.ok(!root.innerHTML.includes('CEFR'),'Teacher studio should not expose language-standard jargon');
 click({route:'student'});
 assertHas('Guten Tag!');
 click({route:'student'});
