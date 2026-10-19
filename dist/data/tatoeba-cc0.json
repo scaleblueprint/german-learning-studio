@@ -1,0 +1,14 @@
+{
+  "dataset": "Selected German sentences from the Tatoeba CC0 export",
+  "retrieved": "2026-10-19",
+  "source": "https://downloads.tatoeba.org/exports/per_language/deu/deu_sentences_CC0.tsv.bz2",
+  "license": "CC0 public-domain dedication",
+  "notes": "Hand-picked examples from the German CC0 export, with original English glosses and manually reviewed selection for this demo. No Tatoeba audio is included.",
+  "sentences": [
+    {"id": 8246323, "german": "Ich nehme bitte ein Wiener Schnitzel.", "english": "I'll have a Wiener schnitzel, please.", "topic": "cafe"},
+    {"id": 8981453, "german": "Nach vorne!", "english": "Forward!", "topic": "directions"},
+    {"id": 7047540, "german": "Wollen Sie zusammen spazieren gehen?", "english": "Would you like to go for a walk together?", "topic": "invitations"},
+    {"id": 8969693, "german": "Das Leben ist wunderschön!", "english": "Life is wonderful!", "topic": "expression"},
+    {"id": 9280790, "german": "Was für ein Glück!", "english": "What luck!", "topic": "expression"}
+  ]
+}
