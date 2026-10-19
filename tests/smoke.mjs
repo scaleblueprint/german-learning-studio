@@ -45,6 +45,8 @@ assertHas('Teacher studio');
 assertHas('Watch teacher demo');
 assertHas('teacher-studio-walkthrough.mp4');
 assertHas('id="studio-demo"');
+click({watchDemo:''});
+assertHas('Video walkthrough');
 click({route:'student'});
 assertHas('Your learning space');
 click({lesson:'hello'});
