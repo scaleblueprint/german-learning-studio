@@ -12,6 +12,8 @@ Serve `dist/` using any static file server (for example, `python3 -m http.server
 
 The existing **Static Site** runs at [german-learning-studio.onrender.com](https://german-learning-studio.onrender.com/) and deploys from [scaleblueprint/german-learning-studio](https://github.com/scaleblueprint/german-learning-studio). The publish directory is `dist`. This prototype needs no build process or server and uses hash-based in-page navigation.
 
+The homepage includes a 75-second, silent illustrated walkthrough of the **Teacher Studio** workflow. Its self-hosted media are `dist/teacher-studio-walkthrough.mp4` and `dist/teacher-studio-poster.svg`; both must remain inside the Render `dist/` publish directory. The MP4 is a product-guided visual sequence based on the prototype, not a filmed screen recording. It can be regenerated with `node tools/create-walkthrough.mjs` in a development environment with `sharp` and `ffmpeg`; Render serves the prebuilt assets and needs neither dependency.
+
 ## Demo behavior and limitations
 
 - The header switches between **Student** and **Teacher** experiences.

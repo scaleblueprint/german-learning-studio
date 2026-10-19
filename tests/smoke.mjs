@@ -42,6 +42,9 @@ function assertHas(fragment){assert.ok(root.innerHTML.includes(fragment),`Expect
 
 assertHas('Learn German.');
 assertHas('Teacher studio');
+assertHas('Watch teacher demo');
+assertHas('teacher-studio-walkthrough.mp4');
+assertHas('id="studio-demo"');
 click({route:'student'});
 assertHas('Your learning space');
 click({lesson:'hello'});
