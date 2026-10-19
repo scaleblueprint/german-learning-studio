@@ -65,6 +65,8 @@ assertHas('1 of 5 lessons finished');
 assertHas('Awaiting review');
 click({route:'teacher'});
 assertHas('Demo learner');
+assertHas('student-mobile-list');
+assertHas('student-mobile-row');
 assertHas('Hallo! Ich heiße Praveen.');
 const submittedIds=JSON.parse(storage.get('ambertheory-german-studio-v1')).submissions;
 assert.equal(submittedIds.length,1);
