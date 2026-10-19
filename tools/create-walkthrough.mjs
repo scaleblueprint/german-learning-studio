@@ -1,5 +1,5 @@
 /**
- * Produce the silent Teacher Studio walkthrough used by the homepage.
+ * Produce the silent Learning + Teacher Studio walkthrough used by the homepage.
  * Run with an installation of sharp and ffmpeg available; the generated MP4
  * and SVG poster are committed, so neither dependency is needed on Render.
  */
@@ -34,27 +34,56 @@ function field(x,y,w,label,value){return txt(x,y,label,13,'#61746b',700)+rect(x,
 function line(x,y,w,color='#e5ebe5'){return rect(x,y,w,2,color,1);}
 
 function shell(page,role='Teacher'){
+  const isTeacher=role==='Teacher';
+  const guide=isTeacher
+    ? [['Learner overview','teacher'],['Create & preview','session'],['Assign to learner','publish'],['Review & coach','review']]
+    : [['Learning dashboard','student'],['Learn & listen','lesson'],['Practise & submit','answer'],['Progress & feedback','progress']];
   return rect(61,143,1158,522,'#fffefa',19)+rect(61,143,1158,49,'#f0f2ec',19)
     +rect(61,175,1158,17,'#f0f2ec',0)
     +rect(84,160,13,13,'#d18d70',7)+rect(107,160,13,13,'#e8be75',7)+rect(130,160,13,13,'#91b6a0',7)
     +rect(166,155,828,28,'#fffefa',8)+txt(185,174,'german-learning-studio.onrender.com',12,'#83918a')
     +rect(80,210,228,437,'#f2f4ee',12)+rect(97,231,35,35,ink,8)+txt(114,254,'At',18,'#e3c092',700,'middle')
     +txt(145,247,'AmberTheory',16,ink,700)+txt(145,263,'GERMAN STUDIO',9,'#748379',700)
-    +txt(98,312,'STUDIO NAVIGATION',10,'#89978f',700)
-    +menu(334,'Overview',page==='overview')+menu(383,'My learning',page==='student')+menu(432,'Teacher studio',page==='teacher')
-    +menu(481,'Session Studio',page==='session')+menu(530,'Practice to review',page==='review')
-    +rect(95,589,195,39,role==='Teacher'?forest:'#e0e9e1',11)
-    +txt(192,614,role==='Teacher'?'Teacher view':'Student view',13,role==='Teacher'?'white':forest,700,'middle');
+    +button(886,205,121,'Learning',!isTeacher)+button(1014,205,158,'Teacher Studio',isTeacher)
+    +txt(98,312,'IN THIS WALKTHROUGH',10,'#89978f',700)
+    +guide.map(([label,key],i)=>menu(346+i*48,label,page===key)).join('')
+    +rect(95,577,195,52,isTeacher?forest:'#e0e9e1',11)
+    +txt(192,598,isTeacher?'TEACHER WORKSPACE':'LEARNING WORKSPACE',10,isTeacher?'#fff':'#527162',700,'middle')
+    +txt(192,614,isTeacher?'Design · Assign · Review':'Learn · Practise · Progress',11,isTeacher?'#dce9de':'#517164',400,'middle');
 }
 function menu(y,label,selected){return (selected?rect(91,y-25,207,41,'#dce8df',9):'')+txt(110,y,selected?'●':'○',13,selected?forest:'#9aa9a1')+txt(133,y,label,15,selected?forest:'#62756d',selected?700:400);}
 function header(label,headline,description){return txt(338,240,label.toUpperCase(),11,copper,700)+txt(338,285,headline,31,ink,700)+txt(339,312,description,14,'#6c7c73');}
 function highlight(x,y,w,h){return rect(x-6,y-6,w+12,h+12,'none',12,copper,4)+`<path d="M ${x+w+16} ${y+7} L ${x+w+47} ${y-26}" stroke="${copper}" stroke-width="4" stroke-linecap="round"/>`+`<circle cx="${x+w+47}" cy="${y-26}" r="7" fill="${copper}"/>`;}
-function overview(){return shell('overview')+header('Welcome','Learn German. Find your voice.','A place to learn together, with guidance from a real teacher.')
-  +panel(340,342,532,218,'Learn with purpose','Short lessons, real conversations, useful practice.')
-  +badge(363,420,'A1 beginner',true)+badge(475,420,'5 sample lessons')
-  +button(363,491,198,'Try the first lesson',true)+button(579,491,245,'Explore teacher view')
-  +panel(894,342,293,218,'Teacher-led learning','One experience for learners and tutors.')
-  +txt(921,435,'Student  ↔  Teacher',22,forest,700)+highlight(579,491,245,43);}
+function studentHome(){return shell('student','Student')+header('Learning · A1 beginner','Guten Tag! Let’s learn German.','Your lessons, assigned practice and progress are all here.')
+  +panel(340,341,530,250,'Make the next conversation yours.','Continue learning at your own pace.')
+  +badge(363,416,'A1 beginner',true)+badge(474,416,'0 / 5 lessons')
+  +txt(364,468,'Up next: Hallo! Nice to meet you',16,ink,700)
+  +button(363,506,208,'Continue learning',true)
+  +panel(885,341,301,250,'Your teacher’s sessions','Practise what you learn in class.')
+  +txt(906,450,'At the café: Your first order',15,forest,700)
+  +button(906,501,234,'Start assigned session')+highlight(363,506,208,43);}
+function firstLesson(){return shell('lesson','Student')+header('A1 · Lesson 01','Hallo! Nice to meet you.','Start with a friendly greeting and a simple introduction.')
+  +panel(340,336,846,282,'German phrase','Greet someone with confidence.')
+  +txt(366,435,'Hallo! Ich heiße Mia.',29,forest,700)
+  +txt(366,472,'Hello! My name is Mia.',18,'#6c7c73')
+  +button(366,533,216,'♫ Hear German',true)+button(598,533,184,'Next step →')
+  +highlight(366,533,216,43);}
+function listen(){return shell('lesson','Student')+header('Listen and repeat','Hear it. Say it. Remember it.','Practise pronunciation before moving to the knowledge check.')
+  +panel(340,341,846,262,'Listen to a polite greeting','Your browser can speak the sample German phrase.')
+  +txt(364,449,'Guten Tag! Wie geht es Ihnen?',23,forest,700)
+  +txt(364,480,'Good day! How are you?',16,'#6c7c73')
+  +button(364,533,238,'♫ Play pronunciation',true)+highlight(364,533,238,43);}
+function basicCheck(){return shell('answer','Student')+header('Learning check','Understand the greeting.','Choose an answer and receive an explanation.')
+  +panel(340,338,846,270,'What does “Ich heiße Mia” mean?','Choose the correct English meaning.')
+  +rect(364,429,793,42,'#eef3ed',8,forest,2)+txt(383,456,'My name is Mia.',16,forest,700)
+  +rect(364,479,793,42,'#fffefa',8,'#dfe5df')+txt(383,506,'I come from Germany.',16,ink)
+  +button(365,544,234,'Check my answer',true)+highlight(364,429,793,42);}
+function earlyProgress(){return shell('progress','Student')+header('Your learning progress','Every small step counts.','Continue through A1 and return to lessons whenever you like.')
+  +panel(340,338,846,270,'Your A1 lesson pathway','Greetings → Hometowns → Numbers → Café → City')
+  +badge(362,424,'Lesson 01 started',true)
+  +rect(362,479,800,13,'#e2ece2',7)+rect(362,479,150,13,copper,7)
+  +txt(362,533,'Your progress stays in this browser for the demo.',15,'#738378')
+  +highlight(362,479,800,13);}
 function teacher(){return shell('teacher')+header('Teacher studio','See each learner clearly.','Plan activities, understand progress, and give personal feedback.')
   +panel(340,340,254,125,'Demo learner','A1 · Active learner')+badge(361,415,'In progress',true)
   +panel(605,340,255,125,'5 lessons','Practice and checkpoint results')
@@ -101,11 +130,30 @@ function answer(){return shell('student','Student')+header('Interactive knowledg
   +rect(364,429,793,42,'#eef3ed',8,forest,2)+txt(383,456,'Ich hätte gern einen Tee, bitte.',16,forest,700)
   +rect(364,479,793,42,'#fffefa',8,'#dfe5df')+txt(383,506,'Gute Nacht!',16,ink)
   +button(365,544,234,'Check my answer',true)+highlight(364,429,793,42);}
+function studentSubmit(){return shell('answer','Student')+header('Role-play · At the café','Try a real German conversation.','Write a polite order and send it to the teacher.')
+  +panel(340,338,846,273,'You are the customer','Include a greeting, your order and a thank-you.')
+  +txt(364,428,'Your German response',14,'#61746b',700)
+  +rect(364,441,792,73,'#fff',9,'#c3d6ca')
+  +txt(382,470,'Guten Tag! Ich hätte gern einen Tee, bitte.',17,forest,700)
+  +txt(382,494,'Vielen Dank!',16,forest)
+  +button(364,543,235,'Send for feedback',true)+highlight(364,543,235,43);}
+function studentPending(){return shell('progress','Student')+header('Submitted for review','You have done your part.','Your teacher now receives the written response in the queue.')
+  +panel(340,339,846,270,'At the café: Your first order','Role-play response saved for your teacher.')
+  +badge(363,420,'Awaiting feedback',true)
+  +rect(363,463,801,93,'#eef3ed',9)
+  +txt(383,492,'Your response',14,forest,700)
+  +txt(383,528,'Guten Tag! Ich hätte gern einen Tee, bitte.',17,ink)
+  +highlight(363,463,801,93);}
 function review(){return shell('review')+header('Practice to review','Give feedback while it matters.','A written role-play arrives in the teacher review queue.')
   +panel(340,338,846,270,'New response · You are the customer','A1 · Written role-play · Awaiting feedback')
   +rect(366,420,788,64,'#f1f5ef',9)+txt(384,450,'Guten Tag! Ich hätte gern einen Tee, bitte.',18,forest,700)
   +field(366,527,523,'Your personal feedback','Great polite request! Try adding a thank-you.')
-  +button(919,541,214,'Send feedback',true)+highlight(919,541,214,43);}
+  +button(919,541,214,'Save feedback',true)+highlight(919,541,214,43);}
+function teacherFeedback(){return shell('review')+header('Personal coaching','A short note makes practice meaningful.','A teacher reviews the response and marks it complete.')
+  +panel(340,338,846,270,'Learner response · Review complete','At the café: Your first order')
+  +rect(365,413,790,66,'#f1f5ef',9)+txt(384,450,'Guten Tag! Ich hätte gern einen Tee, bitte.',18,forest,700)
+  +rect(365,493,790,72,'#e6eee5',9)+txt(384,520,'Teacher note · Reviewed',13,forest,700)
+  +txt(384,546,'Great polite request! Try adding a thank-you.',16,ink)+highlight(365,493,790,72);}
 function progress(){return shell('student','Student')+header('Learning progress','Feedback closes the loop.','Students revisit their answers and see what they have learned.')
   +panel(340,338,846,271,'At the café: Session complete!','Vocabulary · Listening · Quiz · Role-play · Final check')
   +badge(362,419,'5 / 5 complete',true)+badge(493,419,'2 / 2 correct')
@@ -113,21 +161,22 @@ function progress(){return shell('student','Student')+header('Learning progress'
   +txt(385,531,'Great polite request! Try adding a thank-you.',16,ink)+highlight(362,466,800,91);}
 
 const steps=[
-  ['The learning experience','Start on the German Studio homepage.','A1 lessons and teacher guidance',overview],
-  ['Switch to Teacher Studio','Explore the teacher’s workspace.','View learners, sessions and feedback',teacher],
-  ['Open Session Studio','Create a complete teaching sequence.','Use the ready-made café sample',session],
-  ['Describe the learning goal','Give the session a title and audience.','Set A1 level, estimated time, assignment',compose],
-  ['Step 1 · Vocabulary','Start with useful words in context.','German terms with their English meanings',()=>block('', 'Build vocabulary cards.', ['der Kaffee | coffee','der Tee | tea','bitte | please'],0)],
-  ['Step 2 · Listening','Add a German phrase and instructions.','Students can hear and repeat it',()=>block('', 'Create listening practice.', ['Guten Tag!','Ich hätte gern einen Tee, bitte.','Listen twice and repeat aloud.'],1)],
-  ['Step 3 · Knowledge check','Add your own question and answers.','Students receive an explanation after answering',()=>block('', 'Check understanding.', ['Which phrase is a polite request?','Ein Wasser, bitte.','Choose the correct option.'],2)],
-  ['Step 4 · Role-play','Turn knowledge into conversation.','Learners write a response in German',()=>block('', 'Build real-world practice.', ['You are the customer.','Order your favourite drink.','Include a greeting and thanks.'],3)],
-  ['Step 5 · Assessment','Finish with a short knowledge check.','Keep the answer key in your control',()=>block('', 'Check what has been learned.', ['Which German phrase is polite?','Ein Wasser, bitte.','Give helpful corrective feedback.'],4)],
-  ['Preview as student','Review the complete sequence.','Read every step before publishing',preview],
-  ['Publish and assign','Make the lesson available to learners.','Demo publication stays in this browser',publish],
-  ['Student opens the lesson','The session appears on the learner dashboard.','Begin and continue at your own pace',learner],
-  ['Practice and check','Answer interactive questions with feedback.','Listening, writing and checks work together',answer],
-  ['Review learner responses','Read the submitted German conversation.','Write actionable teacher feedback',review],
-  ['Close the learning loop','Students see progress and your note.','The human teacher remains at the centre',progress]
+  ['STUDENT · Start learning','Open straight into the Learning dashboard.','Lessons, assignments and progress together',studentHome],
+  ['STUDENT · Explore a lesson','Build confidence from the first phrase.','A1 German · Helpful translation',firstLesson],
+  ['STUDENT · Listen and speak','Hear the German and repeat aloud.','Pronunciation from your browser',listen],
+  ['STUDENT · Check knowledge','Get instant explanations as you learn.','Quick checks and corrective feedback',basicCheck],
+  ['STUDENT · Track progress','See where to continue next time.','A clear, self-paced learning path',earlyProgress],
+  ['TEACHER · Open the studio','Switch to the teacher workspace.','Learners, content and review in one place',teacher],
+  ['TEACHER · Plan a session','Design a connected lesson journey.','Five teaching blocks in Session Studio',session],
+  ['TEACHER · Set a goal','Choose the outcome, level and audience.','Editable session details',compose],
+  ['TEACHER · Make it engaging','Add words, listening and active practice.','Vocabulary · Audio · Checks · Role-play',()=>block('', 'Build the five teaching blocks.', ['Vocabulary, listening and checks','A real café role-play task','Finish with an assessment.'],3)],
+  ['TEACHER · Preview the learner view','Inspect the full journey before sharing.','Review every block and example',preview],
+  ['TEACHER · Publish and assign','Send the session to the demo learner.','Assignment is local to this browser',publish],
+  ['STUDENT · Open assigned practice','Your teacher’s session is ready.','Start, pause and resume the five blocks',learner],
+  ['STUDENT · Submit the role-play','Write a short conversation in German.','Send your response for personal feedback',studentSubmit],
+  ['TEACHER · Review the response','Read the learner’s German writing.','A real submission appears in the review queue',review],
+  ['TEACHER · Coach the learner','Give specific, human feedback.','Review complete · Your note is saved',teacherFeedback],
+  ['STUDENT · See your progress','Read the teacher’s note and keep growing.','From lesson to practice to feedback',progress]
 ];
 
 function svgFor(index){
@@ -139,7 +188,7 @@ function svgFor(index){
   ${txt(81,96,title,29,'#fffdf6',700)}${txt(83,123,subtitle,16,'#c4d7ca')}
   ${draw()}
   ${rect(67,687,1146,5,'#475a50',2)}${rect(67,687,barWidth,5,'#d6a270',2)}
-  ${txt(66,678,kicker,13,'#d9e5d9')}${txt(1208,678,'NO VOICEOVER  ·  01:15',12,'#aebfb1',700,'end')}
+  ${txt(66,678,kicker,13,'#d9e5d9')}${txt(1208,678,'NO VOICEOVER  ·  01:20',12,'#aebfb1',700,'end')}
   </svg>`;
 }
 
@@ -153,7 +202,7 @@ try {
   const list=steps.map((_,i)=>`file 'slide-${String(i).padStart(2,'0')}.png'\nduration 5\n`).join('') + `file 'slide-${String(steps.length-1).padStart(2,'0')}.png'\n`;
   await fs.writeFile(path.join(tmp,'slides.txt'),list);
   const out=path.join(dist,'teacher-studio-walkthrough.mp4');
-  const result=spawnSync('ffmpeg',['-y','-hide_banner','-loglevel','error','-safe','0','-f','concat','-i',path.join(tmp,'slides.txt'),'-t','75','-r','12','-c:v','libx264','-preset','slow','-crf','32','-pix_fmt','yuv420p','-movflags','+faststart',out],{encoding:'utf-8'});
+  const result=spawnSync('ffmpeg',['-y','-hide_banner','-loglevel','error','-safe','0','-f','concat','-i',path.join(tmp,'slides.txt'),'-t','80','-r','12','-c:v','libx264','-preset','slow','-crf','32','-pix_fmt','yuv420p','-movflags','+faststart',out],{encoding:'utf-8'});
   if(result.status!==0)throw Error(result.stderr||'ffmpeg failed');
   console.log(`Created ${steps.length} scenes and ${out}`);
 } finally {

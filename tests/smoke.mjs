@@ -48,6 +48,8 @@ assert.ok(!root.innerHTML.includes('data-route="home"'),'Redundant Overview link
 assert.ok(!root.innerHTML.includes('Demo role switch'),'Duplicate role switch should be gone');
 assertHas('Watch studio demo');
 assertHas('teacher-studio-walkthrough.mp4');
+assertHas('Student + Teacher · Video walkthrough');
+assertHas('80-second silent, illustrated tour');
 assertHas('id="studio-demo"');
 click({watchDemo:''});
 assertHas('Video walkthrough');
