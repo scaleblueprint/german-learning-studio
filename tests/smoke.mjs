@@ -40,15 +40,28 @@ function click(attributes){
 }
 function assertHas(fragment){assert.ok(root.innerHTML.includes(fragment),`Expected screen content: ${fragment}`);}
 
-assertHas('Learn German.');
-assertHas('Teacher studio');
-assertHas('Watch teacher demo');
+assertHas('Guten Tag!');
+assertHas('Teacher Studio');
+assertHas('Learning');
+assert.equal((root.innerHTML.match(/class="nav-btn /g)||[]).length,2,'Only the two workspaces should appear in the desktop navigation');
+assert.ok(!root.innerHTML.includes('data-route="home"'),'Redundant Overview link should be gone');
+assert.ok(!root.innerHTML.includes('Demo role switch'),'Duplicate role switch should be gone');
+assertHas('Watch studio demo');
 assertHas('teacher-studio-walkthrough.mp4');
 assertHas('id="studio-demo"');
 click({watchDemo:''});
 assertHas('Video walkthrough');
+fakeLocation.hash='#home';
+winListeners.hashchange();
+assertHas('Guten Tag!'); // bookmarked former homepage still opens Learning
+fakeLocation.hash='';
+winListeners.hashchange();
+click({route:'teacher'});
+assertHas('Guide every learner.');
 click({route:'student'});
-assertHas('Your learning space');
+assertHas('Guten Tag!');
+click({route:'student'});
+assertHas('Learning · A1 beginner');
 click({lesson:'hello'});
 assertHas('Hallo! Nice to meet you');
 click({stage:'understand'});
@@ -178,6 +191,6 @@ assert.equal(JSON.parse(storage.get('ambertheory-german-studio-v1')).experiences
 click({route:'sources'});
 assertHas('Tatoeba German CC0 sentences');
 click({reset:''});
-assertHas('Learn German.');
+assertHas('Guten Tag!');
 assert.equal(JSON.parse(storage.get('ambertheory-german-studio-v1')).completed.length,0);
 console.log('Smoke test passed: lessons, full session composer/playback/assessment/teacher feedback, experience builder and reset.');

@@ -346,3 +346,22 @@
   .walkthrough-duration{font-size:11px}
   .walkthrough-player{border-radius:10px}
 }
+
+/* Two clear workspaces. There is no extra overview or second role toggle. */
+.simplified-nav{margin-left:auto;margin-right:0;padding:5px;border-radius:999px;background:#e9ece6;gap:2px}
+.simplified-nav .nav-btn{padding:12px 19px;border-radius:999px;font-size:13px}
+.simplified-nav .nav-btn.active{background:var(--ink);color:#fff;box-shadow:0 3px 9px #26302f1a}
+.workspace-hint{color:#74837a;font-size:11px;font-weight:700;white-space:nowrap}
+.workspace-shortcuts{display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex-shrink:0}
+.workspace-shortcuts .btn{white-space:nowrap}
+.simplified-mobile-nav button{flex:1;font-size:11px}
+@media(max-width:960px){.workspace-hint{display:none}}
+@media(max-width:760px){
+  .workspace-shortcuts{align-items:flex-start;flex-direction:row;flex-wrap:wrap}
+  .dash-header{flex-direction:column}
+  .simplified-mobile-nav button{min-width:0;padding:9px 14px}
+}
+@media(max-width:440px){
+  .workspace-shortcuts .tag{width:100%;max-width:max-content}
+  .workspace-shortcuts .btn{white-space:normal}
+}

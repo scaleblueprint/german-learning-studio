@@ -16,7 +16,7 @@ The homepage includes a 75-second, silent illustrated walkthrough of the **Teach
 
 ## Demo behavior and limitations
 
-- The header switches between **Student** and **Teacher** experiences.
+- The homepage opens directly into **Learning**. A single, two-option header switch moves between **Learning** and **Teacher Studio** (on mobile the same two options appear at the bottom). There is no extra Overview screen or duplicate role toggle. The previous `#home` deep link still opens the learner dashboard. Materials & credits remain available from the footer.
 - Teachers can select a **role-play**, **writing mission**, or **speaking rehearsal** template, customise a learning goal, instructions, German example and success criteria, and save a draft or publish it to the demo learner.
 - Teachers can compose full sessions from five editable block types: **vocabulary cards**, **listening and pronunciation**, **interactive knowledge checks**, **written role-play**, and **final assessment**. They can add, reorder, remove and edit steps, preview the sequence, save drafts, and publish to either the demo learner or an illustrative sample A1 group that includes the demo learner. A ready-made café session shows the experience.
 - The learner follows one session step at a time, hears German via browser speech, answers questions, submits dialogue for teacher review, and sees saved completion, check results and feedback. Teacher Studio includes the session's written response in the existing review queue.
