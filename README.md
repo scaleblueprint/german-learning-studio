@@ -1,6 +1,6 @@
 # AmberTheory German Studio — teacher-led prototype
 
-A portable, buildless static prototype demonstrating a student A1 learning flow, a teacher coaching workspace, a teacher-created Experience Studio and a visual **Session Studio** for composing complete lessons. All source required for the demo is in `dist/`; no build tooling or credentials are needed.
+A portable, buildless static prototype demonstrating the student-facing **First Steps** course (mapped to CEFR A1), a teacher coaching workspace, a teacher-created Experience Studio and a visual **Session Studio** for composing complete lessons. All source required for the demo is in `dist/`; no build tooling or credentials are needed.
 
 For an easily shareable, single-file demonstration, open `german-studio-demo.html` (generated with `node tools/bundle.mjs`). All app logic and styles are embedded in that file; German pronunciation uses built-in browser speech services.
 

@@ -54,15 +54,15 @@ function shell(page,role='Teacher'){
 function menu(y,label,selected){return (selected?rect(91,y-25,207,41,'#dce8df',9):'')+txt(110,y,selected?'●':'○',13,selected?forest:'#9aa9a1')+txt(133,y,label,15,selected?forest:'#62756d',selected?700:400);}
 function header(label,headline,description){return txt(338,240,label.toUpperCase(),11,copper,700)+txt(338,285,headline,31,ink,700)+txt(339,312,description,14,'#6c7c73');}
 function highlight(x,y,w,h){return rect(x-6,y-6,w+12,h+12,'none',12,copper,4)+`<path d="M ${x+w+16} ${y+7} L ${x+w+47} ${y-26}" stroke="${copper}" stroke-width="4" stroke-linecap="round"/>`+`<circle cx="${x+w+47}" cy="${y-26}" r="7" fill="${copper}"/>`;}
-function studentHome(){return shell('student','Student')+header('Learning · A1 beginner','Guten Tag! Let’s learn German.','Your lessons, assigned practice and progress are all here.')
+function studentHome(){return shell('student','Student')+header('Learning · First Steps','Guten Tag! Let’s learn German.','Your lessons, assigned practice and progress are all here.')
   +panel(340,341,530,250,'Make the next conversation yours.','Continue learning at your own pace.')
-  +badge(363,416,'A1 beginner',true)+badge(474,416,'0 / 5 lessons')
+  +badge(363,416,'First Steps',true)+badge(484,416,'CEFR A1')
   +txt(364,468,'Up next: Hallo! Nice to meet you',16,ink,700)
   +button(363,506,208,'Continue learning',true)
   +panel(885,341,301,250,'Your teacher’s sessions','Practise what you learn in class.')
   +txt(906,450,'At the café: Your first order',15,forest,700)
   +button(906,501,234,'Start assigned session')+highlight(363,506,208,43);}
-function firstLesson(){return shell('lesson','Student')+header('A1 · Lesson 01','Hallo! Nice to meet you.','Start with a friendly greeting and a simple introduction.')
+function firstLesson(){return shell('lesson','Student')+header('First Steps · Lesson 01','Hallo! Nice to meet you.','Start with a friendly greeting and a simple introduction.')
   +panel(340,336,846,282,'German phrase','Greet someone with confidence.')
   +txt(366,435,'Hallo! Ich heiße Mia.',29,forest,700)
   +txt(366,472,'Hello! My name is Mia.',18,'#6c7c73')
@@ -78,8 +78,8 @@ function basicCheck(){return shell('answer','Student')+header('Learning check','
   +rect(364,429,793,42,'#eef3ed',8,forest,2)+txt(383,456,'My name is Mia.',16,forest,700)
   +rect(364,479,793,42,'#fffefa',8,'#dfe5df')+txt(383,506,'I come from Germany.',16,ink)
   +button(365,544,234,'Check my answer',true)+highlight(364,429,793,42);}
-function earlyProgress(){return shell('progress','Student')+header('Your learning progress','Every small step counts.','Continue through A1 and return to lessons whenever you like.')
-  +panel(340,338,846,270,'Your A1 lesson pathway','Greetings → Hometowns → Numbers → Café → City')
+function earlyProgress(){return shell('progress','Student')+header('Your learning progress','Every small step counts.','Continue your First Steps lessons whenever you like.')
+  +panel(340,338,846,270,'Your First Steps pathway','Greetings → Hometowns → Numbers → Café → City')
   +badge(362,424,'Lesson 01 started',true)
   +rect(362,479,800,13,'#e2ece2',7)+rect(362,479,150,13,copper,7)
   +txt(362,533,'Your progress stays in this browser for the demo.',15,'#738378')
@@ -121,7 +121,7 @@ function publish(){return shell('session')+header('Publish and assign','Your les
   +button(381,529,190,'Preview as student')+button(593,529,142,'Save draft')
   +button(759,529,235,'Publish & assign',true)+highlight(759,529,235,43);}
 function learner(){return shell('student','Student')+header('Your teacher’s learning sessions','Learn it. Hear it. Use it.','Practise one meaningful step at a time.')
-  +panel(340,341,846,261,'At the café: Your first order','A1 · From your teacher · 20 minutes')
+  +panel(340,341,846,261,'At the café: Your first order','First Steps · From your teacher · 20 minutes')
   +txt(365,453,'Five useful expressions → polite request → dialogue',18,forest,700)
   +rect(365,485,785,11,'#e2ece2',6)+rect(365,485,120,11,copper,6)
   +txt(365,521,'0 of 5 steps complete',13,'#71847a')+button(365,540,230,'Start session',true)+highlight(365,540,230,43);}
@@ -162,7 +162,7 @@ function progress(){return shell('student','Student')+header('Learning progress'
 
 const steps=[
   ['STUDENT · Start learning','Open straight into the Learning dashboard.','Lessons, assignments and progress together',studentHome],
-  ['STUDENT · Explore a lesson','Build confidence from the first phrase.','A1 German · Helpful translation',firstLesson],
+  ['STUDENT · Explore a lesson','Build confidence from the first phrase.','First Steps · Helpful translation',firstLesson],
   ['STUDENT · Listen and speak','Hear the German and repeat aloud.','Pronunciation from your browser',listen],
   ['STUDENT · Check knowledge','Get instant explanations as you learn.','Quick checks and corrective feedback',basicCheck],
   ['STUDENT · Track progress','See where to continue next time.','A clear, self-paced learning path',earlyProgress],

@@ -47,6 +47,9 @@ assert.equal((root.innerHTML.match(/class="nav-btn /g)||[]).length,2,'Only the t
 assert.ok(!root.innerHTML.includes('data-route="home"'),'Redundant Overview link should be gone');
 assert.ok(!root.innerHTML.includes('Demo role switch'),'Duplicate role switch should be gone');
 assertHas('Watch studio demo');
+assertHas('First Steps · Beginner German');
+assertHas('CEFR A1');
+assertHas('Your First Steps lessons');
 assertHas('teacher-studio-walkthrough.mp4');
 assertHas('Student + Teacher · Video walkthrough');
 assertHas('80-second silent, illustrated tour');
@@ -63,7 +66,7 @@ assertHas('Guide every learner.');
 click({route:'student'});
 assertHas('Guten Tag!');
 click({route:'student'});
-assertHas('Learning · A1 beginner');
+assertHas('Learning · First Steps');
 click({lesson:'hello'});
 assertHas('Hallo! Nice to meet you');
 click({stage:'understand'});
