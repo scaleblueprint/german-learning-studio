@@ -23,6 +23,49 @@
 @media(max-width:760px){.head-inner{padding:12px 18px;min-height:65px;justify-content:space-between}.primary-nav{display:none}.mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:20;background:#fffdf8;border-top:1px solid var(--line);justify-content:space-around;padding:7px 8px max(7px,env(safe-area-inset-bottom));box-shadow:0 -6px 25px #0000000b}.mobile-nav button{padding:7px 9px;border-radius:8px;display:flex;align-items:center;gap:4px;flex-direction:column;background:none;color:#64716a;font-size:10px;font-weight:800;min-width:65px}.mobile-nav button.active{color:var(--copper-dark);background:#f8f0e9}.mobile-nav span{font-size:18px}.shell{padding:0 18px}.page{padding:25px 0 95px}.hero{grid-template-columns:1fr}.hero-copy{padding:35px 28px}.hero-art{min-height:300px}.hero-foot{gap:14px}.stat-row{grid-template-columns:1fr;gap:9px}.stat{padding:15px 18px}.lesson-grid{grid-template-columns:1fr}.lesson-card{min-height:0}.split-feature,.source-cards{grid-template-columns:1fr}.section-intro{align-items:flex-start;margin:35px 0 16px}.section-intro .view-link{font-size:11px}.dash-header{align-items:flex-start}.dash-grid{gap:11px}.learning-panel{padding:24px}.teacher-stats{grid-template-columns:repeat(2,1fr)}.course-layout{grid-template-columns:1fr}.course-sidebar{position:static;padding:10px;display:flex;overflow:auto;gap:7px;align-items:center}.sidebar-title,.sidebar-overline{display:none}.sidebar-lesson{min-width:150px;flex-shrink:0}.lesson-banner{padding:27px}.lesson-body{padding:23px}.word-list{grid-template-columns:repeat(2,1fr)}.stage-tab{flex:1 1 auto;text-align:center;padding:11px 9px}.feature{min-height:210px}.footer{padding-bottom:95px}.footer-inner{align-items:flex-start;flex-direction:column}.assignment-strip{flex-direction:column;align-items:flex-start}.source-entry{align-items:flex-start}.bubble-a{top:37px}.bubble-b{bottom:30px}.arch{height:82%}}
 @media(max-width:440px){.brand-text{max-width:130px}.role-toggle button{font-size:10px;padding:8px 9px}.brand-mark{width:35px;height:35px}.word-list{grid-template-columns:1fr}.skill-grid{gap:8px}.skill{padding:14px}.teacher-stat{padding:16px}.lesson-banner .tag{display:none}.phrase-panel{padding:17px}.hero-copy{padding:31px 23px}.hero-art{min-height:260px}.bubble{padding:10px 13px;font-size:20px}.section-intro{display:block}.section-intro .view-link{margin-top:6px}}
 
+/* Keep dashboard content readable instead of squeezing columns on phones. */
+.student-mobile-list{display:none}
+@media(max-width:760px){
+  .dash-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:23px}
+  .dash-header>div{width:100%;min-width:0}
+  .dash-header h1{font-size:clamp(2.2rem,9.2vw,2.8rem);line-height:1.1;margin:12px 0 10px;overflow-wrap:break-word}
+  .dash-header .lead{font-size:14px;line-height:1.65;max-width:42ch}
+  .dash-header>.tag{align-self:flex-start;max-width:100%;white-space:normal;line-height:1.35}
+  .teacher-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .teacher-stat{min-width:0;padding:18px 16px}
+  .teacher-stat .upper{font-size:9px;letter-spacing:.1em;line-height:1.5;overflow-wrap:anywhere}
+  .teacher-stat strong{font-size:28px;margin:7px 0 2px}
+  .teacher-stat p{line-height:1.45}
+  .teacher-grid,.dash-grid,.source-cards{grid-template-columns:minmax(0,1fr)}
+  .teacher-panel{min-width:0;padding:21px 18px}
+  .table-wrap{display:none}
+  .student-mobile-list{display:grid;gap:10px}
+  .student-mobile-row{padding:16px;border:1px solid var(--line);background:#fff;border-radius:13px;min-width:0}
+  .student-mobile-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:9px}
+  .student-mobile-name{display:inline-flex;align-items:center;gap:1px;font-size:13px;min-width:0}
+  .student-mobile-name .avatar{flex-shrink:0}
+  .student-mobile-top .tag{font-size:9px;white-space:normal}
+  .student-mobile-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:15px 0 13px}
+  .student-mobile-meta span{display:flex;flex-direction:column;gap:4px;min-width:0}
+  .student-mobile-meta small{font-size:10px;color:var(--muted)}
+  .student-mobile-meta strong{font-size:13px}
+  .student-mobile-row .progress-shell{height:6px}
+  .queue-head{flex-wrap:wrap}
+  .source-entry{flex-direction:column;align-items:flex-start}
+  .source-entry a{white-space:normal;overflow-wrap:anywhere}
+  .teacher-prompt .btn{max-width:100%;white-space:normal;margin-bottom:8px}
+}
+@media(max-width:400px){
+  .head-inner{padding-left:12px;padding-right:12px;gap:8px}
+  .brand{gap:8px}
+  .brand-name{font-size:12px}
+  .brand-sub{font-size:8px;letter-spacing:.08em}
+  .role-toggle button{padding:8px}
+  .shell{padding-left:15px;padding-right:15px}
+  .teacher-panel{padding:17px 13px}
+  .teacher-stat{padding:16px 13px}
+}
+
 </style>
   </head>
   <body>
@@ -204,7 +247,7 @@ window.GERMAN_LESSONS = [
     const pending=submissions.filter(s=>!state.reviews[s.id]);
     return `<div class="dash-header"><div><span class="eyebrow">Your teaching workspace</span><h1>Guide every learner.</h1><p class="lead">A preview of how a teacher can follow progress, review practice and keep a small cohort moving together.</p></div><span class="tag tag-warm">Sample cohort · Not live data</span></div>
     <div class="teacher-stats"><div class="card teacher-stat"><span class="upper">Learners in cohort</span><strong>5</strong><p>4 fictional + current demo</p></div><div class="card teacher-stat"><span class="upper">Average completion</span><strong>${Math.round(demoStudents.reduce((a,s)=>a+s.progress,0)/demoStudents.length)}%</strong><p>Illustrative sample view</p></div><div class="card teacher-stat"><span class="upper">To review</span><strong>${pending.length}</strong><p>Written exercises</p></div><div class="card teacher-stat"><span class="upper">Active pathway</span><strong>A1</strong><p>${lessons.length} sample lessons</p></div></div>
-    <div class="teacher-grid"><section class="card teacher-panel"><h3>My beginner cohort</h3><p class="subtitle">Fictional example students demonstrate the layout. Only the Demo learner changes as you practise.</p><div class="table-wrap"><table class="roster"><thead><tr><th>Learner</th><th>Level</th><th>Course progress</th><th>Practice</th><th>Support</th></tr></thead><tbody>${demoStudents.map(s=>`<tr><td class="student-name"><span class="avatar">${s.initials}</span>${escape(s.name)}</td><td>${s.level}</td><td><div class="bar-inline"><div class="progress-shell"><div class="progress-fill" style="width:${s.progress}%"></div></div><span>${s.progress}%</span></div></td><td>${s.score}%</td><td><span class="tag ${s.status==='Needs review'?'tag-warm':'tag-muted'}">${escape(s.status)}</span></td></tr>`).join('')}</tbody></table></div><div class="demo-warning">These names and historical results are fictional examples. This static prototype does not yet enrol real students or synchronise progress between devices.</div></section>
+    <div class="teacher-grid"><section class="card teacher-panel"><h3>My beginner cohort</h3><p class="subtitle">Fictional example students demonstrate the layout. Only the Demo learner changes as you practise.</p><div class="table-wrap"><table class="roster"><thead><tr><th>Learner</th><th>Level</th><th>Course progress</th><th>Practice</th><th>Support</th></tr></thead><tbody>${demoStudents.map(s=>`<tr><td class="student-name"><span class="avatar">${s.initials}</span>${escape(s.name)}</td><td>${s.level}</td><td><div class="bar-inline"><div class="progress-shell"><div class="progress-fill" style="width:${s.progress}%"></div></div><span>${s.progress}%</span></div></td><td>${s.score}%</td><td><span class="tag ${s.status==='Needs review'?'tag-warm':'tag-muted'}">${escape(s.status)}</span></td></tr>`).join('')}</tbody></table></div><div class="student-mobile-list">${demoStudents.map(s=>`<article class="student-mobile-row"><div class="student-mobile-top"><span class="student-mobile-name"><span class="avatar">${s.initials}</span><b>${escape(s.name)}</b></span><span class="tag ${s.status==='Needs review'?'tag-warm':'tag-muted'}">${escape(s.status)}</span></div><div class="student-mobile-meta"><span><small>Level</small><strong>${s.level}</strong></span><span><small>Practice</small><strong>${s.score}%</strong></span><span><small>Progress</small><strong>${s.progress}%</strong></span></div><div class="progress-shell"><div class="progress-fill" style="width:${s.progress}%"></div></div></article>`).join('')}</div><div class="demo-warning">These names and historical results are fictional examples. This static prototype does not yet enrol real students or synchronise progress between devices.</div></section>
     <section class="card teacher-panel"><div class="lesson-head"><h3>Practice to review</h3><span class="tag tag-warm">${pending.length} waiting</span></div><p class="subtitle">Open submissions, provide feedback and mark the review complete.</p><div class="queue">${pending.length?pending.map(s=>`<article class="queue-item"><div class="queue-head"><strong>${escape(s.name)}</strong><span class="tag ${s.sample?'tag-muted':'tag-dark'}">${s.sample?'Seed sample':'From this browser'}</span></div><p>${escape(lessons.find(l=>l.id===s.lessonId)?.title||'German practice')}</p><blockquote>${escape(s.text)}</blockquote><label class="form-field" for="fb-${s.id}" style="margin-top:10px">Your feedback</label><textarea id="fb-${s.id}" data-feedback="${s.id}" class="text-entry" placeholder="A short, useful note for this learner…"></textarea><button class="btn btn-primary btn-small" data-review="${s.id}">Save feedback & mark reviewed</button></article>`).join(''):'<div class="empty">Everything reviewed. Try submitting a response in Student view.</div>'}</div></section></div>
     <div class="teacher-prompt"><span class="eyebrow">Class activity</span><h3 style="font-size:25px;margin-top:8px">Assign a short introduction</h3><p>Send the first speaking-and-writing prompt to your Demo learner. This toggles an activity inside this browser; it does not notify real students.</p><button class="btn btn-primary btn-small" data-assignment="${state.assigned?'off':'on'}">${state.assigned?'Remove demo assignment':'Assign to demo learner'}</button><button class="btn btn-outline btn-small" data-role="student">Switch to student view</button></div>
     <section><div class="section-intro"><div><span class="eyebrow">Course stewardship</span><h2>Teacher-approved curriculum</h2><p>In a real rollout, content goes through expert review before students see it. Here you can inspect each original sample lesson.</p></div></div><div class="lesson-grid">${lessons.map(lessonCard).join('')}</div></section>`;
