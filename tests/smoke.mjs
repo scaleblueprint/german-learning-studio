@@ -48,7 +48,7 @@ assert.ok(!root.innerHTML.includes('data-route="home"'),'Redundant Overview link
 assert.ok(!root.innerHTML.includes('Demo role switch'),'Duplicate role switch should be gone');
 assertHas('Watch studio demo');
 assertHas('First Steps · Beginner German');
-assertHas('CEFR A1');
+assert.ok(!root.innerHTML.includes('CEFR A1'),'Learning dashboard should use its friendly course name only');
 assertHas('Your First Steps lessons');
 assertHas('teacher-studio-walkthrough.mp4');
 assertHas('Student + Teacher · Video walkthrough');

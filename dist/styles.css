@@ -365,3 +365,15 @@
   .workspace-shortcuts .tag{width:100%;max-width:max-content}
   .workspace-shortcuts .btn{white-space:normal}
 }
+
+/* Match the whole visible phone viewport, including the fixed bottom navigation. */
+@media(max-width:760px){
+  html,body{width:100%;max-width:100%;min-width:0}
+  #app{display:block;width:100vw;max-width:100vw;min-width:0}
+  .top-notice,.site-header,.page,.footer{width:100%;max-width:100%;min-width:0}
+  .shell{width:100%;max-width:100%;min-width:0}
+  .dash-grid,.learning-panel,.card{min-width:0}
+  .learning-panel{width:100%;max-width:100%}
+  .learning-panel .tag{display:inline-flex;max-width:100%;white-space:normal;line-height:1.4}
+  .learning-panel h2{font-size:clamp(27px,8vw,34px);overflow-wrap:break-word}
+}

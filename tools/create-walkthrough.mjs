@@ -56,7 +56,7 @@ function header(label,headline,description){return txt(338,240,label.toUpperCase
 function highlight(x,y,w,h){return rect(x-6,y-6,w+12,h+12,'none',12,copper,4)+`<path d="M ${x+w+16} ${y+7} L ${x+w+47} ${y-26}" stroke="${copper}" stroke-width="4" stroke-linecap="round"/>`+`<circle cx="${x+w+47}" cy="${y-26}" r="7" fill="${copper}"/>`;}
 function studentHome(){return shell('student','Student')+header('Learning · First Steps','Guten Tag! Let’s learn German.','Your lessons, assigned practice and progress are all here.')
   +panel(340,341,530,250,'Make the next conversation yours.','Continue learning at your own pace.')
-  +badge(363,416,'First Steps',true)+badge(484,416,'CEFR A1')
+  +badge(363,416,'First Steps',true)
   +txt(364,468,'Up next: Hallo! Nice to meet you',16,ink,700)
   +button(363,506,208,'Continue learning',true)
   +panel(885,341,301,250,'Your teacher’s sessions','Practise what you learn in class.')
@@ -85,7 +85,7 @@ function earlyProgress(){return shell('progress','Student')+header('Your learnin
   +txt(362,533,'Your progress stays in this browser for the demo.',15,'#738378')
   +highlight(362,479,800,13);}
 function teacher(){return shell('teacher')+header('Teacher studio','See each learner clearly.','Plan activities, understand progress, and give personal feedback.')
-  +panel(340,340,254,125,'Demo learner','A1 · Active learner')+badge(361,415,'In progress',true)
+  +panel(340,340,254,125,'Demo learner','First Steps · Active learner')+badge(361,415,'In progress',true)
   +panel(605,340,255,125,'5 lessons','Practice and checkpoint results')
   +panel(871,340,316,125,'Practice to review','Written responses in your queue')
   +panel(340,480,846,143,'Session Studio','Compose complete lessons: words, listening, checks, role-play.')
@@ -93,13 +93,13 @@ function teacher(){return shell('teacher')+header('Teacher studio','See each lea
 function session(){return shell('session')+header('Session Studio','Compose a complete lesson.','Turn expertise into a connected learning journey.')
   +panel(340,340,846,105,'One thoughtful journey. Many moments to practise.','Start with five learning blocks and adapt for your class.')
   +button(931,381,224,'+ Create lesson session',true)+highlight(931,381,224,43)
-  +panel(340,463,410,151,'At the café: Your first order','A1 · 20 min · 5 blocks · Assigned')
+  +panel(340,463,410,151,'At the café: Your first order','First Steps · 20 min · 5 blocks · Assigned')
   +badge(360,557,'Published',true)+button(511,557,106,'Preview')+button(629,557,94,'Edit');}
 function compose(){return shell('session')+header('Visual lesson composer','Build a session, step by step.','Set a clear goal and choose who will practise it.')
   +panel(340,333,846,289,'Session details','Describe the learning goal before editing each activity.')
   +field(365,420,355,'Session title','At the café: Your first order')
   +field(747,420,388,'What the learner will achieve','Order politely in an everyday café')
-  +field(365,513,200,'CEFR level','A1 · Beginner')+field(590,513,199,'Estimated time','20 minutes')
+  +field(365,513,200,'Course level','First Steps')+field(590,513,199,'Estimated time','20 minutes')
   +field(814,513,320,'Assign to','Demo learner')+highlight(365,430,355,43);}
 function block(type,title,detail,focusIndex=0){
   const steps=['Vocabulary cards','Listen & repeat','Knowledge check','Role-play task','Final assessment'];
@@ -112,11 +112,11 @@ function block(type,title,detail,focusIndex=0){
   return out+highlight(355,399+focusIndex*39,455,34);
 }
 function preview(){return shell('session')+header('Student-facing preview','Check the learning journey.','See how each activity appears before assigning it.')
-  +panel(339,335,848,282,'At the café: Your first order','Five connected activities · A1 · 20 minutes')
+  +panel(339,335,848,282,'At the café: Your first order','Five connected activities · First Steps · 20 minutes')
   +[ ['01','Five words for the café','Vocabulary'], ['02','Hear a polite order','Listening'], ['03','Choose the polite request','Quiz'],['04','You are the customer','Role-play'],['05','Final knowledge check','Assessment'] ].map((s,i)=>rect(360,417+i*36,800,31,i%2?'#f2f6f1':'#f9faf7',5)+txt(375,438+i*36,s[0],12,copper,700)+txt(422,438+i*36,s[1],14,ink,700)+txt(1086,438+i*36,s[2],11,'#74867b')).join('')
   +highlight(339,335,848,282);}
 function publish(){return shell('session')+header('Publish and assign','Your lesson is ready.','Learners see the published session in their learning dashboard.')
-  +panel(340,339,846,266,'At the café: Your first order','A1 · 20 minutes · Demo learner')
+  +panel(340,339,846,266,'At the café: Your first order','First Steps · 20 minutes · Demo learner')
   +badge(366,410,'5 blocks')+badge(475,410,'Ready to assign',true)
   +button(381,529,190,'Preview as student')+button(593,529,142,'Save draft')
   +button(759,529,235,'Publish & assign',true)+highlight(759,529,235,43);}
@@ -145,7 +145,7 @@ function studentPending(){return shell('progress','Student')+header('Submitted f
   +txt(383,528,'Guten Tag! Ich hätte gern einen Tee, bitte.',17,ink)
   +highlight(363,463,801,93);}
 function review(){return shell('review')+header('Practice to review','Give feedback while it matters.','A written role-play arrives in the teacher review queue.')
-  +panel(340,338,846,270,'New response · You are the customer','A1 · Written role-play · Awaiting feedback')
+  +panel(340,338,846,270,'New response · You are the customer','First Steps · Written role-play · Awaiting feedback')
   +rect(366,420,788,64,'#f1f5ef',9)+txt(384,450,'Guten Tag! Ich hätte gern einen Tee, bitte.',18,forest,700)
   +field(366,527,523,'Your personal feedback','Great polite request! Try adding a thank-you.')
   +button(919,541,214,'Save feedback',true)+highlight(919,541,214,43);}
