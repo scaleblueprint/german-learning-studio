@@ -120,6 +120,26 @@ h1 {letter-spacing:-.055em}
 
 /* Lessons, assignments and hands-on work. */
 .lesson-banner,.mission-banner,.student-session-hero {background:linear-gradient(125deg,#fff0d8,#f7e5e6)}
+.lesson-banner:after {color:#e4c9b4}
+.sidebar-lesson:hover,.sidebar-lesson.active {background:#ffe8d8}
+.sidebar-lesson .count {background:#fff5e9;border-color:#ebd8c9}
+.stage-tab {background:#f5e9e0;color:#634d57}
+.stage-tab:hover:not(.active) {background:#ffe6d5}
+.stage-tab.done:not(.active) {color:var(--green)}
+.lesson-body .explain {color:var(--ink-soft)}
+.sound-button {color:var(--plum)}
+.sound-button:hover {background:#fff0e0}
+.speech {background:#fff0e3}
+.speech:nth-child(even) {background:#f5e5e7}
+.speech span {color:#8a6872}
+.tip,.study-note {background:#fff4e8;border-color:#efd9c7}
+.choice {border-color:#ebd9d4}
+.choice:before {border-color:#c7aaa5}
+.choice:hover {border-color:#cd9487;background:#fff5ed}
+.choice.selected {border-color:var(--plum);background:#fae8e8}
+.choice.selected:before {background:var(--plum);border-color:var(--plum);box-shadow:inset 0 0 0 4px #fae8e8}
+.choice.correct,.finish-panel,.status-success {background:#e2f4e9}
+.finish-score {color:var(--green)}
 .mission-banner p,.student-session-hero p {color:var(--ink-soft)}
 .mission-banner-meta {color:var(--plum)}
 .stage-tab.active,.session-outline-step.active {background:var(--plum);color:#fff}
