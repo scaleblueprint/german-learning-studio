@@ -78,7 +78,7 @@ h1 {letter-spacing:-.055em}
 .learning-panel .btn-white {background:var(--sun);color:#1c2b5a}
 .learning-panel .btn-white:hover {background:#ffe38b}
 .milestone-heading {font-size:10px;text-transform:uppercase;font-weight:800;letter-spacing:.12em;color:#dbe5ff;margin:24px 0 10px}
-.milestone-track {display:flex;gap:12px;align-items:center;position:relative;max-width:430px;margin-bottom:6px}
+.milestone-track {display:flex;justify-content:space-between;gap:12px;align-items:center;position:relative;max-width:430px;margin-bottom:6px}
 .milestone-track:before {content:"";position:absolute;top:17px;left:17px;right:17px;height:3px;background:#ffffff55}
 .milestone {z-index:1;flex:0 0 35px;width:35px;height:35px;border-radius:50%;border:2px solid #a9bbfa;background:#2946b5;color:#e4eaff;font-size:12px;font-weight:800;display:grid;place-items:center;box-shadow:0 0 0 4px rgba(47,75,178,.3);transition:transform .18s,background .18s}
 .milestone.done {background:#27b58e;border-color:#b9ffe5;color:#fff}
