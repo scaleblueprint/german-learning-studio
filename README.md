@@ -16,7 +16,7 @@ The Learning homepage includes an 80-second, silent illustrated walkthrough of t
 
 ## Demo behavior and limitations
 
-- The homepage opens directly into **Learning**. A single, two-option header switch moves between **Learning** and **Teacher Studio** (on mobile the same two options appear at the bottom). There is no extra Overview screen or duplicate role toggle. The previous `#home` deep link still opens the learner dashboard. Materials & credits remain available from the footer.
+- The homepage opens directly into **Learning**. A single, two-option header switch moves between **Learning** and **Teacher Studio** (on mobile the same two options appear at the bottom). A contextual section menu keeps the content manageable: **Home / Lessons / Practice / Exam preparation** for learners, and **Overview / Sessions / Missions / Exam coaching / Learners & reviews** for teachers. Every section has a bookmarkable hash route. There is no extra landing page or duplicate role toggle. The previous `#home` deep link still opens the learner dashboard. Materials & credits remain available from the footer. See [`docs/navigation-requirements.md`](docs/navigation-requirements.md).
 - The Learning dashboard links to **Exam Preparation** with Goethe/telc A1 mini-mocks, four skill practices, browser-generated listening, an 18-minute demo timer with pause, original explanations, results, history and study tips. Levels A2–C2 are clearly listed as **planned**, not offered as unreviewed exercises.
 - Teacher Studio has a **Question Bank** to draft, review and publish original A1 listening/reading checks and a response-review panel for writing and speaking-rehearsal notes. The learner sees qualitative teacher feedback on the completed attempt. Teacher-approved items appear only in newly started practice attempts.
 - Teachers can select a **role-play**, **writing mission**, or **speaking rehearsal** template, customise a learning goal, instructions, German example and success criteria, and save a draft or publish it to the demo learner.
@@ -33,21 +33,21 @@ The Learning homepage includes an 80-second, silent illustrated walkthrough of t
 
 ### Suggested Experience Studio walkthrough
 
-1. Switch to **Teacher** and open the **Experience Studio** section.
+1. Switch to **Teacher Studio → Missions** to open Experience Studio.
 2. Select **Role-play**, **Writing mission**, or **Speaking rehearsal** to populate the builder.
 3. Personalise the teaching instructions and success criteria, then **Publish to demo learner** (or save as a draft).
-4. Switch to **Student**, open the mission under **Practice with a purpose**, and submit a German response.
-5. Return to **Teacher**, add feedback to the new mission entry, and switch back to Student to read it.
+4. Switch to **Learning → Practice**, open the mission under **Practice with a purpose**, and submit a German response.
+5. Return to **Teacher Studio → Learners & reviews**, add feedback to the new mission entry, and switch back to Learning to read it.
 
 This demonstrates the workflow only. Publication does not notify students or synchronize anything between devices.
 
 ### Suggested Session Studio walkthrough
 
-1. Open **Teacher Studio → Session Studio** and preview the published **At the café: Your first order** example.
+1. Open **Teacher Studio → Sessions** and preview the published **At the café: Your first order** example.
 2. Select **Create lesson session**. Edit its title, learning goal and audience; change the text or answer key in each step, add a new block from the library, and use the ↑ / ↓ buttons to reorder it.
 3. Select **Preview as student**, then **Publish & assign** (or **Save draft**).
-4. Switch to **Student → Your teacher's learning sessions**. Follow the cards, pronunciation, quiz, dialogue submission and final assessment through the summary.
-5. Return to **Teacher Studio → Practice to review**, respond to the submitted dialogue, then revisit the learner session summary to see that feedback.
+4. Switch to **Learning → Practice** and open the assigned lesson session. Follow the cards, pronunciation, quiz, dialogue submission and final assessment through the summary.
+5. Return to **Teacher Studio → Learners & reviews**, respond to the submitted dialogue, then revisit the learner session summary to see that feedback.
 
 The sample A1 group is only a presentation of how group assignment would work later. It does not enroll or notify real learners. No external lesson books, recordings or protected exercises are copied into the composer.
 
@@ -69,4 +69,4 @@ Commercial textbooks such as *Netzwerk neu* or Hueber materials are **not includ
 
 ## Checks
 
-Run `node tests/smoke.mjs` and `node tests/exam.mjs`. The buildless `dist/` directory is published directly; `node tools/bundle.mjs` regenerates the portable single-file demo with the exam modules included.
+Run `node tests/smoke.mjs`, `node tests/exam.mjs` and `node tests/navigation.mjs`. The buildless `dist/` directory is published directly; `node tools/bundle.mjs` regenerates the portable single-file demo with the exam modules included.
