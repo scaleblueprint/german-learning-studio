@@ -2,13 +2,17 @@
 
 ## Principle
 
-Keep **Learning** and **Teacher Studio** as the only top-level workspaces. Do not add a redundant landing page, duplicate role switch, or a second overview route. Use the section menu within each workspace to organise dense content without deleting it.
+Use three clear top-level destinations: **Home** (public landing page), **Student Studio**, and **Teacher Studio**. The landing page introduces the value, offers entry to both studios, and presents the student-and-teacher walkthrough. All detailed activities and learner progress live inside the studios. Use section menus within each studio.
 
-## Learning
+## Home
+
+`#home` (and the empty URL hash) opens the public welcome page. It explains the linked learner and teacher experiences, provides working studio entry buttons, and hosts the complete silent walkthrough video. The AmberTheory logo returns here from any studio. This page has no student progress dashboard or teacher editing forms.
+
+## Student Studio
 
 | Menu | Route | Contents |
 | --- | --- | --- |
-| Home | `#student` | Current progress, next lessons, exam entry, student-and-teacher walkthrough video and shortcuts |
+| My progress | `#student` | Current progress, next lessons, exam entry and shortcuts to learning activities |
 | Lessons | `#student/lessons` | All five beginner lessons with direct entry and progress |
 | Practice | `#student/practice` | Assigned sessions, teacher-created missions, short assignment, feedback and indicative skills |
 | Exam preparation | `#exam` | Goethe/telc A1 original practice, mocks, results and tips |
@@ -32,6 +36,6 @@ Each destination is a real hash route, survives refresh, and highlights its menu
 - One visible content pane per selected section; hidden panels are not focusable or shown.
 - Current location is clear with an active state and `aria-current="page"`.
 - Menus fit on narrow screens by wrapping into a two/three-column grid instead of clipping into horizontal overflow.
-- Keep the mobile bottom workspace switch and home-page video.
+- Keep mobile navigation for Home, Student Studio and Teacher Studio, with the video displayed on the public home page.
 - No loss of lesson content, authoring forms, mock controls or existing reviews.
 - Run `node tests/smoke.mjs`, `node tests/exam.mjs`, `node tests/navigation.mjs` and check phone/desktop live pages after deploy.

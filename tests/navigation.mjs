@@ -20,7 +20,14 @@ function activeSection(){return root.innerHTML.match(/<button[^>]*class="section
 function visiblePanes(){return [...root.innerHTML.matchAll(/<section class="view-pane"([^>]*)>/g)].filter(m=>!m[1].includes('hidden')).length;}
 function clickRoute(route){handlers['root:click']({target:{closest(){return {disabled:false,dataset:{route},hasAttribute(name){return name==='data-route';}};}}});}
 
-assert.equal(activeSection(),'Home');
+assert.match(root.innerHTML,/id="public-title"/,'Default route opens a distinct public landing page');
+assert.match(root.innerHTML,/data-route="student"/,'Public page opens Student Studio');
+assert.match(root.innerHTML,/data-route="teacher"/,'Public page opens Teacher Studio');
+assert.match(root.innerHTML,/teacher-studio-walkthrough\\.mp4/,'Landing page includes the two-role demonstration');
+assert.match(root.innerHTML,/class="brand" href="#home"/,'Brand takes the user back to the landing page');
+assert.equal(visiblePanes(),0,'Landing page must not display a studio dashboard');
+open('#student');
+assert.equal(activeSection(),'My progress');
 assert.equal(visiblePanes(),1,'Only the selected learning section should be displayed');
 assert.match(root.innerHTML,/class="brand-logo" src="\.\/ambertheory-lockup\.jpg"/,'Header uses the canonical AmberTheory lockup');
 assert.doesNotMatch(root.innerHTML,/class="brand-mark"/,'AT monogram must not replace the canonical logo');
@@ -30,6 +37,9 @@ assert.equal([...root.innerHTML.matchAll(/class="milestone(?: done| current)?"/g
 assert.match(root.innerHTML,/data-route="student\/lessons"/);
 assert.match(root.innerHTML,/data-route="student\/practice"/);
 
+open('#home');
+assert.match(root.innerHTML,/Discover German/);
+assert.match(root.innerHTML,/teacher-studio-walkthrough\\.mp4/);
 open('#student/lessons');
 assert.equal(activeSection(),'Lessons');
 assert.equal(visiblePanes(),1);
@@ -68,4 +78,6 @@ assert.match(root.innerHTML,/Experience Studio/);
 open('#teacher');
 assert.match(root.innerHTML,/Build a lesson session/);
 assert.match(root.innerHTML,/Review learner progress/);
-console.log('Navigation test passed: section routes, current menus, hidden panes, lesson return and preserved content.');
+open('#home');
+assert.match(root.innerHTML,/id="public-title"/,'Learners and teachers can return to Home');
+console.log('Navigation test passed: public home, student and teacher routes, demo visibility, preserved studio workflows.');
