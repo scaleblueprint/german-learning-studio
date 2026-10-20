@@ -1,0 +1,213 @@
+/* German Studio visual identity: energetic and purposeful, distinct from AmberTheory's other courses.
+   This layer is presentation-only. Learning, teacher, exam and persistence logic remain unchanged. */
+:root {
+  --ink:#1b2854;
+  --ink-soft:#4c5b7c;
+  --muted:#65728f;
+  --cream:#f5f7ff;
+  --paper:#fff;
+  --line:#dfe5f7;
+  --copper:#eb6658;
+  --copper-dark:#bb403d;
+  --forest:#3049be;
+  --mint:#e1f8f0;
+  --peach:#fff0e9;
+  --gold:#ffd35e;
+  --blue:#3552df;
+  --blue-dark:#233995;
+  --coral:#eb6658;
+  --sun:#ffd35e;
+  --green:#138c70;
+  --shadow:0 14px 42px rgba(32,58,142,.075);
+  background:var(--cream);
+}
+body {background:radial-gradient(circle at 92% 5%,rgba(255,211,94,.12),transparent 28rem),var(--cream)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible {outline:3px solid var(--coral);outline-offset:3px}
+h1,h2,h3,h4 {font-family:'Space Grotesk','DM Sans',sans-serif;font-weight:700;letter-spacing:-.043em}
+h1 {letter-spacing:-.055em}
+.serif,.mini-phrase,.phrase-de,.exam-passage {font-family:Fraunces,Georgia,serif}
+.eyebrow {color:var(--blue);letter-spacing:.13em}
+.view-link {color:var(--blue-dark)}
+.view-link:hover {color:var(--blue)}
+.card {background:#fff;box-shadow:var(--shadow)}
+.btn {transition:transform .18s,background-color .18s,box-shadow .18s}
+.btn:not(:disabled):hover {transform:translateY(-1px)}
+.btn-primary {background:var(--blue);color:#fff;box-shadow:0 5px 15px rgba(53,82,223,.18)}
+.btn-primary:hover {background:#233eb5}
+.btn-copper {background:var(--coral);color:#fff}
+.btn-copper:hover {background:#d75347}
+.btn-outline {border-color:#bfcaed;background:#fff;color:var(--blue-dark)}
+.btn-outline:hover {background:#eaf0ff}
+.btn-white {background:#fff;color:var(--blue-dark)}
+.btn-white:hover {background:#edf1ff}
+.btn-ghost {color:var(--blue-dark)}
+.tag {background:#e6f8f1;color:#08785e}
+.tag-dark {background:#dff8f0;color:#096b55}
+.tag-warm {background:#fff0df;color:#96502c}
+.tag-muted {background:#eef1fc;color:#4c5d8b}
+
+/* Clearer, calmer workspace navigation above vibrant content. */
+.site-header {background:rgba(255,255,255,.96);border-bottom:1px solid #dce4fa;box-shadow:0 3px 15px rgba(30,46,104,.045)}
+.brand-mark {background:var(--blue-dark);color:var(--sun);border-radius:13px;font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-.09em}
+.brand-name {color:var(--ink);font-weight:800}
+.brand-sub {color:#55669b}
+.nav-btn {color:#586583}
+.nav-btn:hover {background:#f0f3ff;color:var(--blue-dark)}
+.nav-btn.active {background:var(--blue);color:#fff}
+.top-notice {background:#17275c;color:#e7edff}
+.top-notice span {color:var(--sun)}
+.section-nav {background:#f7f9ff;border-color:#e5e9fa}
+.section-nav-item {color:#536388}
+.section-nav-item:hover {background:#edf1ff;color:var(--blue-dark)}
+.section-nav-item.active {color:var(--blue-dark);background:#e9efff;border-bottom-color:var(--coral)}
+.workspace-hint {color:#617198}
+.mobile-nav {background:#fff;border-color:var(--line)}
+.mobile-nav button {color:#606f95}
+.mobile-nav button.active {color:var(--blue-dark);background:#eaf0ff}
+
+/* Student home: a confident next action, evidence-based progress and playful geometry. */
+.learning-panel {background:linear-gradient(125deg,#233995 0%,#3454d9 67%,#4b67ed 100%);isolation:isolate;box-shadow:0 22px 48px rgba(50,74,181,.21)}
+.learning-panel:after {content:"";position:absolute;width:290px;height:290px;right:-105px;top:-95px;bottom:auto;border-radius:50%;border:55px solid rgba(255,211,94,.15);font-size:0;z-index:-1}
+.learning-panel:before {content:"";position:absolute;width:90px;height:90px;right:95px;bottom:-35px;background:var(--coral);transform:rotate(-20deg);border-radius:24px;opacity:.36;z-index:-1}
+.learning-panel h2 {font-size:clamp(29px,3.3vw,44px);letter-spacing:-.04em;max-width:520px}
+.learning-panel p {color:#e0eaff;font-size:13px}
+.learning-panel .tag-dark {background:#e5edff;color:#213997}
+.learning-panel .progress-shell {height:12px;background:rgba(255,255,255,.23);margin-top:24px}
+.learning-panel .progress-fill {background:linear-gradient(90deg,#ffe38b,var(--sun))}
+.minor-progress {font-size:12px;color:#eef2ff;font-weight:700}
+.learning-panel .btn-white {background:var(--sun);color:#1c2b5a}
+.learning-panel .btn-white:hover {background:#ffe38b}
+.milestone-heading {font-size:10px;text-transform:uppercase;font-weight:800;letter-spacing:.12em;color:#dbe5ff;margin:24px 0 10px}
+.milestone-track {display:flex;gap:12px;align-items:center;position:relative;max-width:430px;margin-bottom:6px}
+.milestone-track:before {content:"";position:absolute;top:17px;left:17px;right:17px;height:3px;background:#ffffff55}
+.milestone {z-index:1;flex:0 0 35px;width:35px;height:35px;border-radius:50%;border:2px solid #a9bbfa;background:#2946b5;color:#e4eaff;font-size:12px;font-weight:800;display:grid;place-items:center;box-shadow:0 0 0 4px rgba(47,75,178,.3);transition:transform .18s,background .18s}
+.milestone.done {background:#27b58e;border-color:#b9ffe5;color:#fff}
+.milestone.current {background:var(--sun);border-color:#fff1b4;color:#233995;box-shadow:0 0 0 4px rgba(255,211,94,.22)}
+.milestone:hover {transform:translateY(-3px)}
+.milestone:focus-visible {outline-color:#fff}
+.next-dot {background:#e9edff;color:var(--blue-dark)}
+.next-item:has(.next-dot:first-child) {transition:border-color .2s}
+.next-item:hover {border-color:#a7b7f6}
+.progress-fill {background:var(--blue)}
+.skill:nth-child(2) .progress-fill {background:var(--coral)}
+.skill:nth-child(3) .progress-fill {background:#12a988}
+.skill:nth-child(4) .progress-fill {background:#c18e10}
+.skill strong,.stat strong,.teacher-stat strong {font-family:'Space Grotesk',sans-serif;font-weight:700}
+.stat-icon {background:#e9efff}
+.lesson-card {border-top:5px solid var(--blue);background:#fff}
+.lesson-card:nth-child(4n+2) {border-top-color:var(--coral)}
+.lesson-card:nth-child(4n+3) {border-top-color:#edbd38}
+.lesson-card:nth-child(4n) {border-top-color:#19ac89}
+.lesson-card:hover {box-shadow:0 22px 42px rgba(53,82,223,.12)}
+.lesson-number {color:#6577a5}
+.mini-phrase {color:#ad4e4b}
+.quick-path {background:#fff;border-color:#dce5fb;border-top:5px solid var(--blue)}
+.quick-path:nth-child(2) {border-top-color:var(--coral)}
+.quick-path:hover {border-color:var(--blue)}
+.quick-path strong {font-family:'Space Grotesk',sans-serif;font-weight:700}
+.quick-path small {color:var(--blue-dark)}
+.exam-home-card {position:relative;overflow:hidden;background:linear-gradient(112deg,#ed6057,#d84e77);box-shadow:0 20px 45px rgba(219,79,103,.17)}
+.exam-home-card:after {content:"";position:absolute;width:145px;height:145px;border:24px solid #ffffff26;border-radius:50%;right:25%;top:-120px;pointer-events:none}
+.exam-home-card .eyebrow {color:#fff1a6}
+.exam-home-card p {color:#fff0f2}
+.exam-home-card .btn-white {color:#a32952}
+.walkthrough {background:linear-gradient(135deg,#e9efff,#fff9ee);border-color:#d4dffb}
+.walkthrough-duration {background:#dfe7ff;color:#2842a3}
+.walkthrough-player,.walkthrough-player video {background:#192a67}
+.walkthrough-note {color:#556994}
+
+/* Lesson, practice mission and session journeys. */
+.lesson-banner,.mission-banner,.student-session-hero {background:linear-gradient(125deg,#e7ecff,#fff4dc)}
+.mission-banner p,.student-session-hero p {color:var(--ink-soft)}
+.mission-banner-meta {color:var(--blue-dark)}
+.stage-tab.active,.session-outline-step.active {background:var(--blue);color:#fff}
+.session-outline-step.active small {color:#e4eaff}
+.session-outline-step:hover:not(.active) {background:#eef2ff}
+.session-outline-step>span {background:#e9efff;color:var(--blue-dark)}
+.course-sidebar,.phrase-panel,.task-card,.teacher-prompt,.assignment-strip {background:#edf2ff}
+.feature.green {background:#233995}
+.feature.cream {background:#fff0df}
+.mission-icon,.template-glyph,.composer-block-symbol {background:#e5ecff;color:var(--blue-dark)}
+.template-card {background:#fff;border-color:var(--line);border-top:4px solid var(--blue)}
+.template-card:nth-child(2) {border-top-color:var(--coral)}
+.template-card:nth-child(3) {border-top-color:#e7b82d}
+.template-card:hover {border-color:var(--blue);box-shadow:0 18px 35px rgba(53,82,223,.12)}
+.template-card strong {font-family:'Space Grotesk',sans-serif;font-weight:700}
+.template-card:nth-child(2) .template-glyph {background:#ffebdf;color:#b64d41}
+.template-card:nth-child(3) .template-glyph {background:#fff4cd;color:#946b07}
+.experience-flow>div {background:#ecf0ff}
+.experience-flow b {background:#dce5ff;color:var(--blue-dark)}
+
+/* Teacher workspace: creative energy with clear controls and accessible fields. */
+.teacher-stat {border-top:4px solid var(--blue)}
+.teacher-stat:nth-child(4n+2) {border-top-color:var(--coral)}
+.teacher-stat:nth-child(4n+3) {border-top-color:#efbd40}
+.teacher-stat:nth-child(4n) {border-top-color:#21aa85}
+.avatar {background:#e5ebff;color:var(--blue-dark)}
+.teacher-prompt {background:#eaf0ff}
+.queue-item blockquote {background:#f1f4ff}
+.session-studio-lead {background:linear-gradient(116deg,#233995,#405ee0);box-shadow:0 20px 42px rgba(50,71,159,.16);position:relative;overflow:hidden}
+.session-studio-lead:after {content:"";position:absolute;right:17%;top:-75px;width:200px;height:200px;border:40px solid #ffffff17;border-radius:50%;pointer-events:none}
+.session-studio-lead span {color:var(--sun)}
+.session-studio-lead strong {font-family:'Space Grotesk',sans-serif;font-weight:700}
+.session-studio-lead p {color:#e1e9ff}
+.session-studio-lead .btn {background:var(--sun);color:#20316e;z-index:1}
+.session-shelf-metrics {color:var(--blue-dark)}
+.composer-meta-grid,.composer-palette,.exam-builder {background:#eef2ff;border-color:#d7e1fc}
+.composer-field {color:var(--ink-soft)}
+.composer-block {background:#fff}
+.composer-palette>p,.composer-palette-foot,.composer-note {color:var(--ink-soft)}
+.composer-palette-item {background:#fff;border-color:#dce4fb}
+.composer-palette-item>span {background:#e5ecff;color:var(--blue-dark)}
+.composer-palette-item>b {color:var(--blue)}
+.composer-palette-item:hover {border-color:var(--blue)}
+.mini-action {background:#edf1ff;border-color:#d9e2fa;color:var(--blue-dark)}
+.mini-action:hover {background:#dce6ff}
+.composer-block-fields input,.composer-field input,.composer-field textarea,.composer-field select {border-color:#cfd9f3}
+
+/* Exam progress and question states remain recognizable, never decorative alone. */
+.exam-hero {background:linear-gradient(112deg,#e9efff 0%,#fff2df 100%)}
+.exam-hero p {color:var(--ink-soft)}
+.exam-hero-symbol {color:#b1c1f4}
+.exam-provider,.exam-level {background:#f8faff}
+.exam-provider strong {font-family:'Space Grotesk',sans-serif;font-weight:700}
+.exam-provider.active {border-color:var(--blue);background:#e7edff;box-shadow:inset 0 0 0 1px var(--blue)}
+.exam-provider:hover {border-color:#839af0}
+.exam-level.active {background:var(--blue);border-color:var(--blue)}
+.exam-level.active small {color:#e2e9ff}
+.exam-main-cta {background:linear-gradient(116deg,#273eae,#425ce1);box-shadow:0 18px 42px rgba(45,70,179,.15)}
+.exam-main-cta .eyebrow {color:var(--sun)}
+.exam-main-cta p,.exam-cta-meta {color:#e3eaff}
+.exam-skill-icon {background:#e5ecff;color:var(--blue-dark)}
+.exam-skill:nth-child(2) .exam-skill-icon {background:#fff0e9;color:#ba4b42}
+.exam-skill:nth-child(3) .exam-skill-icon {background:#fff5d8;color:#8b6615}
+.exam-skill:nth-child(4) .exam-skill-icon {background:#e4f8f0;color:#08745d}
+.exam-attempt-head,.exam-result-hero {background:#e8efff}
+.exam-timer strong {color:var(--blue-dark)}
+.exam-step {background:#e9edfa;color:#536589}
+.exam-step.active {background:var(--blue);color:#fff}
+.exam-step.answered:not(.active) {background:#dcf5e9;color:#08745d}
+.exam-audio {background:#edf2ff}
+.exam-passage {background:#fff4e4;border-left-color:var(--coral)}
+.exam-choice {border-color:#d9e1f5}
+.exam-choice>span {background:#eaf0ff}
+.exam-choice.selected {background:#e8edff;border-color:var(--blue)}
+.exam-choice.selected>span {background:var(--blue);color:#fff}
+.exam-choice:hover {border-color:#8094e5}
+.exam-result-grid>div {background:#fff}
+.exam-review-item blockquote,.exam-feedback-card blockquote {background:#f0f3ff}
+.exam-teacher-stats .card:nth-child(3n+1) {border-top:4px solid var(--blue)}
+.exam-teacher-stats .card:nth-child(3n+2) {border-top:4px solid var(--coral)}
+.exam-teacher-stats .card:nth-child(3n) {border-top:4px solid #22ad89}
+
+@media(max-width:760px) {
+  .section-nav-item.active {border-color:#adc0ff;box-shadow:inset 0 -2px 0 var(--coral)}
+  .milestone-track {gap:10px}
+  .milestone {flex-basis:32px;width:32px;height:32px}
+  .milestone-track:before {top:15px}
+  .learning-panel:after {right:-165px;opacity:.75}
+}
+@media(prefers-reduced-motion:reduce) {
+  .btn,.milestone,.lesson-card,.quick-path,.template-card {transition:none}
+  .view-pane {animation:none}
+}
