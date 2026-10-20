@@ -22,6 +22,8 @@ function clickRoute(route){handlers['root:click']({target:{closest(){return {dis
 
 assert.equal(activeSection(),'Home');
 assert.equal(visiblePanes(),1,'Only the selected learning section should be displayed');
+assert.match(root.innerHTML,/class="brand-logo" src="\.\/ambertheory-lockup\.jpg"/,'Header uses the canonical AmberTheory lockup');
+assert.doesNotMatch(root.innerHTML,/class="brand-mark"/,'AT monogram must not replace the canonical logo');
 assert.match(root.innerHTML,/teacher-studio-walkthrough\.mp4/,'Demo stays on the learning home');
 assert.match(root.innerHTML,/class="milestone current"/,'The next unfinished lesson has a milestone');
 assert.equal([...root.innerHTML.matchAll(/class="milestone(?: done| current)?"/g)].length,5,'Milestones use the actual lesson count');

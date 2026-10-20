@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#233995" />
+    <meta name="theme-color" content="#171717" />
     <meta name="description" content="AmberTheory German Studio — an interactive prototype for teacher-guided German learning." />
     <title>German Studio · AmberTheory</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -463,214 +463,227 @@
 
 </style>
     <style>
-/* German Studio visual identity: energetic and purposeful, distinct from AmberTheory's other courses.
-   This layer is presentation-only. Learning, teacher, exam and persistence logic remain unchanged. */
+/* German Studio · AmberTheory's canonical logo and a warm, confident learning palette.
+   Presentation layer only: never use decorative metrics as evidence of proficiency. */
 :root {
-  --ink:#1b2854;
-  --ink-soft:#4c5b7c;
-  --muted:#65728f;
-  --cream:#f5f7ff;
-  --paper:#fff;
-  --line:#dfe5f7;
-  --copper:#eb6658;
-  --copper-dark:#bb403d;
-  --forest:#3049be;
-  --mint:#e1f8f0;
-  --peach:#fff0e9;
-  --gold:#ffd35e;
-  --blue:#3552df;
-  --blue-dark:#233995;
-  --coral:#eb6658;
-  --sun:#ffd35e;
-  --green:#138c70;
-  --shadow:0 14px 42px rgba(32,58,142,.075);
+  --ink:#30232a;
+  --ink-soft:#675963;
+  --muted:#7c6f75;
+  --cream:#fff9f2;
+  --paper:#fffefd;
+  --line:#eedfd6;
+  --copper:#d65c41;
+  --copper-dark:#a83f31;
+  --forest:#7c344b;
+  --mint:#e4f4ea;
+  --peach:#fff0e0;
+  --gold:#f2b25f;
+  --plum:#72344b;
+  --plum-dark:#482536;
+  --coral:#df6252;
+  --amber:#ffc76b;
+  --green:#167e61;
+  --shadow:0 15px 45px rgba(81,45,50,.065);
   background:var(--cream);
 }
-body {background:radial-gradient(circle at 92% 5%,rgba(255,211,94,.12),transparent 28rem),var(--cream)}
-button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible {outline:3px solid var(--coral);outline-offset:3px}
-h1,h2,h3,h4 {font-family:'Space Grotesk','DM Sans',sans-serif;font-weight:700;letter-spacing:-.043em}
+body {background:radial-gradient(circle at 95% 8%,rgba(255,196,94,.16),transparent 31rem),var(--cream)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible {outline:3px solid #d76c3a;outline-offset:3px}
+h1,h2,h3,h4 {font-family:'Space Grotesk','DM Sans',sans-serif;font-weight:700;letter-spacing:-.042em}
 h1 {letter-spacing:-.055em}
 .serif,.mini-phrase,.phrase-de,.exam-passage {font-family:Fraunces,Georgia,serif}
-.eyebrow {color:var(--blue);letter-spacing:.13em}
-.view-link {color:var(--blue-dark)}
-.view-link:hover {color:var(--blue)}
-.card {background:#fff;box-shadow:var(--shadow)}
+.eyebrow {color:#b74e36;letter-spacing:.13em}
+.view-link {color:var(--plum)}
+.view-link:hover {color:#b54b3c}
+.card {background:#fffefd;box-shadow:var(--shadow)}
 .btn {transition:transform .18s,background-color .18s,box-shadow .18s}
 .btn:not(:disabled):hover {transform:translateY(-1px)}
-.btn-primary {background:var(--blue);color:#fff;box-shadow:0 5px 15px rgba(53,82,223,.18)}
-.btn-primary:hover {background:#233eb5}
+.btn-primary {background:var(--plum);color:#fff;box-shadow:0 5px 15px rgba(114,52,75,.13)}
+.btn-primary:hover {background:#59273c}
 .btn-copper {background:var(--coral);color:#fff}
-.btn-copper:hover {background:#d75347}
-.btn-outline {border-color:#bfcaed;background:#fff;color:var(--blue-dark)}
-.btn-outline:hover {background:#eaf0ff}
-.btn-white {background:#fff;color:var(--blue-dark)}
-.btn-white:hover {background:#edf1ff}
-.btn-ghost {color:var(--blue-dark)}
-.tag {background:#e6f8f1;color:#08785e}
-.tag-dark {background:#dff8f0;color:#096b55}
-.tag-warm {background:#fff0df;color:#96502c}
-.tag-muted {background:#eef1fc;color:#4c5d8b}
+.btn-copper:hover {background:#be4a3c}
+.btn-outline {border-color:#dec8c4;background:#fff;color:var(--plum-dark)}
+.btn-outline:hover {background:#fff0e7}
+.btn-white {background:#fff;color:var(--plum-dark)}
+.btn-white:hover {background:#fff3e3}
+.btn-ghost {color:var(--plum)}
+.tag {background:#e4f3e9;color:#126849}
+.tag-dark {background:#daf0e3;color:#115e46}
+.tag-warm {background:#ffead5;color:#96512e}
+.tag-muted {background:#f6efeb;color:#695b64}
 
-/* Clearer, calmer workspace navigation above vibrant content. */
-.site-header {background:rgba(255,255,255,.96);border-bottom:1px solid #dce4fa;box-shadow:0 3px 15px rgba(30,46,104,.045)}
-.brand-mark {background:var(--blue-dark);color:var(--sun);border-radius:13px;font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-.09em}
-.brand-name {color:var(--ink);font-weight:800}
-.brand-sub {color:#55669b}
-.nav-btn {color:#586583}
-.nav-btn:hover {background:#f0f3ff;color:var(--blue-dark)}
-.nav-btn.active {background:var(--blue);color:#fff}
-.top-notice {background:#17275c;color:#e7edff}
-.top-notice span {color:var(--sun)}
-.section-nav {background:#f7f9ff;border-color:#e5e9fa}
-.section-nav-item {color:#536388}
-.section-nav-item:hover {background:#edf1ff;color:var(--blue-dark)}
-.section-nav-item.active {color:var(--blue-dark);background:#e9efff;border-bottom-color:var(--coral)}
-.workspace-hint {color:#617198}
-.mobile-nav {background:#fff;border-color:var(--line)}
-.mobile-nav button {color:#606f95}
-.mobile-nav button.active {color:var(--blue-dark);background:#eaf0ff}
+/* Brand and workspaces. The image is the canonical AmberTheory full lockup. */
+.site-header {background:#171717;border-bottom:1px solid #372829;box-shadow:0 8px 25px rgba(43,23,26,.11)}
+.head-inner {min-height:85px;gap:26px}
+.brand {gap:13px;min-width:0}
+.brand-logo {display:block;width:210px;height:auto;max-width:100%;object-fit:contain;flex-shrink:0}
+.brand-product {display:inline-flex;align-items:center;border-left:1px solid #77604d;padding-left:14px;color:#f4ddbd;text-transform:uppercase;font-size:10px;font-weight:800;letter-spacing:.14em;white-space:nowrap}
+.workspace-hint {color:#d6c1b8}
+.simplified-nav {background:#33262b}
+.simplified-nav .nav-btn {color:#ecd6d1}
+.simplified-nav .nav-btn:hover {background:#503944;color:#fff}
+.simplified-nav .nav-btn.active {background:var(--amber);color:#35202b;box-shadow:0 4px 14px rgba(0,0,0,.12)}
+.top-notice {background:#472431;color:#f6e8e1}
+.top-notice span {color:#ffcf84}
+.section-nav {background:#fff8f0;border-color:#f1dfd3}
+.section-nav-item {color:#705b65}
+.section-nav-item:hover {background:#fff0e2;color:var(--plum-dark)}
+.section-nav-item.active {color:var(--plum-dark);background:#fce8dc;border-bottom-color:#d65c41}
+.mobile-nav {background:#fffaf4;border-color:#ead8ce}
+.mobile-nav button {color:#705863}
+.mobile-nav button.active {color:var(--plum-dark);background:#ffeddb}
 
-/* Student home: a confident next action, evidence-based progress and playful geometry. */
-.learning-panel {background:linear-gradient(125deg,#233995 0%,#3454d9 67%,#4b67ed 100%);isolation:isolate;box-shadow:0 22px 48px rgba(50,74,181,.21)}
-.learning-panel:after {content:"";position:absolute;width:290px;height:290px;right:-105px;top:-95px;bottom:auto;border-radius:50%;border:55px solid rgba(255,211,94,.15);font-size:0;z-index:-1}
-.learning-panel:before {content:"";position:absolute;width:90px;height:90px;right:95px;bottom:-35px;background:var(--coral);transform:rotate(-20deg);border-radius:24px;opacity:.36;z-index:-1}
+/* Student home. Progress is earned; amber denotes the next useful action. */
+.learning-panel {background:linear-gradient(119deg,#4c2a3a 0%,#803f4f 58%,#a65550 100%);isolation:isolate;box-shadow:0 22px 45px rgba(92,43,65,.18)}
+.learning-panel:after {content:"";position:absolute;width:290px;height:290px;right:-105px;top:-95px;bottom:auto;border-radius:50%;border:55px solid rgba(255,198,106,.16);font-size:0;z-index:-1}
+.learning-panel:before {content:"";position:absolute;width:90px;height:90px;right:100px;bottom:-38px;background:#f68d5c;transform:rotate(-22deg);border-radius:24px;opacity:.34;z-index:-1}
 .learning-panel h2 {font-size:clamp(29px,3.3vw,44px);letter-spacing:-.04em;max-width:520px}
-.learning-panel p {color:#e0eaff;font-size:13px}
-.learning-panel .tag-dark {background:#e5edff;color:#213997}
-.learning-panel .progress-shell {height:12px;background:rgba(255,255,255,.23);margin-top:24px}
-.learning-panel .progress-fill {background:linear-gradient(90deg,#ffe38b,var(--sun))}
-.minor-progress {font-size:12px;color:#eef2ff;font-weight:700}
-.learning-panel .btn-white {background:var(--sun);color:#1c2b5a}
-.learning-panel .btn-white:hover {background:#ffe38b}
-.milestone-heading {font-size:10px;text-transform:uppercase;font-weight:800;letter-spacing:.12em;color:#dbe5ff;margin:24px 0 10px}
-.milestone-track {display:flex;justify-content:space-between;gap:12px;align-items:center;position:relative;max-width:430px;margin-bottom:6px}
+.learning-panel p {color:#f6e7ec;font-size:13px}
+.learning-panel .tag-dark {background:#ffe4c2;color:#552937}
+.learning-panel .progress-shell {height:12px;background:rgba(255,255,255,.24);margin-top:24px}
+.learning-panel .progress-fill {background:linear-gradient(90deg,#ffe09b,var(--amber))}
+.minor-progress {font-size:12px;color:#f8eaf0;font-weight:700}
+.learning-panel .btn-white {background:var(--amber);color:#3c2630}
+.learning-panel .btn-white:hover {background:#ffe0a0}
+.milestone-heading {font-size:10px;text-transform:uppercase;font-weight:800;letter-spacing:.12em;color:#f3dfdf;margin:24px 0 10px}
+.milestone-track {display:flex;justify-content:space-between;gap:9px;align-items:center;position:relative;max-width:430px;margin-bottom:6px}
 .milestone-track:before {content:"";position:absolute;top:17px;left:17px;right:17px;height:3px;background:#ffffff55}
-.milestone {z-index:1;flex:0 0 35px;width:35px;height:35px;border-radius:50%;border:2px solid #a9bbfa;background:#2946b5;color:#e4eaff;font-size:12px;font-weight:800;display:grid;place-items:center;box-shadow:0 0 0 4px rgba(47,75,178,.3);transition:transform .18s,background .18s}
-.milestone.done {background:#27b58e;border-color:#b9ffe5;color:#fff}
-.milestone.current {background:var(--sun);border-color:#fff1b4;color:#233995;box-shadow:0 0 0 4px rgba(255,211,94,.22)}
+.milestone {z-index:1;flex:0 0 35px;width:35px;height:35px;border-radius:50%;border:2px solid #e4b8b5;background:#653147;color:#fff1eb;font-size:12px;font-weight:800;display:grid;place-items:center;box-shadow:0 0 0 4px rgba(90,42,60,.25);transition:transform .18s,background .18s}
+.milestone.done {background:#148260;border-color:#c1f2dd;color:#fff}
+.milestone.current {background:var(--amber);border-color:#ffe8bc;color:#482536;box-shadow:0 0 0 4px rgba(255,198,106,.22)}
 .milestone:hover {transform:translateY(-3px)}
 .milestone:focus-visible {outline-color:#fff}
-.next-dot {background:#e9edff;color:var(--blue-dark)}
-.next-item:has(.next-dot:first-child) {transition:border-color .2s}
-.next-item:hover {border-color:#a7b7f6}
-.progress-fill {background:var(--blue)}
-.skill:nth-child(2) .progress-fill {background:var(--coral)}
-.skill:nth-child(3) .progress-fill {background:#12a988}
-.skill:nth-child(4) .progress-fill {background:#c18e10}
+.next-dot {background:#fff1df;color:var(--plum-dark)}
+.next-item {transition:border-color .18s}
+.next-item:hover {border-color:#d9a899}
+.progress-fill {background:var(--coral)}
+.skill:nth-child(2) .progress-fill {background:#e9a638}
+.skill:nth-child(3) .progress-fill {background:#158b70}
+.skill:nth-child(4) .progress-fill {background:#8f5066}
 .skill strong,.stat strong,.teacher-stat strong {font-family:'Space Grotesk',sans-serif;font-weight:700}
-.stat-icon {background:#e9efff}
-.lesson-card {border-top:5px solid var(--blue);background:#fff}
-.lesson-card:nth-child(4n+2) {border-top-color:var(--coral)}
-.lesson-card:nth-child(4n+3) {border-top-color:#edbd38}
-.lesson-card:nth-child(4n) {border-top-color:#19ac89}
-.lesson-card:hover {box-shadow:0 22px 42px rgba(53,82,223,.12)}
-.lesson-number {color:#6577a5}
-.mini-phrase {color:#ad4e4b}
-.quick-path {background:#fff;border-color:#dce5fb;border-top:5px solid var(--blue)}
-.quick-path:nth-child(2) {border-top-color:var(--coral)}
-.quick-path:hover {border-color:var(--blue)}
+.stat-icon {background:#fff0df}
+.lesson-card {border-top:5px solid #d77e3e;background:#fff}
+.lesson-card:nth-child(4n+2) {border-top-color:#cf5b53}
+.lesson-card:nth-child(4n+3) {border-top-color:#7b3d57}
+.lesson-card:nth-child(4n) {border-top-color:#1b9376}
+.lesson-card:hover {box-shadow:0 22px 42px rgba(94,53,63,.12)}
+.lesson-number {color:#96796c}
+.mini-phrase {color:#b34d35}
+.quick-path {background:#fff;border-color:var(--line);border-top:5px solid #d77e3e}
+.quick-path:nth-child(2) {border-top-color:#cd5c58}
+.quick-path:hover {border-color:#ce986f}
 .quick-path strong {font-family:'Space Grotesk',sans-serif;font-weight:700}
-.quick-path small {color:var(--blue-dark)}
-.exam-home-card {position:relative;overflow:hidden;background:linear-gradient(112deg,#ed6057,#d84e77);box-shadow:0 20px 45px rgba(219,79,103,.17)}
+.quick-path small {color:var(--plum)}
+.exam-home-card {position:relative;overflow:hidden;background:linear-gradient(112deg,#c15a39,#a84350);box-shadow:0 20px 45px rgba(184,72,69,.16)}
 .exam-home-card:after {content:"";position:absolute;width:145px;height:145px;border:24px solid #ffffff26;border-radius:50%;right:25%;top:-120px;pointer-events:none}
-.exam-home-card .eyebrow {color:#fff1a6}
-.exam-home-card p {color:#fff0f2}
-.exam-home-card .btn-white {color:#a32952}
-.walkthrough {background:linear-gradient(135deg,#e9efff,#fff9ee);border-color:#d4dffb}
-.walkthrough-duration {background:#dfe7ff;color:#2842a3}
-.walkthrough-player,.walkthrough-player video {background:#192a67}
-.walkthrough-note {color:#556994}
+.exam-home-card .eyebrow {color:#ffdf9d}
+.exam-home-card p {color:#fff0e9}
+.exam-home-card .btn-white {color:#7f3346}
+.walkthrough {background:linear-gradient(135deg,#fff0e1,#f6e8ed);border-color:#eed8cd}
+.walkthrough-duration {background:#ffe1c2;color:#713b3d}
+.walkthrough-player,.walkthrough-player video {background:#271e26}
+.walkthrough-note {color:#82646c}
 
-/* Lesson, practice mission and session journeys. */
-.lesson-banner,.mission-banner,.student-session-hero {background:linear-gradient(125deg,#e7ecff,#fff4dc)}
+/* Lessons, assignments and hands-on work. */
+.lesson-banner,.mission-banner,.student-session-hero {background:linear-gradient(125deg,#fff0d8,#f7e5e6)}
 .mission-banner p,.student-session-hero p {color:var(--ink-soft)}
-.mission-banner-meta {color:var(--blue-dark)}
-.stage-tab.active,.session-outline-step.active {background:var(--blue);color:#fff}
-.session-outline-step.active small {color:#e4eaff}
-.session-outline-step:hover:not(.active) {background:#eef2ff}
-.session-outline-step>span {background:#e9efff;color:var(--blue-dark)}
-.course-sidebar,.phrase-panel,.task-card,.teacher-prompt,.assignment-strip {background:#edf2ff}
-.feature.green {background:#233995}
-.feature.cream {background:#fff0df}
-.mission-icon,.template-glyph,.composer-block-symbol {background:#e5ecff;color:var(--blue-dark)}
-.template-card {background:#fff;border-color:var(--line);border-top:4px solid var(--blue)}
-.template-card:nth-child(2) {border-top-color:var(--coral)}
-.template-card:nth-child(3) {border-top-color:#e7b82d}
-.template-card:hover {border-color:var(--blue);box-shadow:0 18px 35px rgba(53,82,223,.12)}
+.mission-banner-meta {color:var(--plum)}
+.stage-tab.active,.session-outline-step.active {background:var(--plum);color:#fff}
+.session-outline-step.active small {color:#f6e7ec}
+.session-outline-step:hover:not(.active) {background:#fff1e9}
+.session-outline-step>span {background:#ffedda;color:var(--plum-dark)}
+.course-sidebar,.phrase-panel,.task-card,.teacher-prompt,.assignment-strip {background:#fff0e3}
+.feature.green {background:#642b42}
+.feature.cream {background:#fff0d9}
+.mission-icon,.template-glyph,.composer-block-symbol {background:#ffeddb;color:#7d3c49}
+.template-card {background:#fff;border-color:var(--line);border-top:4px solid #d47f3b}
+.template-card:nth-child(2) {border-top-color:#cf5b53}
+.template-card:nth-child(3) {border-top-color:#7e4056}
+.template-card:hover {border-color:#da9c75;box-shadow:0 18px 35px rgba(95,53,65,.12)}
 .template-card strong {font-family:'Space Grotesk',sans-serif;font-weight:700}
-.template-card:nth-child(2) .template-glyph {background:#ffebdf;color:#b64d41}
-.template-card:nth-child(3) .template-glyph {background:#fff4cd;color:#946b07}
-.experience-flow>div {background:#ecf0ff}
-.experience-flow b {background:#dce5ff;color:var(--blue-dark)}
+.template-card:nth-child(2) .template-glyph {background:#ffe8df;color:#a94342}
+.template-card:nth-child(3) .template-glyph {background:#f5e2ed;color:#743d54}
+.experience-flow>div {background:#fff0e5}
+.experience-flow b {background:#ffdfc5;color:#75384b}
 
-/* Teacher workspace: creative energy with clear controls and accessible fields. */
-.teacher-stat {border-top:4px solid var(--blue)}
-.teacher-stat:nth-child(4n+2) {border-top-color:var(--coral)}
-.teacher-stat:nth-child(4n+3) {border-top-color:#efbd40}
-.teacher-stat:nth-child(4n) {border-top-color:#21aa85}
-.avatar {background:#e5ebff;color:var(--blue-dark)}
-.teacher-prompt {background:#eaf0ff}
-.queue-item blockquote {background:#f1f4ff}
-.session-studio-lead {background:linear-gradient(116deg,#233995,#405ee0);box-shadow:0 20px 42px rgba(50,71,159,.16);position:relative;overflow:hidden}
+/* Teacher Studio: creative tools and readable data. */
+.teacher-stat {border-top:4px solid #ce843d}
+.teacher-stat:nth-child(4n+2) {border-top-color:#cf5b53}
+.teacher-stat:nth-child(4n+3) {border-top-color:#7e4056}
+.teacher-stat:nth-child(4n) {border-top-color:#218b69}
+.avatar {background:#f8e4dd;color:#70394b}
+.queue-item blockquote {background:#fff3e9}
+.session-studio-lead {background:linear-gradient(116deg,#49283c,#984c55);box-shadow:0 20px 42px rgba(96,44,63,.16);position:relative;overflow:hidden}
 .session-studio-lead:after {content:"";position:absolute;right:17%;top:-75px;width:200px;height:200px;border:40px solid #ffffff17;border-radius:50%;pointer-events:none}
-.session-studio-lead span {color:var(--sun)}
+.session-studio-lead span {color:#ffcc81}
 .session-studio-lead strong {font-family:'Space Grotesk',sans-serif;font-weight:700}
-.session-studio-lead p {color:#e1e9ff}
-.session-studio-lead .btn {background:var(--sun);color:#20316e;z-index:1}
-.session-shelf-metrics {color:var(--blue-dark)}
-.composer-meta-grid,.composer-palette,.exam-builder {background:#eef2ff;border-color:#d7e1fc}
+.session-studio-lead p {color:#f9e7ef}
+.session-studio-lead .btn {background:var(--amber);color:#492a3b;z-index:1}
+.session-shelf-metrics {color:var(--plum)}
+.composer-meta-grid,.composer-palette,.exam-builder {background:#fff1e8;border-color:#ead9ce}
 .composer-field {color:var(--ink-soft)}
 .composer-block {background:#fff}
 .composer-palette>p,.composer-palette-foot,.composer-note {color:var(--ink-soft)}
-.composer-palette-item {background:#fff;border-color:#dce4fb}
-.composer-palette-item>span {background:#e5ecff;color:var(--blue-dark)}
-.composer-palette-item>b {color:var(--blue)}
-.composer-palette-item:hover {border-color:var(--blue)}
-.mini-action {background:#edf1ff;border-color:#d9e2fa;color:var(--blue-dark)}
-.mini-action:hover {background:#dce6ff}
-.composer-block-fields input,.composer-field input,.composer-field textarea,.composer-field select {border-color:#cfd9f3}
+.composer-palette-item {background:#fff;border-color:#eddad1}
+.composer-palette-item>span {background:#ffebd8;color:var(--plum)}
+.composer-palette-item>b {color:var(--plum)}
+.composer-palette-item:hover {border-color:#c88a77}
+.mini-action {background:#fff2e9;border-color:#eadad4;color:var(--plum)}
+.mini-action:hover {background:#ffe7d7}
+.composer-block-fields input,.composer-field input,.composer-field textarea,.composer-field select {border-color:#e4d0ca}
 
-/* Exam progress and question states remain recognizable, never decorative alone. */
-.exam-hero {background:linear-gradient(112deg,#e9efff 0%,#fff2df 100%)}
+/* Exam preparation: strong selected states and readable practice content. */
+.exam-hero {background:linear-gradient(112deg,#ffedda 0%,#f7e2e3 100%)}
 .exam-hero p {color:var(--ink-soft)}
-.exam-hero-symbol {color:#b1c1f4}
-.exam-provider,.exam-level {background:#f8faff}
+.exam-hero-symbol {color:#dca588}
+.exam-provider,.exam-level {background:#fffaf6}
 .exam-provider strong {font-family:'Space Grotesk',sans-serif;font-weight:700}
-.exam-provider.active {border-color:var(--blue);background:#e7edff;box-shadow:inset 0 0 0 1px var(--blue)}
-.exam-provider:hover {border-color:#839af0}
-.exam-level.active {background:var(--blue);border-color:var(--blue)}
-.exam-level.active small {color:#e2e9ff}
-.exam-main-cta {background:linear-gradient(116deg,#273eae,#425ce1);box-shadow:0 18px 42px rgba(45,70,179,.15)}
-.exam-main-cta .eyebrow {color:var(--sun)}
-.exam-main-cta p,.exam-cta-meta {color:#e3eaff}
-.exam-skill-icon {background:#e5ecff;color:var(--blue-dark)}
-.exam-skill:nth-child(2) .exam-skill-icon {background:#fff0e9;color:#ba4b42}
-.exam-skill:nth-child(3) .exam-skill-icon {background:#fff5d8;color:#8b6615}
-.exam-skill:nth-child(4) .exam-skill-icon {background:#e4f8f0;color:#08745d}
-.exam-attempt-head,.exam-result-hero {background:#e8efff}
-.exam-timer strong {color:var(--blue-dark)}
-.exam-step {background:#e9edfa;color:#536589}
-.exam-step.active {background:var(--blue);color:#fff}
-.exam-step.answered:not(.active) {background:#dcf5e9;color:#08745d}
-.exam-audio {background:#edf2ff}
-.exam-passage {background:#fff4e4;border-left-color:var(--coral)}
-.exam-choice {border-color:#d9e1f5}
-.exam-choice>span {background:#eaf0ff}
-.exam-choice.selected {background:#e8edff;border-color:var(--blue)}
-.exam-choice.selected>span {background:var(--blue);color:#fff}
-.exam-choice:hover {border-color:#8094e5}
+.exam-provider.active {border-color:#9e4a4e;background:#fae7e6;box-shadow:inset 0 0 0 1px #9e4a4e}
+.exam-provider:hover {border-color:#c78d82}
+.exam-level.active {background:var(--plum);border-color:var(--plum)}
+.exam-level.active small {color:#f8e7ef}
+.exam-main-cta {background:linear-gradient(116deg,#4d2d42,#994c57);box-shadow:0 18px 42px rgba(96,45,65,.15)}
+.exam-main-cta .eyebrow {color:#ffcd80}
+.exam-main-cta p,.exam-cta-meta {color:#f8e6ed}
+.exam-skill-icon {background:#ffe6d5;color:#853f44}
+.exam-skill:nth-child(2) .exam-skill-icon {background:#ffeadf;color:#ab4740}
+.exam-skill:nth-child(3) .exam-skill-icon {background:#fff0c9;color:#815927}
+.exam-skill:nth-child(4) .exam-skill-icon {background:#e2f5ea;color:#146c53}
+.exam-attempt-head,.exam-result-hero {background:#fff0e2}
+.exam-timer strong {color:var(--plum-dark)}
+.exam-step {background:#f6eae5;color:#735b68}
+.exam-step.active {background:var(--plum);color:#fff}
+.exam-step.answered:not(.active) {background:#dff2e5;color:#12674a}
+.exam-audio {background:#fff3e6}
+.exam-passage {background:#fff2e2;border-left-color:#d66b45}
+.exam-choice {border-color:#eadbd5}
+.exam-choice>span {background:#f9eee8}
+.exam-choice.selected {background:#fbe8e6;border-color:var(--plum)}
+.exam-choice.selected>span {background:var(--plum);color:#fff}
+.exam-choice:hover {border-color:#c8928e}
 .exam-result-grid>div {background:#fff}
-.exam-review-item blockquote,.exam-feedback-card blockquote {background:#f0f3ff}
-.exam-teacher-stats .card:nth-child(3n+1) {border-top:4px solid var(--blue)}
-.exam-teacher-stats .card:nth-child(3n+2) {border-top:4px solid var(--coral)}
-.exam-teacher-stats .card:nth-child(3n) {border-top:4px solid #22ad89}
+.exam-review-item blockquote,.exam-feedback-card blockquote {background:#fff3e8}
+.exam-teacher-stats .card:nth-child(3n+1) {border-top:4px solid #ce843d}
+.exam-teacher-stats .card:nth-child(3n+2) {border-top:4px solid #cf5b53}
+.exam-teacher-stats .card:nth-child(3n) {border-top:4px solid #208a6a}
 
+@media(max-width:960px) {
+  .brand-logo {width:180px}
+  .brand-product {font-size:9px;padding-left:11px}
+}
 @media(max-width:760px) {
-  .section-nav-item.active {border-color:#adc0ff;box-shadow:inset 0 -2px 0 var(--coral)}
-  .milestone-track {gap:10px}
+  .head-inner {min-height:73px}
+  .brand-logo {width:175px}
+  .brand-product {font-size:9px;letter-spacing:.08em}
+  .simplified-nav {display:none}
+  .section-nav-item.active {border-color:#e7b8a4;box-shadow:inset 0 -2px 0 #d65c41}
+  .milestone-track {gap:7px}
   .milestone {flex-basis:32px;width:32px;height:32px}
   .milestone-track:before {top:15px}
   .learning-panel:after {right:-165px;opacity:.75}
+}
+@media(max-width:390px) {
+  .brand-logo {width:145px}
+  .brand-product {font-size:8px;padding-left:8px}
 }
 @media(prefers-reduced-motion:reduce) {
   .btn,.milestone,.lesson-card,.quick-path,.template-card {transition:none}
@@ -1083,7 +1096,7 @@ window.GERMAN_EXAM_DATA = Object.freeze({
   function renderShell(content){
     const isTeacher=ui.route==='teacher';
     root.innerHTML=`<div class="top-notice"><span>Interactive concept preview</span> Sample learners · Local progress · No real accounts</div>
-      <header class="site-header"><div class="head-inner"><a class="brand" href="#student" aria-label="AmberTheory German Studio learning home"><span class="brand-mark">At</span><span class="brand-text"><span class="brand-name">AmberTheory</span><span class="brand-sub">German Studio</span></span></a>
+      <header class="site-header"><div class="head-inner"><a class="brand" href="#student" aria-label="AmberTheory German Studio learning home"><img class="brand-logo" src="./dist/ambertheory-lockup.jpg" alt="AmberTheory" width="210" height="65" /><span class="brand-product">German Studio</span></a>
       <nav class="primary-nav simplified-nav" aria-label="Choose your workspace">${navButton('student','Learning')}${navButton('teacher','Teacher Studio')}</nav><span class="workspace-hint">${isTeacher?'Design · Assign · Review':'Learn · Practise · Progress'}</span></div>${sectionNav()}</header>
       <nav class="mobile-nav simplified-mobile-nav" aria-label="Choose your workspace"><button type="button" data-route="student" class="${['student','lesson','experience','session','exam'].includes(ui.route)?'active':''}"><span>▤</span>Learning</button><button type="button" data-route="teacher" class="${isTeacher?'active':''}"><span>◎</span>Teacher Studio</button></nav>
       <main class="shell page">${content}</main><footer class="footer"><div class="shell footer-inner"><span>AmberTheory · German Studio concept · Teacher-led learning</span><div class="footer-links"><a href="#sources">Open materials & credits</a><span>Demo only · No real accounts</span></div></div></footer>`;

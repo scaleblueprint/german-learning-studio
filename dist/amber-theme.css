@@ -1,0 +1,226 @@
+/* German Studio · AmberTheory's canonical logo and a warm, confident learning palette.
+   Presentation layer only: never use decorative metrics as evidence of proficiency. */
+:root {
+  --ink:#30232a;
+  --ink-soft:#675963;
+  --muted:#7c6f75;
+  --cream:#fff9f2;
+  --paper:#fffefd;
+  --line:#eedfd6;
+  --copper:#d65c41;
+  --copper-dark:#a83f31;
+  --forest:#7c344b;
+  --mint:#e4f4ea;
+  --peach:#fff0e0;
+  --gold:#f2b25f;
+  --plum:#72344b;
+  --plum-dark:#482536;
+  --coral:#df6252;
+  --amber:#ffc76b;
+  --green:#167e61;
+  --shadow:0 15px 45px rgba(81,45,50,.065);
+  background:var(--cream);
+}
+body {background:radial-gradient(circle at 95% 8%,rgba(255,196,94,.16),transparent 31rem),var(--cream)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible {outline:3px solid #d76c3a;outline-offset:3px}
+h1,h2,h3,h4 {font-family:'Space Grotesk','DM Sans',sans-serif;font-weight:700;letter-spacing:-.042em}
+h1 {letter-spacing:-.055em}
+.serif,.mini-phrase,.phrase-de,.exam-passage {font-family:Fraunces,Georgia,serif}
+.eyebrow {color:#b74e36;letter-spacing:.13em}
+.view-link {color:var(--plum)}
+.view-link:hover {color:#b54b3c}
+.card {background:#fffefd;box-shadow:var(--shadow)}
+.btn {transition:transform .18s,background-color .18s,box-shadow .18s}
+.btn:not(:disabled):hover {transform:translateY(-1px)}
+.btn-primary {background:var(--plum);color:#fff;box-shadow:0 5px 15px rgba(114,52,75,.13)}
+.btn-primary:hover {background:#59273c}
+.btn-copper {background:var(--coral);color:#fff}
+.btn-copper:hover {background:#be4a3c}
+.btn-outline {border-color:#dec8c4;background:#fff;color:var(--plum-dark)}
+.btn-outline:hover {background:#fff0e7}
+.btn-white {background:#fff;color:var(--plum-dark)}
+.btn-white:hover {background:#fff3e3}
+.btn-ghost {color:var(--plum)}
+.tag {background:#e4f3e9;color:#126849}
+.tag-dark {background:#daf0e3;color:#115e46}
+.tag-warm {background:#ffead5;color:#96512e}
+.tag-muted {background:#f6efeb;color:#695b64}
+
+/* Brand and workspaces. The image is the canonical AmberTheory full lockup. */
+.site-header {background:#171717;border-bottom:1px solid #372829;box-shadow:0 8px 25px rgba(43,23,26,.11)}
+.head-inner {min-height:85px;gap:26px}
+.brand {gap:13px;min-width:0}
+.brand-logo {display:block;width:210px;height:auto;max-width:100%;object-fit:contain;flex-shrink:0}
+.brand-product {display:inline-flex;align-items:center;border-left:1px solid #77604d;padding-left:14px;color:#f4ddbd;text-transform:uppercase;font-size:10px;font-weight:800;letter-spacing:.14em;white-space:nowrap}
+.workspace-hint {color:#d6c1b8}
+.simplified-nav {background:#33262b}
+.simplified-nav .nav-btn {color:#ecd6d1}
+.simplified-nav .nav-btn:hover {background:#503944;color:#fff}
+.simplified-nav .nav-btn.active {background:var(--amber);color:#35202b;box-shadow:0 4px 14px rgba(0,0,0,.12)}
+.top-notice {background:#472431;color:#f6e8e1}
+.top-notice span {color:#ffcf84}
+.section-nav {background:#fff8f0;border-color:#f1dfd3}
+.section-nav-item {color:#705b65}
+.section-nav-item:hover {background:#fff0e2;color:var(--plum-dark)}
+.section-nav-item.active {color:var(--plum-dark);background:#fce8dc;border-bottom-color:#d65c41}
+.mobile-nav {background:#fffaf4;border-color:#ead8ce}
+.mobile-nav button {color:#705863}
+.mobile-nav button.active {color:var(--plum-dark);background:#ffeddb}
+
+/* Student home. Progress is earned; amber denotes the next useful action. */
+.learning-panel {background:linear-gradient(119deg,#4c2a3a 0%,#803f4f 58%,#a65550 100%);isolation:isolate;box-shadow:0 22px 45px rgba(92,43,65,.18)}
+.learning-panel:after {content:"";position:absolute;width:290px;height:290px;right:-105px;top:-95px;bottom:auto;border-radius:50%;border:55px solid rgba(255,198,106,.16);font-size:0;z-index:-1}
+.learning-panel:before {content:"";position:absolute;width:90px;height:90px;right:100px;bottom:-38px;background:#f68d5c;transform:rotate(-22deg);border-radius:24px;opacity:.34;z-index:-1}
+.learning-panel h2 {font-size:clamp(29px,3.3vw,44px);letter-spacing:-.04em;max-width:520px}
+.learning-panel p {color:#f6e7ec;font-size:13px}
+.learning-panel .tag-dark {background:#ffe4c2;color:#552937}
+.learning-panel .progress-shell {height:12px;background:rgba(255,255,255,.24);margin-top:24px}
+.learning-panel .progress-fill {background:linear-gradient(90deg,#ffe09b,var(--amber))}
+.minor-progress {font-size:12px;color:#f8eaf0;font-weight:700}
+.learning-panel .btn-white {background:var(--amber);color:#3c2630}
+.learning-panel .btn-white:hover {background:#ffe0a0}
+.milestone-heading {font-size:10px;text-transform:uppercase;font-weight:800;letter-spacing:.12em;color:#f3dfdf;margin:24px 0 10px}
+.milestone-track {display:flex;justify-content:space-between;gap:9px;align-items:center;position:relative;max-width:430px;margin-bottom:6px}
+.milestone-track:before {content:"";position:absolute;top:17px;left:17px;right:17px;height:3px;background:#ffffff55}
+.milestone {z-index:1;flex:0 0 35px;width:35px;height:35px;border-radius:50%;border:2px solid #e4b8b5;background:#653147;color:#fff1eb;font-size:12px;font-weight:800;display:grid;place-items:center;box-shadow:0 0 0 4px rgba(90,42,60,.25);transition:transform .18s,background .18s}
+.milestone.done {background:#148260;border-color:#c1f2dd;color:#fff}
+.milestone.current {background:var(--amber);border-color:#ffe8bc;color:#482536;box-shadow:0 0 0 4px rgba(255,198,106,.22)}
+.milestone:hover {transform:translateY(-3px)}
+.milestone:focus-visible {outline-color:#fff}
+.next-dot {background:#fff1df;color:var(--plum-dark)}
+.next-item {transition:border-color .18s}
+.next-item:hover {border-color:#d9a899}
+.progress-fill {background:var(--coral)}
+.skill:nth-child(2) .progress-fill {background:#e9a638}
+.skill:nth-child(3) .progress-fill {background:#158b70}
+.skill:nth-child(4) .progress-fill {background:#8f5066}
+.skill strong,.stat strong,.teacher-stat strong {font-family:'Space Grotesk',sans-serif;font-weight:700}
+.stat-icon {background:#fff0df}
+.lesson-card {border-top:5px solid #d77e3e;background:#fff}
+.lesson-card:nth-child(4n+2) {border-top-color:#cf5b53}
+.lesson-card:nth-child(4n+3) {border-top-color:#7b3d57}
+.lesson-card:nth-child(4n) {border-top-color:#1b9376}
+.lesson-card:hover {box-shadow:0 22px 42px rgba(94,53,63,.12)}
+.lesson-number {color:#96796c}
+.mini-phrase {color:#b34d35}
+.quick-path {background:#fff;border-color:var(--line);border-top:5px solid #d77e3e}
+.quick-path:nth-child(2) {border-top-color:#cd5c58}
+.quick-path:hover {border-color:#ce986f}
+.quick-path strong {font-family:'Space Grotesk',sans-serif;font-weight:700}
+.quick-path small {color:var(--plum)}
+.exam-home-card {position:relative;overflow:hidden;background:linear-gradient(112deg,#c15a39,#a84350);box-shadow:0 20px 45px rgba(184,72,69,.16)}
+.exam-home-card:after {content:"";position:absolute;width:145px;height:145px;border:24px solid #ffffff26;border-radius:50%;right:25%;top:-120px;pointer-events:none}
+.exam-home-card .eyebrow {color:#ffdf9d}
+.exam-home-card p {color:#fff0e9}
+.exam-home-card .btn-white {color:#7f3346}
+.walkthrough {background:linear-gradient(135deg,#fff0e1,#f6e8ed);border-color:#eed8cd}
+.walkthrough-duration {background:#ffe1c2;color:#713b3d}
+.walkthrough-player,.walkthrough-player video {background:#271e26}
+.walkthrough-note {color:#82646c}
+
+/* Lessons, assignments and hands-on work. */
+.lesson-banner,.mission-banner,.student-session-hero {background:linear-gradient(125deg,#fff0d8,#f7e5e6)}
+.mission-banner p,.student-session-hero p {color:var(--ink-soft)}
+.mission-banner-meta {color:var(--plum)}
+.stage-tab.active,.session-outline-step.active {background:var(--plum);color:#fff}
+.session-outline-step.active small {color:#f6e7ec}
+.session-outline-step:hover:not(.active) {background:#fff1e9}
+.session-outline-step>span {background:#ffedda;color:var(--plum-dark)}
+.course-sidebar,.phrase-panel,.task-card,.teacher-prompt,.assignment-strip {background:#fff0e3}
+.feature.green {background:#642b42}
+.feature.cream {background:#fff0d9}
+.mission-icon,.template-glyph,.composer-block-symbol {background:#ffeddb;color:#7d3c49}
+.template-card {background:#fff;border-color:var(--line);border-top:4px solid #d47f3b}
+.template-card:nth-child(2) {border-top-color:#cf5b53}
+.template-card:nth-child(3) {border-top-color:#7e4056}
+.template-card:hover {border-color:#da9c75;box-shadow:0 18px 35px rgba(95,53,65,.12)}
+.template-card strong {font-family:'Space Grotesk',sans-serif;font-weight:700}
+.template-card:nth-child(2) .template-glyph {background:#ffe8df;color:#a94342}
+.template-card:nth-child(3) .template-glyph {background:#f5e2ed;color:#743d54}
+.experience-flow>div {background:#fff0e5}
+.experience-flow b {background:#ffdfc5;color:#75384b}
+
+/* Teacher Studio: creative tools and readable data. */
+.teacher-stat {border-top:4px solid #ce843d}
+.teacher-stat:nth-child(4n+2) {border-top-color:#cf5b53}
+.teacher-stat:nth-child(4n+3) {border-top-color:#7e4056}
+.teacher-stat:nth-child(4n) {border-top-color:#218b69}
+.avatar {background:#f8e4dd;color:#70394b}
+.queue-item blockquote {background:#fff3e9}
+.session-studio-lead {background:linear-gradient(116deg,#49283c,#984c55);box-shadow:0 20px 42px rgba(96,44,63,.16);position:relative;overflow:hidden}
+.session-studio-lead:after {content:"";position:absolute;right:17%;top:-75px;width:200px;height:200px;border:40px solid #ffffff17;border-radius:50%;pointer-events:none}
+.session-studio-lead span {color:#ffcc81}
+.session-studio-lead strong {font-family:'Space Grotesk',sans-serif;font-weight:700}
+.session-studio-lead p {color:#f9e7ef}
+.session-studio-lead .btn {background:var(--amber);color:#492a3b;z-index:1}
+.session-shelf-metrics {color:var(--plum)}
+.composer-meta-grid,.composer-palette,.exam-builder {background:#fff1e8;border-color:#ead9ce}
+.composer-field {color:var(--ink-soft)}
+.composer-block {background:#fff}
+.composer-palette>p,.composer-palette-foot,.composer-note {color:var(--ink-soft)}
+.composer-palette-item {background:#fff;border-color:#eddad1}
+.composer-palette-item>span {background:#ffebd8;color:var(--plum)}
+.composer-palette-item>b {color:var(--plum)}
+.composer-palette-item:hover {border-color:#c88a77}
+.mini-action {background:#fff2e9;border-color:#eadad4;color:var(--plum)}
+.mini-action:hover {background:#ffe7d7}
+.composer-block-fields input,.composer-field input,.composer-field textarea,.composer-field select {border-color:#e4d0ca}
+
+/* Exam preparation: strong selected states and readable practice content. */
+.exam-hero {background:linear-gradient(112deg,#ffedda 0%,#f7e2e3 100%)}
+.exam-hero p {color:var(--ink-soft)}
+.exam-hero-symbol {color:#dca588}
+.exam-provider,.exam-level {background:#fffaf6}
+.exam-provider strong {font-family:'Space Grotesk',sans-serif;font-weight:700}
+.exam-provider.active {border-color:#9e4a4e;background:#fae7e6;box-shadow:inset 0 0 0 1px #9e4a4e}
+.exam-provider:hover {border-color:#c78d82}
+.exam-level.active {background:var(--plum);border-color:var(--plum)}
+.exam-level.active small {color:#f8e7ef}
+.exam-main-cta {background:linear-gradient(116deg,#4d2d42,#994c57);box-shadow:0 18px 42px rgba(96,45,65,.15)}
+.exam-main-cta .eyebrow {color:#ffcd80}
+.exam-main-cta p,.exam-cta-meta {color:#f8e6ed}
+.exam-skill-icon {background:#ffe6d5;color:#853f44}
+.exam-skill:nth-child(2) .exam-skill-icon {background:#ffeadf;color:#ab4740}
+.exam-skill:nth-child(3) .exam-skill-icon {background:#fff0c9;color:#815927}
+.exam-skill:nth-child(4) .exam-skill-icon {background:#e2f5ea;color:#146c53}
+.exam-attempt-head,.exam-result-hero {background:#fff0e2}
+.exam-timer strong {color:var(--plum-dark)}
+.exam-step {background:#f6eae5;color:#735b68}
+.exam-step.active {background:var(--plum);color:#fff}
+.exam-step.answered:not(.active) {background:#dff2e5;color:#12674a}
+.exam-audio {background:#fff3e6}
+.exam-passage {background:#fff2e2;border-left-color:#d66b45}
+.exam-choice {border-color:#eadbd5}
+.exam-choice>span {background:#f9eee8}
+.exam-choice.selected {background:#fbe8e6;border-color:var(--plum)}
+.exam-choice.selected>span {background:var(--plum);color:#fff}
+.exam-choice:hover {border-color:#c8928e}
+.exam-result-grid>div {background:#fff}
+.exam-review-item blockquote,.exam-feedback-card blockquote {background:#fff3e8}
+.exam-teacher-stats .card:nth-child(3n+1) {border-top:4px solid #ce843d}
+.exam-teacher-stats .card:nth-child(3n+2) {border-top:4px solid #cf5b53}
+.exam-teacher-stats .card:nth-child(3n) {border-top:4px solid #208a6a}
+
+@media(max-width:960px) {
+  .brand-logo {width:180px}
+  .brand-product {font-size:9px;padding-left:11px}
+}
+@media(max-width:760px) {
+  .head-inner {min-height:73px}
+  .brand-logo {width:175px}
+  .brand-product {font-size:9px;letter-spacing:.08em}
+  .simplified-nav {display:none}
+  .section-nav-item.active {border-color:#e7b8a4;box-shadow:inset 0 -2px 0 #d65c41}
+  .milestone-track {gap:7px}
+  .milestone {flex-basis:32px;width:32px;height:32px}
+  .milestone-track:before {top:15px}
+  .learning-panel:after {right:-165px;opacity:.75}
+}
+@media(max-width:390px) {
+  .brand-logo {width:145px}
+  .brand-product {font-size:8px;padding-left:8px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .btn,.milestone,.lesson-card,.quick-path,.template-card {transition:none}
+  .view-pane {animation:none}
+}
