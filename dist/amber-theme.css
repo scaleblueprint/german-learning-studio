@@ -405,3 +405,19 @@ h1 {letter-spacing:-.055em}
 @media(max-width:1080px){.teacher-planner-layout{grid-template-columns:210px minmax(0,1fr)}.learner-book-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:770px){.teacher-planner{padding:14px}.teacher-planner-head{flex-direction:column}.teacher-planner-head>.tag{align-self:flex-start}.teacher-planner-layout{grid-template-columns:1fr}.teacher-chapter-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:14px}.teacher-chapter-list h3,.teacher-chapter-list p{grid-column:1/-1}.teacher-chapter-choice{grid-template-columns:24px 1fr;min-width:0}.teacher-chapter-choice small{display:none}.teacher-planner-detail{padding:16px}}
 @media(max-width:540px){.learner-book-head{padding:24px 19px}.learner-book-grid{grid-template-columns:1fr}.learner-book-level-title{flex-wrap:wrap}.teacher-chapter-list{grid-template-columns:repeat(2,minmax(0,1fr))}.teacher-chapter-choice strong{font-size:11px;overflow-wrap:anywhere}.teacher-planner-stats{grid-template-columns:1fr 1fr}.teacher-planner-stats>div:last-child{grid-column:1/-1}.teacher-planner-panels{grid-template-columns:1fr}.teacher-planner-actions .btn{width:100%}}
+
+/* PDF-reviewed original A1.1 curriculum: accessible source chips, guided lesson links and richer theory */
+.learner-book-status{white-space:normal;text-align:right;max-width:70%;line-height:1.35;border-radius:9px}
+.learner-book-lesson-links{display:flex;flex-direction:column;align-items:stretch;gap:7px;margin-top:5px;border-top:1px solid #efdfd9;padding-top:12px}
+.learner-book-lesson-links .view-link{width:100%;text-align:left;line-height:1.4;font-size:12px;white-space:normal;background:#fff8f2;border:1px solid #f0dfd2;border-radius:9px;padding:10px 12px;color:#72394e;cursor:pointer}
+.learner-book-lesson-links .view-link:hover,.learner-book-lesson-links .view-link:focus-visible{background:#f7e4d7;outline-offset:2px}
+.a11-theory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:18px 0 21px}
+.a11-theory-card{min-width:0;background:#fff8f1;border:1px solid #efd8c8;border-radius:14px;padding:18px}
+.a11-theory-card h3{font-size:16px;line-height:1.35;margin:0 0 11px;color:#542f43}
+.a11-theory-card p{font-size:14px;line-height:1.75;color:#594d50;margin:0}
+.lesson-source-note{margin:10px 0 0!important;font-size:11px!important;line-height:1.6!important;color:#83606f!important;max-width:640px}
+.teacher-planner-panel ol{padding-left:19px;line-height:1.8;font-size:12px;color:#64545c}
+.course-sidebar{max-height:calc(100vh - 105px);overflow-y:auto;scrollbar-width:thin}
+.milestone-track{flex-wrap:wrap;gap:5px}
+@media(max-width:800px){.a11-theory-grid{grid-template-columns:1fr}.course-sidebar{max-height:none;overflow:visible}}
+@media(max-width:540px){.learner-book-lesson-links .view-link{padding:13px}.a11-theory-card{padding:15px}.a11-theory-card p{font-size:13px}}
