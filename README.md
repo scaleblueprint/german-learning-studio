@@ -4,6 +4,19 @@ A portable, buildless static prototype demonstrating the student-facing **First 
 
 For an easily shareable, single-file demonstration, open `german-studio-demo.html` (generated with `node tools/bundle.mjs`). All app logic and styles are embedded in that file; German pronunciation uses built-in browser speech services.
 
+## Original visual learning experience (22 October 2026)
+
+The course sequence uses the **original Netzwerk A1.1 edition**, not *Netzwerk neu*. All six A1.1 chapters are accessible to learners in Kursbuch → Arbeitsbuch → Plattform order. The five older standalone demos and unverified A1.2 previews are excluded from the current course path.
+
+After a visual review of all ten pages of Klett's original-edition **Chapter 5 public sample** (the teacher's scanned source had previously been indexed for all 166 PDF pages), the first minimalist drawings were augmented with:
+
+- **18 credited, free-use Pexels photographs**, three topic-matched photographs per chapter (each credit links to its photographer's photo page; license: https://www.pexels.com/license/). Assets are hotlinked from Pexels and require network access; use caching/localisation if Pexels blocks access in your classroom.
+- **72 newly authored, sentence-level German examples** with English glosses, contextual usage labels and browser German text-to-speech; **36 comparison patterns** for forms and grammar, 3 per guided lesson.
+- **12 original teaching artifacts**, one per guided lesson: formal/informal speech bubbles, a contact card, weekly schedule, workplace profile, city place board, street route, illustrated grocery list, café menu, analogue clocks, appointment calendar, invitation and restaurant receipt.
+- Material appears **inside the guided lessons** in their Discover and Understand stages, as well as in chapter cards, workbook landing and teacher chapter planning. The original 48 workbook checks, two Plattform revisions and teacher chapter session / assessment tracking remain.
+
+**Copyright and QA boundaries:** All sentences, role cards, charts, captions and teaching artifacts are original practice, not copied from the book. The public sample's design was used to understand the *variety of teaching media*, not to copy its art or protected exercises. A qualified German teacher must validate every German sentence, example, worksheet and assessment before student release. Direct CDN availability and authentic browser layout on mobile still warrant an end-user QA pass. This is an on-device demo, not a real multi-learner tracking platform.
+
 ## Running
 
 Serve `dist/` using any static file server (for example, `python3 -m http.server 8000 --directory dist`) or upload it to a static host. `index.html` can be opened directly, although local file handling may vary by browser.
