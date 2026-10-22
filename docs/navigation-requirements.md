@@ -13,7 +13,7 @@ Use three clear top-level destinations: **Home** (public landing page), **Studen
 | Menu | Route | Contents |
 | --- | --- | --- |
 | My progress | `#student` | Current progress, next lessons, exam entry and shortcuts to learning activities |
-| Lessons | `#student/lessons` | Learner-facing Netzwerk A1.1/A1.2 journey: 12 chapter goals clearly marked in preparation, plus five currently playable introduction lessons |
+| Lessons | `#student/lessons` | Learner-facing Netzwerk neu A1.1/A1.2 journey: 12 chapter goals clearly marked in preparation, plus five currently playable introduction lessons |
 | Practice | `#student/practice` | Assigned sessions, teacher-created missions, short assignment, feedback and indicative skills |
 | Exam preparation | `#exam` | Goethe/telc A1 original practice, mocks, results and tips |
 
