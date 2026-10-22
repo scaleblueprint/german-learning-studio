@@ -496,6 +496,18 @@
 @media(max-width:780px){.artifact-conversations{grid-template-columns:1fr}.artifact-profile,.artifact-week-calendar{grid-template-columns:repeat(2,minmax(0,1fr))}.artifact-profile>div,.artifact-week-calendar>div{border-bottom:1px solid #cbdccc}.artifact-city-board,.artifact-basket{grid-template-columns:repeat(2,minmax(0,1fr))}.artifact-clocks{grid-template-columns:1fr}.artifact-clock svg{max-width:155px}.artifact-roadline{flex-wrap:wrap}.learning-object-canvas{padding:14px}}
 @media(max-width:480px){.lesson-visual-object>header{padding:19px}.learning-object-sentence{padding:13px}.artifact-price-menu>div{grid-template-columns:1fr auto}.artifact-price-menu>div span{grid-column:1}.artifact-invitation{padding:19px}.artifact-invitation>div{grid-template-columns:78px 1fr}.artifact-roadline span{font-size:11px}.artifact-roadline>div{font-size:23px}}
 
+/* Image-led A1.1 chapter practice */
+.photo-practice{margin:32px 0}.photo-practice>.visual-section-title{margin-bottom:18px}
+.photo-practice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.photo-practice-card{min-width:0;overflow:hidden}.photo-practice-card figure{margin:0;background:#ecede8}
+.photo-practice-card img{display:block;width:100%;height:230px;object-fit:cover}
+.photo-practice-card figcaption{padding:9px 16px;font-size:12px;color:#45514a}
+.photo-practice-card figcaption a{color:inherit;text-decoration:underline}
+.photo-practice-content{padding:18px}.photo-practice-content h3{font-size:18px;line-height:1.4;margin:8px 0 16px}
+.photo-practice-choices{display:grid;gap:8px;margin-bottom:15px}.photo-practice-choices .choice{text-align:left;min-height:46px}
+.photo-practice-content .feedback .view-link{display:block;margin-top:8px}
+@media(max-width:720px){.photo-practice-grid{grid-template-columns:1fr}.photo-practice-card img{height:215px}}
+
 </style>
     <style>
 /* German Studio · AmberTheory's canonical logo and a warm, confident learning palette.
@@ -5230,6 +5242,50 @@ window.GERMAN_WORKBOOK = {
 
 </script>
 <script>
+/* Original image-led reinforcement, separate from protected textbook exercises. */
+(()=>{
+ const indices={1:[0,1],2:[0,1],3:[1,2],4:[0,1],5:[0,2],6:[0,1]};
+ const data=()=>window.GERMAN_RICH_SCENES?.data?.chapters||{};
+ const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const get=(chapter,index)=>{
+   const n=Number(chapter),i=Number(index),photo=data()[n]?.[indices[n]?.[i]];
+   if(!photo||!Number.isInteger(i)||i<0||i>1)return null;
+   const wrong1=data()[(n%6)+1]?.[0]?.de,wrong2=data()[((n+2)%6)+1]?.[0]?.de;
+   if(!wrong1||!wrong2)return null;
+   const correct=(n+i)%3,options=[wrong1,wrong2];options.splice(correct,0,photo.de);
+   return {photo,question:'Look at the picture. Which German sentence fits this everyday situation?',options,correct,why:photo.cue+'. '+photo.de};
+ };
+ const stats=(chapter,progress={})=>{
+   const n=Number(chapter),items=[0,1].filter(i=>get(n,i));
+   return {answered:items.filter(i=>progress[n+':'+i]).length,correct:items.filter(i=>progress[n+':'+i]?.correct).length,total:items.length};
+ };
+ const render=(chapter,progress={},selection={})=>{
+   const n=Number(chapter),tasks=[get(n,0),get(n,1)];if(tasks.some(x=>!x))return '';
+   const score=stats(n,progress);
+   return '<section class="photo-practice" aria-label="Chapter '+n+' picture practice"><div class="visual-section-title">'+
+     '<span class="eyebrow">Look · Choose · Say</span><h2>German through real-life pictures</h2>'+
+     '<p>Look at each photograph, choose a phrase that belongs in the situation, and listen to the model after checking. Original exercises awaiting German-teacher review.</p>'+
+     '<strong>'+score.answered+'/'+score.total+' attempted · '+score.correct+' correct</strong></div><div class="photo-practice-grid">'+
+     tasks.map((q,i)=>{
+       const key=n+':'+i,answer=progress[key],selected=answer?answer.chosen:selection[key],p=q.photo;
+       return '<article class="card photo-practice-card"><figure><img src="'+esc(p.src)+'" alt="'+esc(p.alt)+'" loading="lazy" decoding="async" referrerpolicy="no-referrer"/>'+
+         '<figcaption>Photo: <a href="'+esc(p.source)+'" target="_blank" rel="noopener noreferrer">Pexels / '+esc(p.credit)+'</a></figcaption></figure>'+
+         '<div class="photo-practice-content"><span class="eyebrow">Scene '+(i+1)+'</span><h3>'+esc(q.question)+'</h3>'+
+         '<div class="photo-practice-choices">'+q.options.map((phrase,j)=>'<button type="button" lang="de" class="choice '+(selected===j?'selected ':'')+
+         (answer&&j===q.correct?'correct ':'')+(answer&&j===answer.chosen&&!answer.correct?'incorrect':'')+
+         '" data-photo-choice="'+key+':'+j+'" '+(answer?'disabled':'')+'>'+esc(phrase)+'</button>').join('')+'</div>'+
+         (answer?'<div class="feedback '+(answer.correct?'':'error')+'"><b>'+(answer.correct?'Correct!':'Not quite.')+'</b> '+esc(q.why)+
+           '<button type="button" class="view-link" data-speak="'+esc(q.options[q.correct])+'">♫ Listen to the model</button></div>'+
+           '<button type="button" class="view-link" data-photo-retry="'+key+'">Retry scene</button>':
+           '<button type="button" class="btn btn-primary btn-small" data-photo-check="'+key+'" '+(selected===undefined?'disabled':'')+'>Check phrase</button>')+
+         '</div></article>';
+     }).join('')+'</div><p class="workbook-disclaimer">Photographs require internet access. Alternative text describes the scene. Scores remain in this browser only.</p></section>';
+ };
+ window.GERMAN_PHOTO_PRACTICE={get,stats,render};
+})();
+
+</script>
+<script>
 // Original demonstration questions. These are not Goethe/telc examination items.
 // A qualified German teacher must review language, answers and suitability.
 window.GERMAN_EXAM_DATA = Object.freeze({
@@ -5497,7 +5553,7 @@ window.GERMAN_EXAM_DATA = Object.freeze({
     {id:'cafe-dialogue',type:'roleplay',title:'You are the customer',prompt:'The waiter greets you. Order tea or water politely, and say thank you. Write two short lines of dialogue.',starter:'Guten Tag! Ich hätte gern einen Tee, bitte.',criteria:'Include a greeting, a polite order and a thank-you.'},
     {id:'cafe-check',type:'assessment',title:'Final check: respond politely',question:'The waiter says: „Was möchten Sie?“ What is a suitable answer?',options:'Ich komme aus Indien.\nEin Wasser, bitte.\nGute Nacht!',correct:'1',explanation:'Ein Wasser, bitte is a suitable short, polite order.'}
   ]});
-  const defaultState = () => ({completed:[],scores:{},drafts:{},submissions:[],reviews:{},assigned:true,experiences:startingExperiences(),experienceDrafts:{},experienceSubmissions:[],sessions:[initialSession()],sessionProgress:{},sessionSubmissions:[],workbookProgress:{},workbookSubmissions:[]});
+  const defaultState = () => ({completed:[],scores:{},drafts:{},submissions:[],reviews:{},assigned:true,experiences:startingExperiences(),experienceDrafts:{},experienceSubmissions:[],sessions:[initialSession()],sessionProgress:{},sessionSubmissions:[],workbookProgress:{},workbookSubmissions:[],photoPractice:{}});
   const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const stored = (() => {try{return JSON.parse(localStorage.getItem(storageKey));}catch{return null;}})();
   let state = {...defaultState(),...(stored && typeof stored === 'object' ? stored : {})};
@@ -5509,7 +5565,8 @@ window.GERMAN_EXAM_DATA = Object.freeze({
   if(!Array.isArray(state.sessionSubmissions))state.sessionSubmissions=[];
   if(!state.workbookProgress||typeof state.workbookProgress!=='object')state.workbookProgress={};
   if(!Array.isArray(state.workbookSubmissions))state.workbookSubmissions=[];
-  let ui = {route:'home',studentView:'home',teacherView:'home',teacherChapterNumber:1,lessonId:'hello',experienceId:'',stage:'discover',questionIndex:0,selected:null,checked:false,answers:{},builderKind:'roleplay',editingExperienceId:null,previewExperienceId:null,builderOpen:false,sessionComposerOpen:false,editingSessionId:null,sessionDraft:null,sessionPreviewId:null,sessionPreviewDraft:false,sessionId:'',sessionBlockIndex:0,sessionSelection:{},workbookId:'1',workbookQuestion:0,workbookSelected:null};
+  if(!state.photoPractice||typeof state.photoPractice!=='object')state.photoPractice={};
+  let ui = {route:'home',studentView:'home',teacherView:'home',teacherChapterNumber:1,lessonId:'hello',experienceId:'',stage:'discover',questionIndex:0,selected:null,checked:false,answers:{},builderKind:'roleplay',editingExperienceId:null,previewExperienceId:null,builderOpen:false,sessionComposerOpen:false,editingSessionId:null,sessionDraft:null,sessionPreviewId:null,sessionPreviewDraft:false,sessionId:'',sessionBlockIndex:0,sessionSelection:{},workbookId:'1',workbookQuestion:0,workbookSelected:null,photoSelected:{}};
   let openPhrases = [];
   let mediaRecorder = null;
   let mediaStream = null;
@@ -5625,15 +5682,15 @@ function renderWorkbook(){
   const draft=(kind)=>r.progress.drafts?.[kind]||'';
   const response=(kind,title,prompt)=>`<article class="workbook-response"><span class="eyebrow">${title}</span><h3>${title==='Writing'?'Write an original response':'Speak, then reflect'}</h3><p>${escape(prompt)}</p><div class="study-note"><b>Helpful sentence starters:</b> ${escape(unit.support)}</div><label class="form-field" for="workbook-${escape(id)}-${kind}">${kind==='speaking'?'Notes from your spoken rehearsal':'Your German response'}</label><textarea class="text-entry" id="workbook-${escape(id)}-${kind}" data-workbook-draft="${escape(id)}:${kind}" maxlength="1200" placeholder="${kind==='speaking'?'What did you say? Which words need practice?':'Schreiben Sie auf Deutsch …'}">${escape(draft(kind))}</textarea><button class="btn btn-outline btn-small" data-workbook-submit="${escape(id)}:${kind}" ${draft(kind).trim().length<10?'disabled':''}>Send for teacher feedback →</button></article>`;
   return `<div class="workbook-page"><button class="view-link" data-route="student/practice">← Back to practice</button><header class="workbook-hero">${realPhotos(unit.number,{compact:true,heading:false})||chapterVisual(unit.number)}<span class="eyebrow">${unit.review?'A1.1 revision checkpoint':`A1.1 · Chapter ${unit.number} · Workbook`}</span><h1>${escape(unit.title)}</h1><p>${unit.review?'Original integrated revision, inspired by the Plataforma review structure.':`Independent practice mapped to the coursebook and workbook themes in Chapter ${unit.number}.`}</p><div class="workbook-hero-progress"><strong>${r.answered} / ${r.total} answered</strong><span>${r.answered?`${r.correct} correct so far`:'Answer at your own pace'}</span></div></header>
-  <section class="card workbook-check" aria-label="Interactive workbook questions"><div class="workbook-check-top"><span class="eyebrow">Listening · Reading · Grammar · Vocabulary</span><span>${i+1} of ${r.total}</span></div><div class="workbook-pips">${unit.questions.map((item,n)=>`<button class="workbook-pip ${n===i?'active':''} ${r.progress.answers?.[item.id]?'answered':''}" data-workbook-jump="${n}" aria-label="Question ${n+1}${r.progress.answers?.[item.id]?', answered':''}" aria-current="${n===i?'step':'false'}">${n+1}</button>`).join('')}</div><div class="workbook-question-label">${escape(q.skill)}</div>${q.audio?`<div class="workbook-audio"><p>Listen first. The transcript appears after checking.</p><button type="button" class="btn btn-outline btn-small" data-speak="${escape(q.audio)}" aria-label="Play German listening question">♫ Play German</button></div>`:''}${q.reading?`<blockquote class="workbook-reading" lang="de">${escape(q.reading)}</blockquote>`:''}<h2>${escape(q.prompt)}</h2><div class="choice-list">${q.options.map((option,n)=>`<button class="choice ${selected===n?'selected':''} ${answer&&n===q.correct?'correct':''} ${answer&&n===answer.chosen&&!answer.correct?'incorrect':''}" data-workbook-choice="${n}" ${answer?'disabled':''}>${escape(option)}</button>`).join('')}</div>${answer?`<div class="feedback ${answer.correct?'':'error'}"><b>${answer.correct?'Correct!':'Not quite.'}</b> ${escape(q.why)}${q.audio?`<p>Spoken text: <span lang="de">${escape(q.audio)}</span></p>`:''}</div><button class="view-link" data-workbook-retry="${escape(q.id)}">Retry this question</button>`:''}<div class="stage-foot"><button class="btn btn-outline" data-workbook-prev ${i===0?'disabled':''}>← Previous</button>${answer?`<button class="btn btn-primary" data-workbook-next ${i===r.total-1?'disabled':''}>Next question →</button>`:`<button class="btn btn-primary" data-workbook-check ${selected===null?'disabled':''}>Check answer</button>`}</div>${r.answered===r.total?`<div class="status-success">✓ Checkpoint complete: ${r.correct}/${r.total} correct. You can retry individual questions and practise the written and spoken tasks below.</div>`:''}</section>
-  <section class="workbook-response-grid" aria-label="Production practice">${response('writing','Writing',unit.writing)}${response('speaking','Speaking',unit.speaking)}</section><section class="card card-pad workbook-feedback"><h3>Teacher feedback on this practice</h3>${related.length?related.map(s=>`<div class="queue-item"><strong>${s.kind==='speaking'?'Speaking rehearsal notes':'Writing response'}</strong><blockquote>${escape(s.text)}</blockquote>${state.reviews[s.id]?`<div class="feedback"><b>Teacher response:</b> ${escape(state.reviews[s.id].note)}</div>`:'<p>Awaiting feedback in the Teacher Studio on this device.</p>'}</div>`).join(''):'<p>Submit a response above to request teacher feedback.</p>'}</section><p class="workbook-disclaimer">Original AmberTheory material. Synthetic German voice depends on your browser. Not an official textbook exercise or language assessment; teacher review is pending.</p></div>`;
+  <section class="card workbook-check" aria-label="Interactive workbook questions"><div class="workbook-check-top"><span class="eyebrow">Listening · Reading · Grammar · Vocabulary</span><span>${i+1} of ${r.total}</span></div><div class="workbook-pips">${unit.questions.map((item,n)=>`<button class="workbook-pip ${n===i?'active':''} ${r.progress.answers?.[item.id]?'answered':''}" data-workbook-jump="${n}" aria-label="Question ${n+1}${r.progress.answers?.[item.id]?', answered':''}" aria-current="${n===i?'step':'false'}">${n+1}</button>`).join('')}</div><div class="workbook-question-label">${escape(q.skill)}</div>${q.skill==='Listening'&&q.audio?`<div class="workbook-audio"><p>Listen first. The transcript appears after checking.</p><button type="button" class="btn btn-outline btn-small" data-speak="${escape(q.audio)}" aria-label="Play German listening question">♫ Play German</button></div>`:''}${q.skill==='Reading'&&(q.reading||q.audio)?`<blockquote class="workbook-reading" lang="de">${escape(q.reading||q.audio)}</blockquote>`:''}<h2>${escape(q.prompt)}</h2><div class="choice-list">${q.options.map((option,n)=>`<button class="choice ${selected===n?'selected':''} ${answer&&n===q.correct?'correct':''} ${answer&&n===answer.chosen&&!answer.correct?'incorrect':''}" data-workbook-choice="${n}" ${answer?'disabled':''}>${escape(option)}</button>`).join('')}</div>${answer?`<div class="feedback ${answer.correct?'':'error'}"><b>${answer.correct?'Correct!':'Not quite.'}</b> ${escape(q.why)}${q.skill==='Listening'&&q.audio?`<p>Spoken text: <span lang="de">${escape(q.audio)}</span></p>`:''}</div><button class="view-link" data-workbook-retry="${escape(q.id)}">Retry this question</button>`:''}<div class="stage-foot"><button class="btn btn-outline" data-workbook-prev ${i===0?'disabled':''}>← Previous</button>${answer?`<button class="btn btn-primary" data-workbook-next ${i===r.total-1?'disabled':''}>Next question →</button>`:`<button class="btn btn-primary" data-workbook-check ${selected===null?'disabled':''}>Check answer</button>`}</div>${r.answered===r.total?`<div class="status-success">✓ Checkpoint complete: ${r.correct}/${r.total} correct. You can retry individual questions and practise the written and spoken tasks below.</div>`:''}</section>
+  ${!unit.review?window.GERMAN_PHOTO_PRACTICE?.render(unit.number,state.photoPractice,ui.photoSelected)||'':''}<section class="workbook-response-grid" aria-label="Production practice">${response('writing','Writing',unit.writing)}${response('speaking','Speaking',unit.speaking)}</section><section class="card card-pad workbook-feedback"><h3>Teacher feedback on this practice</h3>${related.length?related.map(s=>`<div class="queue-item"><strong>${s.kind==='speaking'?'Speaking rehearsal notes':'Writing response'}</strong><blockquote>${escape(s.text)}</blockquote>${state.reviews[s.id]?`<div class="feedback"><b>Teacher response:</b> ${escape(state.reviews[s.id].note)}</div>`:'<p>Awaiting feedback in the Teacher Studio on this device.</p>'}</div>`).join(''):'<p>Submit a response above to request teacher feedback.</p>'}</section><p class="workbook-disclaimer">Original AmberTheory material. Synthetic German voice depends on your browser. Not an official textbook exercise or language assessment; teacher review is pending.</p></div>`;
 }
 
 function renderTeacherWorkbookInsights(){
   if(!window.GERMAN_WORKBOOK?.chapters?.length)return '';
   const rows=window.GERMAN_WORKBOOK.chapters.map(c=>({c,r:workbookResult(String(c.number))}));
   const pending=state.workbookSubmissions.filter(s=>!state.reviews[s.id]).length;
-  return `<section class="card card-pad workbook-teacher"><span class="eyebrow">Uploaded A1.1 · Learner workbook evidence</span><h2>Chapter practice progress</h2><p>Only the current demo browser is measured. These are independent questions and rehearsal notes, not publisher tests or certified skill scores.</p><div class="workbook-teacher-grid">${rows.map(({c,r})=>`<div><b>Chapter ${c.number} · ${escape(c.title)}</b><span>${r.answered}/${r.total} checked · ${r.correct} correct</span></div>`).join('')}</div><p>${pending} workbook writing/speaking responses waiting in the review queue.</p><p class="workbook-disclaimer">Before a real pilot, validate all 48 chapter questions, the two original Plattform checkpoints and the writing/speaking criteria with the German teacher.</p></section>`;
+  return `<section class="card card-pad workbook-teacher"><span class="eyebrow">Uploaded A1.1 · Learner workbook evidence</span><h2>Chapter practice progress</h2><p>Only the current demo browser is measured. These are independent questions and rehearsal notes, not publisher tests or certified skill scores.</p><div class="workbook-teacher-grid">${rows.map(({c,r})=>`<div><b>Chapter ${c.number} · ${escape(c.title)}</b><span>${r.answered}/${r.total} checked · ${r.correct} correct · ${window.GERMAN_PHOTO_PRACTICE?.stats(c.number,state.photoPractice).answered||0}/2 photo tasks</span></div>`).join('')}</div><p>${pending} workbook writing/speaking responses waiting in the review queue.</p><p class="workbook-disclaimer">Before a real pilot, validate all 48 chapter questions, the two original Plattform checkpoints and the writing/speaking criteria with the German teacher.</p></section>`;
 }
 
   function renderLearnerBookPath(){
@@ -5682,6 +5739,7 @@ function renderTeacherWorkbookInsights(){
     return `<section class="teacher-chapter-report card" aria-label="Chapter ${ch.number} progress">
     <div class="lesson-head"><div><span class="eyebrow">Chapter ${ch.number} · Learner tracking</span><h3>Progress, assessment & feedback</h3></div><span class="tag tag-muted">Local demo data</span></div>
     <div class="chapter-metric-grid"><div><strong>${finished}/${guided.length}</strong><span>Lessons finished</span></div><div><strong>${wb.answered}/${wb.total}</strong><span>Workbook questions</span></div><div><strong>${checks.length?checks.filter(x=>x.correct).length+'/'+checks.length:'—'}</strong><span>Session answers correct</span></div><div><strong>${pending}</strong><span>Needs feedback</span></div></div>
+    <p class="teacher-planner-hint">Visual practice: ${window.GERMAN_PHOTO_PRACTICE?.stats(ch.number,state.photoPractice).answered||0}/2 scenes tried · ${window.GERMAN_PHOTO_PRACTICE?.stats(ch.number,state.photoPractice).correct||0} correct. Same-browser learner only.</p>
     <h4>Sessions in Chapter ${ch.number}</h4><div class="chapter-session-report">
     ${sessions.length?sessions.map(ss=>{const p=sessionProgress(ss.id),answered=Object.values(p.answers||{}),open=state.sessionSubmissions.filter(x=>x.sessionId===ss.id&&!state.reviews[x.id]).length;return `<div class="chapter-session-report-row"><div><strong>${escape(ss.title)}</strong><small>${ss.status==='published'?'Assigned':'Draft'} · ${sessionDoneCount(ss)}/${ss.blocks.length} steps · ${answered.length?answered.filter(x=>x.correct).length+'/'+answered.length+' correct':'No checks yet'} · ${open} to review</small></div><button class="view-link" data-edit-session="${escape(ss.id)}">Edit →</button></div>`}).join(''):'<p>No sessions created yet.</p>'}</div>
     <div class="chapter-teacher-actions"><button class="btn btn-primary btn-small" data-start-chapter-session="${ch.number}">+ Create practice</button><button class="btn btn-outline btn-small" data-start-chapter-assessment="${ch.number}">+ Create assessment</button><button class="btn btn-outline btn-small" data-route="teacher/learners">Review responses →</button></div>
@@ -5938,6 +5996,9 @@ function renderTeacherWorkbookInsights(){
     if(button.hasAttribute('data-watch-demo')){document.getElementById('studio-demo')?.scrollIntoView?.({behavior:'smooth',block:'start'});return;}
     if(button.hasAttribute('data-route')){const route=button.dataset.route;return navigate(route==='student'&&ui.route==='lesson'?'student/lessons':route==='student'&&['experience','session'].includes(ui.route)?'student/practice':route);}
     if(button.hasAttribute('data-role'))return navigate(button.dataset.role==='teacher'?'teacher':'student');
+    if(button.hasAttribute('data-photo-choice')){const [n,i,j]=button.dataset.photoChoice.split(':').map(Number),key=n+':'+i,q=window.GERMAN_PHOTO_PRACTICE?.get(n,i);if(!q||state.photoPractice[key]||!Number.isInteger(j)||j<0||j>=q.options.length)return;ui.photoSelected[key]=j;render();return;}
+    if(button.hasAttribute('data-photo-check')){const [n,i]=button.dataset.photoCheck.split(':').map(Number),key=n+':'+i,q=window.GERMAN_PHOTO_PRACTICE?.get(n,i),chosen=ui.photoSelected[key];if(!q||state.photoPractice[key]||!Number.isInteger(chosen)||chosen<0||chosen>=q.options.length)return;state.photoPractice[key]={chosen,correct:chosen===q.correct};save();render();return;}
+    if(button.hasAttribute('data-photo-retry')){const [n,i]=button.dataset.photoRetry.split(':').map(Number),key=n+':'+i;if(!window.GERMAN_PHOTO_PRACTICE?.get(n,i))return;delete state.photoPractice[key];delete ui.photoSelected[key];save();render();return;}
     if(button.hasAttribute('data-workbook'))return navigate('workbook',button.dataset.workbook);
     if(button.hasAttribute('data-workbook-jump')){ui.workbookQuestion=Number(button.dataset.workbookJump);ui.workbookSelected=null;render();return;}
     if(button.hasAttribute('data-workbook-prev')){ui.workbookQuestion=Math.max(0,ui.workbookQuestion-1);ui.workbookSelected=null;render();return;}

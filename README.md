@@ -101,3 +101,8 @@ The new materials are in `dist/workbook.js`, presented under **Student Studio �
 ## Checks
 
 Run `node tests/workbook.mjs` for workbook/question coverage and learner-teacher workflow. Run `node tests/curriculum-a11.mjs` for the uploaded 166-page PDF map and 12 authored lessons, and `node tests/curriculum-neu.mjs` to safeguard the other edition's archived 176-page reference. Run `node tests/smoke.mjs`, `node tests/exam.mjs`, `node tests/navigation.mjs` and `node tests/role-separation.mjs` for student/teacher regression coverage. The buildless `dist/` directory is published directly; `node tools/bundle.mjs` regenerates the portable single-file demo with the exam modules included.
+
+
+## Phase 1 continuation — image-led practice and reading repair (23 October 2026)
+
+A1.1 Chapters 1–6 now each have two independently authored photo-to-German-phrase checks (12 total), using the existing credited Pexels photography. Learners can check and retry answers, hear the model sentence through their browser and retain progress locally; Teacher Studio reports each chapter's photo-practice results. Separately, Reading workbook questions now show their original German passage rather than incorrectly being rendered as a hidden listening transcript. Listening tasks retain their audio-first interaction. CI runs a new photo and reading regression. These features are original supplementary practice requiring qualified German-teacher QA; they are not republished textbook exercises. All saved progress is limited to this browser.
