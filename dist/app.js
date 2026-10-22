@@ -201,10 +201,28 @@ function renderTeacherWorkbookInsights(){
       <p class="learner-book-foot">The 166-page original Netzwerk A1.1 PDF is used for high-level topics and structure, not to reproduce publisher text or artwork. All new exercises and illustrations need teacher approval. The unprovided A1.2 chapters are not included.</p>
     </section>`;
   }
+  function renderChapterTeacherReport(ch){
+    if(!ch.chapterPdfAvailable)return '';
+    const guided=lessonsInChapter(ch.number),sessions=chapterSessions(ch.number);
+    const finished=guided.filter(l=>state.completed.includes(l.id)).length;
+    const wb=workbookResult(String(ch.number));
+    const checks=sessions.flatMap(ss=>Object.values(state.sessionProgress[ss.id]?.answers||{}));
+    const pending=state.workbookSubmissions.filter(x=>x.workbookChapter===String(ch.number)&&!state.reviews[x.id]).length+
+      state.submissions.filter(x=>guided.some(l=>l.id===x.lessonId)&&!state.reviews[x.id]).length+
+      state.sessionSubmissions.filter(x=>sessions.some(ss=>ss.id===x.sessionId)&&!state.reviews[x.id]).length;
+    return `<section class="teacher-chapter-report card" aria-label="Chapter ${ch.number} progress">
+    <div class="lesson-head"><div><span class="eyebrow">Chapter ${ch.number} · Learner tracking</span><h3>Progress, assessment & feedback</h3></div><span class="tag tag-muted">Local demo data</span></div>
+    <div class="chapter-metric-grid"><div><strong>${finished}/${guided.length}</strong><span>Lessons finished</span></div><div><strong>${wb.answered}/${wb.total}</strong><span>Workbook questions</span></div><div><strong>${checks.length?checks.filter(x=>x.correct).length+'/'+checks.length:'—'}</strong><span>Session answers correct</span></div><div><strong>${pending}</strong><span>Needs feedback</span></div></div>
+    <h4>Sessions in Chapter ${ch.number}</h4><div class="chapter-session-report">
+    ${sessions.length?sessions.map(ss=>{const p=sessionProgress(ss.id),answered=Object.values(p.answers||{}),open=state.sessionSubmissions.filter(x=>x.sessionId===ss.id&&!state.reviews[x.id]).length;return `<div class="chapter-session-report-row"><div><strong>${escape(ss.title)}</strong><small>${ss.status==='published'?'Assigned':'Draft'} · ${sessionDoneCount(ss)}/${ss.blocks.length} steps · ${answered.length?answered.filter(x=>x.correct).length+'/'+answered.length+' correct':'No checks yet'} · ${open} to review</small></div><button class="view-link" data-edit-session="${escape(ss.id)}">Edit →</button></div>`}).join(''):'<p>No sessions created yet.</p>'}</div>
+    <div class="chapter-teacher-actions"><button class="btn btn-primary btn-small" data-start-chapter-session="${ch.number}">+ Create practice</button><button class="btn btn-outline btn-small" data-start-chapter-assessment="${ch.number}">+ Create assessment</button><button class="btn btn-outline btn-small" data-route="teacher/learners">Review responses →</button></div>
+    <p class="teacher-planner-hint">Tracking is based on the current browser’s demo learner, not a real class or synchronised account.</p></section>`;
+  }
+
   function renderTeacherBookPlanner(){
   const book=window.GERMAN_CURRICULUM;
   if(!book?.chapters?.length)return '';
-  const ch=book.chapters.find(x=>x.number===ui.teacherChapterNumber)||book.chapters[0];
+  const ch=textbookChapters().find(x=>x.number===ui.teacherChapterNumber)||textbookChapters()[0];
   const linked=state.sessions.filter(s=>Number(s.chapterNumber)===ch.number);
   const assigned=linked.filter(s=>s.status==='published').length;
   const topics=(items)=>`<ul>${(items||[]).map(item=>`<li>${escape(item)}</li>`).join('')}</ul>`;
@@ -217,11 +235,11 @@ function renderTeacherWorkbookInsights(){
     <div class="teacher-planner-layout">
       <nav class="teacher-chapter-list" aria-label="Select chapter to plan">
         <h3>Course chapters</h3><p>Choose a teaching focus</p>
-        ${book.chapters.map(item=>`<button type="button" data-teacher-chapter="${item.number}" class="teacher-chapter-choice ${item.number===ch.number?'active':''}" aria-pressed="${item.number===ch.number}">
+        ${textbookChapters().map(item=>`<button type="button" data-teacher-chapter="${item.number}" class="teacher-chapter-choice ${item.number===ch.number?'active':''}" aria-pressed="${item.number===ch.number}">
         <span>${String(item.number).padStart(2,'0')}</span><strong>${escape(item.title)}</strong><small>${item.stage}</small></button>`).join('')}
       </nav>
       <div class="teacher-planner-detail">
-        <div class="teacher-planner-title"><span class="eyebrow">${ch.stage} · Chapter ${ch.number}</span><h3>${escape(ch.title)}</h3><p>${escape(ch.originalLessonGoal)}</p><p class="teacher-planner-source">${ch.chapterPdfAvailable?`Source: uploaded original A1.1 · Kursbuch PDF pp. ${ch.sourcePages.coursebookPdfStart}–${ch.sourcePages.coursebookPdfEnd} · Arbeitsbuch PDF pp. ${ch.sourcePages.workbookPdfStart}–${ch.sourcePages.workbookPdfEnd}`:'Publisher outline only · A1.2 PDF not yet reviewed'}</p></div>
+        <div class="teacher-planner-title">${chapterVisual(ch.number)}<span class="eyebrow">${ch.stage} · Chapter ${ch.number}</span><h3>${escape(ch.title)}</h3><p>${escape(ch.originalLessonGoal)}</p><p class="teacher-planner-source">${ch.chapterPdfAvailable?`Source: uploaded original A1.1 · Kursbuch PDF pp. ${ch.sourcePages.coursebookPdfStart}–${ch.sourcePages.coursebookPdfEnd} · Arbeitsbuch PDF pp. ${ch.sourcePages.workbookPdfStart}–${ch.sourcePages.workbookPdfEnd}`:'Publisher outline only · A1.2 PDF not yet reviewed'}</p></div>
         <div class="teacher-planner-stats"><div><b>${linked.length}</b><span>Local sessions linked</span></div><div><b>${assigned}</b><span>Assigned in demo</span></div><div><b>${ch.chapterPdfAvailable?'PDF reviewed':'Outline'}</b><span>Teacher validation pending</span></div></div>
         <div class="teacher-planner-panels">
           <section class="teacher-planner-panel"><h4>Communication objectives</h4><p>Students should be able to:</p>${topics(ch.communicationOutcomes)}</section>
@@ -229,7 +247,7 @@ function renderTeacherWorkbookInsights(){
           <section class="teacher-planner-panel"><h4>Listening, pronunciation & culture</h4><p><strong>Pronunciation:</strong> ${escape(ch.pronunciationFocus)}</p><p><strong>Culture:</strong> ${escape(ch.culturalContext)}</p><p>Check learners' listening, speaking, reading and writing with your own original tasks.</p></section>
           <section class="teacher-planner-panel teacher-planner-activity"><h4>Suggested original class activity</h4><p>${escape(ch.originalTeacherStudioActivity)}</p>${(ch.originalLessonBlueprints||[]).length?`<h4>Original guided lesson sequence</h4><ol>${ch.originalLessonBlueprints.map(bp=>`<li>${escape(bp.title)}</li>`).join('')}</ol>`:''}${ch.originalPracticeTypes?.length?`<h4>Workbook-inspired skill formats</h4>${topics(ch.originalPracticeTypes)}`:''}<p class="teacher-planner-hint">A starting suggestion for the teacher, not a copied textbook exercise or a finished lesson.</p></section>
         </div>
-        <div class="teacher-planner-actions"><button class="btn btn-primary" data-start-chapter-session="${ch.number}">Create chapter session draft →</button>
+        ${renderChapterTeacherReport(ch)}<div class="teacher-planner-actions"><button class="btn btn-primary" data-start-chapter-session="${ch.number}">Create chapter session draft →</button>
         <button class="btn btn-outline" data-route="teacher/missions">Open Mission Studio</button>
         <button class="btn btn-outline" data-route="teacher/exams">Open Exam Coaching</button></div>
         <p class="teacher-planner-source">Teaching alignment: ${ch.chapterPdfAvailable?'uploaded original Netzwerk A1.1 coursebook and workbook page images':'original Netzwerk A1.2 publisher outline only; PDF pending'}. Original lesson content and answer keys must be checked by the German teacher before use with real learners.</p>
@@ -455,6 +473,7 @@ function renderTeacherWorkbookInsights(){
     if(button.hasAttribute('data-open-session'))return navigate('session',button.dataset.openSession);
     if(button.hasAttribute('data-teacher-chapter')){ui.teacherChapterNumber=Number(button.dataset.teacherChapter)||1;render();return;}
     if(button.hasAttribute('data-start-chapter-session'))return openSessionComposer(null,Number(button.dataset.startChapterSession));
+    if(button.hasAttribute('data-start-chapter-assessment'))return openSessionComposer(null,Number(button.dataset.startChapterAssessment),'assessment');
     if(button.hasAttribute('data-new-session'))return openSessionComposer(null,ui.teacherChapterNumber);
     if(button.hasAttribute('data-edit-session'))return openSessionComposer(button.dataset.editSession);
     if(button.hasAttribute('data-close-session-composer')){ui.sessionComposerOpen=false;ui.sessionDraft=null;ui.sessionPreviewDraft=false;render();return;}
