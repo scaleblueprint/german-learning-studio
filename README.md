@@ -59,6 +59,17 @@ CEFR A1 framework reference: [Council of Europe](https://www.coe.int/en/web/comm
 
 Commercial textbooks such as *Netzwerk neu* or Hueber materials are **not included**. Obtaining a book does not grant reproduction rights; check publisher licensing before importing pages, recordings, exercises or photos into the platform.
 
+
+## Teacher-selected Netzwerk A1 curriculum reference (October 2026)
+
+The teacher requested that AmberTheory follow **Netzwerk A1 (original edition, not Netzwerk neu)** as its A1 content reference. The publisher's official A1.1 and A1.2 tables of contents have been mapped to 12 source-traceable chapter outlines: communication goals, vocabulary themes, grammar, pronunciation, cultural context and original practice ideas. Four chapter-review checkpoints are planned after chapters 3, 6, 9 and 12.
+
+- Structured data: [dist/data/netzwerk-a1-reference.json](dist/data/netzwerk-a1-reference.json) and its browser equivalent [dist/curriculum.js](dist/curriculum.js).
+- Review trail and licensing boundaries: [docs/netzwerk-a1-source-reference.md](docs/netzwerk-a1-source-reference.md).
+- **Student Studio → Lessons** shows the mapped A1.1/A1.2 chapter route alongside the existing five *playable* demo lessons; **Teacher Studio → Sessions** shows the corresponding planning reference.
+- The mapped outlines **are not 12 complete lessons**. Full original content, teacher approval and chapter-level assignment workflows are pending.
+- The Scribd upload's complete pages were not accessible and its exact edition is unconfirmed; the mapping is grounded in official publisher tables of contents. No protected book lessons, images, recordings or exercises have been imported.
+
 ## Next steps before a real pilot
 
 1. Teacher validates lesson sequence, content and assessment answer keys.
