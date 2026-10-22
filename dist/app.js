@@ -168,25 +168,39 @@ function renderTeacherWorkbookInsights(){
 }
 
   function renderLearnerBookPath(){
-  const book=window.GERMAN_CURRICULUM;
-  if(!book?.chapters?.length)return '';
-  const renderStage=stage=>{
-    const chapters=book.chapters.filter(ch=>ch.stage===stage);
-    return `<div class="learner-book-level">
-      <div class="learner-book-level-title"><h4>${stage==='A1.1'?'Everyday beginnings':'Everyday independence'}</h4><span>${stage} · ${chapters.length} chapters</span></div>
-      <div class="learner-book-grid">${chapters.map(ch=>`<article class="learner-book-card">
-        <div class="learner-book-card-top"><span class="learner-book-number">${String(ch.number).padStart(2,'0')}</span><span class="learner-book-status">${ch.chapterPdfAvailable?'Original lessons + workbook practice · teacher review pending':'A1.2 · source PDF pending'}</span></div>
-        <h5>${escape(ch.title)}</h5><p>${escape(ch.originalLessonGoal)}</p>
-        <small>Learning goal · Chapter ${ch.number}${ch.chapterPdfAvailable?` · Coursebook PDF pp. ${ch.sourcePages.coursebookPdfStart}–${ch.sourcePages.coursebookPdfEnd}`:''}</small>${ch.chapterPdfAvailable&&window.GERMAN_WORKBOOK?.chapters?.some(c=>c.number===ch.number)?`<div class="learner-book-lesson-links"><button class="btn btn-outline btn-small" data-workbook="${ch.number}">Practise chapter & workbook →</button></div>`:''}${lessons.filter(l=>l.chapterNumber===ch.number).length?`<div class="learner-book-lesson-links">${lessons.filter(l=>l.chapterNumber===ch.number).map(l=>`<button class="view-link" type="button" data-lesson="${escape(l.id)}">${escape(l.title)} →</button>`).join('')}</div>`:''}</article>`).join('')}</div>
-      <p class="learner-checkpoint">After ${stage==='A1.1'?'chapters 3 and 6':'chapters 9 and 12'}: original listening, reading, grammar, writing and speaking review checkpoints are available for A1.1; A1.2 checkpoints await source verification.</p>
-    </div>`;
-  };
-  return `<section class="learner-book-route" aria-label="German course learning journey">
-    <div class="learner-book-head"><span class="eyebrow">Your course journey</span><h3>From first words to real conversations.</h3><p>Chapters 1–6 follow the uploaded original Netzwerk A1.1 coursebook and workbook, with independently authored interactive practice. Chapters 7–12 are publisher-outline previews until the A1.2 source is supplied.</p></div>
-    ${renderStage('A1.1')}${renderStage('A1.2')}
-    <div class="learner-book-foot">The original A1.1 guided lessons are available for practice; the German teacher has not yet signed off their content. A1.2 chapters are outlines, not playable lessons.</div>
-  </section>`;
-}
+    const chapters=textbookChapters();
+    return `<section class="learner-book-route textbook-journey" aria-label="Original Netzwerk A1.1 textbook chapters">
+      <div class="learner-book-head"><span class="eyebrow">Your book · Netzwerk A1.1</span><h3>Kursbuch → Arbeitsbuch → Plattform</h3>
+      <p>Six source-verified textbook chapters in order. Open a guided topic, consolidate it in the workbook, and finish the chapter with your teacher’s assigned sessions and assessments.</p></div>
+      <div class="textbook-chapter-list">${chapters.map(ch=>{
+        const linked=lessonsInChapter(ch.number), sessions=chapterSessions(ch.number).filter(ss=>ss.status==='published');
+        const done=linked.filter(l=>state.completed.includes(l.id)).length, wb=workbookResult(String(ch.number));
+        return `<article class="textbook-chapter" id="course-chapter-${ch.number}">
+          <div class="textbook-chapter-intro"><div class="textbook-chapter-heading">
+            <div class="textbook-chapter-index"><span>Kapitel</span><strong>${String(ch.number).padStart(2,'0')}</strong></div>
+            <div><span class="eyebrow">A1.1 · ${escape(ch.title)}</span><h4>${escape(ch.originalLessonGoal)}</h4>
+            <p>${escape((ch.communicationOutcomes||[]).join(' · '))}</p>
+            <small>Kursbuch PDF pp. ${ch.sourcePages.coursebookPdfStart}–${ch.sourcePages.coursebookPdfEnd} · Arbeitsbuch PDF pp. ${ch.sourcePages.workbookPdfStart}–${ch.sourcePages.workbookPdfEnd}</small></div>
+            </div>${chapterVisual(ch.number)}</div>
+          <div class="textbook-chapter-content">
+            <div class="textbook-learning-block"><span class="eyebrow">01 · Kursbuch</span><h5>Learn the ideas</h5><p>Vocabulary, grammar, pronunciation and original dialogue practice.</p>
+            ${linked.map((l,i)=>`<button class="chapter-topic-button" data-lesson="${escape(l.id)}"><span>${ch.number}.${i+1}</span><strong>${escape(l.title)}</strong><small>${state.completed.includes(l.id)?'✓ Finished':'Open lesson'} ↗</small></button>`).join('')}
+            <span class="textbook-meta">${done}/${linked.length} topics complete</span></div>
+            <div class="textbook-learning-block"><span class="eyebrow">02 · Arbeitsbuch</span><h5>Practise the chapter</h5><p>Original listening, reading, grammar and vocabulary checks, plus writing and speaking rehearsal.</p>
+            <div class="textbook-score">${wb.answered}/${wb.total}<span> checked · ${wb.correct} correct</span></div><button class="btn btn-outline btn-small" data-workbook="${ch.number}">Open practice →</button></div>
+            <div class="textbook-learning-block"><span class="eyebrow">03 · Teacher sessions</span><h5>More practice & assessment</h5><p>Chapter-specific sessions designed and published by your teacher.</p>
+            ${sessions.length?sessions.map(ss=>`<button class="chapter-topic-button" data-open-session="${escape(ss.id)}"><strong>${escape(ss.title)}</strong><small>${sessionDoneCount(ss)}/${ss.blocks.length} steps ↗</small></button>`).join(''):'<p class="textbook-meta">No additional chapter sessions assigned yet.</p>'}</div>
+          </div>
+          <details class="textbook-chapter-details"><summary>What this chapter covers · Vocabulary, grammar and pronunciation</summary>
+             <div class="textbook-topic-details"><div><h6>Vocabulary</h6><ul>${(ch.vocabularyThemes||[]).map(x=>`<li>${escape(x)}</li>`).join('')}</ul></div>
+             <div><h6>Grammar</h6><ul>${(ch.grammarTopics||[]).map(x=>`<li>${escape(x)}</li>`).join('')}</ul></div>
+             <div><h6>Pronunciation & culture</h6><p>${escape(ch.pronunciationFocus)}</p><p>${escape(ch.culturalContext)}</p></div></div></details>
+          </article>
+          ${ch.reviewCheckpointAfter?`<article class="platform-checkpoint"><div><span class="eyebrow">Plattform ${ch.number===3?1:2} · Textbook review milestone</span><h4>Revisit chapters ${ch.number-2}–${ch.number}</h4><p>Original mixed-skill revision in the order of your textbook.</p></div><button class="btn btn-primary" data-workbook="review-${ch.number}">Open review →</button></article>`:''}`;
+      }).join('')}</div>
+      <p class="learner-book-foot">The 166-page original Netzwerk A1.1 PDF is used for high-level topics and structure, not to reproduce publisher text or artwork. All new exercises and illustrations need teacher approval. The unprovided A1.2 chapters are not included.</p>
+    </section>`;
+  }
   function renderTeacherBookPlanner(){
   const book=window.GERMAN_CURRICULUM;
   if(!book?.chapters?.length)return '';
