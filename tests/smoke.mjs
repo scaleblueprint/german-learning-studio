@@ -19,7 +19,7 @@ const ctx=vm.createContext({
   confirm:()=>true,setTimeout:()=>1,clearTimeout(){},console,URL,
   SpeechSynthesisUtterance:class{}
 });
-for(const name of ['curriculum.js','lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js','workbook.js','chapter-visuals.js','app.js']){
+for(const name of ['curriculum.js','lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js','workbook.js','chapter-visuals.js','rich-scenes.js','learning-objects.js','app.js']){
   vm.runInContext(fs.readFileSync(new URL('../dist/'+name,import.meta.url),'utf8'),ctx);
 }
 function open(hash){location.hash=hash;listeners['window:hashchange']();return root.innerHTML;}
@@ -37,12 +37,19 @@ assert.ok(html.includes('data-workbook="review-3"')&&html.includes('data-workboo
 assert.doesNotMatch(html,/Hallo! Nice to meet you|Everyday independence/);
 assertHas('Guten Appetit!');
 assertHas('Arbeitsbuch PDF pp. 116–127');
-assert.match(html,/Original AmberTheory illustration/);
+assert.match(html,/real-photo-gallery/);
+assert.match(html,/Photo: <a href=/);
+assert.match(html,/images.pexels.com/);
 assert.match(html,/city|City|places/i);
 click({lesson:win.GERMAN_LESSONS.find(x=>x.chapterNumber===1).id});
 assertHas('A1.1 · Chapter 1');
 assertHas('lesson-topic-visual');
+assertHas('Real places, people and everyday situations');
+assertHas('real-context-photo');
 click({stage:'understand'});assertHas('Understand it, word by word');
+assertHas('Six ways to use this chapter language');
+assertHas('example-language-card');
+assertHas('lesson-visual-object');
 click({stage:'check'});assertHas('QUESTION 1 OF');
 const first=win.GERMAN_LESSONS.find(x=>x.chapterNumber===1),answer=first.questions[0].correct;
 click({choice:String(answer)});click({checkAnswer:''});assertHas('Correct!');
@@ -73,6 +80,10 @@ assert.equal(saved.sessionProgress[session.id].answers[session.blocks[1].id].cor
 html=open('#teacher/sessions');click({teacherChapter:'3'});
 assertHas('Session answers correct');assertHas('1/1');
 assertHas('Edit →');
+click({route:'student/lessons'});
+click({lesson:win.GERMAN_LESSONS.find(x=>x.chapterNumber===5).id});
+click({stage:'understand'});assertHas('Clock showing');assertHas('halb acht');
+click({route:'student/lessons'});
 html=open('#student/lessons');
 assert.match(html,/Kapitel/);
 assert.ok(html.indexOf('Guten Tag!')<html.indexOf('Freunde, Kollegen und ich'));
