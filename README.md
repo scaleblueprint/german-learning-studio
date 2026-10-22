@@ -82,4 +82,4 @@ The active **shared curriculum** is now *Netzwerk neu A1* (Kursbuch; ISBN 978-3-
 
 ## Checks
 
-Run `node tests/smoke.mjs`, `node tests/exam.mjs` and `node tests/navigation.mjs`. The buildless `dist/` directory is published directly; `node tools/bundle.mjs` regenerates the portable single-file demo with the exam modules included.
+Run `node tests/curriculum-neu.mjs` to validate the 176-page index and shared curriculum, plus `node tests/smoke.mjs`, `node tests/exam.mjs`, `node tests/navigation.mjs` and `node tests/role-separation.mjs` for the app. The buildless `dist/` directory is published directly; `node tools/bundle.mjs` regenerates the portable single-file demo with the exam modules included.
