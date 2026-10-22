@@ -473,6 +473,29 @@
 @media(max-width:1000px){.textbook-chapter-content{grid-template-columns:1fr}.textbook-learning-block{border-right:0;border-bottom:1px solid var(--line)}.textbook-learning-block:last-child{border-bottom:0}.textbook-learning-block p{min-height:0}.textbook-topic-details{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.textbook-chapter-intro{grid-template-columns:1fr;padding:18px}.textbook-chapter-heading{gap:12px}.textbook-chapter-index{min-width:46px;height:56px}.textbook-chapter-intro .chapter-visual{justify-self:center}.textbook-learning-block{padding:18px}.textbook-topic-details{grid-template-columns:1fr}.platform-checkpoint{align-items:flex-start;flex-direction:column}.chapter-metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.teacher-chapter-report{padding:17px}.chapter-session-report-row{flex-wrap:wrap}}
 
+/* Rich chapter imagery and example-led lessons. Deliberately distinct from publisher page art. */
+.real-photo-gallery{margin:23px 0 30px;min-width:0}.real-photo-gallery .visual-section-title{margin:0 0 16px}.visual-section-title h3{font-size:clamp(20px,2vw,28px);line-height:1.2;margin:6px 0 10px}.visual-section-title p{max-width:750px;font-size:13px;color:var(--ink-soft);line-height:1.75}
+.real-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.real-context-photo{min-width:0;position:relative;overflow:hidden;background:#fff;border:1px solid #ddd4c7;border-radius:16px;margin:0;box-shadow:0 6px 18px rgba(24,44,39,.07)}.real-photo-frame{position:relative;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(135deg,#dfece5,#eadbca)}.real-photo-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .4s}.real-context-photo:hover img{transform:scale(1.035)}.real-context-photo figcaption{padding:14px 15px 16px;display:flex;flex-direction:column;align-items:flex-start;gap:7px}.visual-number{display:inline-block;font-size:10px;font-weight:800;color:#b45c46;letter-spacing:.1em}.real-context-photo figcaption strong{font-size:15px;color:var(--ink);line-height:1.3}.real-photo-german{font-size:16px;font-weight:800;line-height:1.4;color:#245c4f}.real-photo-cue{font-size:12px;color:var(--ink-soft);line-height:1.5}.real-context-photo figcaption small{font-size:10px;color:var(--muted);line-height:1.5}.real-context-photo figcaption small a{color:inherit;text-decoration:underline}.real-photo-audio{height:33px!important;width:33px!important;min-width:33px!important;font-size:14px!important;align-self:flex-end;margin-top:-38px}
+.compact-photo-gallery{margin:0;width:100%}.compact-photo-gallery .real-photo-grid{gap:7px;grid-template-columns:repeat(3,minmax(0,1fr))}.compact-photo-gallery .real-context-photo{border-radius:11px;box-shadow:none;background:#faf6ee}.compact-photo-gallery .real-photo-frame{aspect-ratio:3/4}.compact-photo-gallery .real-context-photo figcaption{padding:8px 7px 11px;gap:4px}.compact-photo-gallery .real-context-photo figcaption strong{font-size:10px}.compact-photo-gallery .real-photo-german{font-size:10px;line-height:1.3}.compact-photo-gallery .real-photo-cue,.compact-photo-gallery .real-context-photo figcaption small{display:none}.compact-photo-gallery .real-photo-audio{height:25px!important;width:25px!important;min-width:25px!important;font-size:11px!important;margin-top:0}.compact-photo-gallery .visual-number{font-size:9px}
+.textbook-chapter-intro .real-photo-gallery{max-width:490px;justify-self:end}.textbook-chapter-intro .real-photo-grid{gap:8px}
+.workbook-hero>.real-photo-gallery{max-width:650px;margin:0 0 20px}.teacher-planner-title>.real-photo-gallery{max-width:700px;margin-bottom:19px}
+.visual-example-bank{margin:30px 0;padding:27px;border-radius:18px;background:#f1f5ef;border:1px solid #cdded2}.visual-example-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:17px 0 23px}.example-language-card{padding:17px;border-radius:13px;background:#fff;border:1px solid #d3e1d7;display:flex;flex-direction:column;min-width:0}.example-index{font-size:11px;color:#9b5c46;font-weight:700;letter-spacing:.025em;margin-bottom:11px}.example-de{font-size:clamp(16px,1.7vw,21px);line-height:1.4;font-weight:800;color:#234d42}.example-en{font-size:12px;color:#64766e;line-height:1.6;margin:7px 0 13px}.example-language-card .view-link{font-size:11px;margin-top:auto;align-self:flex-start}.language-patterns{padding:22px;border-radius:14px;background:#fff;display:grid;grid-template-columns:minmax(150px,.55fr) minmax(0,1.45fr);gap:15px}.language-patterns h4{font-size:22px;margin:5px 0 9px;color:#244a41}.language-patterns p{color:var(--ink-soft);font-size:12px;line-height:1.65}.language-pattern-list{display:flex;flex-direction:column;gap:8px}.language-pattern-list>div{display:grid;grid-template-columns:minmax(80px,.55fr) minmax(140px,1fr) minmax(135px,1fr) 30px;gap:8px;align-items:center;padding:11px;border-radius:10px;background:#f9f5e9}.language-pattern-list span{font-size:11px;font-weight:700;color:#a55641}.language-pattern-list strong{font-size:13px;color:#23493f;line-height:1.5}.language-pattern-list small{font-size:11px;color:#607267;line-height:1.5}.language-pattern-list .sound-button{height:27px!important;width:27px!important;font-size:11px!important;min-width:27px!important}
+@media(max-width:930px){.real-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.real-photo-gallery .real-context-photo:nth-child(3){grid-column:span 2;display:grid;grid-template-columns:.6fr 1fr}.real-photo-gallery .real-context-photo:nth-child(3) .real-photo-frame{aspect-ratio:1.5}.compact-photo-gallery .real-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.compact-photo-gallery .real-context-photo:nth-child(3){grid-column:auto;display:block}.compact-photo-gallery .real-context-photo:nth-child(3) .real-photo-frame{aspect-ratio:3/4}.language-patterns{grid-template-columns:1fr}.textbook-chapter-intro .real-photo-gallery{justify-self:stretch;max-width:100%}}
+@media(max-width:640px){.real-photo-grid{grid-template-columns:1fr;gap:12px}.real-photo-gallery .real-context-photo:nth-child(3){grid-column:auto;display:block}.real-photo-gallery .real-context-photo:nth-child(3) .real-photo-frame{aspect-ratio:4/3}.real-photo-frame{aspect-ratio:16/10}.visual-example-bank{padding:16px;margin:19px 0}.visual-example-grid{grid-template-columns:1fr}.language-patterns{padding:12px}.language-pattern-list>div{grid-template-columns:1fr 30px}.language-pattern-list span,.language-pattern-list strong,.language-pattern-list small{grid-column:1}.language-pattern-list .sound-button{grid-column:2;grid-row:1/4}.compact-photo-gallery .real-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.compact-photo-gallery .real-context-photo:nth-child(3){display:block}.compact-photo-gallery .real-context-photo figcaption{padding:7px 6px 9px}.compact-photo-gallery .real-context-photo figcaption strong{font-size:9px}.compact-photo-gallery .real-photo-german{font-size:10px}.compact-photo-gallery .real-photo-frame{aspect-ratio:3/4}.compact-photo-gallery .real-photo-gallery{margin:0}}
+@media(prefers-reduced-motion:reduce){.real-photo-frame img{transition:none}}
+
+/* Original interactive workbook-style visual teaching objects. */
+.lesson-visual-object{margin:26px 0 32px;background:#fffdf8;border:1px solid #d6dacd;border-radius:19px;overflow:hidden;box-shadow:0 6px 18px rgba(35,54,42,.06)}.lesson-visual-object>header{padding:24px 27px 17px;background:linear-gradient(100deg,#fbe8d3,#f3f1dc)}.lesson-visual-object>header h3{font-size:clamp(21px,2.3vw,27px);margin:7px 0 10px;color:#294c42}.lesson-visual-object>header p{font-size:13px;color:#586f63;line-height:1.65}.learning-object-canvas{padding:25px;background:#fefdfa}.learning-object-sentence{border-top:1px solid #e1ddcb;padding:16px 26px;display:flex;align-items:center;flex-wrap:wrap;gap:12px}.learning-object-sentence strong{font-size:12px;color:#a45641}.learning-object-sentence span{font-size:16px;font-weight:800;color:#245245}.artifact-listen{border:1px solid #a9c9bd;color:#24594b;border-radius:19px;padding:7px 12px;font-size:11px;font-weight:700;background:#edf8f1;cursor:pointer;white-space:nowrap}.learning-object-caption{display:block;padding:10px 26px 18px;font-size:10px;color:#819187}
+.artifact-conversations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.artifact-conversations>div{background:#f5f2e9;border:1px solid #dfd8cd;border-radius:13px;padding:18px}.artifact-conversations>div>span{font-size:12px;font-weight:800;color:#ab5942}.artifact-speech{max-width:94%;font-size:15px;font-weight:700;line-height:1.6;border-radius:17px;padding:13px 15px;margin:14px 0}.artifact-speech.left{background:#dcf0e7;color:#244d42;border-bottom-left-radius:3px}.artifact-speech.right{background:#ffe3d1;color:#80513d;border-bottom-right-radius:3px;margin-left:auto}.artifact-conversations .artifact-listen{margin-top:3px}
+.artifact-profile,.artifact-week-calendar{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid #cbdccc;border-radius:13px;overflow:hidden}.artifact-profile>div,.artifact-week-calendar>div{padding:17px 10px;display:flex;flex-direction:column;gap:10px;min-width:0;border-right:1px solid #cbdccc;background:#f2f7ef}.artifact-profile>div:last-child,.artifact-week-calendar>div:last-child{border:0}.artifact-profile strong,.artifact-week-calendar strong{color:#a44f39;font-size:11px}.artifact-profile span,.artifact-week-calendar span{color:#2a5447;font-size:13px;font-weight:700;overflow-wrap:anywhere}
+.artifact-city-board,.artifact-basket{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.artifact-city-stop,.artifact-basket>div{display:flex;flex-direction:column;align-items:center;gap:9px;padding:25px 12px;background:#e7f2ee;border-radius:13px;border:1px solid #cbded5;text-align:center}.artifact-city-stop>span,.artifact-basket>div>span{font-size:40px}.artifact-city-stop b,.artifact-basket strong{font-size:13px;color:#235246}.artifact-city-stop small{font-size:11px;color:#61746e}.artifact-basket{grid-template-columns:repeat(5,minmax(0,1fr))}.artifact-basket>div{background:#f8f0de}
+.artifact-directions{border:1px solid #cbded5;border-radius:17px;padding:20px;background:repeating-linear-gradient(0deg,#e9f4ec 0,#e9f4ec 35px,#e0ebe5 36px,#e0ebe5 37px)}.artifact-roadline{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:30px 0}.artifact-roadline>div{display:flex;flex-direction:column;align-items:center;gap:7px;padding:16px;background:white;border-radius:12px;box-shadow:0 4px 12px #bcd5c1;font-size:30px}.artifact-roadline strong{font-size:13px;color:#275748}.artifact-roadline span{font-size:13px;font-weight:800;color:#a2543d;white-space:nowrap}.artifact-directions p{font-size:11px;color:#426c5d}
+.artifact-price-menu{max-width:620px;margin:auto;background:#fff;border:3px double #d1b78f;border-radius:12px;padding:22px}.artifact-price-menu header{font-size:24px;font-weight:800;color:#2b5549;border-bottom:2px solid #dac4a0;padding-bottom:12px;margin-bottom:13px}.artifact-price-menu>div{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;padding:12px 0;border-bottom:1px dashed #ddd2bd;font-size:13px;color:#385b51}.artifact-price-menu>div strong{color:#1f4c3d}.artifact-price-menu>div span{color:#a05f4b}.artifact-price-menu.receipt{max-width:480px}.artifact-price-menu.receipt>div{grid-template-columns:1fr auto}.artifact-price-menu.receipt>div:last-child{border-bottom:0;border-top:2px solid #314c42;padding-top:15px}
+.artifact-clocks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.artifact-clock{padding:17px;background:#eef5ef;border-radius:14px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}.artifact-clock svg{width:min(100%,170px);height:auto}.artifact-clock strong{font-size:20px;color:#a65e41}.artifact-clock>span{font-size:13px;font-weight:800;color:#2a5948}
+.artifact-invitation{max-width:550px;margin:auto;padding:27px 34px;border-radius:16px;background:linear-gradient(140deg,#fff2e4,#fce0dc);border:2px solid #d49c8d}.artifact-invitation>span{font-size:38px}.artifact-invitation h4{font-size:27px;color:#a15043;margin:10px 0 20px}.artifact-invitation>div{display:grid;grid-template-columns:105px 1fr;padding:11px 2px;border-bottom:1px solid #e5bcb2;font-size:14px}.artifact-invitation strong{color:#9d6151}.artifact-invitation span{font-weight:700;color:#3d5e52}
+@media(max-width:780px){.artifact-conversations{grid-template-columns:1fr}.artifact-profile,.artifact-week-calendar{grid-template-columns:repeat(2,minmax(0,1fr))}.artifact-profile>div,.artifact-week-calendar>div{border-bottom:1px solid #cbdccc}.artifact-city-board,.artifact-basket{grid-template-columns:repeat(2,minmax(0,1fr))}.artifact-clocks{grid-template-columns:1fr}.artifact-clock svg{max-width:155px}.artifact-roadline{flex-wrap:wrap}.learning-object-canvas{padding:14px}}
+@media(max-width:480px){.lesson-visual-object>header{padding:19px}.learning-object-sentence{padding:13px}.artifact-price-menu>div{grid-template-columns:1fr auto}.artifact-price-menu>div span{grid-column:1}.artifact-invitation{padding:19px}.artifact-invitation>div{grid-template-columns:78px 1fr}.artifact-roadline span{font-size:11px}.artifact-roadline>div{font-size:23px}}
+
 </style>
     <style>
 /* German Studio · AmberTheory's canonical logo and a warm, confident learning palette.
@@ -4036,6 +4059,1177 @@ window.GERMAN_WORKBOOK = {
 
 </script>
 <script>
+/* Lesson-rich original photo-and-example experience. Images: credited free-use Pexels photos,
+ * linked to their original attribution pages. No scanned publisher artwork is included.
+ * German examples and activities are independently written, pending teacher language review. */
+(() => {
+ const data={
+  "chapters": {
+    "1": [
+      {
+        "id": 8419631,
+        "title": "Meeting a classmate",
+        "alt": "Students introducing themselves",
+        "de": "Hallo! Wie heißt du?",
+        "cue": "Introduce yourself to a classmate",
+        "credit": "RDNE Stock project",
+        "source": "https://www.pexels.com/photo/8419631/",
+        "src": "https://images.pexels.com/photos/8419631/pexels-photo-8419631.jpeg?auto=compress&cs=tinysrgb&w=860"
+      },
+      {
+        "id": 5527700,
+        "title": "Talking at a café",
+        "alt": "Two people speaking over coffee",
+        "de": "Guten Tag. Ich heiße Lara.",
+        "cue": "Greet somebody new politely",
+        "credit": "Anna Tarazevich",
+        "source": "https://www.pexels.com/photo/5527700/",
+        "src": "https://images.pexels.com/photos/5527700/pexels-photo-5527700.jpeg?auto=compress&cs=tinysrgb&w=860"
+      },
+      {
+        "id": 3874031,
+        "title": "Names and introductions",
+        "alt": "Two people having a conversation",
+        "de": "Woher kommen Sie?",
+        "cue": "Ask where a new acquaintance comes from",
+        "credit": "Gustavo Fring",
+        "source": "https://www.pexels.com/photo/3874031/",
+        "src": "https://images.pexels.com/photos/3874031/pexels-photo-3874031.jpeg?auto=compress&cs=tinysrgb&w=860"
+      }
+    ],
+    "2": [
+      {
+        "id": 6761568,
+        "title": "Leisure with friends",
+        "alt": "Friends with bicycles",
+        "de": "Am Samstag fahre ich Rad.",
+        "cue": "Describe a weekend hobby",
+        "credit": "Rachel Claire",
+        "source": "https://www.pexels.com/photo/6761568/",
+        "src": "https://images.pexels.com/photos/6761568/pexels-photo-6761568.jpeg?auto=compress&cs=tinysrgb&w=860"
+      },
+      {
+        "id": 4623489,
+        "title": "Work and colleagues",
+        "alt": "A group talking in an office",
+        "de": "Ich arbeite im Büro.",
+        "cue": "Say where you work",
+        "credit": "Ketut Subiyanto",
+        "source": "https://www.pexels.com/photo/4623489/",
+        "src": "https://images.pexels.com/photos/4623489/pexels-photo-4623489.jpeg?auto=compress&cs=tinysrgb&w=860"
+      },
+      {
+        "id": 28353118,
+        "title": "Meeting schedule",
+        "alt": "An open planner and pen",
+        "de": "Treffen wir uns am Mittwoch?",
+        "cue": "Suggest a day for an activity",
+        "credit": "Natalia S",
+        "source": "https://www.pexels.com/photo/28353118/",
+        "src": "https://images.pexels.com/photos/28353118/pexels-photo-28353118.jpeg?auto=compress&cs=tinysrgb&w=860"
+      }
+    ],
+    "3": [
+      {
+        "id": 5477386,
+        "title": "In Hamburg",
+        "alt": "A city square in Hamburg",
+        "de": "Das ist das Rathaus.",
+        "cue": "Name a place in town",
+        "credit": "Nico Becker",
+        "source": "https://www.pexels.com/photo/5477386/",
+        "src": "https://images.pexels.com/photos/5477386/pexels-photo-5477386.jpeg?auto=compress&cs=tinysrgb&w=860"
+      },
+      {
+        "id": 18908406,
+        "title": "Public transport",
+        "alt": "A yellow tram in Berlin",
+        "de": "Wo ist die Haltestelle?",
+        "cue": "Ask for the tram stop",
+        "credit": "Pascal Bronsert",
+        "source": "https://www.pexels.com/photo/18908406/",
+        "src": "https://images.pexels.com/photos/18908406/pexels-photo-18908406.jpeg?auto=compress&cs=tinysrgb&w=860"
+      },
+      {
+        "id": 13180605,
+        "title": "Finding directions",
+        "alt": "Road signs in a German town",
+        "de": "Gehen Sie bitte geradeaus.",
+        "cue": "Give a polite direction",
+        "credit": "Neda Kekil",
+        "source": "https://www.pexels.com/photo/13180605/",
+        "src": "https://images.pexels.com/photos/13180605/pexels-photo-13180605.jpeg?auto=compress&cs=tinysrgb&w=860"
+      }
+    ],
+    "4": [
+      {
+        "id": 30888608,
+        "title": "Bread and baked goods",
+        "alt": "Breads displayed in a Berlin bakery",
+        "de": "Ich möchte ein Brot, bitte.",
+        "cue": "Order something at the bakery",
+        "credit": "Silvio Pelegrin",
+        "source": "https://www.pexels.com/photo/30888608/",
+        "src": "https://images.pexels.com/photos/30888608/pexels-photo-30888608.jpeg?auto=compress&cs=tinysrgb&w=860"
+      },
+      {
+        "id": 3873912,
+        "title": "At the market",
+        "alt": "Fresh vegetables on a market stall",
+        "de": "Wie viel kosten die Tomaten?",
+        "cue": "Ask for the price of vegetables",
+        "credit": "ready made",
+        "source": "https://www.pexels.com/photo/3873912/",
+        "src": "https://images.pexels.com/photos/3873912/pexels-photo-3873912.jpeg?auto=compress&cs=tinysrgb&w=860"
+      },
+      {
+        "id": 6281454,
+        "title": "Shopping conversation",
+        "alt": "Customer speaking to a café employee",
+        "de": "Haben Sie noch Brötchen?",
+        "cue": "Ask whether an item is available",
+        "credit": "Antoni Shkraba",
+        "source": "https://www.pexels.com/photo/6281454/",
+        "src": "https://images.pexels.com/photos/6281454/pexels-photo-6281454.jpeg?auto=compress&cs=tinysrgb&w=860"
+      }
+    ],
+    "5": [
+      {
+        "id": 7445340,
+        "title": "Morning routine",
+        "alt": "An alarm clock beside books",
+        "de": "Um sieben Uhr stehe ich auf.",
+        "cue": "Say when your day begins",
+        "credit": "KATRIN BOLOVTSOVA",
+        "source": "https://www.pexels.com/photo/7445340/",
+        "src": "https://images.pexels.com/photos/7445340/pexels-photo-7445340.jpeg?auto=compress&cs=tinysrgb&w=860"
+      },
+      {
+        "id": 4260753,
+        "title": "Family at home",
+        "alt": "Family using a laptop together",
+        "de": "Das ist mein Vater.",
+        "cue": "Talk about a family member",
+        "credit": "August de Richelieu",
+        "source": "https://www.pexels.com/photo/4260753/",
+        "src": "https://images.pexels.com/photos/4260753/pexels-photo-4260753.jpeg?auto=compress&cs=tinysrgb&w=860"
+      },
+      {
+        "id": 6172482,
+        "title": "Making an appointment",
+        "alt": "A hand writing in a calendar",
+        "de": "Haben Sie am Dienstag Zeit?",
+        "cue": "Suggest an appointment time",
+        "credit": "RDNE Stock project",
+        "source": "https://www.pexels.com/photo/6172482/",
+        "src": "https://images.pexels.com/photos/6172482/pexels-photo-6172482.jpeg?auto=compress&cs=tinysrgb&w=860"
+      }
+    ],
+    "6": [
+      {
+        "id": 9543840,
+        "title": "A birthday celebration",
+        "alt": "Friends gathered around a birthday cake",
+        "de": "Herzlichen Glückwunsch!",
+        "cue": "Congratulate a friend",
+        "credit": "Mikhail Nilov",
+        "source": "https://www.pexels.com/photo/9543840/",
+        "src": "https://images.pexels.com/photos/9543840/pexels-photo-9543840.jpeg?auto=compress&cs=tinysrgb&w=860"
+      },
+      {
+        "id": 15098824,
+        "title": "Restaurant menu",
+        "alt": "A menu and meal on a restaurant table",
+        "de": "Die Rechnung, bitte.",
+        "cue": "Ask to pay politely",
+        "credit": "Yelena from Pexels",
+        "source": "https://www.pexels.com/photo/15098824/",
+        "src": "https://images.pexels.com/photos/15098824/pexels-photo-15098824.jpeg?auto=compress&cs=tinysrgb&w=860"
+      },
+      {
+        "id": 5527555,
+        "title": "Meeting friends",
+        "alt": "Two people talking in a café",
+        "de": "Wir treffen uns am Freitag.",
+        "cue": "Make a plan with friends",
+        "credit": "Anna Tarazevich",
+        "source": "https://www.pexels.com/photo/5527555/",
+        "src": "https://images.pexels.com/photos/5527555/pexels-photo-5527555.jpeg?auto=compress&cs=tinysrgb&w=860"
+      }
+    ]
+  },
+  "examples": {
+    "a11-greetings": [
+      [
+        "Hallo, ich bin Mia.",
+        "Hi, I'm Mia.",
+        "Meeting a fellow student"
+      ],
+      [
+        "Guten Morgen, Frau Keller.",
+        "Good morning, Ms Keller.",
+        "Greeting a teacher"
+      ],
+      [
+        "Wie heißt du?",
+        "What is your name? (informal)",
+        "Talking with a classmate"
+      ],
+      [
+        "Wie heißen Sie?",
+        "What is your name? (formal)",
+        "Speaking politely"
+      ],
+      [
+        "Mir geht es gut, danke.",
+        "I'm fine, thank you.",
+        "Answering a greeting"
+      ],
+      [
+        "Auf Wiedersehen!",
+        "Goodbye! (formal)",
+        "Leaving an appointment"
+      ]
+    ],
+    "a11-origin-spelling": [
+      [
+        "Ich komme aus Indien.",
+        "I come from India.",
+        "Saying where you come from"
+      ],
+      [
+        "Woher kommen Sie?",
+        "Where do you come from? (formal)",
+        "Asking about origin"
+      ],
+      [
+        "Ich spreche Englisch und Deutsch.",
+        "I speak English and German.",
+        "Talking about languages"
+      ],
+      [
+        "Wie schreibt man Ihren Namen?",
+        "How do you spell your name?",
+        "Checking a name"
+      ],
+      [
+        "Mein Nachname ist Meier.",
+        "My surname is Meier.",
+        "Filling out a profile"
+      ],
+      [
+        "Meine Telefonnummer ist null eins fünf sieben …",
+        "My phone number is zero one five seven …",
+        "Giving contact details"
+      ]
+    ],
+    "a11-hobbies": [
+      [
+        "Ich spiele gern Fußball.",
+        "I like playing football.",
+        "Talking about hobbies"
+      ],
+      [
+        "Was machst du am Wochenende?",
+        "What are you doing on the weekend?",
+        "Asking about plans"
+      ],
+      [
+        "Am Freitag habe ich Zeit.",
+        "I have time on Friday.",
+        "Availability"
+      ],
+      [
+        "Gehen wir am Samstag ins Kino?",
+        "Shall we go to the cinema on Saturday?",
+        "Inviting a friend"
+      ],
+      [
+        "Nein, am Samstag kann ich nicht.",
+        "No, I can't on Saturday.",
+        "Declining a plan"
+      ],
+      [
+        "Ja, gern! Um wie viel Uhr?",
+        "Yes, gladly! At what time?",
+        "Accepting an invitation"
+      ]
+    ],
+    "a11-jobs-seasons": [
+      [
+        "Ich bin Ärztin.",
+        "I'm a doctor (woman).",
+        "Naming a profession"
+      ],
+      [
+        "Mein Bruder ist Lehrer.",
+        "My brother is a teacher.",
+        "Describing a job"
+      ],
+      [
+        "Ich arbeite von neun bis fünf.",
+        "I work from nine to five.",
+        "Work hours"
+      ],
+      [
+        "Hast du einen Computer?",
+        "Do you have a computer?",
+        "Yes/no question"
+      ],
+      [
+        "Das sind meine Kollegen.",
+        "These are my colleagues.",
+        "Using plural nouns"
+      ],
+      [
+        "Im Sommer fahre ich oft Rad.",
+        "In summer I often cycle.",
+        "Seasons and leisure"
+      ]
+    ],
+    "a11-city-places": [
+      [
+        "Das ist ein Museum.",
+        "That is a museum.",
+        "Naming a building"
+      ],
+      [
+        "Wo ist der Bahnhof?",
+        "Where is the train station?",
+        "Asking about a place"
+      ],
+      [
+        "Hier gibt es eine Bank.",
+        "There's a bank here.",
+        "Describing a neighbourhood"
+      ],
+      [
+        "Ist das ein Hotel?",
+        "Is that a hotel?",
+        "Identifying a building"
+      ],
+      [
+        "Nein, das ist kein Hotel.",
+        "No, that isn't a hotel.",
+        "Negating a noun"
+      ],
+      [
+        "Die Haltestelle ist dort.",
+        "The stop is over there.",
+        "Pointing to transport"
+      ]
+    ],
+    "a11-city-directions": [
+      [
+        "Entschuldigung, wo ist der Markt?",
+        "Excuse me, where is the market?",
+        "Polite directions question"
+      ],
+      [
+        "Gehen Sie geradeaus.",
+        "Go straight ahead (formal).",
+        "Giving directions"
+      ],
+      [
+        "Biegen Sie links ab.",
+        "Turn left (formal).",
+        "Explaining a turn"
+      ],
+      [
+        "Dann gehen Sie nach rechts.",
+        "Then go to the right.",
+        "Explaining a route"
+      ],
+      [
+        "Nehmen Sie den Bus.",
+        "Take the bus.",
+        "Recommending transport"
+      ],
+      [
+        "Vielen Dank für Ihre Hilfe!",
+        "Thank you very much for your help!",
+        "Ending the conversation"
+      ]
+    ],
+    "a11-food-shops": [
+      [
+        "Zum Frühstück esse ich Brot.",
+        "For breakfast I eat bread.",
+        "Mealtimes"
+      ],
+      [
+        "Wir brauchen zwei Tomaten.",
+        "We need two tomatoes.",
+        "Shopping list"
+      ],
+      [
+        "Haben wir noch Käse?",
+        "Do we still have cheese?",
+        "Checking what is at home"
+      ],
+      [
+        "Ein Kilo Äpfel, bitte.",
+        "One kilo of apples, please.",
+        "Quantities"
+      ],
+      [
+        "Wo ist die Bäckerei?",
+        "Where is the bakery?",
+        "Finding a shop"
+      ],
+      [
+        "Ich gehe heute auf den Markt.",
+        "I'm going to the market today.",
+        "Planning shopping"
+      ]
+    ],
+    "a11-accusative-restaurant": [
+      [
+        "Ich nehme einen Tee.",
+        "I'll take a tea.",
+        "Masculine noun in accusative"
+      ],
+      [
+        "Ich möchte eine Suppe.",
+        "I'd like a soup.",
+        "Feminine noun in accusative"
+      ],
+      [
+        "Ich kaufe ein Brot.",
+        "I'm buying a loaf of bread.",
+        "Neuter noun in accusative"
+      ],
+      [
+        "Was kostet der Apfel?",
+        "How much does the apple cost?",
+        "Checking price"
+      ],
+      [
+        "Haben Sie einen Kaffee?",
+        "Do you have a coffee?",
+        "Polite request"
+      ],
+      [
+        "Das macht fünf Euro, bitte.",
+        "That comes to five euros, please.",
+        "Paying"
+      ]
+    ],
+    "a11-daily-time": [
+      [
+        "Es ist acht Uhr.",
+        "It's eight o'clock.",
+        "Full hours"
+      ],
+      [
+        "Es ist Viertel nach neun.",
+        "It's a quarter past nine.",
+        "Informal clock time"
+      ],
+      [
+        "Es ist halb sieben.",
+        "It's half past six.",
+        "German half-hour expression"
+      ],
+      [
+        "Ich frühstücke um sieben Uhr.",
+        "I have breakfast at seven.",
+        "Describing routine"
+      ],
+      [
+        "Am Nachmittag lerne ich Deutsch.",
+        "In the afternoon I study German.",
+        "Time of day"
+      ],
+      [
+        "Ich arbeite von neun bis fünf.",
+        "I work from nine until five.",
+        "From ... until"
+      ]
+    ],
+    "a11-family-appointments": [
+      [
+        "Das ist meine Schwester.",
+        "This is my sister.",
+        "Family vocabulary"
+      ],
+      [
+        "Mein Vater arbeitet heute.",
+        "My father is working today.",
+        "Possessive mein"
+      ],
+      [
+        "Ich muss morgen arbeiten.",
+        "I have to work tomorrow.",
+        "Modal verb müssen"
+      ],
+      [
+        "Kannst du am Dienstag kommen?",
+        "Can you come on Tuesday?",
+        "Making arrangements"
+      ],
+      [
+        "Ich möchte einen Termin vereinbaren.",
+        "I'd like to arrange an appointment.",
+        "Calling an office"
+      ],
+      [
+        "Entschuldigung, ich komme später.",
+        "Sorry, I'm coming later.",
+        "Apologising for lateness"
+      ]
+    ],
+    "a11-birthdays-invitations": [
+      [
+        "Wann hast du Geburtstag?",
+        "When is your birthday?",
+        "Asking the date"
+      ],
+      [
+        "Ich habe am dritten Mai Geburtstag.",
+        "My birthday is on the third of May.",
+        "Giving a date"
+      ],
+      [
+        "Kommst du am Samstag zu meiner Party?",
+        "Are you coming to my party on Saturday?",
+        "Inviting a friend"
+      ],
+      [
+        "Danke für die Einladung!",
+        "Thank you for the invitation!",
+        "Replying politely"
+      ],
+      [
+        "Ja, ich komme gern.",
+        "Yes, I'd love to come.",
+        "Accepting an invitation"
+      ],
+      [
+        "Leider kann ich nicht kommen.",
+        "Unfortunately I can't come.",
+        "Declining kindly"
+      ]
+    ],
+    "a11-restaurant-past": [
+      [
+        "Wir möchten einen Tisch für zwei.",
+        "We'd like a table for two.",
+        "Arriving at a restaurant"
+      ],
+      [
+        "Ich nehme das Tagesgericht.",
+        "I'll take the daily special.",
+        "Ordering a meal"
+      ],
+      [
+        "Noch ein Wasser, bitte.",
+        "Another water, please.",
+        "Ordering a drink"
+      ],
+      [
+        "Können wir bitte bezahlen?",
+        "Could we pay, please?",
+        "Requesting the bill"
+      ],
+      [
+        "Gestern war ich im Café.",
+        "Yesterday I was at the café.",
+        "Simple past of sein"
+      ],
+      [
+        "Wir hatten viel Spaß.",
+        "We had a lot of fun.",
+        "Simple past of haben"
+      ]
+    ]
+  },
+  "patterns": {
+    "a11-greetings": [
+      [
+        "Informal",
+        "Wie heißt du?",
+        "What is your name?"
+      ],
+      [
+        "Formal",
+        "Wie heißen Sie?",
+        "What is your name?"
+      ],
+      [
+        "Self-introduction",
+        "Ich heiße Nina.",
+        "My name is Nina."
+      ]
+    ],
+    "a11-origin-spelling": [
+      [
+        "Origin",
+        "Ich komme aus Berlin.",
+        "I come from Berlin."
+      ],
+      [
+        "Language",
+        "Ich spreche Deutsch.",
+        "I speak German."
+      ],
+      [
+        "Spelling",
+        "A – N – N – A",
+        "Spell letters one by one."
+      ]
+    ],
+    "a11-hobbies": [
+      [
+        "Activity",
+        "Ich spiele Tennis.",
+        "I play tennis."
+      ],
+      [
+        "Day",
+        "Am Mittwoch habe ich Zeit.",
+        "I have time Wednesday."
+      ],
+      [
+        "Yes/no question",
+        "Spielst du Fußball?",
+        "Do you play football?"
+      ]
+    ],
+    "a11-jobs-seasons": [
+      [
+        "The article",
+        "der Beruf / die Arbeit",
+        "the profession / the work"
+      ],
+      [
+        "Plural",
+        "ein Kollege → zwei Kollegen",
+        "one colleague → two colleagues"
+      ],
+      [
+        "Sein",
+        "Ich bin Student.",
+        "I am a student."
+      ]
+    ],
+    "a11-city-places": [
+      [
+        "Definite",
+        "der Bahnhof",
+        "the train station"
+      ],
+      [
+        "Indefinite",
+        "ein Bahnhof",
+        "a train station"
+      ],
+      [
+        "Negative",
+        "kein Bahnhof",
+        "not a train station"
+      ]
+    ],
+    "a11-city-directions": [
+      [
+        "Straight",
+        "Gehen Sie geradeaus.",
+        "Go straight."
+      ],
+      [
+        "Turn left",
+        "Biegen Sie links ab.",
+        "Turn left."
+      ],
+      [
+        "Turn right",
+        "Biegen Sie rechts ab.",
+        "Turn right."
+      ]
+    ],
+    "a11-food-shops": [
+      [
+        "Shopping list",
+        "Wir brauchen Milch.",
+        "We need milk."
+      ],
+      [
+        "Availability",
+        "Haben wir Brot?",
+        "Do we have bread?"
+      ],
+      [
+        "Quantity",
+        "Ein Kilo Äpfel.",
+        "One kilo of apples."
+      ]
+    ],
+    "a11-accusative-restaurant": [
+      [
+        "Masculine",
+        "der Tee → einen Tee",
+        "Accusative changes the masculine article."
+      ],
+      [
+        "Feminine",
+        "die Suppe → eine Suppe",
+        "Feminine article unchanged."
+      ],
+      [
+        "Neuter",
+        "das Brot → ein Brot",
+        "Neuter article unchanged."
+      ]
+    ],
+    "a11-daily-time": [
+      [
+        "Official",
+        "Es ist 14:30 Uhr.",
+        "It's 14:30."
+      ],
+      [
+        "Informal",
+        "Es ist halb drei.",
+        "It's half past two."
+      ],
+      [
+        "Time",
+        "Um acht Uhr lerne ich.",
+        "At eight o'clock I study."
+      ]
+    ],
+    "a11-family-appointments": [
+      [
+        "Possessive",
+        "mein Vater / meine Mutter",
+        "my father / my mother"
+      ],
+      [
+        "Modal structure",
+        "Ich muss heute arbeiten.",
+        "I have to work today."
+      ],
+      [
+        "Appointment",
+        "Haben Sie um zehn Uhr Zeit?",
+        "Are you available at ten?"
+      ]
+    ],
+    "a11-birthdays-invitations": [
+      [
+        "Date",
+        "am dritten Juni",
+        "on June third"
+      ],
+      [
+        "Invitation",
+        "Kommst du zur Party?",
+        "Are you coming to the party?"
+      ],
+      [
+        "Reply",
+        "Ja, gern! / Leider nicht.",
+        "Yes, gladly / Unfortunately no."
+      ]
+    ],
+    "a11-restaurant-past": [
+      [
+        "Order",
+        "Ich nehme eine Suppe.",
+        "I'll take a soup."
+      ],
+      [
+        "Payment",
+        "Die Rechnung, bitte.",
+        "The bill, please."
+      ],
+      [
+        "Past",
+        "war / hatte",
+        "was / had"
+      ]
+    ]
+  }
+};
+ const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const photo=(p,i,small)=>`<figure class="real-context-photo ${small?'is-mini':''}">
+   <div class="real-photo-frame"><img src="${esc(p.src)}" alt="${esc(p.alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></div>
+   <figcaption><span class="visual-number">${String(i+1).padStart(2,'0')}</span><strong>${esc(p.title)}</strong>
+   <span class="real-photo-german" lang="de">${esc(p.de)}</span>
+   <span class="real-photo-cue">${esc(p.cue)}</span>
+   <button type="button" class="sound-button real-photo-audio" data-speak="${esc(p.de)}" aria-label="Hear ${esc(p.de)}">♫</button>
+   <small>Photo: <a href="${esc(p.source)}" target="_blank" rel="noopener noreferrer">Pexels / ${esc(p.credit)}</a></small></figcaption>
+   </figure>`;
+ const photos=(n,{compact=false,heading=true}={})=>{
+   const items=data.chapters[String(n)]||[];
+   if(!items.length)return '';
+   return `<section class="real-photo-gallery ${compact?'compact-photo-gallery':''}" aria-label="Real life scenes for chapter ${n}">
+     ${heading?'<div class="visual-section-title"><span class="eyebrow">See it in real life</span><h3>Real places, people and everyday situations</h3><p>Look at the photographs, listen to the original German example, and describe what you see.</p></div>':''}
+     <div class="real-photo-grid">${items.map((p,i)=>photo(p,i,compact)).join('')}</div></section>`;
+ };
+ const examples=(id)=>{
+   const rows=data.examples[id]||[],rules=data.patterns[id]||[];
+   if(!rows.length)return '';
+   return `<section class="visual-example-bank" aria-label="Original German worked examples">
+     <div class="visual-section-title"><span class="eyebrow">More examples · Listen and say</span><h3>Six ways to use this chapter language</h3><p>Notice how the expression changes with the situation. Each sentence is an original practice example, not a textbook quotation.</p></div>
+     <div class="visual-example-grid">${rows.map(([de,en,when],i)=>`<article class="example-language-card"><span class="example-index">${String(i+1).padStart(2,'0')} · ${esc(when)}</span>
+         <div class="example-de" lang="de">${esc(de)}</div><div class="example-en">${esc(en)}</div>
+         <button type="button" class="view-link" data-speak="${esc(de)}" aria-label="Play ${esc(de)}">♫ Listen and repeat</button></article>`).join('')}</div>
+     ${rules.length?`<div class="language-patterns"><div><span class="eyebrow">Spot the pattern</span><h4>Compare the forms</h4><p>Read the examples side by side, then try changing one word.</p></div>
+      <div class="language-pattern-list">${rules.map(([label,de,en])=>`<div><span>${esc(label)}</span><strong lang="de">${esc(de)}</strong><small>${esc(en)}</small><button type="button" data-speak="${esc(de)}" class="sound-button" aria-label="Listen to ${esc(de)}">♫</button></div>`).join('')}</div></div>`:''}
+     </section>`;
+ };
+ window.GERMAN_RICH_SCENES={photos,examples,data};
+})();
+
+</script>
+<script>
+/* Original teaching artifacts inspired by textbook teaching media types:
+   dialogues, calendars, receipts, role cards, city routes, schedules and clocks.
+   Not publisher reproductions, not genuine official documents or screenshots. */
+(()=>{
+  const data={
+  "a11-greetings": {
+    "title": "Two greetings. Two situations.",
+    "kind": "dialogues",
+    "intro": "Compare the conversation with a classmate and the conversation with a teacher.",
+    "parts": [
+      [
+        "With a friend",
+        "Hallo! Wie heißt du?",
+        "Ich heiße Lina. Und du?"
+      ],
+      [
+        "At the school office",
+        "Guten Tag. Wie heißen Sie?",
+        "Ich heiße Frau Weber."
+      ]
+    ]
+  },
+  "a11-origin-spelling": {
+    "title": "A learner's contact card",
+    "kind": "contact",
+    "intro": "Read this original sample profile, then make one using your own information.",
+    "parts": [
+      [
+        "Vorname",
+        "Lea"
+      ],
+      [
+        "Nachname",
+        "Schmidt"
+      ],
+      [
+        "Land",
+        "Deutschland"
+      ],
+      [
+        "Sprache",
+        "Deutsch und Englisch"
+      ],
+      [
+        "Telefon",
+        "0157 2048 36"
+      ]
+    ]
+  },
+  "a11-hobbies": {
+    "title": "Make a plan with a classmate",
+    "kind": "planner",
+    "intro": "Check the day and read an original model exchange.",
+    "parts": [
+      [
+        "Montag",
+        "Musik"
+      ],
+      [
+        "Dienstag",
+        "Arbeit"
+      ],
+      [
+        "Mittwoch",
+        "Fußball"
+      ],
+      [
+        "Donnerstag",
+        "frei"
+      ],
+      [
+        "Freitag",
+        "Kino"
+      ]
+    ],
+    "foot": "Hast du am Donnerstag Zeit? — Ja, gern!"
+  },
+  "a11-jobs-seasons": {
+    "title": "A workplace introduction",
+    "kind": "profile",
+    "intro": "Listen to an original sample professional profile and describe the person.",
+    "parts": [
+      [
+        "Name",
+        "Jonas"
+      ],
+      [
+        "Beruf",
+        "Koch"
+      ],
+      [
+        "Arbeitsort",
+        "Restaurant"
+      ],
+      [
+        "Arbeitszeit",
+        "10–18 Uhr"
+      ],
+      [
+        "Freizeit",
+        "Rad fahren"
+      ]
+    ],
+    "foot": "Jonas ist Koch. Er arbeitet im Restaurant."
+  },
+  "a11-city-places": {
+    "title": "What can you see in town?",
+    "kind": "city",
+    "intro": "Look at the city board. Notice the articles before the nouns.",
+    "parts": [
+      [
+        "der Bahnhof",
+        "Station"
+      ],
+      [
+        "das Rathaus",
+        "Town hall"
+      ],
+      [
+        "die Bank",
+        "Bank"
+      ],
+      [
+        "das Museum",
+        "Museum"
+      ]
+    ],
+    "foot": "Hier gibt es einen Bahnhof und ein Museum."
+  },
+  "a11-city-directions": {
+    "title": "Follow a route across town",
+    "kind": "route",
+    "intro": "Use the landmarks and directions to describe the route.",
+    "parts": [
+      [
+        "START",
+        "Bahnhof"
+      ],
+      [
+        "1",
+        "geradeaus"
+      ],
+      [
+        "2",
+        "rechts"
+      ],
+      [
+        "ZIEL",
+        "Museum"
+      ]
+    ],
+    "foot": "Gehen Sie geradeaus. Dann biegen Sie rechts ab."
+  },
+  "a11-food-shops": {
+    "title": "Our shopping basket",
+    "kind": "shopping",
+    "intro": "Spot the quantities and articles in an original shopping list.",
+    "parts": [
+      [
+        "🥖",
+        "ein Brot"
+      ],
+      [
+        "🥛",
+        "eine Milch"
+      ],
+      [
+        "🍅",
+        "zwei Tomaten"
+      ],
+      [
+        "🧀",
+        "ein Stück Käse"
+      ],
+      [
+        "🍎",
+        "ein Kilo Äpfel"
+      ]
+    ],
+    "foot": "Was brauchen wir? Wir brauchen Brot und Käse."
+  },
+  "a11-accusative-restaurant": {
+    "title": "A café order: which article changes?",
+    "kind": "menu",
+    "intro": "Compare the menu with the words in a customer's order.",
+    "parts": [
+      [
+        "der Tee",
+        "einen Tee",
+        "2,50 €"
+      ],
+      [
+        "die Suppe",
+        "eine Suppe",
+        "4,00 €"
+      ],
+      [
+        "das Brot",
+        "ein Brot",
+        "3,00 €"
+      ]
+    ],
+    "foot": "Ich möchte einen Tee und ein Brot, bitte."
+  },
+  "a11-daily-time": {
+    "title": "Read the clock in German",
+    "kind": "clocks",
+    "intro": "Match the digital time to everyday German time expressions.",
+    "parts": [
+      [
+        "07:30",
+        "Es ist halb acht.",
+        "7",
+        "30"
+      ],
+      [
+        "08:15",
+        "Es ist Viertel nach acht.",
+        "8",
+        "15"
+      ],
+      [
+        "14:45",
+        "Es ist Viertel vor drei.",
+        "2",
+        "45"
+      ]
+    ],
+    "foot": "Ich gehe um halb acht zur Arbeit."
+  },
+  "a11-family-appointments": {
+    "title": "An appointment message",
+    "kind": "calendar",
+    "intro": "Read an original small calendar and email, then propose another appointment.",
+    "parts": [
+      [
+        "Mo",
+        "9 Uhr · Arbeit"
+      ],
+      [
+        "Di",
+        "17 Uhr · Deutsch"
+      ],
+      [
+        "Mi",
+        "11 Uhr · frei"
+      ],
+      [
+        "Do",
+        "15 Uhr · Arzt"
+      ],
+      [
+        "Fr",
+        "18 Uhr · Familie"
+      ]
+    ],
+    "foot": "Guten Tag, Frau König. Haben Sie am Mittwoch um elf Uhr Zeit?"
+  },
+  "a11-birthdays-invitations": {
+    "title": "A birthday invitation",
+    "kind": "invitation",
+    "intro": "Read the original sample invitation and find the date, time and place.",
+    "parts": [
+      [
+        "Für",
+        "Lina"
+      ],
+      [
+        "Anlass",
+        "Geburtstag"
+      ],
+      [
+        "Wann",
+        "Samstag, 14. Juni"
+      ],
+      [
+        "Uhrzeit",
+        "16:00 Uhr"
+      ],
+      [
+        "Wo",
+        "bei mir zu Hause"
+      ]
+    ],
+    "foot": "Kommst du? — Ja, gern. Vielen Dank für die Einladung!"
+  },
+  "a11-restaurant-past": {
+    "title": "A table for two and the bill",
+    "kind": "receipt",
+    "intro": "Connect a menu, the order and the final payment conversation.",
+    "parts": [
+      [
+        "2 × Wasser",
+        "5,00 €"
+      ],
+      [
+        "1 × Suppe",
+        "4,50 €"
+      ],
+      [
+        "1 × Brot",
+        "3,00 €"
+      ],
+      [
+        "Gesamt",
+        "12,50 €"
+      ]
+    ],
+    "foot": "Die Rechnung, bitte. — Das macht zwölf Euro fünfzig."
+  }
+};
+  const e=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const listen=s=>`<button type="button" class="artifact-listen" data-speak="${e(s)}" aria-label="Hear ${e(s)}">♫ Hear the sentence</button>`;
+  const clock=(hour,min)=>{
+    const angleM=min*6,angleH=(hour%12+min/60)*30;
+    return `<svg viewBox="0 0 150 150" role="img" aria-label="Clock showing ${hour}:${String(min).padStart(2,'0')}"><circle cx="75" cy="75" r="66" fill="#fff" stroke="#d5c2a6" stroke-width="7"/>${Array.from({length:12},(_,i)=>{const a=(i*30-90)*Math.PI/180;return `<text x="${(75+51*Math.cos(a)).toFixed(1)}" y="${(80+51*Math.sin(a)).toFixed(1)}" text-anchor="middle" font-size="12" font-family="Arial" fill="#37594e">${i||12}</text>`}).join('')}<line x1="75" y1="75" x2="${75+31*Math.sin(angleH*Math.PI/180)}" y2="${75-31*Math.cos(angleH*Math.PI/180)}" stroke="#23483f" stroke-width="5" stroke-linecap="round"/><line x1="75" y1="75" x2="${75+43*Math.sin(angleM*Math.PI/180)}" y2="${75-43*Math.cos(angleM*Math.PI/180)}" stroke="#c55b4b" stroke-width="3.5" stroke-linecap="round"/><circle cx="75" cy="75" r="4" fill="#23483f"/></svg>`;
+  };
+  const content=o=>{
+    const p=o.parts||[];
+    if(o.kind==='dialogues')return `<div class="artifact-conversations">${p.map(([label,a,b])=>`<div><span>${e(label)}</span><div class="artifact-speech left">${e(a)}</div><div class="artifact-speech right">${e(b)}</div>${listen(a)}</div>`).join('')}</div>`;
+    if(o.kind==='clocks')return `<div class="artifact-clocks">${p.map(([digital,phrase,hour,minute])=>`<div class="artifact-clock">${clock(Number(hour),Number(minute))}<strong>${e(digital)}</strong><span lang="de">${e(phrase)}</span>${listen(phrase)}</div>`).join('')}</div>`;
+    if(o.kind==='shopping')return `<div class="artifact-basket">${p.map(([ico,name])=>`<div><span>${e(ico)}</span><strong lang="de">${e(name)}</strong></div>`).join('')}</div>`;
+    if(o.kind==='route')return `<div class="artifact-directions"><div class="artifact-roadline"><div>🚉<strong>Bahnhof</strong></div><span>↑ geradeaus</span><span>→ rechts</span><div>🏛️<strong>Museum</strong></div></div><p>Start → Destination: practical route language</p></div>`;
+    if(o.kind==='city')return `<div class="artifact-city-board">${p.map(([de,en],i)=>`<div class="artifact-city-stop"><span>${['🚉','🏛️','🏦','🖼️'][i]}</span><b lang="de">${e(de)}</b><small>${e(en)}</small></div>`).join('')}</div>`;
+    if(o.kind==='menu')return `<div class="artifact-price-menu"><header>Im Café · Modellkarte</header>${p.map(([name,form,price])=>`<div><strong>${e(name)}</strong><span>→ ${e(form)}</span><b>${e(price)}</b></div>`).join('')}</div>`;
+    if(o.kind==='receipt')return `<div class="artifact-price-menu receipt"><header>Restaurant · Musterrechnung</header>${p.map(([label,price])=>`<div><strong>${e(label)}</strong><b>${e(price)}</b></div>`).join('')}</div>`;
+    if(o.kind==='invitation')return `<div class="artifact-invitation"><span>✉</span><h4>Du bist eingeladen!</h4>${p.map(([key,val])=>`<div><strong>${e(key)}</strong><span>${e(val)}</span></div>`).join('')}</div>`;
+    if(o.kind==='planner'||o.kind==='calendar')return `<div class="artifact-week-calendar">${p.map(([day,activity])=>`<div><strong>${e(day)}</strong><span>${e(activity)}</span></div>`).join('')}</div>`;
+    return `<div class="artifact-profile">${p.map(([field,val])=>`<div><strong>${e(field)}</strong><span>${e(val)}</span></div>`).join('')}</div>`;
+  };
+  window.GERMAN_LEARNING_OBJECTS={
+    render(id){
+      const o=data[id];if(!o)return '';
+      return `<section class="lesson-visual-object" aria-label="Original visual example">
+      <header><span class="eyebrow">Look closely · Real-world language object</span><h3>${e(o.title)}</h3><p>${e(o.intro)}</p></header>
+      <div class="learning-object-canvas">${content(o)}</div>
+      ${o.foot?`<div class="learning-object-sentence"><strong>Try saying:</strong><span lang="de">${e(o.foot)}</span>${listen(o.foot)}</div>`:''}
+      <small class="learning-object-caption">Illustrative original activity · Not a reproduction of a publisher page or exercise</small>
+      </section>`;
+    },
+    data
+  };
+})();
+
+</script>
+<script>
 // Original demonstration questions. These are not Goethe/telc examination items.
 // A qualified German teacher must review language, answers and suitability.
 window.GERMAN_EXAM_DATA = Object.freeze({
@@ -4279,6 +5473,8 @@ window.GERMAN_EXAM_DATA = Object.freeze({
   const lessonsInChapter=n=>textbookLessons().filter(l=>l.chapterNumber===Number(n));
   const chapterSessions=n=>state.sessions.filter(ss=>Number(ss.chapterNumber)===Number(n));
   const chapterVisual=n=>window.GERMAN_VISUALS?.render(n)||'';
+  const realPhotos=(n,options={})=>window.GERMAN_RICH_SCENES?.photos(n,options)||'';
+  const languageExamples=l=>window.GERMAN_RICH_SCENES?.examples(l.id)||'';
   const storageKey = 'ambertheory-german-studio-v1';
   const root = document.getElementById('app');
   const experienceTemplates = [
@@ -4428,7 +5624,7 @@ function renderWorkbook(){
   const related=state.workbookSubmissions.filter(s=>s.workbookChapter===id);
   const draft=(kind)=>r.progress.drafts?.[kind]||'';
   const response=(kind,title,prompt)=>`<article class="workbook-response"><span class="eyebrow">${title}</span><h3>${title==='Writing'?'Write an original response':'Speak, then reflect'}</h3><p>${escape(prompt)}</p><div class="study-note"><b>Helpful sentence starters:</b> ${escape(unit.support)}</div><label class="form-field" for="workbook-${escape(id)}-${kind}">${kind==='speaking'?'Notes from your spoken rehearsal':'Your German response'}</label><textarea class="text-entry" id="workbook-${escape(id)}-${kind}" data-workbook-draft="${escape(id)}:${kind}" maxlength="1200" placeholder="${kind==='speaking'?'What did you say? Which words need practice?':'Schreiben Sie auf Deutsch …'}">${escape(draft(kind))}</textarea><button class="btn btn-outline btn-small" data-workbook-submit="${escape(id)}:${kind}" ${draft(kind).trim().length<10?'disabled':''}>Send for teacher feedback →</button></article>`;
-  return `<div class="workbook-page"><button class="view-link" data-route="student/practice">← Back to practice</button><header class="workbook-hero">${chapterVisual(unit.number)}<span class="eyebrow">${unit.review?'A1.1 revision checkpoint':`A1.1 · Chapter ${unit.number} · Workbook`}</span><h1>${escape(unit.title)}</h1><p>${unit.review?'Original integrated revision, inspired by the Plataforma review structure.':`Independent practice mapped to the coursebook and workbook themes in Chapter ${unit.number}.`}</p><div class="workbook-hero-progress"><strong>${r.answered} / ${r.total} answered</strong><span>${r.answered?`${r.correct} correct so far`:'Answer at your own pace'}</span></div></header>
+  return `<div class="workbook-page"><button class="view-link" data-route="student/practice">← Back to practice</button><header class="workbook-hero">${realPhotos(unit.number,{compact:true,heading:false})||chapterVisual(unit.number)}<span class="eyebrow">${unit.review?'A1.1 revision checkpoint':`A1.1 · Chapter ${unit.number} · Workbook`}</span><h1>${escape(unit.title)}</h1><p>${unit.review?'Original integrated revision, inspired by the Plataforma review structure.':`Independent practice mapped to the coursebook and workbook themes in Chapter ${unit.number}.`}</p><div class="workbook-hero-progress"><strong>${r.answered} / ${r.total} answered</strong><span>${r.answered?`${r.correct} correct so far`:'Answer at your own pace'}</span></div></header>
   <section class="card workbook-check" aria-label="Interactive workbook questions"><div class="workbook-check-top"><span class="eyebrow">Listening · Reading · Grammar · Vocabulary</span><span>${i+1} of ${r.total}</span></div><div class="workbook-pips">${unit.questions.map((item,n)=>`<button class="workbook-pip ${n===i?'active':''} ${r.progress.answers?.[item.id]?'answered':''}" data-workbook-jump="${n}" aria-label="Question ${n+1}${r.progress.answers?.[item.id]?', answered':''}" aria-current="${n===i?'step':'false'}">${n+1}</button>`).join('')}</div><div class="workbook-question-label">${escape(q.skill)}</div>${q.audio?`<div class="workbook-audio"><p>Listen first. The transcript appears after checking.</p><button type="button" class="btn btn-outline btn-small" data-speak="${escape(q.audio)}" aria-label="Play German listening question">♫ Play German</button></div>`:''}${q.reading?`<blockquote class="workbook-reading" lang="de">${escape(q.reading)}</blockquote>`:''}<h2>${escape(q.prompt)}</h2><div class="choice-list">${q.options.map((option,n)=>`<button class="choice ${selected===n?'selected':''} ${answer&&n===q.correct?'correct':''} ${answer&&n===answer.chosen&&!answer.correct?'incorrect':''}" data-workbook-choice="${n}" ${answer?'disabled':''}>${escape(option)}</button>`).join('')}</div>${answer?`<div class="feedback ${answer.correct?'':'error'}"><b>${answer.correct?'Correct!':'Not quite.'}</b> ${escape(q.why)}${q.audio?`<p>Spoken text: <span lang="de">${escape(q.audio)}</span></p>`:''}</div><button class="view-link" data-workbook-retry="${escape(q.id)}">Retry this question</button>`:''}<div class="stage-foot"><button class="btn btn-outline" data-workbook-prev ${i===0?'disabled':''}>← Previous</button>${answer?`<button class="btn btn-primary" data-workbook-next ${i===r.total-1?'disabled':''}>Next question →</button>`:`<button class="btn btn-primary" data-workbook-check ${selected===null?'disabled':''}>Check answer</button>`}</div>${r.answered===r.total?`<div class="status-success">✓ Checkpoint complete: ${r.correct}/${r.total} correct. You can retry individual questions and practise the written and spoken tasks below.</div>`:''}</section>
   <section class="workbook-response-grid" aria-label="Production practice">${response('writing','Writing',unit.writing)}${response('speaking','Speaking',unit.speaking)}</section><section class="card card-pad workbook-feedback"><h3>Teacher feedback on this practice</h3>${related.length?related.map(s=>`<div class="queue-item"><strong>${s.kind==='speaking'?'Speaking rehearsal notes':'Writing response'}</strong><blockquote>${escape(s.text)}</blockquote>${state.reviews[s.id]?`<div class="feedback"><b>Teacher response:</b> ${escape(state.reviews[s.id].note)}</div>`:'<p>Awaiting feedback in the Teacher Studio on this device.</p>'}</div>`).join(''):'<p>Submit a response above to request teacher feedback.</p>'}</section><p class="workbook-disclaimer">Original AmberTheory material. Synthetic German voice depends on your browser. Not an official textbook exercise or language assessment; teacher review is pending.</p></div>`;
 }
@@ -4454,7 +5650,7 @@ function renderTeacherWorkbookInsights(){
             <div><span class="eyebrow">A1.1 · ${escape(ch.title)}</span><h4>${escape(ch.originalLessonGoal)}</h4>
             <p>${escape((ch.communicationOutcomes||[]).join(' · '))}</p>
             <small>Kursbuch PDF pp. ${ch.sourcePages.coursebookPdfStart}–${ch.sourcePages.coursebookPdfEnd} · Arbeitsbuch PDF pp. ${ch.sourcePages.workbookPdfStart}–${ch.sourcePages.workbookPdfEnd}</small></div>
-            </div>${chapterVisual(ch.number)}</div>
+            </div>${realPhotos(ch.number,{compact:true,heading:false})||chapterVisual(ch.number)}</div>
           <div class="textbook-chapter-content">
             <div class="textbook-learning-block"><span class="eyebrow">01 · Kursbuch</span><h5>Learn the ideas</h5><p>Vocabulary, grammar, pronunciation and original dialogue practice.</p>
             ${linked.map((l,i)=>`<button class="chapter-topic-button" data-lesson="${escape(l.id)}"><span>${ch.number}.${i+1}</span><strong>${escape(l.title)}</strong><small>${state.completed.includes(l.id)?'✓ Finished':'Open lesson'} ↗</small></button>`).join('')}
@@ -4512,7 +5708,7 @@ function renderTeacherWorkbookInsights(){
         <span>${String(item.number).padStart(2,'0')}</span><strong>${escape(item.title)}</strong><small>${item.stage}</small></button>`).join('')}
       </nav>
       <div class="teacher-planner-detail">
-        <div class="teacher-planner-title">${chapterVisual(ch.number)}<span class="eyebrow">${ch.stage} · Chapter ${ch.number}</span><h3>${escape(ch.title)}</h3><p>${escape(ch.originalLessonGoal)}</p><p class="teacher-planner-source">${ch.chapterPdfAvailable?`Source: uploaded original A1.1 · Kursbuch PDF pp. ${ch.sourcePages.coursebookPdfStart}–${ch.sourcePages.coursebookPdfEnd} · Arbeitsbuch PDF pp. ${ch.sourcePages.workbookPdfStart}–${ch.sourcePages.workbookPdfEnd}`:'Publisher outline only · A1.2 PDF not yet reviewed'}</p></div>
+        <div class="teacher-planner-title">${realPhotos(ch.number,{compact:true,heading:false})||chapterVisual(ch.number)}<span class="eyebrow">${ch.stage} · Chapter ${ch.number}</span><h3>${escape(ch.title)}</h3><p>${escape(ch.originalLessonGoal)}</p><p class="teacher-planner-source">${ch.chapterPdfAvailable?`Source: uploaded original A1.1 · Kursbuch PDF pp. ${ch.sourcePages.coursebookPdfStart}–${ch.sourcePages.coursebookPdfEnd} · Arbeitsbuch PDF pp. ${ch.sourcePages.workbookPdfStart}–${ch.sourcePages.workbookPdfEnd}`:'Publisher outline only · A1.2 PDF not yet reviewed'}</p></div>
         <div class="teacher-planner-stats"><div><b>${linked.length}</b><span>Local sessions linked</span></div><div><b>${assigned}</b><span>Assigned in demo</span></div><div><b>${ch.chapterPdfAvailable?'PDF reviewed':'Outline'}</b><span>Teacher validation pending</span></div></div>
         <div class="teacher-planner-panels">
           <section class="teacher-planner-panel"><h4>Communication objectives</h4><p>Students should be able to:</p>${topics(ch.communicationOutcomes)}</section>
@@ -4565,8 +5761,8 @@ function renderTeacherWorkbookInsights(){
     return `<div class="course-layout">${sidebar()}<div class="lesson-main"><div class="lesson-banner"><div><span class="eyebrow">${l.chapterNumber?`A1.1 · Chapter ${l.chapterNumber}`:'Original A1.1'} · Lesson ${escape(l.unit)}</span><h1>${escape(l.title)}</h1><p>${escape(l.subtitle)}</p>${l.sourcePdfPages?`<p class="lesson-source-note">Original AmberTheory practice · Reference: uploaded A1.1 PDF pp. ${l.sourcePdfPages[0]}–${l.sourcePdfPages[1]} · Teacher review pending</p>`:''}</div><span class="tag ${done?'tag-dark':'tag-warm'}">${done?'✓ Completed':escape(l.duration)}</span></div>${l.chapterNumber?`<div class="lesson-topic-visual">${chapterVisual(l.chapterNumber)}</div>`:''}<nav class="lesson-stage" aria-label="Lesson stages">${stageNames.map(([id,label])=>`<button class="stage-tab ${id===ui.stage?'active':''}" data-stage="${id}">${label}</button>`).join('')}</nav><article class="lesson-body card"><span class="eyebrow">${escape(stage[1])}</span>${renderStage(l)}</article><div class="lesson-nav"><button data-route="student/lessons">← Book chapters</button><button data-lesson="${textbookLessons()[(textbookLessons().indexOf(l)+1)%textbookLessons().length]?.id||l.id}">Next topic →</button></div></div></div>`;
   }
   function renderStage(l){
-    if(ui.stage==='discover')return `<h2>A moment from everyday life</h2><p class="explain">${escape(l.scene)}</p><div class="phrase-panel"><div><div class="upper">Hear the language</div><div class="phrase-de">${escape(l.phrase.de)}</div><div class="phrase-en">${escape(l.phrase.en)}</div>${l.phrase.sourceId?`<div class="phrase-source">${sourceNote(l.phrase.sourceId)}</div>`:''}</div><button class="sound-button" data-speak="${escape(l.phrase.de)}" aria-label="Play German pronunciation" title="Play browser German voice">♫</button></div><div class="study-note"><b>Listen and repeat.</b> Use the sound button to hear a German browser voice, then say the phrase aloud. Voice quality depends on the voices installed on your device.</div><div class="stage-foot"><p>Try to hear the rhythm before focusing on every word.</p><button class="btn btn-primary" data-stage="understand">Understand the words ${icon('arrow')}</button></div>`;
-    if(ui.stage==='understand')return `<h2>Understand it, word by word</h2><p class="explain">${l.pattern||''}</p>${l.theorySections?.length?`<div class="a11-theory-grid">${l.theorySections.map(section=>`<section class="a11-theory-card"><h3>${escape(section.heading)}</h3><p>${escape(section.body)}</p></section>`).join('')}</div>`:'' }<div class="word-list">${l.words.map(([de,en])=>`<div class="word"><b>${escape(de)}</b><p>${escape(en)}</p><button class="view-link" data-speak="${escape(de)}" aria-label="Hear ${escape(de)}" style="font-size:11px;margin-top:7px">♫ Listen</button></div>`).join('')}</div><div class="tip"><b>Pronunciation and usage tip:</b> ${escape(l.tip)}</div><div class="dialogue">${l.dialogue.map(([name,de,en])=>`<div class="speech"><span>${escape(name)}</span><strong>${escape(de)}</strong><div class="muted" style="font-size:11px;margin-top:5px">${escape(en)}</div></div>`).join('')}</div><div class="stage-foot"><button class="btn btn-outline" data-stage="discover">← Back</button><button class="btn btn-primary" data-stage="check">Check understanding ${icon('arrow')}</button></div>`;
+    if(ui.stage==='discover')return `<h2>A moment from everyday life</h2><p class="explain">${escape(l.scene)}</p>${l.chapterNumber?realPhotos(l.chapterNumber):''}<div class="phrase-panel"><div><div class="upper">Hear the language</div><div class="phrase-de">${escape(l.phrase.de)}</div><div class="phrase-en">${escape(l.phrase.en)}</div>${l.phrase.sourceId?`<div class="phrase-source">${sourceNote(l.phrase.sourceId)}</div>`:''}</div><button class="sound-button" data-speak="${escape(l.phrase.de)}" aria-label="Play German pronunciation" title="Play browser German voice">♫</button></div><div class="study-note"><b>Listen and repeat.</b> Use the sound button to hear a German browser voice, then say the phrase aloud. Voice quality depends on the voices installed on your device.</div><div class="stage-foot"><p>Try to hear the rhythm before focusing on every word.</p><button class="btn btn-primary" data-stage="understand">Understand the words ${icon('arrow')}</button></div>`;
+    if(ui.stage==='understand')return `<h2>Understand it, word by word</h2><p class="explain">${l.pattern||''}</p>${l.theorySections?.length?`<div class="a11-theory-grid">${l.theorySections.map(section=>`<section class="a11-theory-card"><h3>${escape(section.heading)}</h3><p>${escape(section.body)}</p></section>`).join('')}</div>`:'' }${l.chapterNumber?languageExamples(l):''}${l.chapterNumber?window.GERMAN_LEARNING_OBJECTS?.render(l.id)||'':''}<div class="word-list">${l.words.map(([de,en])=>`<div class="word"><b>${escape(de)}</b><p>${escape(en)}</p><button class="view-link" data-speak="${escape(de)}" aria-label="Hear ${escape(de)}" style="font-size:11px;margin-top:7px">♫ Listen</button></div>`).join('')}</div><div class="tip"><b>Pronunciation and usage tip:</b> ${escape(l.tip)}</div><div class="dialogue">${l.dialogue.map(([name,de,en])=>`<div class="speech"><span>${escape(name)}</span><strong>${escape(de)}</strong><div class="muted" style="font-size:11px;margin-top:5px">${escape(en)}</div></div>`).join('')}</div><div class="stage-foot"><button class="btn btn-outline" data-stage="discover">← Back</button><button class="btn btn-primary" data-stage="check">Check understanding ${icon('arrow')}</button></div>`;
     if(ui.stage==='check')return renderQuiz(l);
     return renderApply(l);
   }
