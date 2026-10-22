@@ -50,7 +50,7 @@ assert.doesNotMatch(root.innerHTML,/Hallo! Nice to meet you/);
 open('#student/practice');
 assert.equal(activeSection(),'Practice');
 assert.equal(visiblePanes(),1);
-assert.match(root.innerHTML,/Workbook and chapter assignments/);
+assert.match(root.innerHTML,/Practice and assignments/);
 assert.match(root.innerHTML,/Your teacher’s learning sessions/);
 
 open('#exam');
