@@ -27,7 +27,7 @@ const input=(field,value)=>{
 
 let html=open('#student/lessons');
 assert.match(html,/Kursbuch → Arbeitsbuch → Plattform/);
-assert.equal((html.match(/class="textbook-chapter"/g)||[]).length,6);
+assert.equal((new Set([...html.matchAll(/id="course-chapter-(\d+)"/g)].map(x=>x[1]))).size,6);
 assert.doesNotMatch(html,/Create chapter session draft/);
 assert.doesNotMatch(html,/Hallo! Nice to meet you/,'Unrelated standalone demos are hidden from the course');
 assert.match(html,/Greetings in real situations/,'PDF-grounded lessons visible to learner');
