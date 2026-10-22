@@ -30,7 +30,7 @@ const context=vm.createContext({
   URL,
   console,
 });
-vm.runInContext(fs.readFileSync(new URL('../dist/lessons.js',import.meta.url),'utf8'),context);
+for(const script of ['lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js'])vm.runInContext(fs.readFileSync(new URL('../dist/'+script,import.meta.url),'utf8'),context);
 vm.runInContext(fs.readFileSync(new URL('../dist/app.js',import.meta.url),'utf8'),context);
 
 function click(attributes){
@@ -87,7 +87,7 @@ listeners['root:input']({target:{dataset:{draft:'hello'},value:'Hallo! Ich heiß
 click({submitResponse:'hello'});
 assertHas('appears in the Teacher Studio review queue');
 click({finishLesson:'hello'});
-assertHas('1 of 5 lessons finished');
+assertHas('1 of 17 lessons finished');
 assertHas('Awaiting review');
 click({route:'teacher'});
 assertHas('Demo learner');
