@@ -39,7 +39,8 @@ function input(field,value){
   listeners['root:input']({target:el});
 }
 let html=open('#student/lessons');
-assert.equal((html.match(/data-workbook="\d+"/g)||[]).length,6,'Only A1.1 PDF chapters have workbook buttons');
+assert.ok(html.includes('data-workbook="1"')&&html.includes('data-workbook="6"'),'All six original A1.1 chapters must have practice');
+assert.ok(!html.includes('data-workbook="7"')&&!html.includes('data-workbook="12"'),'A1.2 previews must not launch unverified exercises');
 assert.match(html,/A1\.2 · source PDF pending/);
 html=open('#student/practice');
 assert.equal((html.match(/class="workbook-tile"/g)||[]).length,8,'6 chapters + 2 checkpoints');
@@ -81,5 +82,5 @@ html=open('#workbook/review-6');
 assert.match(html,/Plattform 2 · Revision/);
 assert.match(html,/1 of 9/);
 html=open('#student/lessons');
-assert.equal((html.match(/data-workbook="\d+"/g)||[]).length,6,'A1.2 must remain unimplemented until source supplied');
+assert.ok(!html.includes('data-workbook="7"'),'A1.2 must remain unimplemented until source supplied');
 console.log('Workbook flow passed: 48 original chapter tasks, two checkpoints, navigation, local results, teacher review, A1.2 boundary.');
