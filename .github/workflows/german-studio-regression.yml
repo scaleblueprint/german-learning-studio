@@ -22,6 +22,7 @@ jobs:
         run: |
           node tests/curriculum-a11.mjs
           node tests/curriculum-neu.mjs
+          node tests/workbook.mjs
       - name: Run student and teacher regression checks
         run: |
           node tests/smoke.mjs
