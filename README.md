@@ -60,15 +60,17 @@ CEFR A1 framework reference: [Council of Europe](https://www.coe.int/en/web/comm
 Commercial textbooks such as *Netzwerk neu* or Hueber materials are **not included**. Obtaining a book does not grant reproduction rights; check publisher licensing before importing pages, recordings, exercises or photos into the platform.
 
 
-## Teacher-selected Netzwerk A1 curriculum reference (October 2026)
+## Current course reference: Netzwerk neu A1 (22 October 2026)
 
-The teacher requested that AmberTheory follow **Netzwerk A1 (original edition, not Netzwerk neu)** as its A1 content reference. The publisher's official A1.1 and A1.2 tables of contents have been mapped to 12 source-traceable chapter outlines: communication goals, vocabulary themes, grammar, pronunciation, cultural context and original practice ideas. Four chapter-review checkpoints are planned after chapters 3, 6, 9 and 12.
+The active **shared curriculum** is now *Netzwerk neu A1* (Kursbuch; ISBN 978-3-12-607156-7, 176 pages), aligned to the user's latest textbook reference. This is **different** from the older *Netzwerk A1* edition mapped earlier that day. The old mapping remains available as a historical archive without mixing chapter numbers or titles.
 
-- Structured data: [dist/data/netzwerk-a1-reference.json](dist/data/netzwerk-a1-reference.json) and its browser equivalent [dist/curriculum.js](dist/curriculum.js).
-- Review trail and licensing boundaries: [docs/netzwerk-a1-source-reference.md](docs/netzwerk-a1-source-reference.md).
-- **Student Studio → Lessons** shows a learner-facing 12-chapter course journey with clear goals and honest *in preparation* labels, followed by the five playable demo lessons. **Teacher Studio → Sessions** is a different chapter planning workbench with communication objectives, language focus, original activity suggestions and a chapter-linked session composer.
-- The mapped outlines **are not 12 complete lessons**. Full original content, teacher approval and chapter-level assignment workflows are pending.
-- The Scribd upload's complete pages were not accessible and its exact edition is unconfirmed; the mapping is grounded in official publisher tables of contents. No protected book lessons, images, recordings or exercises have been imported.
+- New source-of-truth map including 176 **section-indexed** page records, 12 chapter themes and 60 original lesson **outlines**: [dist/data/netzwerk-neu-a1-reference.json](dist/data/netzwerk-neu-a1-reference.json).
+- The live Student Studio and Teacher Studio read the same active chapter data from [dist/curriculum.js](dist/curriculum.js). The student sees a chapter journey; the teacher sees a chapter planner and session drafts.
+- The original earlier-edition map is retained: [dist/data/netzwerk-a1-reference.json](dist/data/netzwerk-a1-reference.json).
+- Source, page-index limitations, publisher references and copyright-safe authoring rules: [docs/netzwerk-neu-a1-source-reference.md](docs/netzwerk-neu-a1-source-reference.md). Historical original-book record: [docs/netzwerk-a1-source-reference.md](docs/netzwerk-a1-source-reference.md).
+- Review sections after chapters 3, 6, 9 and 12 are planned. **All chapter lesson outlines are still in preparation**, pending independently authored lesson bodies, authentic or licensed media, answer keys, and German teacher validation. Five existing playable demo lessons are separate examples, not complete chapter coverage.
+
+**Not a 176-page transcription:** Pages 1–176 are classified by their coursebook section, but individual image-heavy pages, every exercise and detailed page-specific objectives have **not** been independently audited. The public web-text index can lose layout and umlauts. Do not present publisher content as copied lessons or as a fully validated course.
 
 ## Next steps before a real pilot
 
