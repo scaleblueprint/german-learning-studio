@@ -1,6 +1,6 @@
 # Historical record — original Netzwerk A1 curriculum mapping (superseded)
 
-**Update, 22 October 2026:** The user subsequently supplied the different *Netzwerk neu A1* Kursbuch (176 pages). That newer book is now the active shared curriculum mapping in `dist/curriculum.js`. This document and `dist/data/netzwerk-a1-reference.json` are preserved for historical reference only. See [the current source reference](netzwerk-neu-a1-source-reference.md).
+**Update, 22 October 2026:** The user uploaded the **original Netzwerk A1.1** Kurs- und Arbeitsbuch scan, 166 pages. That user-uploaded source now grounds the first six active chapters and twelve original interactive pilot lessons. This earlier original-edition publisher-TOC map is preserved as a historical baseline; see [the uploaded PDF audit](netzwerk-a1-1-uploaded-audit.md). The distinct *Netzwerk neu* link map remains archived separately.
 
 ## Earlier decision (22 October 2026)
 
@@ -16,7 +16,7 @@ The teacher-requested **Netzwerk A1** textbook is the primary A1 curriculum refe
 | [Publisher resources](https://www.klett-sprachen.de/netzwerk/r-388/187) | Existence of official vocabulary lists, transcripts, chapter tests, learning aids, code-protected recordings | Public catalogue; reuse rights NOT assumed |
 | [User-supplied Scribd upload](https://www.scribd.com/document/917795854/Netzwerk-A1-Kursbuch) | URL supplied; all pages NOT accessible | Restricted in this environment |
 
-The **historical original-edition** data are preserved in `dist/data/netzwerk-a1-reference.json`. The active `dist/curriculum.js` now comes from **the newer edition** `dist/data/netzwerk-neu-a1-reference.json`; do not resynchronise it from this older file.
+The **historical original-edition** data are preserved in `dist/data/netzwerk-a1-reference.json`. The active `dist/curriculum.js` now comes from the **uploaded original A1.1** source `dist/data/netzwerk-a1-1-uploaded-reference.json`; do not resynchronise it from this earlier, less-complete TOC-only file.
 
 ## What is in the curriculum data
 
