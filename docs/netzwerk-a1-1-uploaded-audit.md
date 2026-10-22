@@ -62,6 +62,14 @@ Each new interactive lesson includes: a real-life setup, German/English phrase, 
 - Existing publish control still governs teacher-created sessions. **Practice lesson availability does not mean teacher-approved content.**
 - No publisher audio/video is available in the upload. The app continues to use device German TTS where supported.
 
+## Implementation extension: independently authored workbook support
+
+- Chapters 1–6: each now has eight original choice questions across listening (device TTS), reading, grammar and vocabulary, plus writing and speaking-rehearsal tasks. These are not copied workbook activities.
+- Plattform 1 (after Chapters 1–3) and Plattform 2 (after Chapters 4–6): nine-question original mixed-skill revision assembled from chapter tasks, plus open production prompts.
+- Student Studio: direct chapter practice, saved answers, explanatory feedback, retries, draft text and teacher-response visibility on the same device.
+- Teacher Studio: original question progress and written rehearsal responses appear in review queue; four fictional sample pupils remain explicitly fictional.
+- Validation: `tests/workbook.mjs` verifies counts, navigation, persistence, review, and separation from unavailable A1.2. A certified exam or full publisher workbook recreation is not implied.
+
 ## What remains
 
 1. German-teacher QA of wording, articles, register, skill progression, pronunciation, quiz answers and answer explanations.
