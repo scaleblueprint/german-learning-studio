@@ -62,7 +62,7 @@ assert.equal(session.blocks.filter(b=>['quiz','assessment'].includes(b.type)).le
 assertHas('Chapter 3 · In der Stadt · Assessment');
 html=open('#student/practice');
 assertHas('Chapter 3 · In der Stadt · Assessment');
-click({openSession:session.id});assertHas('Hear the chapter language');
+click({openSession:session.id});assertHas('Listen and repeat');
 click({completeSessionBlock:session.blocks[0].id});
 assertHas('Grammar check');
 click({sessionChoice:String(session.blocks[1].correct)});
