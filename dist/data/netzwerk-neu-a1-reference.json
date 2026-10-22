@@ -1,0 +1,2770 @@
+{
+  "id": "netzwerk-neu-a1",
+  "title": "Netzwerk neu A1 — coursebook-aligned curriculum reference",
+  "edition": {
+    "series": "Netzwerk neu",
+    "publisher": "Ernst Klett Sprachen",
+    "isbn": "978-3-12-607156-7",
+    "format": "Kursbuch mit Audios und Videos",
+    "pageCount": 176,
+    "previousReference": "Netzwerk A1 (original edition) retained separately"
+  },
+  "usage": {
+    "role": "shared curriculum data for learner and teacher, original learning material only",
+    "notAReproduction": true,
+    "notPublisherEndorsed": true,
+    "licenceRequiredForRepublishingBookContent": true,
+    "teacherSignoffRequired": true,
+    "pilotStatus": "outlines verified; detailed independently written lessons and audio not yet complete"
+  },
+  "sources": {
+    "publisherBook": "https://www.klett-international.com/en/bh/netzwerk-neu-a1/t-4495/9783126071567",
+    "userFlipbook": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
+    "publicIndexedTextReference": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+    "publisherResources": "https://www.klett-sprachen.de/netzwerk-neu/r-18/605"
+  },
+  "verification": {
+    "date": "2026-10-22",
+    "scope": "176 pages section-indexed, chapter titles/page ranges and TOC themes checked. No claim that each page's exercises and images were individually audited.",
+    "knownLimitations": [
+      "User's specific FlipHTML5 viewer does not expose readable page text through web access.",
+      "An independently indexed copy of the same coursebook was used for chapter-level mapping.",
+      "Indexed text drops umlauts and image/table context; cannot be treated as an exact transcript.",
+      "Workbook pages after 176 in the comparison viewer are excluded."
+    ]
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Guten Tag!",
+      "stage": "A1.1",
+      "source": {
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
+        "verified": "2026-10-22",
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 9,
+        "flipbookEnd": 18,
+        "printedStart": 8,
+        "printedEnd": 17
+      },
+      "communicationOutcomes": [
+        "greet and take leave formally and informally",
+        "introduce yourself and others",
+        "ask how someone is",
+        "say and spell names, numbers, phone details",
+        "ask about country of origin and spoken languages"
+      ],
+      "vocabularyThemes": [
+        "greetings",
+        "countries and languages",
+        "numbers 0–20",
+        "alphabet and contact details"
+      ],
+      "grammarTopics": [
+        "W-questions",
+        "statements with the verb in second position",
+        "personal pronouns and regular present tense verbs"
+      ],
+      "pronunciationFocus": "Alphabet and spelling",
+      "culturalContext": "Countries and languages of German-speaking regions",
+      "originalLessonGoal": "Greet and take leave formally and informally; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life first introductions scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "First introductions",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Formal and informal greetings",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Names and countries",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "German alphabet and numbers",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Exchange contact details",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
+      "relatedExistingDemoLessonIds": [
+        "hello",
+        "origin",
+        "numbers"
+      ],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 2,
+      "title": "Freunde, Kollegen und ich",
+      "stage": "A1.1",
+      "source": {
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
+        "verified": "2026-10-22",
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 19,
+        "flipbookEnd": 28,
+        "printedStart": 18,
+        "printedEnd": 27
+      },
+      "communicationOutcomes": [
+        "talk about hobbies",
+        "make simple arrangements",
+        "name weekdays",
+        "describe jobs and working hours",
+        "complete a basic personal form"
+      ],
+      "vocabularyThemes": [
+        "hobbies",
+        "weekdays",
+        "jobs",
+        "working hours",
+        "numbers above 20"
+      ],
+      "grammarTopics": [
+        "common irregular present tense verbs",
+        "yes/no questions",
+        "definite articles der/das/die",
+        "noun singular and plural",
+        "haben and sein"
+      ],
+      "pronunciationFocus": "Intonation in questions and answers",
+      "culturalContext": "Leisure and joining a group",
+      "originalLessonGoal": "Talk about hobbies; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life hobbies and activities scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Hobbies and activities",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Make plans for the week",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Professions and workplaces",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Numbers and forms",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Articles and plural nouns",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 3,
+      "title": "In Hamburg",
+      "stage": "A1.1",
+      "source": {
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
+        "verified": "2026-10-22",
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 29,
+        "flipbookEnd": 38,
+        "printedStart": 28,
+        "printedEnd": 37
+      },
+      "communicationOutcomes": [
+        "name city places and buildings",
+        "ask about a place",
+        "identify means of transport",
+        "ask for and give simple directions",
+        "name months and seasons"
+      ],
+      "vocabularyThemes": [
+        "city buildings and landmarks",
+        "transport",
+        "directions",
+        "months and seasons"
+      ],
+      "grammarTopics": [
+        "indefinite articles ein/eine",
+        "negation with kein/keine",
+        "formal imperative Sie",
+        "adjectives with sein"
+      ],
+      "pronunciationFocus": "Long and short German vowels",
+      "culturalContext": "City life and seasons in D-A-CH",
+      "originalLessonGoal": "Name city places and buildings; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life buildings and landmarks scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Buildings and landmarks",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Transport around town",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Asking where something is",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Giving step-by-step directions",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Seasons and events",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
+      "relatedExistingDemoLessonIds": [
+        "city"
+      ],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": true,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 4,
+      "title": "Guten Appetit!",
+      "stage": "A1.1",
+      "source": {
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
+        "verified": "2026-10-22",
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 45,
+        "flipbookEnd": 54,
+        "printedStart": 44,
+        "printedEnd": 53
+      },
+      "communicationOutcomes": [
+        "plan a grocery purchase",
+        "ask for and buy food",
+        "respond at a café or meal",
+        "say likes and preferences about food"
+      ],
+      "vocabularyThemes": [
+        "meals",
+        "food and drinks",
+        "shops",
+        "quantities and prices"
+      ],
+      "grammarTopics": [
+        "accusative articles",
+        "verbs requiring an accusative object",
+        "mögen and möchten",
+        "sentence position"
+      ],
+      "pronunciationFocus": "Umlauts ä, ö, ü",
+      "culturalContext": "Food professions and eating traditions",
+      "originalLessonGoal": "Plan a grocery purchase; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life everyday meals scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Everyday meals",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Groceries and quantities",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Shopping politely",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Accusative in practice",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "At the table",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
+      "relatedExistingDemoLessonIds": [
+        "cafe"
+      ],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 5,
+      "title": "Alltag und Familie",
+      "stage": "A1.1",
+      "source": {
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
+        "verified": "2026-10-22",
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 55,
+        "flipbookEnd": 64,
+        "printedStart": 54,
+        "printedEnd": 63
+      },
+      "communicationOutcomes": [
+        "tell the time",
+        "sequence a typical day",
+        "talk about family",
+        "make an appointment by phone",
+        "apologize for being late"
+      ],
+      "vocabularyThemes": [
+        "daily routine",
+        "time expressions",
+        "family members",
+        "appointments"
+      ],
+      "grammarTopics": [
+        "am, um, von … bis time expressions",
+        "possessive articles in nominative and accusative",
+        "modal verbs müssen, können, wollen",
+        "sentence bracket with infinitive"
+      ],
+      "pronunciationFocus": "German r in different positions",
+      "culturalContext": "Punctuality and schedules",
+      "originalLessonGoal": "Tell the time; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life a day in my life scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "A day in my life",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Clock times and appointments",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Family and relationships",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Possessive words",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Plans, ability and obligation",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 6,
+      "title": "Zeit mit Freunden",
+      "stage": "A1.1",
+      "source": {
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
+        "verified": "2026-10-22",
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 65,
+        "flipbookEnd": 74,
+        "printedStart": 64,
+        "printedEnd": 73
+      },
+      "communicationOutcomes": [
+        "describe leisure plans",
+        "say a date and birthday",
+        "write an invitation",
+        "order and pay at a restaurant",
+        "describe a recent event simply"
+      ],
+      "vocabularyThemes": [
+        "ordinal numbers and dates",
+        "recreation",
+        "meals and drinks",
+        "public events"
+      ],
+      "grammarTopics": [
+        "dates with am",
+        "separable verbs",
+        "accusative personal pronouns",
+        "für + accusative",
+        "simple past of haben and sein"
+      ],
+      "pronunciationFocus": "Diphthongs ei, eu, au",
+      "culturalContext": "Cafés, restaurants and cultural events",
+      "originalLessonGoal": "Describe leisure plans; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life dates and birthdays scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Dates and birthdays",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Inviting friends",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Separable verbs in a plan",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Restaurant conversations",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Looking back at an event",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": true,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 7,
+      "title": "Arbeitsalltag",
+      "stage": "A1.2",
+      "source": {
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
+        "verified": "2026-10-22",
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 81,
+        "flipbookEnd": 90,
+        "printedStart": 80,
+        "printedEnd": 89
+      },
+      "communicationOutcomes": [
+        "understand everyday workplace interactions",
+        "describe a workday",
+        "describe a location and a process",
+        "understand and reply to a simple letter",
+        "make small talk at work"
+      ],
+      "vocabularyThemes": [
+        "workplace",
+        "locations",
+        "banking",
+        "digital devices and media"
+      ],
+      "grammarTopics": [
+        "joining clauses with und, oder, aber",
+        "dative articles",
+        "prepositions with dative",
+        "place phrases with dative"
+      ],
+      "pronunciationFocus": "s, sch and st sounds",
+      "culturalContext": "Small talk at the office",
+      "originalLessonGoal": "Understand everyday workplace interactions; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life workplace encounters scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Workplace encounters",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Daily tasks and messages",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Dative in common phrases",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Bank and computer vocabulary",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Workplace emails and small talk",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 8,
+      "title": "Fit und gesund",
+      "stage": "A1.2",
+      "source": {
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
+        "verified": "2026-10-22",
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 91,
+        "flipbookEnd": 100,
+        "printedStart": 90,
+        "printedEnd": 99
+      },
+      "communicationOutcomes": [
+        "name body parts",
+        "understand symptoms and medical conversations",
+        "follow instructions",
+        "give basic everyday health advice"
+      ],
+      "vocabularyThemes": [
+        "body parts",
+        "common illnesses",
+        "medication vocabulary",
+        "healthcare jobs"
+      ],
+      "grammarTopics": [
+        "imperative du, ihr, Sie",
+        "imperative word order",
+        "sollen, müssen, dürfen and prohibitions"
+      ],
+      "pronunciationFocus": "Pairs p/b, t/d, k/g",
+      "culturalContext": "Traditional household remedies",
+      "originalLessonGoal": "Name body parts; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life body parts scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Body parts",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "How do you feel?",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "At the doctor's",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Instructions and requests",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Advice and everyday habits",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 9,
+      "title": "Meine Wohnung",
+      "stage": "A1.2",
+      "source": {
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
+        "verified": "2026-10-22",
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 101,
+        "flipbookEnd": 110,
+        "printedStart": 100,
+        "printedEnd": 109
+      },
+      "communicationOutcomes": [
+        "understand apartment advertisements",
+        "describe rooms and furniture",
+        "plan where to put objects",
+        "explain likes and dislikes",
+        "write a short home description"
+      ],
+      "vocabularyThemes": [
+        "rooms",
+        "furniture and appliances",
+        "colours",
+        "living arrangements"
+      ],
+      "grammarTopics": [
+        "sein plus adjective",
+        "in + accusative for destination",
+        "two-way prepositions with dative for position"
+      ],
+      "pronunciationFocus": "Long and short e",
+      "culturalContext": "Housing types in D-A-CH",
+      "originalLessonGoal": "Understand apartment advertisements; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life rooms in a home scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Rooms in a home",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Furniture and appliances",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Where things are",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Planning a room",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Describing a home",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": true,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 10,
+      "title": "Studium und Beruf",
+      "stage": "A1.2",
+      "source": {
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
+        "verified": "2026-10-22",
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 117,
+        "flipbookEnd": 126,
+        "printedStart": 116,
+        "printedEnd": 125
+      },
+      "communicationOutcomes": [
+        "describe studies and jobs",
+        "report past events",
+        "understand basic job-search information",
+        "ask for clarification on the phone",
+        "give a short account of a day"
+      ],
+      "vocabularyThemes": [
+        "jobs and workplaces",
+        "study and training",
+        "applications",
+        "time and sequencing"
+      ],
+      "grammarTopics": [
+        "Perfekt sentence bracket",
+        "regular and irregular past participles",
+        "past participles ending in -iert",
+        "Perfekt with haben and sein"
+      ],
+      "pronunciationFocus": "German h",
+      "culturalContext": "Seasonal jobs and employment",
+      "originalLessonGoal": "Describe studies and jobs; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life study and job words scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Study and job words",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Expressing work preferences",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Introducing the Perfekt",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Job search and applications",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Talking about a past day",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 11,
+      "title": "Die Jacke gefällt mir!",
+      "stage": "A1.2",
+      "source": {
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
+        "verified": "2026-10-22",
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 127,
+        "flipbookEnd": 136,
+        "printedStart": 126,
+        "printedEnd": 135
+      },
+      "communicationOutcomes": [
+        "name clothing",
+        "understand and give compliments",
+        "request help when shopping",
+        "find departments in a store",
+        "discuss past purchases"
+      ],
+      "vocabularyThemes": [
+        "clothing",
+        "department stores",
+        "sizes",
+        "colours and shops"
+      ],
+      "grammarTopics": [
+        "welcher/welches/welche",
+        "dieser/dieses/diese",
+        "past participles with separable/inseparable prefixes",
+        "dative personal pronouns",
+        "verbs used with dative"
+      ],
+      "pronunciationFocus": "Stress in prefixed verbs",
+      "culturalContext": "Shopping and city life in Berlin",
+      "originalLessonGoal": "Name clothing; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life clothes and preferences scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Clothes and preferences",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Sizes and descriptions",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Asking for help in shops",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Dative for liking and fitting",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Talking about earlier purchases",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 12,
+      "title": "Ab in den Urlaub!",
+      "stage": "A1.2",
+      "source": {
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
+        "verified": "2026-10-22",
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 137,
+        "flipbookEnd": 146,
+        "printedStart": 136,
+        "printedEnd": 145
+      },
+      "communicationOutcomes": [
+        "choose a trip type and destination",
+        "plan a city itinerary",
+        "give and follow directions",
+        "write a postcard",
+        "describe weather and travel experiences"
+      ],
+      "vocabularyThemes": [
+        "travel types",
+        "destinations",
+        "landmarks",
+        "compass directions",
+        "weather"
+      ],
+      "grammarTopics": [
+        "impersonal man",
+        "connect clauses with denn",
+        "wer, wen, wem question forms",
+        "time prepositions with dative"
+      ],
+      "pronunciationFocus": "Contrasts f, v and w",
+      "culturalContext": "Destinations in Germany",
+      "originalLessonGoal": "Choose a trip type and destination; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life packing for a trip scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Packing for a trip",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Directions on holiday",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Describing a destination",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Weather and travel plans",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "A postcard or short trip report",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": true,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    }
+  ],
+  "checkpoints": [
+    {
+      "afterChapter": 3,
+      "skills": [
+        "listening",
+        "reading",
+        "writing",
+        "speaking"
+      ],
+      "contentStatus": "planned-original-practice",
+      "officialExam": false
+    },
+    {
+      "afterChapter": 6,
+      "skills": [
+        "listening",
+        "reading",
+        "writing",
+        "speaking"
+      ],
+      "contentStatus": "planned-original-practice",
+      "officialExam": false
+    },
+    {
+      "afterChapter": 9,
+      "skills": [
+        "listening",
+        "reading",
+        "writing",
+        "speaking"
+      ],
+      "contentStatus": "planned-original-practice",
+      "officialExam": false
+    },
+    {
+      "afterChapter": 12,
+      "skills": [
+        "listening",
+        "reading",
+        "writing",
+        "speaking"
+      ],
+      "contentStatus": "planned-original-practice",
+      "officialExam": false
+    }
+  ],
+  "sections": [
+    {
+      "kind": "front-matter",
+      "label": "Cover, publication details and reading key",
+      "first": 1,
+      "last": 4
+    },
+    {
+      "kind": "table-of-contents",
+      "label": "Chapter aims and contents",
+      "first": 5,
+      "last": 8
+    },
+    {
+      "kind": "chapter",
+      "label": "Guten Tag!",
+      "chapterNumber": 1,
+      "first": 9,
+      "last": 18
+    },
+    {
+      "kind": "chapter",
+      "label": "Freunde, Kollegen und ich",
+      "chapterNumber": 2,
+      "first": 19,
+      "last": 28
+    },
+    {
+      "kind": "chapter",
+      "label": "In Hamburg",
+      "chapterNumber": 3,
+      "first": 29,
+      "last": 38
+    },
+    {
+      "kind": "review",
+      "label": "Plattform 1: chapters 1–3",
+      "first": 39,
+      "last": 44
+    },
+    {
+      "kind": "chapter",
+      "label": "Guten Appetit!",
+      "chapterNumber": 4,
+      "first": 45,
+      "last": 54
+    },
+    {
+      "kind": "chapter",
+      "label": "Alltag und Familie",
+      "chapterNumber": 5,
+      "first": 55,
+      "last": 64
+    },
+    {
+      "kind": "chapter",
+      "label": "Zeit mit Freunden",
+      "chapterNumber": 6,
+      "first": 65,
+      "last": 74
+    },
+    {
+      "kind": "review",
+      "label": "Plattform 2: chapters 4–6",
+      "first": 75,
+      "last": 80
+    },
+    {
+      "kind": "chapter",
+      "label": "Arbeitsalltag",
+      "chapterNumber": 7,
+      "first": 81,
+      "last": 90
+    },
+    {
+      "kind": "chapter",
+      "label": "Fit und gesund",
+      "chapterNumber": 8,
+      "first": 91,
+      "last": 100
+    },
+    {
+      "kind": "chapter",
+      "label": "Meine Wohnung",
+      "chapterNumber": 9,
+      "first": 101,
+      "last": 110
+    },
+    {
+      "kind": "review",
+      "label": "Plattform 3: chapters 7–9",
+      "first": 111,
+      "last": 116
+    },
+    {
+      "kind": "chapter",
+      "label": "Studium und Beruf",
+      "chapterNumber": 10,
+      "first": 117,
+      "last": 126
+    },
+    {
+      "kind": "chapter",
+      "label": "Die Jacke gefällt mir!",
+      "chapterNumber": 11,
+      "first": 127,
+      "last": 136
+    },
+    {
+      "kind": "chapter",
+      "label": "Ab in den Urlaub!",
+      "chapterNumber": 12,
+      "first": 137,
+      "last": 146
+    },
+    {
+      "kind": "review",
+      "label": "Plattform 4: chapters 10–12",
+      "first": 147,
+      "last": 152
+    },
+    {
+      "kind": "appendix",
+      "label": "Grammar reference",
+      "first": 153,
+      "last": 161
+    },
+    {
+      "kind": "appendix",
+      "label": "Irregular verbs",
+      "first": 162,
+      "last": 162
+    },
+    {
+      "kind": "appendix",
+      "label": "Alphabetical vocabulary index",
+      "first": 163,
+      "last": 174
+    },
+    {
+      "kind": "back-matter",
+      "label": "Image/source credits",
+      "first": 175,
+      "last": 175
+    },
+    {
+      "kind": "back-matter",
+      "label": "Book back cover",
+      "first": 176,
+      "last": 176
+    }
+  ],
+  "pageIndex": [
+    {
+      "flipbookPage": 1,
+      "printedPage": null,
+      "sectionType": "front-matter",
+      "sectionTitle": "Cover, publication details and reading key",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 2,
+      "printedPage": null,
+      "sectionType": "front-matter",
+      "sectionTitle": "Cover, publication details and reading key",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 3,
+      "printedPage": null,
+      "sectionType": "front-matter",
+      "sectionTitle": "Cover, publication details and reading key",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 4,
+      "printedPage": null,
+      "sectionType": "front-matter",
+      "sectionTitle": "Cover, publication details and reading key",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 5,
+      "printedPage": null,
+      "sectionType": "table-of-contents",
+      "sectionTitle": "Chapter aims and contents",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 6,
+      "printedPage": null,
+      "sectionType": "table-of-contents",
+      "sectionTitle": "Chapter aims and contents",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 7,
+      "printedPage": null,
+      "sectionType": "table-of-contents",
+      "sectionTitle": "Chapter aims and contents",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 8,
+      "printedPage": null,
+      "sectionType": "table-of-contents",
+      "sectionTitle": "Chapter aims and contents",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 9,
+      "printedPage": 8,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Tag!",
+      "chapterNumber": 1,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 10,
+      "printedPage": 9,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Tag!",
+      "chapterNumber": 1,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 11,
+      "printedPage": 10,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Tag!",
+      "chapterNumber": 1,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 12,
+      "printedPage": 11,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Tag!",
+      "chapterNumber": 1,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 13,
+      "printedPage": 12,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Tag!",
+      "chapterNumber": 1,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 14,
+      "printedPage": 13,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Tag!",
+      "chapterNumber": 1,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 15,
+      "printedPage": 14,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Tag!",
+      "chapterNumber": 1,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 16,
+      "printedPage": 15,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Tag!",
+      "chapterNumber": 1,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 17,
+      "printedPage": 16,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Tag!",
+      "chapterNumber": 1,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 18,
+      "printedPage": 17,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Tag!",
+      "chapterNumber": 1,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 19,
+      "printedPage": 18,
+      "sectionType": "chapter",
+      "sectionTitle": "Freunde, Kollegen und ich",
+      "chapterNumber": 2,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 20,
+      "printedPage": 19,
+      "sectionType": "chapter",
+      "sectionTitle": "Freunde, Kollegen und ich",
+      "chapterNumber": 2,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 21,
+      "printedPage": 20,
+      "sectionType": "chapter",
+      "sectionTitle": "Freunde, Kollegen und ich",
+      "chapterNumber": 2,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 22,
+      "printedPage": 21,
+      "sectionType": "chapter",
+      "sectionTitle": "Freunde, Kollegen und ich",
+      "chapterNumber": 2,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 23,
+      "printedPage": 22,
+      "sectionType": "chapter",
+      "sectionTitle": "Freunde, Kollegen und ich",
+      "chapterNumber": 2,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 24,
+      "printedPage": 23,
+      "sectionType": "chapter",
+      "sectionTitle": "Freunde, Kollegen und ich",
+      "chapterNumber": 2,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 25,
+      "printedPage": 24,
+      "sectionType": "chapter",
+      "sectionTitle": "Freunde, Kollegen und ich",
+      "chapterNumber": 2,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 26,
+      "printedPage": 25,
+      "sectionType": "chapter",
+      "sectionTitle": "Freunde, Kollegen und ich",
+      "chapterNumber": 2,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 27,
+      "printedPage": 26,
+      "sectionType": "chapter",
+      "sectionTitle": "Freunde, Kollegen und ich",
+      "chapterNumber": 2,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 28,
+      "printedPage": 27,
+      "sectionType": "chapter",
+      "sectionTitle": "Freunde, Kollegen und ich",
+      "chapterNumber": 2,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 29,
+      "printedPage": 28,
+      "sectionType": "chapter",
+      "sectionTitle": "In Hamburg",
+      "chapterNumber": 3,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 30,
+      "printedPage": 29,
+      "sectionType": "chapter",
+      "sectionTitle": "In Hamburg",
+      "chapterNumber": 3,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 31,
+      "printedPage": 30,
+      "sectionType": "chapter",
+      "sectionTitle": "In Hamburg",
+      "chapterNumber": 3,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 32,
+      "printedPage": 31,
+      "sectionType": "chapter",
+      "sectionTitle": "In Hamburg",
+      "chapterNumber": 3,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 33,
+      "printedPage": 32,
+      "sectionType": "chapter",
+      "sectionTitle": "In Hamburg",
+      "chapterNumber": 3,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 34,
+      "printedPage": 33,
+      "sectionType": "chapter",
+      "sectionTitle": "In Hamburg",
+      "chapterNumber": 3,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 35,
+      "printedPage": 34,
+      "sectionType": "chapter",
+      "sectionTitle": "In Hamburg",
+      "chapterNumber": 3,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 36,
+      "printedPage": 35,
+      "sectionType": "chapter",
+      "sectionTitle": "In Hamburg",
+      "chapterNumber": 3,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 37,
+      "printedPage": 36,
+      "sectionType": "chapter",
+      "sectionTitle": "In Hamburg",
+      "chapterNumber": 3,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 38,
+      "printedPage": 37,
+      "sectionType": "chapter",
+      "sectionTitle": "In Hamburg",
+      "chapterNumber": 3,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 39,
+      "printedPage": 38,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 1: chapters 1–3",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 40,
+      "printedPage": 39,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 1: chapters 1–3",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 41,
+      "printedPage": 40,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 1: chapters 1–3",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 42,
+      "printedPage": 41,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 1: chapters 1–3",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 43,
+      "printedPage": 42,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 1: chapters 1–3",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 44,
+      "printedPage": 43,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 1: chapters 1–3",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 45,
+      "printedPage": 44,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Appetit!",
+      "chapterNumber": 4,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 46,
+      "printedPage": 45,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Appetit!",
+      "chapterNumber": 4,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 47,
+      "printedPage": 46,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Appetit!",
+      "chapterNumber": 4,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 48,
+      "printedPage": 47,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Appetit!",
+      "chapterNumber": 4,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 49,
+      "printedPage": 48,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Appetit!",
+      "chapterNumber": 4,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 50,
+      "printedPage": 49,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Appetit!",
+      "chapterNumber": 4,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 51,
+      "printedPage": 50,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Appetit!",
+      "chapterNumber": 4,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 52,
+      "printedPage": 51,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Appetit!",
+      "chapterNumber": 4,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 53,
+      "printedPage": 52,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Appetit!",
+      "chapterNumber": 4,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 54,
+      "printedPage": 53,
+      "sectionType": "chapter",
+      "sectionTitle": "Guten Appetit!",
+      "chapterNumber": 4,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 55,
+      "printedPage": 54,
+      "sectionType": "chapter",
+      "sectionTitle": "Alltag und Familie",
+      "chapterNumber": 5,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 56,
+      "printedPage": 55,
+      "sectionType": "chapter",
+      "sectionTitle": "Alltag und Familie",
+      "chapterNumber": 5,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 57,
+      "printedPage": 56,
+      "sectionType": "chapter",
+      "sectionTitle": "Alltag und Familie",
+      "chapterNumber": 5,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 58,
+      "printedPage": 57,
+      "sectionType": "chapter",
+      "sectionTitle": "Alltag und Familie",
+      "chapterNumber": 5,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 59,
+      "printedPage": 58,
+      "sectionType": "chapter",
+      "sectionTitle": "Alltag und Familie",
+      "chapterNumber": 5,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 60,
+      "printedPage": 59,
+      "sectionType": "chapter",
+      "sectionTitle": "Alltag und Familie",
+      "chapterNumber": 5,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 61,
+      "printedPage": 60,
+      "sectionType": "chapter",
+      "sectionTitle": "Alltag und Familie",
+      "chapterNumber": 5,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 62,
+      "printedPage": 61,
+      "sectionType": "chapter",
+      "sectionTitle": "Alltag und Familie",
+      "chapterNumber": 5,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 63,
+      "printedPage": 62,
+      "sectionType": "chapter",
+      "sectionTitle": "Alltag und Familie",
+      "chapterNumber": 5,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 64,
+      "printedPage": 63,
+      "sectionType": "chapter",
+      "sectionTitle": "Alltag und Familie",
+      "chapterNumber": 5,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 65,
+      "printedPage": 64,
+      "sectionType": "chapter",
+      "sectionTitle": "Zeit mit Freunden",
+      "chapterNumber": 6,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 66,
+      "printedPage": 65,
+      "sectionType": "chapter",
+      "sectionTitle": "Zeit mit Freunden",
+      "chapterNumber": 6,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 67,
+      "printedPage": 66,
+      "sectionType": "chapter",
+      "sectionTitle": "Zeit mit Freunden",
+      "chapterNumber": 6,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 68,
+      "printedPage": 67,
+      "sectionType": "chapter",
+      "sectionTitle": "Zeit mit Freunden",
+      "chapterNumber": 6,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 69,
+      "printedPage": 68,
+      "sectionType": "chapter",
+      "sectionTitle": "Zeit mit Freunden",
+      "chapterNumber": 6,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 70,
+      "printedPage": 69,
+      "sectionType": "chapter",
+      "sectionTitle": "Zeit mit Freunden",
+      "chapterNumber": 6,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 71,
+      "printedPage": 70,
+      "sectionType": "chapter",
+      "sectionTitle": "Zeit mit Freunden",
+      "chapterNumber": 6,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 72,
+      "printedPage": 71,
+      "sectionType": "chapter",
+      "sectionTitle": "Zeit mit Freunden",
+      "chapterNumber": 6,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 73,
+      "printedPage": 72,
+      "sectionType": "chapter",
+      "sectionTitle": "Zeit mit Freunden",
+      "chapterNumber": 6,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 74,
+      "printedPage": 73,
+      "sectionType": "chapter",
+      "sectionTitle": "Zeit mit Freunden",
+      "chapterNumber": 6,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 75,
+      "printedPage": 74,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 2: chapters 4–6",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 76,
+      "printedPage": 75,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 2: chapters 4–6",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 77,
+      "printedPage": 76,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 2: chapters 4–6",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 78,
+      "printedPage": 77,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 2: chapters 4–6",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 79,
+      "printedPage": 78,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 2: chapters 4–6",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 80,
+      "printedPage": 79,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 2: chapters 4–6",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 81,
+      "printedPage": 80,
+      "sectionType": "chapter",
+      "sectionTitle": "Arbeitsalltag",
+      "chapterNumber": 7,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 82,
+      "printedPage": 81,
+      "sectionType": "chapter",
+      "sectionTitle": "Arbeitsalltag",
+      "chapterNumber": 7,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 83,
+      "printedPage": 82,
+      "sectionType": "chapter",
+      "sectionTitle": "Arbeitsalltag",
+      "chapterNumber": 7,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 84,
+      "printedPage": 83,
+      "sectionType": "chapter",
+      "sectionTitle": "Arbeitsalltag",
+      "chapterNumber": 7,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 85,
+      "printedPage": 84,
+      "sectionType": "chapter",
+      "sectionTitle": "Arbeitsalltag",
+      "chapterNumber": 7,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 86,
+      "printedPage": 85,
+      "sectionType": "chapter",
+      "sectionTitle": "Arbeitsalltag",
+      "chapterNumber": 7,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 87,
+      "printedPage": 86,
+      "sectionType": "chapter",
+      "sectionTitle": "Arbeitsalltag",
+      "chapterNumber": 7,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 88,
+      "printedPage": 87,
+      "sectionType": "chapter",
+      "sectionTitle": "Arbeitsalltag",
+      "chapterNumber": 7,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 89,
+      "printedPage": 88,
+      "sectionType": "chapter",
+      "sectionTitle": "Arbeitsalltag",
+      "chapterNumber": 7,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 90,
+      "printedPage": 89,
+      "sectionType": "chapter",
+      "sectionTitle": "Arbeitsalltag",
+      "chapterNumber": 7,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 91,
+      "printedPage": 90,
+      "sectionType": "chapter",
+      "sectionTitle": "Fit und gesund",
+      "chapterNumber": 8,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 92,
+      "printedPage": 91,
+      "sectionType": "chapter",
+      "sectionTitle": "Fit und gesund",
+      "chapterNumber": 8,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 93,
+      "printedPage": 92,
+      "sectionType": "chapter",
+      "sectionTitle": "Fit und gesund",
+      "chapterNumber": 8,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 94,
+      "printedPage": 93,
+      "sectionType": "chapter",
+      "sectionTitle": "Fit und gesund",
+      "chapterNumber": 8,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 95,
+      "printedPage": 94,
+      "sectionType": "chapter",
+      "sectionTitle": "Fit und gesund",
+      "chapterNumber": 8,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 96,
+      "printedPage": 95,
+      "sectionType": "chapter",
+      "sectionTitle": "Fit und gesund",
+      "chapterNumber": 8,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 97,
+      "printedPage": 96,
+      "sectionType": "chapter",
+      "sectionTitle": "Fit und gesund",
+      "chapterNumber": 8,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 98,
+      "printedPage": 97,
+      "sectionType": "chapter",
+      "sectionTitle": "Fit und gesund",
+      "chapterNumber": 8,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 99,
+      "printedPage": 98,
+      "sectionType": "chapter",
+      "sectionTitle": "Fit und gesund",
+      "chapterNumber": 8,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 100,
+      "printedPage": 99,
+      "sectionType": "chapter",
+      "sectionTitle": "Fit und gesund",
+      "chapterNumber": 8,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 101,
+      "printedPage": 100,
+      "sectionType": "chapter",
+      "sectionTitle": "Meine Wohnung",
+      "chapterNumber": 9,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 102,
+      "printedPage": 101,
+      "sectionType": "chapter",
+      "sectionTitle": "Meine Wohnung",
+      "chapterNumber": 9,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 103,
+      "printedPage": 102,
+      "sectionType": "chapter",
+      "sectionTitle": "Meine Wohnung",
+      "chapterNumber": 9,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 104,
+      "printedPage": 103,
+      "sectionType": "chapter",
+      "sectionTitle": "Meine Wohnung",
+      "chapterNumber": 9,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 105,
+      "printedPage": 104,
+      "sectionType": "chapter",
+      "sectionTitle": "Meine Wohnung",
+      "chapterNumber": 9,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 106,
+      "printedPage": 105,
+      "sectionType": "chapter",
+      "sectionTitle": "Meine Wohnung",
+      "chapterNumber": 9,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 107,
+      "printedPage": 106,
+      "sectionType": "chapter",
+      "sectionTitle": "Meine Wohnung",
+      "chapterNumber": 9,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 108,
+      "printedPage": 107,
+      "sectionType": "chapter",
+      "sectionTitle": "Meine Wohnung",
+      "chapterNumber": 9,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 109,
+      "printedPage": 108,
+      "sectionType": "chapter",
+      "sectionTitle": "Meine Wohnung",
+      "chapterNumber": 9,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 110,
+      "printedPage": 109,
+      "sectionType": "chapter",
+      "sectionTitle": "Meine Wohnung",
+      "chapterNumber": 9,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 111,
+      "printedPage": 110,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 3: chapters 7–9",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 112,
+      "printedPage": 111,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 3: chapters 7–9",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 113,
+      "printedPage": 112,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 3: chapters 7–9",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 114,
+      "printedPage": 113,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 3: chapters 7–9",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 115,
+      "printedPage": 114,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 3: chapters 7–9",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 116,
+      "printedPage": 115,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 3: chapters 7–9",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 117,
+      "printedPage": 116,
+      "sectionType": "chapter",
+      "sectionTitle": "Studium und Beruf",
+      "chapterNumber": 10,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 118,
+      "printedPage": 117,
+      "sectionType": "chapter",
+      "sectionTitle": "Studium und Beruf",
+      "chapterNumber": 10,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 119,
+      "printedPage": 118,
+      "sectionType": "chapter",
+      "sectionTitle": "Studium und Beruf",
+      "chapterNumber": 10,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 120,
+      "printedPage": 119,
+      "sectionType": "chapter",
+      "sectionTitle": "Studium und Beruf",
+      "chapterNumber": 10,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 121,
+      "printedPage": 120,
+      "sectionType": "chapter",
+      "sectionTitle": "Studium und Beruf",
+      "chapterNumber": 10,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 122,
+      "printedPage": 121,
+      "sectionType": "chapter",
+      "sectionTitle": "Studium und Beruf",
+      "chapterNumber": 10,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 123,
+      "printedPage": 122,
+      "sectionType": "chapter",
+      "sectionTitle": "Studium und Beruf",
+      "chapterNumber": 10,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 124,
+      "printedPage": 123,
+      "sectionType": "chapter",
+      "sectionTitle": "Studium und Beruf",
+      "chapterNumber": 10,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 125,
+      "printedPage": 124,
+      "sectionType": "chapter",
+      "sectionTitle": "Studium und Beruf",
+      "chapterNumber": 10,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 126,
+      "printedPage": 125,
+      "sectionType": "chapter",
+      "sectionTitle": "Studium und Beruf",
+      "chapterNumber": 10,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 127,
+      "printedPage": 126,
+      "sectionType": "chapter",
+      "sectionTitle": "Die Jacke gefällt mir!",
+      "chapterNumber": 11,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 128,
+      "printedPage": 127,
+      "sectionType": "chapter",
+      "sectionTitle": "Die Jacke gefällt mir!",
+      "chapterNumber": 11,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 129,
+      "printedPage": 128,
+      "sectionType": "chapter",
+      "sectionTitle": "Die Jacke gefällt mir!",
+      "chapterNumber": 11,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 130,
+      "printedPage": 129,
+      "sectionType": "chapter",
+      "sectionTitle": "Die Jacke gefällt mir!",
+      "chapterNumber": 11,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 131,
+      "printedPage": 130,
+      "sectionType": "chapter",
+      "sectionTitle": "Die Jacke gefällt mir!",
+      "chapterNumber": 11,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 132,
+      "printedPage": 131,
+      "sectionType": "chapter",
+      "sectionTitle": "Die Jacke gefällt mir!",
+      "chapterNumber": 11,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 133,
+      "printedPage": 132,
+      "sectionType": "chapter",
+      "sectionTitle": "Die Jacke gefällt mir!",
+      "chapterNumber": 11,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 134,
+      "printedPage": 133,
+      "sectionType": "chapter",
+      "sectionTitle": "Die Jacke gefällt mir!",
+      "chapterNumber": 11,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 135,
+      "printedPage": 134,
+      "sectionType": "chapter",
+      "sectionTitle": "Die Jacke gefällt mir!",
+      "chapterNumber": 11,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 136,
+      "printedPage": 135,
+      "sectionType": "chapter",
+      "sectionTitle": "Die Jacke gefällt mir!",
+      "chapterNumber": 11,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 137,
+      "printedPage": 136,
+      "sectionType": "chapter",
+      "sectionTitle": "Ab in den Urlaub!",
+      "chapterNumber": 12,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 138,
+      "printedPage": 137,
+      "sectionType": "chapter",
+      "sectionTitle": "Ab in den Urlaub!",
+      "chapterNumber": 12,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 139,
+      "printedPage": 138,
+      "sectionType": "chapter",
+      "sectionTitle": "Ab in den Urlaub!",
+      "chapterNumber": 12,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 140,
+      "printedPage": 139,
+      "sectionType": "chapter",
+      "sectionTitle": "Ab in den Urlaub!",
+      "chapterNumber": 12,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 141,
+      "printedPage": 140,
+      "sectionType": "chapter",
+      "sectionTitle": "Ab in den Urlaub!",
+      "chapterNumber": 12,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 142,
+      "printedPage": 141,
+      "sectionType": "chapter",
+      "sectionTitle": "Ab in den Urlaub!",
+      "chapterNumber": 12,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 143,
+      "printedPage": 142,
+      "sectionType": "chapter",
+      "sectionTitle": "Ab in den Urlaub!",
+      "chapterNumber": 12,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 144,
+      "printedPage": 143,
+      "sectionType": "chapter",
+      "sectionTitle": "Ab in den Urlaub!",
+      "chapterNumber": 12,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 145,
+      "printedPage": 144,
+      "sectionType": "chapter",
+      "sectionTitle": "Ab in den Urlaub!",
+      "chapterNumber": 12,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 146,
+      "printedPage": 145,
+      "sectionType": "chapter",
+      "sectionTitle": "Ab in den Urlaub!",
+      "chapterNumber": 12,
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 147,
+      "printedPage": 146,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 4: chapters 10–12",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 148,
+      "printedPage": 147,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 4: chapters 10–12",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 149,
+      "printedPage": 148,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 4: chapters 10–12",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 150,
+      "printedPage": 149,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 4: chapters 10–12",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 151,
+      "printedPage": 150,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 4: chapters 10–12",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 152,
+      "printedPage": 151,
+      "sectionType": "review",
+      "sectionTitle": "Plattform 4: chapters 10–12",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 153,
+      "printedPage": 152,
+      "sectionType": "appendix",
+      "sectionTitle": "Grammar reference",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 154,
+      "printedPage": 153,
+      "sectionType": "appendix",
+      "sectionTitle": "Grammar reference",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 155,
+      "printedPage": 154,
+      "sectionType": "appendix",
+      "sectionTitle": "Grammar reference",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 156,
+      "printedPage": 155,
+      "sectionType": "appendix",
+      "sectionTitle": "Grammar reference",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 157,
+      "printedPage": 156,
+      "sectionType": "appendix",
+      "sectionTitle": "Grammar reference",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 158,
+      "printedPage": 157,
+      "sectionType": "appendix",
+      "sectionTitle": "Grammar reference",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 159,
+      "printedPage": 158,
+      "sectionType": "appendix",
+      "sectionTitle": "Grammar reference",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 160,
+      "printedPage": 159,
+      "sectionType": "appendix",
+      "sectionTitle": "Grammar reference",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 161,
+      "printedPage": 160,
+      "sectionType": "appendix",
+      "sectionTitle": "Grammar reference",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 162,
+      "printedPage": 161,
+      "sectionType": "appendix",
+      "sectionTitle": "Irregular verbs",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 163,
+      "printedPage": 162,
+      "sectionType": "appendix",
+      "sectionTitle": "Alphabetical vocabulary index",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 164,
+      "printedPage": 163,
+      "sectionType": "appendix",
+      "sectionTitle": "Alphabetical vocabulary index",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 165,
+      "printedPage": 164,
+      "sectionType": "appendix",
+      "sectionTitle": "Alphabetical vocabulary index",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 166,
+      "printedPage": 165,
+      "sectionType": "appendix",
+      "sectionTitle": "Alphabetical vocabulary index",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 167,
+      "printedPage": 166,
+      "sectionType": "appendix",
+      "sectionTitle": "Alphabetical vocabulary index",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 168,
+      "printedPage": 167,
+      "sectionType": "appendix",
+      "sectionTitle": "Alphabetical vocabulary index",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 169,
+      "printedPage": 168,
+      "sectionType": "appendix",
+      "sectionTitle": "Alphabetical vocabulary index",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 170,
+      "printedPage": 169,
+      "sectionType": "appendix",
+      "sectionTitle": "Alphabetical vocabulary index",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 171,
+      "printedPage": 170,
+      "sectionType": "appendix",
+      "sectionTitle": "Alphabetical vocabulary index",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 172,
+      "printedPage": 171,
+      "sectionType": "appendix",
+      "sectionTitle": "Alphabetical vocabulary index",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 173,
+      "printedPage": 172,
+      "sectionType": "appendix",
+      "sectionTitle": "Alphabetical vocabulary index",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 174,
+      "printedPage": 173,
+      "sectionType": "appendix",
+      "sectionTitle": "Alphabetical vocabulary index",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 175,
+      "printedPage": null,
+      "sectionType": "back-matter",
+      "sectionTitle": "Image/source credits",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    },
+    {
+      "flipbookPage": 176,
+      "printedPage": null,
+      "sectionType": "back-matter",
+      "sectionTitle": "Book back cover",
+      "annotationLevel": "section-indexed",
+      "pageSpecificExerciseReview": "not-complete"
+    }
+  ]
+}
