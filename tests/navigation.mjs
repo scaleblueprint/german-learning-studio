@@ -32,9 +32,9 @@ assert.equal(activeSection(),'My progress');
 assert.equal(visiblePanes(),1,'Only the selected learning section should be displayed');
 assert.match(root.innerHTML,/class="brand-logo" src="\.\/ambertheory-lockup\.jpg"/,'Header uses the canonical AmberTheory lockup');
 assert.doesNotMatch(root.innerHTML,/class="brand-mark"/,'AT monogram must not replace the canonical logo');
-assert.match(root.innerHTML,/data-route="home">▶ Watch studio demo/,'Student view retains a route to the public demo');
-assert.match(root.innerHTML,/class="milestone current"/,'The next unfinished lesson has a milestone');
-assert.equal([...root.innerHTML.matchAll(/class="milestone(?: done| current)?"/g)].length,17,'Milestones use the actual lesson count');
+assert.match(root.innerHTML,/Watch studio walkthrough/,'Student view retains a route to the demo');
+assert.match(root.innerHTML,/Kursbuch · Chapters 1–6/,'Student dashboard follows the book');
+assert.equal((root.innerHTML.match(/class="textbook-chapter"/g)||[]).length,6,'Six verified textbook chapters');
 assert.match(root.innerHTML,/data-route="student\/lessons"/);
 assert.match(root.innerHTML,/data-route="student\/practice"/);
 
@@ -44,13 +44,13 @@ assert.match(root.innerHTML,/teacher-studio-walkthrough\.mp4/);
 open('#student/lessons');
 assert.equal(activeSection(),'Lessons');
 assert.equal(visiblePanes(),1);
-assert.match(root.innerHTML,/Your First Steps lessons/);
-assert.match(root.innerHTML,/Hallo! Nice to meet you/);
+assert.match(root.innerHTML,/Kursbuch, Arbeitsbuch and Plattform/);
+assert.doesNotMatch(root.innerHTML,/Hallo! Nice to meet you/);
 
 open('#student/practice');
 assert.equal(activeSection(),'Practice');
 assert.equal(visiblePanes(),1);
-assert.match(root.innerHTML,/Practice with a purpose/);
+assert.match(root.innerHTML,/Workbook and chapter assignments/);
 assert.match(root.innerHTML,/Your teacher’s learning sessions/);
 
 open('#exam');
@@ -75,7 +75,7 @@ assert.match(root.innerHTML,/Content quality & readiness/);
 open('#teacher/sessions');
 assert.match(root.innerHTML,/Plan your next teaching experience/);
 assert.match(root.innerHTML,/data-teacher-chapter="4"/);
-assert.doesNotMatch(root.innerHTML,/From first words to real conversations/);
+assert.doesNotMatch(root.innerHTML,/Kursbuch → Arbeitsbuch → Plattform/);
 assert.match(root.innerHTML,/Session Studio/);
 open('#teacher/missions');
 assert.match(root.innerHTML,/Experience Studio/);
