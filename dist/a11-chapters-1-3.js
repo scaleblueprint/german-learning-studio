@@ -621,7 +621,7 @@ window.GERMAN_A11_LESSONS_PART1 = [
           "airport"
         ],
         "correct": 1,
-        "why": "Bahnhof is a railway station."
+        "why": "Der Bahnhof refers to a railway station, where passengers arrive or depart by train."
       },
       {
         "q": "Which negative sentence is grammatical?",
