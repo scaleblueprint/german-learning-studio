@@ -26,18 +26,18 @@ const input=(field,value)=>{
 };
 
 let html=open('#student/lessons');
-assert.match(html,/From first words to real conversations/);
-assert.equal((html.match(/class="learner-book-card"/g)||[]).length,12);
+assert.match(html,/Kursbuch → Arbeitsbuch → Plattform/);
+assert.equal((html.match(/class="textbook-chapter"/g)||[]).length,6);
 assert.doesNotMatch(html,/Create chapter session draft/);
-assert.match(html,/Hallo! Nice to meet you/,'Original playable lessons remain visible');
-assert.match(html,/Greetings in real situations/,'New PDF-grounded lessons visible to learner');
+assert.doesNotMatch(html,/Hallo! Nice to meet you/,'Unrelated standalone demos are hidden from the course');
+assert.match(html,/Greetings in real situations/,'PDF-grounded lessons visible to learner');
 assert.match(html,/A1.2 · source PDF pending/,'Unverified A1.2 must not be called complete');
 
 html=open('#teacher/sessions');
 assert.match(html,/Plan your next teaching experience/);
 assert.match(html,/Communication objectives/);
-assert.doesNotMatch(html,/From first words to real conversations/);
-assert.equal((html.match(/data-teacher-chapter="/g)||[]).length,12);
+assert.doesNotMatch(html,/Kursbuch → Arbeitsbuch → Plattform/);
+assert.equal((html.match(/data-teacher-chapter="/g)||[]).length,6);
 click({teacherChapter:'4'});
 assert.match(root.innerHTML,/Guten Appetit!/);
 assert.match(root.innerHTML,/Arbeitsbuch PDF pp. 116–127/,'Uploaded workbook page reference visible to teacher');
