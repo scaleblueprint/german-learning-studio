@@ -41,7 +41,9 @@ function input(field,value){
 let html=open('#student/lessons');
 assert.ok(html.includes('data-workbook="1"')&&html.includes('data-workbook="6"'),'All six original A1.1 chapters must have practice');
 assert.ok(!html.includes('data-workbook="7"')&&!html.includes('data-workbook="12"'),'A1.2 previews must not launch unverified exercises');
-assert.match(html,/A1\.2 · source PDF pending/);
+assert.doesNotMatch(html,/A1\.2 · source PDF pending/,'A1.2 previews are removed from the active course');
+assert.equal((html.match(/class="textbook-chapter"/g)||[]).length,6,'Six verified book chapters only');
+assert.equal((html.match(/class="platform-checkpoint"/g)||[]).length,2,'Textbook reviews after chapters 3 and 6');
 html=open('#student/practice');
 assert.equal((html.match(/class="workbook-tile"/g)||[]).length,8,'6 chapters + 2 checkpoints');
 assert.match(html,/Plattform 1/);
