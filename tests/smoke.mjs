@@ -33,7 +33,7 @@ assertHas('Discover German.');
 assertHas('teacher-studio-walkthrough.mp4');
 let html=open('#student/lessons');
 assert.equal((new Set([...html.matchAll(/id="course-chapter-(\d+)"/g)].map(x=>x[1]))).size,6);
-assert.equal((html.match(/class="platform-checkpoint"/g)||[]).length,2);
+assert.ok(html.includes('data-workbook="review-3"')&&html.includes('data-workbook="review-6"'));
 assert.doesNotMatch(html,/Hallo! Nice to meet you|Everyday independence/);
 assertHas('Guten Appetit!');
 assertHas('Arbeitsbuch PDF pp. 116–127');
