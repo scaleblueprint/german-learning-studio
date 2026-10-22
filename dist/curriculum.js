@@ -1,63 +1,116 @@
-/* Book-aligned curriculum reference, not a copy of protected textbook material. */
+/* Curriculum outline for both Student and Teacher Studios. Original app content; no copied textbook pages/exercises/audio. */
 window.GERMAN_CURRICULUM = {
-  "id": "netzwerk-a1-original",
-  "title": "Netzwerk A1 — curriculum reference map",
+  "id": "netzwerk-neu-a1",
+  "title": "Netzwerk neu A1 — coursebook-aligned curriculum reference",
   "edition": {
-    "series": "Netzwerk",
-    "excludeSeries": [
-      "Netzwerk neu"
-    ],
+    "series": "Netzwerk neu",
     "publisher": "Ernst Klett Sprachen",
-    "isbn": "978-3-12-606128-5",
-    "isbnVerification": "Publisher lists a 160-page Kursbuch; Scribd upload's precise edition not independently authenticated."
+    "isbn": "978-3-12-607156-7",
+    "format": "Kursbuch mit Audios und Videos",
+    "pageCount": 176,
+    "previousReference": "Netzwerk A1 (original edition) retained separately"
   },
   "usage": {
-    "role": "curriculum reference; independent teaching material only",
+    "role": "shared curriculum data for learner and teacher, original learning material only",
     "notAReproduction": true,
     "notPublisherEndorsed": true,
     "licenceRequiredForRepublishingBookContent": true,
     "teacherSignoffRequired": true,
-    "pilotStatus": "original lessons and questions still require development and review"
+    "pilotStatus": "outlines verified; detailed independently written lessons and audio not yet complete"
   },
   "sources": {
-    "publisherBook": "https://www.klett-sprachen.de/netzwerk-a1/t-1/9783126061285",
-    "originalScribdUserReference": "https://www.scribd.com/document/917795854/Netzwerk-A1-Kursbuch",
-    "tocA11": "https://www.klett-sprachen.de/downloads/2624/inhaltsverzeichnis-netzwerk-a1-1/pdf",
-    "tocA12": "https://www.klett-sprachen.de/downloads/2622/inhaltsverzeichnis-netzwerk-a1-2/pdf",
-    "publisherResources": "https://www.klett-sprachen.de/netzwerk/r-388/187"
+    "publisherBook": "https://www.klett-international.com/en/bh/netzwerk-neu-a1/t-4495/9783126071567",
+    "userFlipbook": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
+    "publicIndexedTextReference": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+    "publisherResources": "https://www.klett-sprachen.de/netzwerk-neu/r-18/605"
+  },
+  "verification": {
+    "date": "2026-10-22",
+    "scope": "176 pages section-indexed, chapter titles/page ranges and TOC themes checked. No claim that each page's exercises and images were individually audited.",
+    "knownLimitations": [
+      "User's specific FlipHTML5 viewer does not expose readable page text through web access.",
+      "An independently indexed copy of the same coursebook was used for chapter-level mapping.",
+      "Indexed text drops umlauts and image/table context; cannot be treated as an exact transcript.",
+      "Workbook pages after 176 in the comparison viewer are excluded."
+    ]
   },
   "chapters": [
     {
       "number": 1,
-      "title": "Guten Tag",
+      "title": "Guten Tag!",
       "stage": "A1.1",
       "source": {
-        "kind": "publisher-table-of-contents",
-        "url": "https://www.klett-sprachen.de/downloads/2624/inhaltsverzeichnis-netzwerk-a1-1/pdf",
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
         "verified": "2026-10-22",
-        "details": "Publisher chapter outline only; not full copyrighted textbook."
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 9,
+        "flipbookEnd": 18,
+        "printedStart": 8,
+        "printedEnd": 17
       },
       "communicationOutcomes": [
-        "greetings and farewells",
-        "introductions",
-        "spelling",
-        "phone numbers and email",
-        "countries and languages"
+        "greet and take leave formally and informally",
+        "introduce yourself and others",
+        "ask how someone is",
+        "say and spell names, numbers, phone details",
+        "ask about country of origin and spoken languages"
       ],
       "vocabularyThemes": [
-        "numbers 1–20",
-        "countries",
-        "languages"
+        "greetings",
+        "countries and languages",
+        "numbers 0–20",
+        "alphabet and contact details"
       ],
       "grammarTopics": [
         "W-questions",
-        "declarative sentences",
-        "personal pronouns and present tense verbs (intro)"
+        "statements with the verb in second position",
+        "personal pronouns and regular present tense verbs"
       ],
-      "pronunciationFocus": "German alphabet",
-      "culturalContext": "Countries and languages in D-A-CH",
-      "originalLessonGoal": "Introduce yourself and exchange contact information",
-      "originalTeacherStudioActivity": "Create a two-role introduction and spelling/phone-number listening task",
+      "pronunciationFocus": "Alphabet and spelling",
+      "culturalContext": "Countries and languages of German-speaking regions",
+      "originalLessonGoal": "Greet and take leave formally and informally; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life first introductions scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "First introductions",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Formal and informal greetings",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Names and countries",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "German alphabet and numbers",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Exchange contact details",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
       "relatedExistingDemoLessonIds": [
         "hello",
         "origin",
@@ -73,36 +126,80 @@ window.GERMAN_CURRICULUM = {
       "title": "Freunde, Kollegen und ich",
       "stage": "A1.1",
       "source": {
-        "kind": "publisher-table-of-contents",
-        "url": "https://www.klett-sprachen.de/downloads/2624/inhaltsverzeichnis-netzwerk-a1-1/pdf",
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
         "verified": "2026-10-22",
-        "details": "Publisher chapter outline only; not full copyrighted textbook."
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 19,
+        "flipbookEnd": 28,
+        "printedStart": 18,
+        "printedEnd": 27
       },
       "communicationOutcomes": [
-        "talking about hobbies",
-        "arranging to meet",
-        "weekdays and seasons",
-        "jobs and working hours",
-        "creating a short profile"
+        "talk about hobbies",
+        "make simple arrangements",
+        "name weekdays",
+        "describe jobs and working hours",
+        "complete a basic personal form"
       ],
       "vocabularyThemes": [
         "hobbies",
         "weekdays",
-        "numbers over 20",
         "jobs",
-        "months and seasons"
+        "working hours",
+        "numbers above 20"
       ],
       "grammarTopics": [
-        "der/das/die",
-        "pronouns and verb forms",
+        "common irregular present tense verbs",
         "yes/no questions",
-        "noun plurals",
+        "definite articles der/das/die",
+        "noun singular and plural",
         "haben and sein"
       ],
-      "pronunciationFocus": "Question and answer intonation",
-      "culturalContext": "Seasons and leisure in D-A-CH",
-      "originalLessonGoal": "Introduce a friend and discuss hobbies and work",
-      "originalTeacherStudioActivity": "Design a partner interview and short learner profile",
+      "pronunciationFocus": "Intonation in questions and answers",
+      "culturalContext": "Leisure and joining a group",
+      "originalLessonGoal": "Talk about hobbies; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life hobbies and activities scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Hobbies and activities",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Make plans for the week",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Professions and workplaces",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Numbers and forms",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Articles and plural nouns",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
       "relatedExistingDemoLessonIds": [],
       "relatedDemosAreNotFullChapterCoverage": true,
       "reviewCheckpointAfter": false,
@@ -111,34 +208,81 @@ window.GERMAN_CURRICULUM = {
     },
     {
       "number": 3,
-      "title": "In der Stadt",
+      "title": "In Hamburg",
       "stage": "A1.1",
       "source": {
-        "kind": "publisher-table-of-contents",
-        "url": "https://www.klett-sprachen.de/downloads/2624/inhaltsverzeichnis-netzwerk-a1-1/pdf",
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
         "verified": "2026-10-22",
-        "details": "Publisher chapter outline only; not full copyrighted textbook."
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 29,
+        "flipbookEnd": 38,
+        "printedStart": 28,
+        "printedEnd": 37
       },
       "communicationOutcomes": [
-        "places and buildings",
-        "asking about places",
-        "transport",
-        "asking for and giving directions"
+        "name city places and buildings",
+        "ask about a place",
+        "identify means of transport",
+        "ask for and give simple directions",
+        "name months and seasons"
       ],
       "vocabularyThemes": [
-        "city places",
+        "city buildings and landmarks",
         "transport",
-        "directions"
+        "directions",
+        "months and seasons"
       ],
       "grammarTopics": [
-        "definite and indefinite articles",
-        "negation with kein",
-        "formal imperative with Sie"
+        "indefinite articles ein/eine",
+        "negation with kein/keine",
+        "formal imperative Sie",
+        "adjectives with sein"
       ],
-      "pronunciationFocus": "Long and short vowels",
-      "culturalContext": "Hamburg landmarks and city life",
-      "originalLessonGoal": "Guide a visitor to a destination",
-      "originalTeacherStudioActivity": "Build a direction-giving map role-play and listening checkpoint",
+      "pronunciationFocus": "Long and short German vowels",
+      "culturalContext": "City life and seasons in D-A-CH",
+      "originalLessonGoal": "Name city places and buildings; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life buildings and landmarks scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Buildings and landmarks",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Transport around town",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Asking where something is",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Giving step-by-step directions",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Seasons and events",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
       "relatedExistingDemoLessonIds": [
         "city"
       ],
@@ -152,32 +296,77 @@ window.GERMAN_CURRICULUM = {
       "title": "Guten Appetit!",
       "stage": "A1.1",
       "source": {
-        "kind": "publisher-table-of-contents",
-        "url": "https://www.klett-sprachen.de/downloads/2624/inhaltsverzeichnis-netzwerk-a1-1/pdf",
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
         "verified": "2026-10-22",
-        "details": "Publisher chapter outline only; not full copyrighted textbook."
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 45,
+        "flipbookEnd": 54,
+        "printedStart": 44,
+        "printedEnd": 53
       },
       "communicationOutcomes": [
-        "talking about meals",
-        "planning shopping",
-        "shopping conversations",
-        "mealtime conversations"
+        "plan a grocery purchase",
+        "ask for and buy food",
+        "respond at a café or meal",
+        "say likes and preferences about food"
       ],
       "vocabularyThemes": [
         "meals",
-        "food",
-        "drinks",
-        "shops"
+        "food and drinks",
+        "shops",
+        "quantities and prices"
       ],
       "grammarTopics": [
-        "word order",
-        "accusative",
-        "verbs with accusative objects"
+        "accusative articles",
+        "verbs requiring an accusative object",
+        "mögen and möchten",
+        "sentence position"
       ],
-      "pronunciationFocus": "ä, ö and ü",
-      "culturalContext": "Food customs and food-related jobs in D-A-CH",
-      "originalLessonGoal": "Shop for ingredients and order a meal",
-      "originalTeacherStudioActivity": "Create a shop dialogue with prices, quantities and feedback",
+      "pronunciationFocus": "Umlauts ä, ö, ü",
+      "culturalContext": "Food professions and eating traditions",
+      "originalLessonGoal": "Plan a grocery purchase; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life everyday meals scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Everyday meals",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Groceries and quantities",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Shopping politely",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Accusative in practice",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "At the table",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
       "relatedExistingDemoLessonIds": [
         "cafe"
       ],
@@ -188,35 +377,81 @@ window.GERMAN_CURRICULUM = {
     },
     {
       "number": 5,
-      "title": "Tag für Tag",
+      "title": "Alltag und Familie",
       "stage": "A1.1",
       "source": {
-        "kind": "publisher-table-of-contents",
-        "url": "https://www.klett-sprachen.de/downloads/2624/inhaltsverzeichnis-netzwerk-a1-1/pdf",
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
         "verified": "2026-10-22",
-        "details": "Publisher chapter outline only; not full copyrighted textbook."
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 55,
+        "flipbookEnd": 64,
+        "printedStart": 54,
+        "printedEnd": 63
       },
       "communicationOutcomes": [
-        "telling the time",
-        "daily routine",
-        "talking about family",
-        "making appointments",
-        "apologising for lateness"
+        "tell the time",
+        "sequence a typical day",
+        "talk about family",
+        "make an appointment by phone",
+        "apologize for being late"
       ],
       "vocabularyThemes": [
-        "daily routines",
-        "times",
-        "family"
+        "daily routine",
+        "time expressions",
+        "family members",
+        "appointments"
       ],
       "grammarTopics": [
-        "am, um and von … bis",
-        "possessive determiners",
-        "können, müssen and wollen with the sentence bracket"
+        "am, um, von … bis time expressions",
+        "possessive articles in nominative and accusative",
+        "modal verbs müssen, können, wollen",
+        "sentence bracket with infinitive"
       ],
-      "pronunciationFocus": "German r",
-      "culturalContext": "Punctuality and appointments in D-A-CH",
-      "originalLessonGoal": "Discuss a daily schedule and arrange a meeting",
-      "originalTeacherStudioActivity": "Build an interactive clock and telephone appointment task",
+      "pronunciationFocus": "German r in different positions",
+      "culturalContext": "Punctuality and schedules",
+      "originalLessonGoal": "Tell the time; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life a day in my life scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "A day in my life",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Clock times and appointments",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Family and relationships",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Possessive words",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Plans, ability and obligation",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
       "relatedExistingDemoLessonIds": [],
       "relatedDemosAreNotFullChapterCoverage": true,
       "reviewCheckpointAfter": false,
@@ -228,35 +463,79 @@ window.GERMAN_CURRICULUM = {
       "title": "Zeit mit Freunden",
       "stage": "A1.1",
       "source": {
-        "kind": "publisher-table-of-contents",
-        "url": "https://www.klett-sprachen.de/downloads/2624/inhaltsverzeichnis-netzwerk-a1-1/pdf",
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
         "verified": "2026-10-22",
-        "details": "Publisher chapter outline only; not full copyrighted textbook."
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 65,
+        "flipbookEnd": 74,
+        "printedStart": 64,
+        "printedEnd": 73
       },
       "communicationOutcomes": [
-        "planning with friends",
-        "birthdays and invitations",
-        "ordering and paying in restaurants",
-        "talking about past events",
-        "finding event details"
+        "describe leisure plans",
+        "say a date and birthday",
+        "write an invitation",
+        "order and pay at a restaurant",
+        "describe a recent event simply"
       ],
       "vocabularyThemes": [
-        "leisure",
-        "food and drinks",
-        "events",
-        "descriptions"
+        "ordinal numbers and dates",
+        "recreation",
+        "meals and drinks",
+        "public events"
       ],
       "grammarTopics": [
         "dates with am",
         "separable verbs",
-        "für + accusative",
         "accusative personal pronouns",
+        "für + accusative",
         "simple past of haben and sein"
       ],
-      "pronunciationFocus": "ei, eu and au",
-      "culturalContext": "Social venues and leisure in D-A-CH",
-      "originalLessonGoal": "Invite a friend and make a restaurant plan",
-      "originalTeacherStudioActivity": "Create an invitation-writing and restaurant speaking mission",
+      "pronunciationFocus": "Diphthongs ei, eu, au",
+      "culturalContext": "Cafés, restaurants and cultural events",
+      "originalLessonGoal": "Describe leisure plans; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life dates and birthdays scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Dates and birthdays",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Inviting friends",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Separable verbs in a plan",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Restaurant conversations",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Looking back at an event",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
       "relatedExistingDemoLessonIds": [],
       "relatedDemosAreNotFullChapterCoverage": true,
       "reviewCheckpointAfter": true,
@@ -265,36 +544,81 @@ window.GERMAN_CURRICULUM = {
     },
     {
       "number": 7,
-      "title": "Kontakte",
+      "title": "Arbeitsalltag",
       "stage": "A1.2",
       "source": {
-        "kind": "publisher-table-of-contents",
-        "url": "https://www.klett-sprachen.de/downloads/2622/inhaltsverzeichnis-netzwerk-a1-2/pdf",
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
         "verified": "2026-10-22",
-        "details": "Publisher chapter outline only; not full copyrighted textbook."
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 81,
+        "flipbookEnd": 90,
+        "printedStart": 80,
+        "printedEnd": 89
       },
       "communicationOutcomes": [
-        "arranging appointments",
-        "understanding instructions",
-        "reading and answering letters",
-        "talking about language learning",
-        "telephone conversations"
+        "understand everyday workplace interactions",
+        "describe a workday",
+        "describe a location and a process",
+        "understand and reply to a simple letter",
+        "make small talk at work"
       ],
       "vocabularyThemes": [
-        "office routine",
-        "telephone",
-        "letter conventions",
-        "language learning"
+        "workplace",
+        "locations",
+        "banking",
+        "digital devices and media"
       ],
       "grammarTopics": [
-        "prepositions with dative",
+        "joining clauses with und, oder, aber",
         "dative articles",
-        "possessives in accusative"
+        "prepositions with dative",
+        "place phrases with dative"
       ],
-      "pronunciationFocus": "Long and short e",
-      "culturalContext": "Social networking in D-A-CH",
-      "originalLessonGoal": "Write a short message and arrange an appointment",
-      "originalTeacherStudioActivity": "Create a telephone listening and formal email-writing task",
+      "pronunciationFocus": "s, sch and st sounds",
+      "culturalContext": "Small talk at the office",
+      "originalLessonGoal": "Understand everyday workplace interactions; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life workplace encounters scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Workplace encounters",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Daily tasks and messages",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Dative in common phrases",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Bank and computer vocabulary",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Workplace emails and small talk",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
       "relatedExistingDemoLessonIds": [],
       "relatedDemosAreNotFullChapterCoverage": true,
       "reviewCheckpointAfter": false,
@@ -303,37 +627,79 @@ window.GERMAN_CURRICULUM = {
     },
     {
       "number": 8,
-      "title": "Meine Wohnung",
+      "title": "Fit und gesund",
       "stage": "A1.2",
       "source": {
-        "kind": "publisher-table-of-contents",
-        "url": "https://www.klett-sprachen.de/downloads/2622/inhaltsverzeichnis-netzwerk-a1-2/pdf",
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
         "verified": "2026-10-22",
-        "details": "Publisher chapter outline only; not full copyrighted textbook."
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 91,
+        "flipbookEnd": 100,
+        "printedStart": 90,
+        "printedEnd": 99
       },
       "communicationOutcomes": [
-        "reading housing advertisements",
-        "describing a home",
-        "discussing furniture and colours",
-        "answering an invitation",
-        "expressing likes and dislikes"
+        "name body parts",
+        "understand symptoms and medical conversations",
+        "follow instructions",
+        "give basic everyday health advice"
       ],
       "vocabularyThemes": [
-        "rooms",
-        "furniture",
-        "appliances",
-        "colours",
-        "housing types"
+        "body parts",
+        "common illnesses",
+        "medication vocabulary",
+        "healthcare jobs"
       ],
       "grammarTopics": [
-        "adjectives with sein, sehr and zu",
-        "in + accusative",
-        "two-way prepositions with dative"
+        "imperative du, ihr, Sie",
+        "imperative word order",
+        "sollen, müssen, dürfen and prohibitions"
       ],
-      "pronunciationFocus": "s and sch",
-      "culturalContext": "Housing styles in D-A-CH",
-      "originalLessonGoal": "Describe a home and where its furniture is located",
-      "originalTeacherStudioActivity": "Create an interactive room-labelling activity and home-description writing task",
+      "pronunciationFocus": "Pairs p/b, t/d, k/g",
+      "culturalContext": "Traditional household remedies",
+      "originalLessonGoal": "Name body parts; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life body parts scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Body parts",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "How do you feel?",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "At the doctor's",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Instructions and requests",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Advice and everyday habits",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
       "relatedExistingDemoLessonIds": [],
       "relatedDemosAreNotFullChapterCoverage": true,
       "reviewCheckpointAfter": false,
@@ -342,36 +708,80 @@ window.GERMAN_CURRICULUM = {
     },
     {
       "number": 9,
-      "title": "Alles Arbeit?",
+      "title": "Meine Wohnung",
       "stage": "A1.2",
       "source": {
-        "kind": "publisher-table-of-contents",
-        "url": "https://www.klett-sprachen.de/downloads/2622/inhaltsverzeichnis-netzwerk-a1-2/pdf",
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
         "verified": "2026-10-22",
-        "details": "Publisher chapter outline only; not full copyrighted textbook."
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 101,
+        "flipbookEnd": 110,
+        "printedStart": 100,
+        "printedEnd": 109
       },
       "communicationOutcomes": [
-        "describing work and study",
-        "talking about previous events",
-        "reading job advertisements",
-        "expressing opinions about jobs",
-        "telephone enquiries"
+        "understand apartment advertisements",
+        "describe rooms and furniture",
+        "plan where to put objects",
+        "explain likes and dislikes",
+        "write a short home description"
       ],
       "vocabularyThemes": [
-        "occupations",
-        "workplaces",
-        "study",
-        "jobs"
+        "rooms",
+        "furniture and appliances",
+        "colours",
+        "living arrangements"
       ],
       "grammarTopics": [
-        "Perfekt tense",
-        "regular and irregular past participles",
-        "und, oder and aber"
+        "sein plus adjective",
+        "in + accusative for destination",
+        "two-way prepositions with dative for position"
       ],
-      "pronunciationFocus": "German h",
-      "culturalContext": "Seasonal work in D-A-CH",
-      "originalLessonGoal": "Tell a simple story about yesterday or a recent job",
-      "originalTeacherStudioActivity": "Create a job-ad comprehension and past-event speaking task",
+      "pronunciationFocus": "Long and short e",
+      "culturalContext": "Housing types in D-A-CH",
+      "originalLessonGoal": "Understand apartment advertisements; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life rooms in a home scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Rooms in a home",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Furniture and appliances",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Where things are",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Planning a room",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Describing a home",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
       "relatedExistingDemoLessonIds": [],
       "relatedDemosAreNotFullChapterCoverage": true,
       "reviewCheckpointAfter": true,
@@ -380,36 +790,81 @@ window.GERMAN_CURRICULUM = {
     },
     {
       "number": 10,
-      "title": "Kleidung und Mode",
+      "title": "Studium und Beruf",
       "stage": "A1.2",
       "source": {
-        "kind": "publisher-table-of-contents",
-        "url": "https://www.klett-sprachen.de/downloads/2622/inhaltsverzeichnis-netzwerk-a1-2/pdf",
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
         "verified": "2026-10-22",
-        "details": "Publisher chapter outline only; not full copyrighted textbook."
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 117,
+        "flipbookEnd": 126,
+        "printedStart": 116,
+        "printedEnd": 125
       },
       "communicationOutcomes": [
-        "discussing clothing",
-        "understanding shopping messages",
-        "trying on and buying clothes",
-        "locating departments",
-        "describing shopping experiences"
+        "describe studies and jobs",
+        "report past events",
+        "understand basic job-search information",
+        "ask for clarification on the phone",
+        "give a short account of a day"
       ],
       "vocabularyThemes": [
-        "clothing",
-        "department-store floors",
-        "shops"
+        "jobs and workplaces",
+        "study and training",
+        "applications",
+        "time and sequencing"
       ],
       "grammarTopics": [
-        "welcher/welches/welche",
-        "dieser/dieses/diese",
-        "participles of separable and inseparable verbs",
-        "dative pronouns"
+        "Perfekt sentence bracket",
+        "regular and irregular past participles",
+        "past participles ending in -iert",
+        "Perfekt with haben and sein"
       ],
-      "pronunciationFocus": "Stress in prefixed verbs",
-      "culturalContext": "Fashion and shopping in Berlin",
-      "originalLessonGoal": "Choose clothing and ask for help in a store",
-      "originalTeacherStudioActivity": "Create a changing-room conversation and department-store directions task",
+      "pronunciationFocus": "German h",
+      "culturalContext": "Seasonal jobs and employment",
+      "originalLessonGoal": "Describe studies and jobs; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life study and job words scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Study and job words",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Expressing work preferences",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Introducing the Perfekt",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Job search and applications",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Talking about a past day",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
       "relatedExistingDemoLessonIds": [],
       "relatedDemosAreNotFullChapterCoverage": true,
       "reviewCheckpointAfter": false,
@@ -418,35 +873,82 @@ window.GERMAN_CURRICULUM = {
     },
     {
       "number": 11,
-      "title": "Gesund und munter",
+      "title": "Die Jacke gefällt mir!",
       "stage": "A1.2",
       "source": {
-        "kind": "publisher-table-of-contents",
-        "url": "https://www.klett-sprachen.de/downloads/2622/inhaltsverzeichnis-netzwerk-a1-2/pdf",
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
         "verified": "2026-10-22",
-        "details": "Publisher chapter outline only; not full copyrighted textbook."
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 127,
+        "flipbookEnd": 136,
+        "printedStart": 126,
+        "printedEnd": 135
       },
       "communicationOutcomes": [
-        "naming body parts",
-        "understanding exercise instructions",
-        "speaking with a doctor",
-        "giving and understanding basic health guidance"
+        "name clothing",
+        "understand and give compliments",
+        "request help when shopping",
+        "find departments in a store",
+        "discuss past purchases"
       ],
       "vocabularyThemes": [
-        "body parts",
-        "personal care",
-        "illness vocabulary",
-        "health professions"
+        "clothing",
+        "department stores",
+        "sizes",
+        "colours and shops"
       ],
       "grammarTopics": [
-        "imperative forms",
-        "requests and directions",
-        "sollen, müssen, dürfen and nicht dürfen"
+        "welcher/welches/welche",
+        "dieser/dieses/diese",
+        "past participles with separable/inseparable prefixes",
+        "dative personal pronouns",
+        "verbs used with dative"
       ],
-      "pronunciationFocus": "p/b, t/d and k/g",
-      "culturalContext": "Traditional household remedies in German-speaking regions",
-      "originalLessonGoal": "Describe simple symptoms and understand basic directions",
-      "originalTeacherStudioActivity": "Create a doctor-visit role-play with listening and teacher feedback",
+      "pronunciationFocus": "Stress in prefixed verbs",
+      "culturalContext": "Shopping and city life in Berlin",
+      "originalLessonGoal": "Name clothing; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life clothes and preferences scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Clothes and preferences",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Sizes and descriptions",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Asking for help in shops",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Dative for liking and fitting",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "Talking about earlier purchases",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
       "relatedExistingDemoLessonIds": [],
       "relatedDemosAreNotFullChapterCoverage": true,
       "reviewCheckpointAfter": false,
@@ -458,34 +960,79 @@ window.GERMAN_CURRICULUM = {
       "title": "Ab in den Urlaub!",
       "stage": "A1.2",
       "source": {
-        "kind": "publisher-table-of-contents",
-        "url": "https://www.klett-sprachen.de/downloads/2622/inhaltsverzeichnis-netzwerk-a1-2/pdf",
+        "kind": "public-indexed-coursebook-outline",
+        "url": "https://fliphtml5.com/qdeox/zrth/netzwerk_neu_a1_kursbuch/",
+        "teacherReferenceUrl": "https://fliphtml5.com/hpxsx/efce/netzwerk-neu-a1-kursbuch_%282%29/",
         "verified": "2026-10-22",
-        "details": "Publisher chapter outline only; not full copyrighted textbook."
+        "details": "Section contents and chapter page range checked against publicly indexed coursebook and publisher; individual exercise text is not imported."
+      },
+      "sourcePageRange": {
+        "flipbookStart": 137,
+        "flipbookEnd": 146,
+        "printedStart": 136,
+        "printedEnd": 145
       },
       "communicationOutcomes": [
-        "understanding tour suggestions",
-        "giving directions",
-        "writing a postcard",
-        "describing weather",
-        "understanding travel reports",
-        "discussing hotel problems"
+        "choose a trip type and destination",
+        "plan a city itinerary",
+        "give and follow directions",
+        "write a postcard",
+        "describe weather and travel experiences"
       ],
       "vocabularyThemes": [
-        "vacations",
+        "travel types",
         "destinations",
-        "sights",
+        "landmarks",
+        "compass directions",
         "weather"
       ],
       "grammarTopics": [
         "impersonal man",
-        "wer, wen, wem and related questions",
-        "sequence words zuerst, dann, später, zum Schluss"
+        "connect clauses with denn",
+        "wer, wen, wem question forms",
+        "time prepositions with dative"
       ],
-      "pronunciationFocus": "f, v and w",
-      "culturalContext": "Popular destinations in Germany",
-      "originalLessonGoal": "Plan a trip and write a short travel message",
-      "originalTeacherStudioActivity": "Create a travel-planning scenario and hotel-help speaking rehearsal",
+      "pronunciationFocus": "Contrasts f, v and w",
+      "culturalContext": "Destinations in Germany",
+      "originalLessonGoal": "Choose a trip type and destination; demonstrate the skill independently in a new scenario.",
+      "originalTeacherStudioActivity": "Create an original real-life packing for a trip scenario with scaffold, peer role-play and four-skill check; have the teacher validate it before release.",
+      "originalLessonBlueprints": [
+        {
+          "sequence": 1,
+          "title": "Packing for a trip",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "listening",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 2,
+          "title": "Directions on holiday",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "speaking",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 3,
+          "title": "Describing a destination",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "reading",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 4,
+          "title": "Weather and travel plans",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "writing",
+          "publishStatus": "outline-only"
+        },
+        {
+          "sequence": 5,
+          "title": "A postcard or short trip report",
+          "contentOrigin": "to be authored by AmberTheory",
+          "skillFocus": "mixed",
+          "publishStatus": "outline-only"
+        }
+      ],
       "relatedExistingDemoLessonIds": [],
       "relatedDemosAreNotFullChapterCoverage": true,
       "reviewCheckpointAfter": true,
@@ -537,6 +1084,158 @@ window.GERMAN_CURRICULUM = {
       ],
       "contentStatus": "planned-original-practice",
       "officialExam": false
+    }
+  ],
+  "sections": [
+    {
+      "kind": "front-matter",
+      "label": "Cover, publication details and reading key",
+      "first": 1,
+      "last": 4
+    },
+    {
+      "kind": "table-of-contents",
+      "label": "Chapter aims and contents",
+      "first": 5,
+      "last": 8
+    },
+    {
+      "kind": "chapter",
+      "label": "Guten Tag!",
+      "chapterNumber": 1,
+      "first": 9,
+      "last": 18
+    },
+    {
+      "kind": "chapter",
+      "label": "Freunde, Kollegen und ich",
+      "chapterNumber": 2,
+      "first": 19,
+      "last": 28
+    },
+    {
+      "kind": "chapter",
+      "label": "In Hamburg",
+      "chapterNumber": 3,
+      "first": 29,
+      "last": 38
+    },
+    {
+      "kind": "review",
+      "label": "Plattform 1: chapters 1–3",
+      "first": 39,
+      "last": 44
+    },
+    {
+      "kind": "chapter",
+      "label": "Guten Appetit!",
+      "chapterNumber": 4,
+      "first": 45,
+      "last": 54
+    },
+    {
+      "kind": "chapter",
+      "label": "Alltag und Familie",
+      "chapterNumber": 5,
+      "first": 55,
+      "last": 64
+    },
+    {
+      "kind": "chapter",
+      "label": "Zeit mit Freunden",
+      "chapterNumber": 6,
+      "first": 65,
+      "last": 74
+    },
+    {
+      "kind": "review",
+      "label": "Plattform 2: chapters 4–6",
+      "first": 75,
+      "last": 80
+    },
+    {
+      "kind": "chapter",
+      "label": "Arbeitsalltag",
+      "chapterNumber": 7,
+      "first": 81,
+      "last": 90
+    },
+    {
+      "kind": "chapter",
+      "label": "Fit und gesund",
+      "chapterNumber": 8,
+      "first": 91,
+      "last": 100
+    },
+    {
+      "kind": "chapter",
+      "label": "Meine Wohnung",
+      "chapterNumber": 9,
+      "first": 101,
+      "last": 110
+    },
+    {
+      "kind": "review",
+      "label": "Plattform 3: chapters 7–9",
+      "first": 111,
+      "last": 116
+    },
+    {
+      "kind": "chapter",
+      "label": "Studium und Beruf",
+      "chapterNumber": 10,
+      "first": 117,
+      "last": 126
+    },
+    {
+      "kind": "chapter",
+      "label": "Die Jacke gefällt mir!",
+      "chapterNumber": 11,
+      "first": 127,
+      "last": 136
+    },
+    {
+      "kind": "chapter",
+      "label": "Ab in den Urlaub!",
+      "chapterNumber": 12,
+      "first": 137,
+      "last": 146
+    },
+    {
+      "kind": "review",
+      "label": "Plattform 4: chapters 10–12",
+      "first": 147,
+      "last": 152
+    },
+    {
+      "kind": "appendix",
+      "label": "Grammar reference",
+      "first": 153,
+      "last": 161
+    },
+    {
+      "kind": "appendix",
+      "label": "Irregular verbs",
+      "first": 162,
+      "last": 162
+    },
+    {
+      "kind": "appendix",
+      "label": "Alphabetical vocabulary index",
+      "first": 163,
+      "last": 174
+    },
+    {
+      "kind": "back-matter",
+      "label": "Image/source credits",
+      "first": 175,
+      "last": 175
+    },
+    {
+      "kind": "back-matter",
+      "label": "Book back cover",
+      "first": 176,
+      "last": 176
     }
   ]
 };
