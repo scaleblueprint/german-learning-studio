@@ -13,7 +13,7 @@ const ctx=vm.createContext({
   localStorage:{getItem(k){return store.get(k)||null;},setItem(k,v){store.set(k,v);}},
   navigator:{},fetch:async()=>({ok:false}),setTimeout:()=>1,clearTimeout(){},confirm:()=>true,console
 });
-for(const script of ['curriculum.js','lessons.js','app.js']){
+for(const script of ['curriculum.js','lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js','app.js']){
   vm.runInContext(fs.readFileSync(new URL('../dist/'+script,import.meta.url),'utf8'),ctx);
 }
 const open=hash=>{loc.hash=hash;listeners['window:hashchange']();return root.innerHTML;};
@@ -30,6 +30,8 @@ assert.match(html,/From first words to real conversations/);
 assert.equal((html.match(/class="learner-book-card"/g)||[]).length,12);
 assert.doesNotMatch(html,/Create chapter session draft/);
 assert.match(html,/Hallo! Nice to meet you/,'Original playable lessons remain visible');
+assert.match(html,/Greetings in real situations/,'New PDF-grounded lessons visible to learner');
+assert.match(html,/A1.2 · source PDF pending/,'Unverified A1.2 must not be called complete');
 
 html=open('#teacher/sessions');
 assert.match(html,/Plan your next teaching experience/);
@@ -38,6 +40,7 @@ assert.doesNotMatch(html,/From first words to real conversations/);
 assert.equal((html.match(/data-teacher-chapter="/g)||[]).length,12);
 click({teacherChapter:'4'});
 assert.match(root.innerHTML,/Guten Appetit!/);
+assert.match(root.innerHTML,/Arbeitsbuch PDF pp. 116–127/,'Uploaded workbook page reference visible to teacher');
 click({startChapterSession:'4'});
 assert.match(root.innerHTML,/Build a session, step by step/);
 assert.match(root.innerHTML,/Chapter 4 · Guten Appetit!/);
