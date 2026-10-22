@@ -35,7 +35,7 @@ The app's curriculum source data are `dist/data/netzwerk-a1-reference.json`, wit
 
 ## Required teacher experience
 
-Teacher Studio > Sessions currently shows the same chapter reference map, including original teaching suggestions. Next work is to allow chapter selection in the session builder and persisted, chapter-tagged assignments; show real learner progress by chapter and skill; and build teacher approval/version control. These are **not yet implemented**.
+Teacher Studio > Sessions now provides a dedicated **chapter planning workbench** (different from the learner course journey). Teachers can select any original Netzwerk A1 chapter, review learning objectives and language preparation, and open a prefilled, unpublished **chapter-linked session draft**. The composer stores optional `chapterNumber` metadata, and published, chapter-tagged sessions show up in learner Practice on the same browser. Newly created vocabulary/audio scaffolds are deliberately incomplete and must be written and validated by the teacher before publishing. Real learner progress by chapter and skill, authenticated cohorts, and formal content approval/versioning are **not yet implemented**.
 
 ## Attribution and copyright boundaries
 
@@ -50,7 +50,7 @@ Teacher Studio > Sessions currently shows the same chapter reference map, includ
 - `dist/data/netzwerk-a1-reference.json`: structured and source-referenced chapter mapping.
 - `dist/curriculum.js`: browser-friendly equivalent.
 - `dist/index.html`: loads mapping before `dist/app.js`.
-- `dist/app.js`: displays chapter reference in student Lessons and teacher Sessions.
+- `dist/app.js`: shows separate learner chapter journey and teacher planning workbench, with chapter-linked session drafts, persistence and publish controls.
 - `dist/amber-theme.css`: mobile-friendly chapter details using the German Studio palette.
 - `tools/bundle.mjs`: includes curriculum in future single-file demo builds.
 
