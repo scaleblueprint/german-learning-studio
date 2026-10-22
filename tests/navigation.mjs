@@ -13,7 +13,7 @@ const context = vm.createContext({
   setTimeout:()=>1,clearTimeout(){},navigator:{},console,
 });
 vm.runInContext(fs.readFileSync(new URL('../dist/curriculum.js',import.meta.url),'utf8'),context);
-vm.runInContext(fs.readFileSync(new URL('../dist/lessons.js',import.meta.url),'utf8'),context);
+for(const script of ['lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js'])vm.runInContext(fs.readFileSync(new URL('../dist/'+script,import.meta.url),'utf8'),context);
 vm.runInContext(fs.readFileSync(new URL('../dist/app.js',import.meta.url),'utf8'),context);
 
 function open(hash){location.hash=hash;handlers['window:hashchange']();return root.innerHTML;}
@@ -34,7 +34,7 @@ assert.match(root.innerHTML,/class="brand-logo" src="\.\/ambertheory-lockup\.jpg
 assert.doesNotMatch(root.innerHTML,/class="brand-mark"/,'AT monogram must not replace the canonical logo');
 assert.match(root.innerHTML,/teacher-studio-walkthrough\.mp4/,'Demo stays on the learning home');
 assert.match(root.innerHTML,/class="milestone current"/,'The next unfinished lesson has a milestone');
-assert.equal([...root.innerHTML.matchAll(/class="milestone(?: done| current)?"/g)].length,5,'Milestones use the actual lesson count');
+assert.equal([...root.innerHTML.matchAll(/class="milestone(?: done| current)?"/g)].length,17,'Milestones use the actual lesson count');
 assert.match(root.innerHTML,/data-route="student\/lessons"/);
 assert.match(root.innerHTML,/data-route="student\/practice"/);
 
