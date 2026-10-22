@@ -81,3 +81,11 @@ Each new interactive lesson includes: a real-life setup, German/English phrase, 
 ## Copyright rule
 
 The PDF is a teacher-owned/source-provided copyrighted textbook. The app uses the textbook's **high-level curriculum sequence** but does not redistribute scanned pages, publisher photographs, proprietary exercise texts, vocabulary glossary, answer keys, DVD clips or recordings. All newly playable lesson writing and questions are independent AmberTheory material for teacher review.
+
+## Visual density audit and enrichment, 22 October 2026
+
+A new review of the [original edition's publisher-issued Chapter 5 sample](https://www.klett-sprachen.de/downloads/2626/kursbuch-probekapitel-5-tag-fuer-tag/pdf) inspected **all ten page images**, not only the extracted text. The sample illustrates a high-density visual instructional approach: real photos of daily routine actions, clocks, a photographed family webpage, a weekly planner, email examples, appointment dialogues, role cards, grammar comparison tables and recap panels. Merely replacing a chapter cover with a single SVG did not meet that benchmark.
+
+Implementation in `dist/rich-scenes.js` and `dist/learning-objects.js` brings an independent visual layer to each of the twelve verified A1.1 lessons: 18 credited free-use real-world photographs, 72 original contextual examples with German speech controls, 36 pattern comparisons and 12 original real-world teaching-object mockups. Photos are selected for *semantic relevance to the lesson*, not because they appear in the book. They are not publisher illustrations. Each chapter is still in the same six-chapter A1.1 coursebook/workbook/Plattform sequence. Teacher-created sessions and assessments retain their chapter numbers.
+
+Further work before classroom release: independently verify each photo endpoint in a real browser, ensure access for school networks, language-proof all examples with the teacher, improve original audio beyond operating-system text-to-speech, increase interactive photographic comprehension questions, and add real multi-user tracking if required. The original 166-page user scan is **not mounted in the current work session**; detailed page-specific artwork auditing beyond the publisher's freely available Chapter 5 sample depends on its reavailability.
