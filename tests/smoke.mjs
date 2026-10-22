@@ -40,16 +40,14 @@ function click(attributes){
 }
 function assertHas(fragment){assert.ok(root.innerHTML.includes(fragment),`Expected screen content: ${fragment}`);}
 
-assertHas('Guten Tag!');
+assertHas('Discover German.');
 assertHas('Teacher Studio');
 assertHas('Learning');
-assert.equal((root.innerHTML.match(/class="nav-btn /g)||[]).length,2,'Only the two workspaces should appear in the desktop navigation');
-assert.ok(!root.innerHTML.includes('data-route="home"'),'Redundant Overview link should be gone');
+assert.equal((root.innerHTML.match(/class="nav-btn /g)||[]).length,3,'Home, Student Studio and Teacher Studio are the three top-level destinations');
+assert.ok(root.innerHTML.includes('data-route="home"'),'Landing page navigation should be available');
 assert.ok(!root.innerHTML.includes('Demo role switch'),'Duplicate role switch should be gone');
-assertHas('Watch studio demo');
-assertHas('First Steps · Beginner German');
+assertHas('Watch the student + teacher demonstration');
 assert.ok(!root.innerHTML.includes('CEFR A1'),'Learning dashboard should use its friendly course name only');
-assertHas('Your First Steps lessons');
 assertHas('teacher-studio-walkthrough.mp4');
 assertHas('Student + Teacher · Video walkthrough');
 assertHas('80-second silent, illustrated tour');
@@ -58,7 +56,7 @@ click({watchDemo:''});
 assertHas('Video walkthrough');
 fakeLocation.hash='#home';
 winListeners.hashchange();
-assertHas('Guten Tag!'); // bookmarked former homepage still opens Learning
+assertHas('Discover German.'); // home hash opens the public landing page
 fakeLocation.hash='';
 winListeners.hashchange();
 click({route:'teacher'});
@@ -67,6 +65,8 @@ assertHas('Role-play · First Steps');
 assert.ok(!root.innerHTML.includes('CEFR'),'Teacher studio should not expose language-standard jargon');
 click({route:'student'});
 assertHas('Guten Tag!');
+assertHas('First Steps · Beginner German');
+assertHas('Your First Steps lessons');
 click({route:'student'});
 assertHas('Learning · First Steps');
 click({lesson:'hello'});
@@ -198,6 +198,6 @@ assert.equal(JSON.parse(storage.get('ambertheory-german-studio-v1')).experiences
 click({route:'sources'});
 assertHas('Tatoeba German CC0 sentences');
 click({reset:''});
-assertHas('Guten Tag!');
+assertHas('Discover German.');
 assert.equal(JSON.parse(storage.get('ambertheory-german-studio-v1')).completed.length,0);
 console.log('Smoke test passed: lessons, full session composer/playback/assessment/teacher feedback, experience builder and reset.');
