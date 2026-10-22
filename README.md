@@ -60,17 +60,16 @@ CEFR A1 framework reference: [Council of Europe](https://www.coe.int/en/web/comm
 Commercial textbooks such as *Netzwerk neu* or Hueber materials are **not included**. Obtaining a book does not grant reproduction rights; check publisher licensing before importing pages, recordings, exercises or photos into the platform.
 
 
-## Current course reference: Netzwerk neu A1 (22 October 2026)
+## Current course reference: uploaded original Netzwerk A1.1 (22 October 2026)
 
-The active **shared curriculum** is now *Netzwerk neu A1* (Kursbuch; ISBN 978-3-12-607156-7, 176 pages), aligned to the user's latest textbook reference. This is **different** from the older *Netzwerk A1* edition mapped earlier that day. The old mapping remains available as a historical archive without mixing chapter numbers or titles.
+The teacher's uploaded `netzwerk-a1-1pdf_compress.pdf` is **original Netzwerk A1.1, Kurs- und Arbeitsbuch Teil 1**, a scanned **166-page** source containing the original edition's first six course chapters and workbook reinforcement. This is **not** the earlier public-link *Netzwerk neu A1* 176-page book. A1.1 is now the verified live reference for the first half of the course. The different newer edition remains archived, not silently mixed.
 
-- New source-of-truth map including 176 **section-indexed** page records, 12 chapter themes and 60 original lesson **outlines**: [dist/data/netzwerk-neu-a1-reference.json](dist/data/netzwerk-neu-a1-reference.json).
-- The live Student Studio and Teacher Studio read the same active chapter data from [dist/curriculum.js](dist/curriculum.js). The student sees a chapter journey; the teacher sees a chapter planner and session drafts.
-- The original earlier-edition map is retained: [dist/data/netzwerk-a1-reference.json](dist/data/netzwerk-a1-reference.json).
-- Source, page-index limitations, publisher references and copyright-safe authoring rules: [docs/netzwerk-neu-a1-source-reference.md](docs/netzwerk-neu-a1-source-reference.md). Historical original-book record: [docs/netzwerk-a1-source-reference.md](docs/netzwerk-a1-source-reference.md).
-- Review sections after chapters 3, 6, 9 and 12 are planned. **All chapter lesson outlines are still in preparation**, pending independently authored lesson bodies, authentic or licensed media, answer keys, and German teacher validation. Five existing playable demo lessons are separate examples, not complete chapter coverage.
-
-**Not a 176-page transcription:** Pages 1–176 are classified by their coursebook section, but individual image-heavy pages, every exercise and detailed page-specific objectives have **not** been independently audited. The public web-text index can lose layout and umlauts. Do not present publisher content as copied lessons or as a fully validated course.
+- Source-mapped curriculum: [dist/data/netzwerk-a1-1-uploaded-reference.json](dist/data/netzwerk-a1-1-uploaded-reference.json) contains 166 PDF-page section records, communication objectives, grammar, vocabulary themes, workbook formats and separate source ranges.
+- Client-side shared course data: [dist/curriculum.js](dist/curriculum.js) drives the learner chapter journey and teacher planner from one edition-consistent source.
+- Original, independently authored lessons: [A1.1 Chapters 1–3](dist/a11-chapters-1-3.js) and [A1.1 Chapters 4–6](dist/a11-chapters-4-6.js) supply **12 interactive guided lessons**, including explanations, original dialogues, spoken phrase playback via browser TTS, four questions with feedback, and an application task. The initial five interactive prototype lessons remain.
+- Verified source and page map: [docs/netzwerk-a1-1-uploaded-audit.md](docs/netzwerk-a1-1-uploaded-audit.md).
+- Chapters **7–12** remain original-edition A1.2 **publisher-outline-only** previews because the A1.2 PDF has not been uploaded. The newer-edition *Netzwerk neu* map remains archived at [dist/data/netzwerk-neu-a1-reference.json](dist/data/netzwerk-neu-a1-reference.json).
+- **Teacher validation is still pending**; this is original prototype practice, not copied textbook activities or finished official-course certification. The supplied PDF does not contain playable publisher audio/video.
 
 ## Next steps before a real pilot
 
@@ -82,4 +81,4 @@ The active **shared curriculum** is now *Netzwerk neu A1* (Kursbuch; ISBN 978-3-
 
 ## Checks
 
-Run `node tests/curriculum-neu.mjs` to validate the 176-page index and shared curriculum, plus `node tests/smoke.mjs`, `node tests/exam.mjs`, `node tests/navigation.mjs` and `node tests/role-separation.mjs` for the app. The buildless `dist/` directory is published directly; `node tools/bundle.mjs` regenerates the portable single-file demo with the exam modules included.
+Run `node tests/curriculum-a11.mjs` for the uploaded 166-page PDF map and 12 authored lessons, and `node tests/curriculum-neu.mjs` to safeguard the other edition's archived 176-page reference. Run `node tests/smoke.mjs`, `node tests/exam.mjs`, `node tests/navigation.mjs` and `node tests/role-separation.mjs` for student/teacher regression coverage. The buildless `dist/` directory is published directly; `node tools/bundle.mjs` regenerates the portable single-file demo with the exam modules included.
