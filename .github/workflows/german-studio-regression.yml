@@ -1,0 +1,34 @@
+name: German Studio content regression
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate uploaded textbook source and archived editions
+        run: |
+          node tests/curriculum-a11.mjs
+          node tests/curriculum-neu.mjs
+      - name: Run student and teacher regression checks
+        run: |
+          node tests/smoke.mjs
+          node tests/navigation.mjs
+          node tests/role-separation.mjs
+          node tests/exam.mjs
+      - name: Verify regenerated standalone demo is current
+        run: |
+          node tools/bundle.mjs
+          git diff --exit-code -- german-studio-demo.html
