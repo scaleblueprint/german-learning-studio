@@ -105,7 +105,7 @@ window.GERMAN_A11_LESSONS_PART2 = [
           "der Käse"
         ],
         "correct": 2,
-        "why": "Käse is masculine: der Käse."
+        "why": "Käse is grammatically masculine in German, so it is learned with the article der."
       },
       {
         "q": "How do you ask 'What do we need?'",
@@ -115,7 +115,7 @@ window.GERMAN_A11_LESSONS_PART2 = [
           "Wie heißen Sie?"
         ],
         "correct": 0,
-        "why": "brauchen means to need."
+        "why": "The verb brauchen means to need; this question asks which ingredients are required."
       },
       {
         "q": "Where could you buy bread?",
@@ -125,7 +125,7 @@ window.GERMAN_A11_LESSONS_PART2 = [
           "im Bahnhof"
         ],
         "correct": 1,
-        "why": "A Bäckerei is a bakery."
+        "why": "Bäckerei means bakery, the shop where people buy bread and many baked goods."
       }
     ]
   },
@@ -740,7 +740,7 @@ window.GERMAN_A11_LESSONS_PART2 = [
           "pay in cash only"
         ],
         "correct": 0,
-        "why": "getrennt means separately."
+        "why": "The word getrennt means separately; in a restaurant, it asks for separate payments."
       },
       {
         "q": "Choose the polite request to pay.",
