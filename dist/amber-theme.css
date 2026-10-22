@@ -340,3 +340,68 @@ h1 {letter-spacing:-.055em}
 .book-source-note{font-size:12px;color:#6f5e64;line-height:1.6;margin:20px 0 0}
 .book-source-note a{color:#7d3958;text-decoration:underline}
 @media(max-width:800px){.book-list{grid-template-columns:1fr}.book-reference{padding:16px}.book-reference-heading{flex-direction:column;gap:12px}}
+
+
+/* Distinct roles: learner course journey versus teacher curriculum workbench */
+.learner-book-route{margin:24px 0 32px}
+.learner-book-head{padding:25px 27px;border-radius:20px;background:linear-gradient(118deg,#5c3045 0%,#9a4a4b 100%);color:#fff}
+.learner-book-head .eyebrow{color:#ffdaaa}
+.learner-book-head h3{font-size:clamp(22px,2.7vw,31px);line-height:1.22;letter-spacing:-.02em;margin:10px 0}
+.learner-book-head p{max-width:680px;font-size:14px;line-height:1.6;color:#fff2e8;margin:0}
+.learner-book-level{margin:25px 0}
+.learner-book-level-title{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 12px}
+.learner-book-level-title h4{font-size:20px;margin:0;color:#4e2b3b}
+.learner-book-level-title span{font-size:12px;color:#8c6772}
+.learner-book-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.learner-book-card{min-width:0;padding:19px 18px 17px;border-radius:16px;border:1px solid #eedbd5;background:#fff;display:flex;flex-direction:column;gap:9px;box-shadow:0 3px 15px rgba(83,45,59,.035)}
+.learner-book-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.learner-book-number{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#f6e7d7;color:#7a3b47;font-size:14px;font-weight:800}
+.learner-book-status{font-size:10px;letter-spacing:.015em;font-weight:700;color:#815c67;background:#fcf2e8;padding:6px 8px;border-radius:999px;white-space:nowrap}
+.learner-book-card h5{color:#48283a;font-size:16px;font-weight:800;line-height:1.3;margin:3px 0 0}
+.learner-book-card p{font-size:13px;color:#675a60;line-height:1.52;margin:0;flex:1}
+.learner-book-card small{font-size:11px;font-weight:700;color:#906b5b}
+.learner-checkpoint{font-size:12px;margin:13px 0 0;color:#7d626c;padding-left:3px}
+.learner-book-foot{font-size:12px;color:#6e5c64;line-height:1.65;padding:12px 15px;background:#fbf1e8;border-radius:10px}
+.teacher-planner{margin:10px 0 34px;background:#fffaf7;border:1px solid #eeded6;border-radius:22px;padding:23px}
+.teacher-planner-head{display:flex;gap:22px;align-items:start;justify-content:space-between;margin-bottom:21px}
+.teacher-planner-head>div{max-width:720px}
+.teacher-planner-head h2{font-size:clamp(23px,2.8vw,30px);color:#48293a;margin:8px 0 12px}
+.teacher-planner-head p{font-size:14px;color:#725b64;line-height:1.65;margin:0}
+.teacher-planner-head>.tag{flex-shrink:0}
+.teacher-planner-layout{display:grid;grid-template-columns:minmax(210px,250px) minmax(0,1fr);gap:17px;align-items:start}
+.teacher-chapter-list{background:#5b3447;padding:16px;border-radius:16px;display:flex;flex-direction:column;gap:5px}
+.teacher-chapter-list h3{font-size:16px;margin:0;color:#fff}
+.teacher-chapter-list p{font-size:12px;color:#e9cdcf;margin:0 0 13px}
+.teacher-chapter-choice{border:1px solid transparent;width:100%;display:grid;grid-template-columns:28px 1fr auto;align-items:center;gap:8px;text-align:left;cursor:pointer;background:transparent;color:#f9edf0;padding:10px;border-radius:9px;font:inherit}
+.teacher-chapter-choice span{font-size:12px;color:#f5bd94;font-weight:800}
+.teacher-chapter-choice strong{font-size:12px;font-weight:700;line-height:1.3}
+.teacher-chapter-choice small{font-size:10px;color:#eac5bf}
+.teacher-chapter-choice:hover{background:#754759}
+.teacher-chapter-choice.active{background:#fff2e5;color:#522c41}
+.teacher-chapter-choice.active span,.teacher-chapter-choice.active small{color:#955e51}
+.teacher-chapter-choice:focus-visible{outline:3px solid #e8b77c;outline-offset:2px}
+.teacher-planner-detail{min-width:0;border-radius:16px;padding:22px;background:#fff;border:1px solid #ebdedb}
+.teacher-planner-title .eyebrow{color:#a25a54}
+.teacher-planner-title h3{color:#482c3e;font-size:clamp(22px,2.6vw,29px);margin:6px 0}
+.teacher-planner-title p{color:#725d62;line-height:1.6;font-size:14px;margin:0}
+.teacher-planner-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:19px 0}
+.teacher-planner-stats>div{padding:13px;border-radius:11px;background:#fff4ed;display:flex;flex-direction:column;gap:4px}
+.teacher-planner-stats b{font-size:16px;color:#603044}
+.teacher-planner-stats span{font-size:11px;color:#765f68;line-height:1.4}
+.teacher-planner-panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.teacher-planner-panel{background:#fdf9f6;border:1px solid #eee3dd;border-radius:12px;padding:16px;min-width:0}
+.teacher-planner-panel h4{font-size:14px;color:#482b39;margin:0 0 12px}
+.teacher-planner-panel p{font-size:12px;line-height:1.65;margin:5px 0 12px;color:#6d5961}
+.teacher-planner-panel ul{margin:4px 0 13px;padding-left:19px;color:#64545c;font-size:12px;line-height:1.75}
+.teacher-planner-panel b{font-size:12px;color:#653c4c}
+.teacher-planner-activity{background:#faefe7;border-color:#efd7c6}
+.teacher-planner-hint{font-style:italic;color:#8c6b61!important}
+.teacher-planner-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.teacher-planner-actions .btn{white-space:normal;text-align:center}
+.teacher-planner-source{font-size:11px;line-height:1.6;color:#896d72;margin:16px 0 0}
+.teacher-stewardship{margin-top:25px;padding:22px}
+.teacher-stewardship h2{font-size:23px;margin:9px 0;color:#553348}
+.teacher-stewardship p{max-width:730px;line-height:1.65;color:#6d5c64;font-size:14px}
+@media(max-width:1080px){.teacher-planner-layout{grid-template-columns:210px minmax(0,1fr)}.learner-book-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:770px){.teacher-planner{padding:14px}.teacher-planner-head{flex-direction:column}.teacher-planner-head>.tag{align-self:flex-start}.teacher-planner-layout{grid-template-columns:1fr}.teacher-chapter-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:14px}.teacher-chapter-list h3,.teacher-chapter-list p{grid-column:1/-1}.teacher-chapter-choice{grid-template-columns:24px 1fr;min-width:0}.teacher-chapter-choice small{display:none}.teacher-planner-detail{padding:16px}}
+@media(max-width:540px){.learner-book-head{padding:24px 19px}.learner-book-grid{grid-template-columns:1fr}.learner-book-level-title{flex-wrap:wrap}.teacher-chapter-list{grid-template-columns:repeat(2,minmax(0,1fr))}.teacher-chapter-choice strong{font-size:11px;overflow-wrap:anywhere}.teacher-planner-stats{grid-template-columns:1fr 1fr}.teacher-planner-stats>div:last-child{grid-column:1/-1}.teacher-planner-panels{grid-template-columns:1fr}.teacher-planner-actions .btn{width:100%}}
