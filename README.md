@@ -71,6 +71,12 @@ The teacher's uploaded `netzwerk-a1-1pdf_compress.pdf` is **original Netzwerk A1
 - Chapters **7–12** remain original-edition A1.2 **publisher-outline-only** previews because the A1.2 PDF has not been uploaded. The newer-edition *Netzwerk neu* map remains archived at [dist/data/netzwerk-neu-a1-reference.json](dist/data/netzwerk-neu-a1-reference.json).
 - **Teacher validation is still pending**; this is original prototype practice, not copied textbook activities or finished official-course certification. The supplied PDF does not contain playable publisher audio/video.
 
+## A1.1 workbook & revision implementation (22 October 2026)
+
+The six PDF-grounded chapters now include **48 independently authored multiple-choice tasks** split across browser-TTS listening, original reading passages, grammar and vocabulary; there are also guided **writing and speaking-rehearsal prompts** in every chapter. **Plattform 1 (after Chapter 3)** and **Plattform 2 (after Chapter 6)** each provide a nine-question cross-chapter revision assembled from the corresponding original tasks. Exercises have replay, explanation, per-question retries, browser-local persistence and submission to the existing teacher review queue. This is original supplemental practice; neither the scanned exercise pages nor publisher media are copied, and teacher QA remains mandatory.
+
+The new materials are in `dist/workbook.js`, presented under **Student Studio → Lessons → Chapter practice** and **Student Studio → Practice → Workbook & revision**. Teacher Studio → Learners & reviews shows actual demo-browser chapter attempts and writing/speaking submissions. All data stay in local browser storage; there are no real student accounts or cross-device synchronisation. Run `node tests/workbook.mjs` along with the existing regression tests.
+
 ## Next steps before a real pilot
 
 1. Teacher validates lesson sequence, content and assessment answer keys.
@@ -81,4 +87,4 @@ The teacher's uploaded `netzwerk-a1-1pdf_compress.pdf` is **original Netzwerk A1
 
 ## Checks
 
-Run `node tests/curriculum-a11.mjs` for the uploaded 166-page PDF map and 12 authored lessons, and `node tests/curriculum-neu.mjs` to safeguard the other edition's archived 176-page reference. Run `node tests/smoke.mjs`, `node tests/exam.mjs`, `node tests/navigation.mjs` and `node tests/role-separation.mjs` for student/teacher regression coverage. The buildless `dist/` directory is published directly; `node tools/bundle.mjs` regenerates the portable single-file demo with the exam modules included.
+Run `node tests/workbook.mjs` for workbook/question coverage and learner-teacher workflow. Run `node tests/curriculum-a11.mjs` for the uploaded 166-page PDF map and 12 authored lessons, and `node tests/curriculum-neu.mjs` to safeguard the other edition's archived 176-page reference. Run `node tests/smoke.mjs`, `node tests/exam.mjs`, `node tests/navigation.mjs` and `node tests/role-separation.mjs` for student/teacher regression coverage. The buildless `dist/` directory is published directly; `node tools/bundle.mjs` regenerates the portable single-file demo with the exam modules included.
