@@ -1,8 +1,8 @@
-# Netzwerk neu A1 — verified coursebook reference and content-build status
+# Archived reference — Netzwerk neu A1 (different edition; not active)
 
 **Reference edition:** *Netzwerk neu A1*, Kursbuch mit Audios und Videos, Ernst Klett Sprachen, ISBN **978-3-12-607156-7**, 176 flipbook pages.
 
-**Date checked:** 22 October 2026.
+**Date checked:** 22 October 2026. **Status update:** The later user-uploaded PDF is the older **original Netzwerk A1.1** coursebook/workbook. The active app switched to the original edition; this 176-page *Netzwerk neu* mapping is preserved only as a separate historical reference. See [current uploaded PDF analysis](netzwerk-a1-1-uploaded-audit.md).
 
 ## Purpose
 
@@ -48,7 +48,7 @@ Use this book for learning order, communication objectives, vocabulary **themes*
 ## Content architecture
 
 - Canonical **new** data: `dist/data/netzwerk-neu-a1-reference.json`.
-- Active shared client-side curriculum: `dist/curriculum.js` (chapters, original lesson blueprints, review checkpoints and metadata from the same new reference; full per-page index kept out of active payload).
+- Historical client-side mapping was stored in `dist/curriculum.js`; **the active client-side mapping now follows the uploaded original A1.1 PDF**, not this archived newer book.
 - Preserved **older** book data: `dist/data/netzwerk-a1-reference.json` (original *Netzwerk*, a different series).
 - All 12 new chapter records have communication goals, vocabulary themes, grammar, pronunciation, cultural context and **five original lesson outlines**, intended to become one shared content source for both studios.
 - A learner sees a chapter journey and forthcoming outcomes; a teacher sees planning goals and can create **draft** sessions from the same chapter data. Sessions do not become student lessons simply because a chapter was indexed.
