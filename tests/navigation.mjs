@@ -12,6 +12,7 @@ const context = vm.createContext({
   localStorage:{getItem(){return null;},setItem(){}},fetch:async()=>({ok:false}),
   setTimeout:()=>1,clearTimeout(){},navigator:{},console,
 });
+vm.runInContext(fs.readFileSync(new URL('../dist/curriculum.js',import.meta.url),'utf8'),context);
 vm.runInContext(fs.readFileSync(new URL('../dist/lessons.js',import.meta.url),'utf8'),context);
 vm.runInContext(fs.readFileSync(new URL('../dist/app.js',import.meta.url),'utf8'),context);
 
@@ -70,8 +71,11 @@ for(const [hash,label] of [
   assert.equal(visiblePanes(),1,`${hash} should show only one teacher section`);
 }
 assert.match(root.innerHTML,/Practice to review/);
-assert.match(root.innerHTML,/Teacher-approved curriculum/);
+assert.match(root.innerHTML,/Content quality & readiness/);
 open('#teacher/sessions');
+assert.match(root.innerHTML,/Plan your next teaching experience/);
+assert.match(root.innerHTML,/data-teacher-chapter="4"/);
+assert.doesNotMatch(root.innerHTML,/From first words to real conversations/);
 assert.match(root.innerHTML,/Session Studio/);
 open('#teacher/missions');
 assert.match(root.innerHTML,/Experience Studio/);
