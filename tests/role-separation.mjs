@@ -31,7 +31,7 @@ assert.equal((new Set([...html.matchAll(/id="course-chapter-(\d+)"/g)].map(x=>x[
 assert.doesNotMatch(html,/Create chapter session draft/);
 assert.doesNotMatch(html,/Hallo! Nice to meet you/,'Unrelated standalone demos are hidden from the course');
 assert.match(html,/Greetings in real situations/,'PDF-grounded lessons visible to learner');
-assert.match(html,/A1.2 · source PDF pending/,'Unverified A1.2 must not be called complete');
+assert.doesNotMatch(html,/A1.2 · source PDF pending/,'Unverified A1.2 is excluded from the active course');
 
 html=open('#teacher/sessions');
 assert.match(html,/Plan your next teaching experience/);
