@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#171717" />
-    <meta name="description" content="AmberTheory German Studio — an interactive prototype for teacher-guided German learning." />
+    <meta name="description" content="AmberTheory German Studio — a welcoming German learning experience with connected Student and Teacher Studios." />
     <title>German Studio · AmberTheory</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -710,12 +710,653 @@ h1 {letter-spacing:-.055em}
   .view-pane {animation:none}
 }
 
+/* Public welcome page: distinct from the learner and teacher workspaces. */
+.public-shell{max-width:1340px}
+.public-landing{display:flex;flex-direction:column;gap:56px}
+.public-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.86fr);min-height:540px;border-radius:28px;overflow:hidden;background:#fff1e3;border:1px solid #eacfc1;box-shadow:0 26px 65px rgba(94,42,54,.1)}
+.public-hero-copy{padding:clamp(30px,5vw,76px) clamp(25px,4.3vw,68px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.public-kicker{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.13em;font-weight:800;text-transform:uppercase;color:#8f4550;margin-bottom:22px}
+.public-kicker-dot{width:10px;height:10px;border-radius:50%;background:#e98148;box-shadow:0 0 0 5px #f8ddc9}
+.public-hero h1{margin:0;font-size:clamp(38px,4.7vw,69px);line-height:1.07;letter-spacing:-.065em;color:#4b263a;max-width:680px}
+.public-hero h1 em{font-style:normal;color:#d25940}
+.public-hero-copy>p:not(.public-hero-caveat){font-size:clamp(15px,1.35vw,18px);line-height:1.75;max-width:490px;color:#6d535b;margin:22px 0 0}
+.public-actions{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 14px}
+.public-actions .btn{padding:15px 20px;min-height:49px;white-space:normal;text-align:center}
+.public-start{background:#70354a}
+.public-secondary{border:1px solid #d4b4aa}
+.public-demo-link{border:none;background:transparent;color:#964d3b;font-weight:800;font-size:12px;padding:10px 0;text-align:left}
+.public-demo-link:hover{text-decoration:underline}
+.public-hero-caveat{margin-top:17px;font-size:11px;color:#907b7f;line-height:1.6}
+.public-hero-art{position:relative;overflow:hidden;min-height:440px;background:radial-gradient(circle at 76% 20%,#f9a753 0,transparent 43%),linear-gradient(135deg,#5b2c48 3%,#923f53 57%,#c66845);display:flex;align-items:center;justify-content:center;padding:55px 32px;isolation:isolate}
+.public-art-orbit{position:absolute;border:2px solid #ffe1a94f;border-radius:50%;pointer-events:none}
+.orbit-one{width:570px;height:570px;top:-280px;right:-220px}
+.orbit-two{width:390px;height:390px;bottom:-240px;left:-150px}
+.public-preview-card{z-index:1;width:min(100%,375px);background:#fff9f2;padding:30px;border-radius:22px;box-shadow:0 25px 54px #2c112c4f;transform:rotate(-3deg)}
+.public-preview-overline{font-size:10px;letter-spacing:.15em;font-weight:900;color:#b45c40}
+.public-preview-speech{font-family:Fraunces,Georgia,serif;font-size:clamp(34px,3.4vw,53px);line-height:1.1;color:#533147;margin:21px 0 10px}
+.public-preview-speech span{display:block;color:#bb6546}
+.public-preview-card p{color:#73646c;font-size:13px;margin-bottom:24px}
+.public-preview-steps{display:flex;flex-wrap:wrap;gap:7px}
+.public-preview-steps span{border:1px solid #ead8ce;border-radius:20px;padding:7px 9px;font-size:10px;color:#735760;background:#fff}
+.public-preview-steps .done{color:#186c52;background:#ddf4e9;border-color:#c3e7d8}
+.public-art-note{position:absolute;right:19px;bottom:33px;display:flex;gap:12px;align-items:center;color:#432438;background:#ffcd7d;padding:13px 15px;border-radius:16px;z-index:2;box-shadow:0 14px 30px #35203a42}
+.public-art-note>span{font-size:24px}
+.public-art-note strong,.public-art-note small{display:block}
+.public-art-note strong{font-size:11px}
+.public-art-note small{font-size:10px;opacity:.75;margin-top:3px}
+.public-intro{text-align:center;max-width:1100px;margin:0 auto;width:100%}
+.public-intro h2,.public-how h2{font-size:clamp(29px,3.4vw,43px);color:#482536;margin:9px 0 12px}
+.public-intro>p{font-size:14px;color:#716269;line-height:1.7}
+.public-paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;text-align:left;margin-top:30px}
+.public-path{background:#fff;border:1px solid #eedbd3;border-radius:22px;padding:29px;box-shadow:0 14px 35px #48253609}
+.public-path-student{border-top:5px solid #d88043}
+.public-path-teacher{border-top:5px solid #843c5d}
+.public-path-symbol{width:52px;height:52px;border-radius:15px;background:#fff0df;color:#9e4b37;display:grid;place-items:center;font-family:Fraunces,Georgia,serif;font-size:26px;margin-bottom:18px}
+.public-path-teacher .public-path-symbol{background:#f3e2e8;color:#6d3152}
+.public-path h3{font-size:25px;color:#492a3d;margin:8px 0}
+.public-path p{font-size:13px;color:#725e67;line-height:1.75;min-height:70px}
+.public-path ul{padding-left:20px;color:#62525b;font-size:12px;line-height:2}
+.public-card-link{width:100%;display:flex;align-items:center;justify-content:space-between;border:none;border-top:1px solid #efddd4;background:transparent;color:#6c3048;font-weight:800;font-size:13px;text-align:left;margin-top:21px;padding:18px 0 0}
+.public-card-link:hover{color:#c55b3d}
+.public-card-link span{font-size:20px}
+.public-how{background:#f6e8e8;border:1px solid #edd6d9;border-radius:24px;padding:32px;display:grid;grid-template-columns:.75fr 1.25fr;gap:28px}
+.public-how>div>p{font-size:13px;line-height:1.8;color:#705c63}
+.public-how-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:stretch}
+.public-how-steps>div{background:#fffaf6;padding:19px;border-radius:15px}
+.public-how-steps b{font-size:20px;color:#bd6146;display:block;margin-bottom:20px}
+.public-how-steps strong,.public-how-steps small{display:block}
+.public-how-steps strong{font-size:12px;line-height:1.5;color:#552c42}
+.public-how-steps small{font-size:11px;line-height:1.6;color:#76646a;margin-top:8px}
+.public-landing>.walkthrough{margin-top:0}
+.public-end-cta{background:#472738;border-radius:22px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:22px;color:#fff}
+.public-end-cta h2{font-size:clamp(23px,2.5vw,33px);max-width:610px;margin:7px 0}
+.public-end-cta .eyebrow{color:#ffd29a}
+.public-end-cta .btn{background:#ffca80;color:#472738;flex-shrink:0}
+@media(max-width:990px){.public-hero{grid-template-columns:1fr 1fr}.public-hero-copy{padding:32px}.public-hero-art{padding:35px 18px}.public-art-note{right:8px;bottom:8px}}
+@media(max-width:760px){.public-landing{gap:35px}.public-hero{grid-template-columns:1fr;min-height:0;border-radius:19px}.public-hero-copy{padding:32px 25px}.public-hero-art{min-height:325px}.public-preview-card{width:min(88%,340px);padding:25px}.public-preview-speech{font-size:41px}.public-art-note{bottom:12px}.public-paths,.public-how{grid-template-columns:1fr}.public-how-steps{grid-template-columns:1fr}.public-how-steps>div{display:grid;grid-template-columns:40px 1fr;column-gap:7px;padding:14px}.public-how-steps b{grid-row:span 2;margin:0}.public-how-steps small{margin-top:3px}.public-path p{min-height:0}.public-end-cta{flex-direction:column;align-items:flex-start}.public-actions .btn{flex:1}.public-intro h2{font-size:32px}.public-shell{padding-top:17px}}
+@media(max-width:390px){.public-hero h1{font-size:35px}.public-hero-copy{padding:24px 18px}.public-actions{flex-direction:column;width:100%}.public-actions .btn{width:100%}.public-hero-art{min-height:290px}.public-art-note{position:relative;right:auto;bottom:auto;align-self:flex-end;margin-left:-90px;font-size:10px}.public-preview-card{padding:18px;width:82%}}
+
+
+/* Netzwerk A1 book-aligned reference: visibly separate from the playable demo lessons. */
+.book-reference{margin:24px 0 30px;padding:22px;border:1px solid #e9d5c7;border-radius:20px;background:#fffaf5}
+.book-reference-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:24px}
+.book-reference-heading h3{font-size:clamp(21px,2.5vw,28px);margin:6px 0 9px;color:#472738}
+.book-reference-heading p{max-width:730px;color:#715b63;line-height:1.6;margin:0;font-size:14px}
+.book-reference-heading>.tag{flex-shrink:0}
+.book-level+.book-level{margin-top:24px}
+.book-level-heading{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:0 0 10px}
+.book-level-heading h4{font-size:18px;color:#472738;margin:0}
+.book-level-heading span{color:#806b70;font-size:12px}
+.book-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.book-chapter{min-width:0;border:1px solid #eddccf;box-shadow:none;background:#fff;border-radius:14px;overflow:hidden}
+.book-chapter summary{display:flex;align-items:center;gap:12px;padding:17px;cursor:pointer;list-style:none}
+.book-chapter summary::-webkit-details-marker{display:none}
+.book-chapter summary:focus-visible{outline:3px solid #a96872;outline-offset:-3px}
+.book-number{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:38px;height:38px;border-radius:11px;background:#f9e5d4;font-size:13px;font-weight:800;color:#6b374a}
+.book-title{display:block;min-width:0;flex:1}
+.book-title strong{display:block;color:#432638;font-size:14px;line-height:1.4}
+.book-title small{display:block;color:#75626a;font-size:12px;line-height:1.5;margin-top:3px}
+.book-expand{color:#87586c;font-size:20px}
+.book-chapter[open] .book-expand{transform:rotate(180deg)}
+.book-chapter-details{padding:4px 18px 18px;border-top:1px solid #f1e3d9}
+.book-detail{font-size:12px;color:#5d5155;line-height:1.6;margin:11px 0 0}
+.book-detail b{color:#432638}
+.book-chapter-status{font-size:12px;color:#8b5a3c;margin:14px 0 0;font-weight:700}
+.book-source-note{font-size:12px;color:#6f5e64;line-height:1.6;margin:20px 0 0}
+.book-source-note a{color:#7d3958;text-decoration:underline}
+@media(max-width:800px){.book-list{grid-template-columns:1fr}.book-reference{padding:16px}.book-reference-heading{flex-direction:column;gap:12px}}
+
 </style>
   </head>
   <body>
     <div id="app"></div>
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script>
+/* Book-aligned curriculum reference, not a copy of protected textbook material. */
+window.GERMAN_CURRICULUM = {
+  "id": "netzwerk-a1-original",
+  "title": "Netzwerk A1 — curriculum reference map",
+  "edition": {
+    "series": "Netzwerk",
+    "excludeSeries": [
+      "Netzwerk neu"
+    ],
+    "publisher": "Ernst Klett Sprachen",
+    "isbn": "978-3-12-606128-5",
+    "isbnVerification": "Publisher lists a 160-page Kursbuch; Scribd upload's precise edition not independently authenticated."
+  },
+  "usage": {
+    "role": "curriculum reference; independent teaching material only",
+    "notAReproduction": true,
+    "notPublisherEndorsed": true,
+    "licenceRequiredForRepublishingBookContent": true,
+    "teacherSignoffRequired": true,
+    "pilotStatus": "original lessons and questions still require development and review"
+  },
+  "sources": {
+    "publisherBook": "https://www.klett-sprachen.de/netzwerk-a1/t-1/9783126061285",
+    "originalScribdUserReference": "https://www.scribd.com/document/917795854/Netzwerk-A1-Kursbuch",
+    "tocA11": "https://www.klett-sprachen.de/downloads/2624/inhaltsverzeichnis-netzwerk-a1-1/pdf",
+    "tocA12": "https://www.klett-sprachen.de/downloads/2622/inhaltsverzeichnis-netzwerk-a1-2/pdf",
+    "publisherResources": "https://www.klett-sprachen.de/netzwerk/r-388/187"
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Guten Tag",
+      "stage": "A1.1",
+      "source": {
+        "kind": "publisher-table-of-contents",
+        "url": "https://www.klett-sprachen.de/downloads/2624/inhaltsverzeichnis-netzwerk-a1-1/pdf",
+        "verified": "2026-10-22",
+        "details": "Publisher chapter outline only; not full copyrighted textbook."
+      },
+      "communicationOutcomes": [
+        "greetings and farewells",
+        "introductions",
+        "spelling",
+        "phone numbers and email",
+        "countries and languages"
+      ],
+      "vocabularyThemes": [
+        "numbers 1–20",
+        "countries",
+        "languages"
+      ],
+      "grammarTopics": [
+        "W-questions",
+        "declarative sentences",
+        "personal pronouns and present tense verbs (intro)"
+      ],
+      "pronunciationFocus": "German alphabet",
+      "culturalContext": "Countries and languages in D-A-CH",
+      "originalLessonGoal": "Introduce yourself and exchange contact information",
+      "originalTeacherStudioActivity": "Create a two-role introduction and spelling/phone-number listening task",
+      "relatedExistingDemoLessonIds": [
+        "hello",
+        "origin",
+        "numbers"
+      ],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 2,
+      "title": "Freunde, Kollegen und ich",
+      "stage": "A1.1",
+      "source": {
+        "kind": "publisher-table-of-contents",
+        "url": "https://www.klett-sprachen.de/downloads/2624/inhaltsverzeichnis-netzwerk-a1-1/pdf",
+        "verified": "2026-10-22",
+        "details": "Publisher chapter outline only; not full copyrighted textbook."
+      },
+      "communicationOutcomes": [
+        "talking about hobbies",
+        "arranging to meet",
+        "weekdays and seasons",
+        "jobs and working hours",
+        "creating a short profile"
+      ],
+      "vocabularyThemes": [
+        "hobbies",
+        "weekdays",
+        "numbers over 20",
+        "jobs",
+        "months and seasons"
+      ],
+      "grammarTopics": [
+        "der/das/die",
+        "pronouns and verb forms",
+        "yes/no questions",
+        "noun plurals",
+        "haben and sein"
+      ],
+      "pronunciationFocus": "Question and answer intonation",
+      "culturalContext": "Seasons and leisure in D-A-CH",
+      "originalLessonGoal": "Introduce a friend and discuss hobbies and work",
+      "originalTeacherStudioActivity": "Design a partner interview and short learner profile",
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 3,
+      "title": "In der Stadt",
+      "stage": "A1.1",
+      "source": {
+        "kind": "publisher-table-of-contents",
+        "url": "https://www.klett-sprachen.de/downloads/2624/inhaltsverzeichnis-netzwerk-a1-1/pdf",
+        "verified": "2026-10-22",
+        "details": "Publisher chapter outline only; not full copyrighted textbook."
+      },
+      "communicationOutcomes": [
+        "places and buildings",
+        "asking about places",
+        "transport",
+        "asking for and giving directions"
+      ],
+      "vocabularyThemes": [
+        "city places",
+        "transport",
+        "directions"
+      ],
+      "grammarTopics": [
+        "definite and indefinite articles",
+        "negation with kein",
+        "formal imperative with Sie"
+      ],
+      "pronunciationFocus": "Long and short vowels",
+      "culturalContext": "Hamburg landmarks and city life",
+      "originalLessonGoal": "Guide a visitor to a destination",
+      "originalTeacherStudioActivity": "Build a direction-giving map role-play and listening checkpoint",
+      "relatedExistingDemoLessonIds": [
+        "city"
+      ],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": true,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 4,
+      "title": "Guten Appetit!",
+      "stage": "A1.1",
+      "source": {
+        "kind": "publisher-table-of-contents",
+        "url": "https://www.klett-sprachen.de/downloads/2624/inhaltsverzeichnis-netzwerk-a1-1/pdf",
+        "verified": "2026-10-22",
+        "details": "Publisher chapter outline only; not full copyrighted textbook."
+      },
+      "communicationOutcomes": [
+        "talking about meals",
+        "planning shopping",
+        "shopping conversations",
+        "mealtime conversations"
+      ],
+      "vocabularyThemes": [
+        "meals",
+        "food",
+        "drinks",
+        "shops"
+      ],
+      "grammarTopics": [
+        "word order",
+        "accusative",
+        "verbs with accusative objects"
+      ],
+      "pronunciationFocus": "ä, ö and ü",
+      "culturalContext": "Food customs and food-related jobs in D-A-CH",
+      "originalLessonGoal": "Shop for ingredients and order a meal",
+      "originalTeacherStudioActivity": "Create a shop dialogue with prices, quantities and feedback",
+      "relatedExistingDemoLessonIds": [
+        "cafe"
+      ],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 5,
+      "title": "Tag für Tag",
+      "stage": "A1.1",
+      "source": {
+        "kind": "publisher-table-of-contents",
+        "url": "https://www.klett-sprachen.de/downloads/2624/inhaltsverzeichnis-netzwerk-a1-1/pdf",
+        "verified": "2026-10-22",
+        "details": "Publisher chapter outline only; not full copyrighted textbook."
+      },
+      "communicationOutcomes": [
+        "telling the time",
+        "daily routine",
+        "talking about family",
+        "making appointments",
+        "apologising for lateness"
+      ],
+      "vocabularyThemes": [
+        "daily routines",
+        "times",
+        "family"
+      ],
+      "grammarTopics": [
+        "am, um and von … bis",
+        "possessive determiners",
+        "können, müssen and wollen with the sentence bracket"
+      ],
+      "pronunciationFocus": "German r",
+      "culturalContext": "Punctuality and appointments in D-A-CH",
+      "originalLessonGoal": "Discuss a daily schedule and arrange a meeting",
+      "originalTeacherStudioActivity": "Build an interactive clock and telephone appointment task",
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 6,
+      "title": "Zeit mit Freunden",
+      "stage": "A1.1",
+      "source": {
+        "kind": "publisher-table-of-contents",
+        "url": "https://www.klett-sprachen.de/downloads/2624/inhaltsverzeichnis-netzwerk-a1-1/pdf",
+        "verified": "2026-10-22",
+        "details": "Publisher chapter outline only; not full copyrighted textbook."
+      },
+      "communicationOutcomes": [
+        "planning with friends",
+        "birthdays and invitations",
+        "ordering and paying in restaurants",
+        "talking about past events",
+        "finding event details"
+      ],
+      "vocabularyThemes": [
+        "leisure",
+        "food and drinks",
+        "events",
+        "descriptions"
+      ],
+      "grammarTopics": [
+        "dates with am",
+        "separable verbs",
+        "für + accusative",
+        "accusative personal pronouns",
+        "simple past of haben and sein"
+      ],
+      "pronunciationFocus": "ei, eu and au",
+      "culturalContext": "Social venues and leisure in D-A-CH",
+      "originalLessonGoal": "Invite a friend and make a restaurant plan",
+      "originalTeacherStudioActivity": "Create an invitation-writing and restaurant speaking mission",
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": true,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 7,
+      "title": "Kontakte",
+      "stage": "A1.2",
+      "source": {
+        "kind": "publisher-table-of-contents",
+        "url": "https://www.klett-sprachen.de/downloads/2622/inhaltsverzeichnis-netzwerk-a1-2/pdf",
+        "verified": "2026-10-22",
+        "details": "Publisher chapter outline only; not full copyrighted textbook."
+      },
+      "communicationOutcomes": [
+        "arranging appointments",
+        "understanding instructions",
+        "reading and answering letters",
+        "talking about language learning",
+        "telephone conversations"
+      ],
+      "vocabularyThemes": [
+        "office routine",
+        "telephone",
+        "letter conventions",
+        "language learning"
+      ],
+      "grammarTopics": [
+        "prepositions with dative",
+        "dative articles",
+        "possessives in accusative"
+      ],
+      "pronunciationFocus": "Long and short e",
+      "culturalContext": "Social networking in D-A-CH",
+      "originalLessonGoal": "Write a short message and arrange an appointment",
+      "originalTeacherStudioActivity": "Create a telephone listening and formal email-writing task",
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 8,
+      "title": "Meine Wohnung",
+      "stage": "A1.2",
+      "source": {
+        "kind": "publisher-table-of-contents",
+        "url": "https://www.klett-sprachen.de/downloads/2622/inhaltsverzeichnis-netzwerk-a1-2/pdf",
+        "verified": "2026-10-22",
+        "details": "Publisher chapter outline only; not full copyrighted textbook."
+      },
+      "communicationOutcomes": [
+        "reading housing advertisements",
+        "describing a home",
+        "discussing furniture and colours",
+        "answering an invitation",
+        "expressing likes and dislikes"
+      ],
+      "vocabularyThemes": [
+        "rooms",
+        "furniture",
+        "appliances",
+        "colours",
+        "housing types"
+      ],
+      "grammarTopics": [
+        "adjectives with sein, sehr and zu",
+        "in + accusative",
+        "two-way prepositions with dative"
+      ],
+      "pronunciationFocus": "s and sch",
+      "culturalContext": "Housing styles in D-A-CH",
+      "originalLessonGoal": "Describe a home and where its furniture is located",
+      "originalTeacherStudioActivity": "Create an interactive room-labelling activity and home-description writing task",
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 9,
+      "title": "Alles Arbeit?",
+      "stage": "A1.2",
+      "source": {
+        "kind": "publisher-table-of-contents",
+        "url": "https://www.klett-sprachen.de/downloads/2622/inhaltsverzeichnis-netzwerk-a1-2/pdf",
+        "verified": "2026-10-22",
+        "details": "Publisher chapter outline only; not full copyrighted textbook."
+      },
+      "communicationOutcomes": [
+        "describing work and study",
+        "talking about previous events",
+        "reading job advertisements",
+        "expressing opinions about jobs",
+        "telephone enquiries"
+      ],
+      "vocabularyThemes": [
+        "occupations",
+        "workplaces",
+        "study",
+        "jobs"
+      ],
+      "grammarTopics": [
+        "Perfekt tense",
+        "regular and irregular past participles",
+        "und, oder and aber"
+      ],
+      "pronunciationFocus": "German h",
+      "culturalContext": "Seasonal work in D-A-CH",
+      "originalLessonGoal": "Tell a simple story about yesterday or a recent job",
+      "originalTeacherStudioActivity": "Create a job-ad comprehension and past-event speaking task",
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": true,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 10,
+      "title": "Kleidung und Mode",
+      "stage": "A1.2",
+      "source": {
+        "kind": "publisher-table-of-contents",
+        "url": "https://www.klett-sprachen.de/downloads/2622/inhaltsverzeichnis-netzwerk-a1-2/pdf",
+        "verified": "2026-10-22",
+        "details": "Publisher chapter outline only; not full copyrighted textbook."
+      },
+      "communicationOutcomes": [
+        "discussing clothing",
+        "understanding shopping messages",
+        "trying on and buying clothes",
+        "locating departments",
+        "describing shopping experiences"
+      ],
+      "vocabularyThemes": [
+        "clothing",
+        "department-store floors",
+        "shops"
+      ],
+      "grammarTopics": [
+        "welcher/welches/welche",
+        "dieser/dieses/diese",
+        "participles of separable and inseparable verbs",
+        "dative pronouns"
+      ],
+      "pronunciationFocus": "Stress in prefixed verbs",
+      "culturalContext": "Fashion and shopping in Berlin",
+      "originalLessonGoal": "Choose clothing and ask for help in a store",
+      "originalTeacherStudioActivity": "Create a changing-room conversation and department-store directions task",
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 11,
+      "title": "Gesund und munter",
+      "stage": "A1.2",
+      "source": {
+        "kind": "publisher-table-of-contents",
+        "url": "https://www.klett-sprachen.de/downloads/2622/inhaltsverzeichnis-netzwerk-a1-2/pdf",
+        "verified": "2026-10-22",
+        "details": "Publisher chapter outline only; not full copyrighted textbook."
+      },
+      "communicationOutcomes": [
+        "naming body parts",
+        "understanding exercise instructions",
+        "speaking with a doctor",
+        "giving and understanding basic health guidance"
+      ],
+      "vocabularyThemes": [
+        "body parts",
+        "personal care",
+        "illness vocabulary",
+        "health professions"
+      ],
+      "grammarTopics": [
+        "imperative forms",
+        "requests and directions",
+        "sollen, müssen, dürfen and nicht dürfen"
+      ],
+      "pronunciationFocus": "p/b, t/d and k/g",
+      "culturalContext": "Traditional household remedies in German-speaking regions",
+      "originalLessonGoal": "Describe simple symptoms and understand basic directions",
+      "originalTeacherStudioActivity": "Create a doctor-visit role-play with listening and teacher feedback",
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": false,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    },
+    {
+      "number": 12,
+      "title": "Ab in den Urlaub!",
+      "stage": "A1.2",
+      "source": {
+        "kind": "publisher-table-of-contents",
+        "url": "https://www.klett-sprachen.de/downloads/2622/inhaltsverzeichnis-netzwerk-a1-2/pdf",
+        "verified": "2026-10-22",
+        "details": "Publisher chapter outline only; not full copyrighted textbook."
+      },
+      "communicationOutcomes": [
+        "understanding tour suggestions",
+        "giving directions",
+        "writing a postcard",
+        "describing weather",
+        "understanding travel reports",
+        "discussing hotel problems"
+      ],
+      "vocabularyThemes": [
+        "vacations",
+        "destinations",
+        "sights",
+        "weather"
+      ],
+      "grammarTopics": [
+        "impersonal man",
+        "wer, wen, wem and related questions",
+        "sequence words zuerst, dann, später, zum Schluss"
+      ],
+      "pronunciationFocus": "f, v and w",
+      "culturalContext": "Popular destinations in Germany",
+      "originalLessonGoal": "Plan a trip and write a short travel message",
+      "originalTeacherStudioActivity": "Create a travel-planning scenario and hotel-help speaking rehearsal",
+      "relatedExistingDemoLessonIds": [],
+      "relatedDemosAreNotFullChapterCoverage": true,
+      "reviewCheckpointAfter": true,
+      "releaseStatus": "mapped-outline-only",
+      "teacherValidated": false
+    }
+  ],
+  "checkpoints": [
+    {
+      "afterChapter": 3,
+      "skills": [
+        "listening",
+        "reading",
+        "writing",
+        "speaking"
+      ],
+      "contentStatus": "planned-original-practice",
+      "officialExam": false
+    },
+    {
+      "afterChapter": 6,
+      "skills": [
+        "listening",
+        "reading",
+        "writing",
+        "speaking"
+      ],
+      "contentStatus": "planned-original-practice",
+      "officialExam": false
+    },
+    {
+      "afterChapter": 9,
+      "skills": [
+        "listening",
+        "reading",
+        "writing",
+        "speaking"
+      ],
+      "contentStatus": "planned-original-practice",
+      "officialExam": false
+    },
+    {
+      "afterChapter": 12,
+      "skills": [
+        "listening",
+        "reading",
+        "writing",
+        "speaking"
+      ],
+      "contentStatus": "planned-original-practice",
+      "officialExam": false
+    }
+  ]
+};
+
+</script>
+<script>
 /* Original prototype curriculum. Instructor review is required before classroom use. */
 window.GERMAN_LESSONS = [
   {
@@ -1102,7 +1743,7 @@ window.GERMAN_EXAM_DATA = Object.freeze({
     const next=session?.blocks.findIndex(b=>!p.completed.includes(b.id))??0;
     ui.sessionId=id;ui.sessionBlockIndex=next<0?session.blocks.length:next;ui.sessionSelection={};
   }
-  function routeFromHash(){const hash=decodeURIComponent(location.hash.replace(/^#/,''));if(hash.startsWith('lesson/')){const id=hash.slice(7);if(lessons.some(l=>l.id===id)){ui.route='lesson';if(ui.lessonId!==id)resetLessonUI(id);return;}}if(hash.startsWith('experience/')){const id=hash.slice(11);if(state.experiences.some(x=>x.id===id&&x.status==='published')){ui.route='experience';ui.experienceId=id;return;}}if(hash.startsWith('session/')){const id=hash.slice(8);if(state.sessions.some(x=>x.id===id&&x.status==='published')){ui.route='session';if(ui.sessionId!==id)resumeSession(id);return;}}if(hash.startsWith('student/')){ui.route='student';ui.studentView=['home','lessons','practice'].includes(hash.slice(8))?hash.slice(8):'home';return;}if(hash.startsWith('teacher/')){ui.route='teacher';ui.teacherView=['home','sessions','missions','exams','learners'].includes(hash.slice(8))?hash.slice(8):'home';return;}ui.route=['teacher','sources','exam'].includes(hash)?hash:'student';if(ui.route==='teacher')ui.teacherView='home';if(ui.route==='student')ui.studentView='home';}
+  function routeFromHash(){const hash=decodeURIComponent(location.hash.replace(/^#/,''));if(hash.startsWith('lesson/')){const id=hash.slice(7);if(lessons.some(l=>l.id===id)){ui.route='lesson';if(ui.lessonId!==id)resetLessonUI(id);return;}}if(hash.startsWith('experience/')){const id=hash.slice(11);if(state.experiences.some(x=>x.id===id&&x.status==='published')){ui.route='experience';ui.experienceId=id;return;}}if(hash.startsWith('session/')){const id=hash.slice(8);if(state.sessions.some(x=>x.id===id&&x.status==='published')){ui.route='session';if(ui.sessionId!==id)resumeSession(id);return;}}if(hash.startsWith('student/')){ui.route='student';ui.studentView=['home','lessons','practice'].includes(hash.slice(8))?hash.slice(8):'home';return;}if(hash.startsWith('teacher/')){ui.route='teacher';ui.teacherView=['home','sessions','missions','exams','learners'].includes(hash.slice(8))?hash.slice(8):'home';return;}ui.route=['home','student','teacher','sources','exam'].includes(hash)?hash:'home';if(ui.route==='teacher')ui.teacherView='home';if(ui.route==='student')ui.studentView='home';}
   function navigate(route,id){const target=route==='lesson'?`lesson/${id}`:route==='experience'?`experience/${id}`:route==='session'?`session/${id}`:route;if(route==='session')resumeSession(id);if(location.hash.slice(1)===target){if(route==='lesson'&&ui.lessonId!==id)resetLessonUI(id);if(route==='experience')ui.experienceId=id;ui.route=route;render();}else{location.hash=target;}window.scrollTo({top:0,behavior:'instant'});}
   function navButton(route,label){const selected=(route==='student'&&['student','lesson','experience','session','exam'].includes(ui.route))||ui.route===route;return `<button type="button" class="nav-btn ${selected?'active':''}" data-route="${route}" aria-pressed="${selected}">${label}</button>`;}
   function sectionNav(){
@@ -1110,19 +1751,21 @@ window.GERMAN_EXAM_DATA = Object.freeze({
     const current=isTeacher?ui.teacherView:ui.route==='exam'?'exam':ui.route==='lesson'?'lessons':['experience','session'].includes(ui.route)?'practice':ui.studentView;
     const items=isTeacher?
       [['home','Overview','teacher'],['sessions','Sessions','teacher/sessions'],['missions','Missions','teacher/missions'],['exams','Exam coaching','teacher/exams'],['learners','Learners & reviews','teacher/learners']]:
-      [['home','Home','student'],['lessons','Lessons','student/lessons'],['practice','Practice','student/practice'],['exam','Exam preparation','exam']];
+      [['home','My progress','student'],['lessons','Lessons','student/lessons'],['practice','Practice','student/practice'],['exam','Exam preparation','exam']];
     return `<nav class="section-nav ${isTeacher?'teacher-section-nav':'learning-section-nav'}" aria-label="${isTeacher?'Teacher Studio':'Learning'} sections"><div class="section-nav-inner">${items.map(([id,label,route])=>`<button type="button" class="section-nav-item ${current===id?'active':''}" data-route="${route}" ${current===id?'aria-current="page"':''}>${label}</button>`).join('')}</div></nav>`;
   }
   function renderShell(content){
     const isTeacher=ui.route==='teacher';
-    root.innerHTML=`<div class="top-notice"><span>Interactive concept preview</span> Sample learners · Local progress · No real accounts</div>
-      <header class="site-header"><div class="head-inner"><a class="brand" href="#student" aria-label="AmberTheory German Studio learning home"><img class="brand-logo" src="./dist/ambertheory-lockup.jpg" alt="AmberTheory" width="210" height="65" /><span class="brand-product">German Studio</span></a>
-      <nav class="primary-nav simplified-nav" aria-label="Choose your workspace">${navButton('student','Learning')}${navButton('teacher','Teacher Studio')}</nav><span class="workspace-hint">${isTeacher?'Design · Assign · Review':'Learn · Practise · Progress'}</span></div>${sectionNav()}</header>
-      <nav class="mobile-nav simplified-mobile-nav" aria-label="Choose your workspace"><button type="button" data-route="student" class="${['student','lesson','experience','session','exam'].includes(ui.route)?'active':''}"><span>▤</span>Learning</button><button type="button" data-route="teacher" class="${isTeacher?'active':''}"><span>◎</span>Teacher Studio</button></nav>
-      <main class="shell page">${content}</main><footer class="footer"><div class="shell footer-inner"><span>AmberTheory · German Studio concept · Teacher-led learning</span><div class="footer-links"><a href="#sources">Open materials & credits</a><span>Demo only · No real accounts</span></div></div></footer>`;
+    const isLanding=ui.route==='home';
+    root.innerHTML=`${isLanding?'':'<div class="top-notice"><span>Interactive concept preview</span> Sample learners · Local progress · No real accounts</div>'}
+      <header class="site-header"><div class="head-inner"><a class="brand" href="#home" aria-label="AmberTheory German Studio home"><img class="brand-logo" src="./dist/ambertheory-lockup.jpg" alt="AmberTheory" width="210" height="65" /><span class="brand-product">German Studio</span></a>
+      <nav class="primary-nav simplified-nav" aria-label="Main navigation">${navButton('home','Home')}${navButton('student','Student Studio')}${navButton('teacher','Teacher Studio')}</nav></div>${isLanding?'':sectionNav()}</header>
+      <nav class="mobile-nav simplified-mobile-nav" aria-label="Main navigation"><button type="button" data-route="home" class="${isLanding?'active':''}"><span>⌂</span>Home</button><button type="button" data-route="student" class="${['student','lesson','experience','session','exam'].includes(ui.route)?'active':''}"><span>▤</span>Student</button><button type="button" data-route="teacher" class="${isTeacher?'active':''}"><span>◎</span>Teacher</button></nav>
+      <main class="shell page ${isLanding?'public-shell':''}">${content}</main><footer class="footer"><div class="shell footer-inner"><span>AmberTheory · German Studio concept · Teacher-led learning</span><div class="footer-links"><a href="#home">Home</a><a href="#sources">Open materials & credits</a><span>Demo only · No real accounts</span></div></div></footer>`;
   }
-  function render(){routeFromHash();let page='';if(ui.route==='student')page=renderStudent();else if(ui.route==='lesson')page=renderLesson();else if(ui.route==='experience')page=renderExperience();else if(ui.route==='session')page=renderSession();else if(ui.route==='exam')page=`<div id="exam-root">${window.GermanExamStudio?.renderLearner()||'<p>Exam preparation is loading.</p>'}</div>`;else if(ui.route==='teacher')page=renderTeacher();else if(ui.route==='sources')page=renderSources();else page=renderStudent();renderShell(page);}
-
+  function render(){routeFromHash();let page='';if(ui.route==='home')page=renderPublicLanding();else if(ui.route==='student')page=renderStudent();else if(ui.route==='lesson')page=renderLesson();else if(ui.route==='experience')page=renderExperience();else if(ui.route==='session')page=renderSession();else if(ui.route==='exam')page=`<div id="exam-root">${window.GermanExamStudio?.renderLearner()||'<p>Exam preparation is loading.</p>'}</div>`;else if(ui.route==='teacher')page=renderTeacher();else if(ui.route==='sources')page=renderSources();else page=renderPublicLanding();renderShell(page);}
+  
+  function renderPublicLanding(){return "<div class=\"public-landing\">\n  <section class=\"public-hero\" aria-labelledby=\"public-title\">\n    <div class=\"public-hero-copy\"><span class=\"public-kicker\"><span class=\"public-kicker-dot\"></span> AmberTheory · Language Learning Studio</span>\n      <h1 id=\"public-title\">Discover German.<br><em>Find your confidence.</em></h1>\n      <p>Explore a guided way to learn, practise and grow — with a teacher creating meaningful experiences along the way.</p>\n      <div class=\"public-actions\"><button class=\"btn btn-primary public-start\" data-route=\"student\">Enter Student Studio →</button><button class=\"btn btn-outline public-secondary\" data-route=\"teacher\">Explore Teacher Studio ↗</button></div>\n      <button class=\"public-demo-link\" data-watch-demo>▶ Watch the student + teacher demonstration ↓</button>\n      <p class=\"public-hero-caveat\">Open interactive prototype · No sign-in required · Progress stays on this device</p>\n    </div>\n    <div class=\"public-hero-art\" aria-label=\"A preview of the learning experience\">\n      <div class=\"public-art-orbit orbit-one\"></div><div class=\"public-art-orbit orbit-two\"></div>\n      <div class=\"public-preview-card\"><span class=\"public-preview-overline\">YOUR FIRST STEPS</span><div class=\"public-preview-speech\">Hallo! <span>Wie geht's?</span></div><p>Start with everyday conversation.</p><div class=\"public-preview-steps\"><span class=\"done\">01 · Discover</span><span>02 · Understand</span><span>03 · Practise</span></div></div>\n      <div class=\"public-art-note\"><span>✦</span><div><strong>Built around progress</strong><small>One meaningful step at a time</small></div></div>\n    </div>\n  </section>\n  <section class=\"public-intro\" aria-labelledby=\"public-path-title\"><span class=\"eyebrow\">One learning journey · Two connected studios</span><h2 id=\"public-path-title\">What would you like to do?</h2><p>Choose where to begin. The learner and teacher experiences are designed to work together.</p>\n    <div class=\"public-paths\">\n      <article class=\"public-path public-path-student\"><div class=\"public-path-symbol\">Aa</div><span class=\"eyebrow\">For learners</span><h3>Student Studio</h3><p>Follow lessons, hear German, try real-life conversations, prepare for Goethe or telc exams and see your progress.</p><ul><li>Beginner-friendly lessons</li><li>Practice missions and exam preparation</li><li>Feedback and learning milestones</li></ul><button class=\"public-card-link\" data-route=\"student\">Start learning <span>→</span></button></article>\n      <article class=\"public-path public-path-teacher\"><div class=\"public-path-symbol\">✎</div><span class=\"eyebrow\">For teachers</span><h3>Teacher Studio</h3><p>Turn lessons into experiences: build sessions, set missions, coach exam skills and review learner responses.</p><ul><li>Session and activity builders</li><li>Assignments and learner reviews</li><li>Exam coaching tools</li></ul><button class=\"public-card-link\" data-route=\"teacher\">Explore teaching tools <span>→</span></button></article>\n    </div>\n  </section>\n  <section class=\"public-how\" aria-labelledby=\"public-how-title\"><div><span class=\"eyebrow\">The experience</span><h2 id=\"public-how-title\">Learn. Try. Improve.</h2><p>Lessons introduce the language, activities help you use it, and teacher feedback helps you take the next step.</p></div><div class=\"public-how-steps\"><div><b>01</b><strong>Learn a useful idea</strong><small>Short guided lessons with speaking and listening</small></div><div><b>02</b><strong>Try it in context</strong><small>Practise a café conversation or a writing mission</small></div><div><b>03</b><strong>Grow with feedback</strong><small>Track completion and reflect on teacher reviews</small></div></div></section>" + renderWalkthrough() + "<section class=\"public-end-cta\"><div><span class=\"eyebrow\">Ready to explore?</span><h2>Your German journey starts with one conversation.</h2></div><button class=\"btn btn-primary\" data-route=\"student\">Open Student Studio →</button></section>\n</div>";}
   function renderWalkthrough(){
     return `<section class="walkthrough" id="studio-demo" aria-labelledby="demo-heading"><div class="walkthrough-intro"><div><span class="eyebrow">Student + Teacher · Video walkthrough</span><h2 id="demo-heading">See both sides of the learning journey.</h2><p>Watch the 80-second silent, illustrated tour: learn and practise as a student, then design, assign and review activities as a teacher—and see the feedback reach the student.</p></div><span class="walkthrough-duration">▶ 1 min 20 sec · No voiceover</span></div><div class="walkthrough-player"><video controls playsinline preload="metadata" poster="./teacher-studio-poster.svg?v=clean-first-steps-20261020" aria-label="Watch the German Learning and Teacher Studio walkthrough"><source src="./teacher-studio-walkthrough.mp4?v=clean-first-steps-20261020" type="video/mp4" />Your browser cannot play this video. <a href="./teacher-studio-walkthrough.mp4?v=clean-first-steps-20261020">Download the walkthrough</a>.</video></div><p class="walkthrough-note">Illustrated steps based on the working prototype. Explore <button class="view-link" data-route="student">Learning →</button> or <button class="view-link" data-route="teacher">Teacher Studio →</button> yourself.</p></section>`;
   }
@@ -1148,15 +1791,26 @@ window.GERMAN_EXAM_DATA = Object.freeze({
     <aside class="card card-pad mission-side"><span class="eyebrow">Your practice history</span><h3 style="margin:12px 0">Feedback makes it stick.</h3><p class="subtle" style="font-size:12px">Try the mission, get a short note and improve your next response.</p><div class="queue" style="margin-top:17px">${responses.length?responses.map(s=>`<div class="queue-item"><div class="queue-head"><strong>Your response</strong><span class="tag ${state.reviews[s.id]?'tag-dark':'tag-warm'}">${state.reviews[s.id]?'Reviewed':'Awaiting feedback'}</span></div><blockquote>${escape(s.text)}</blockquote>${state.reviews[s.id]?`<div class="feedback"><b>Teacher note:</b> ${escape(state.reviews[s.id].note)}</div>`:''}</div>`).join(''):'<div class="empty">Your first attempt will appear here after you submit it.</div>'}</div><div class="study-note"><b>Demo note:</b> Speaking rehearsal happens locally. Only the written response is visible in the Teacher Studio on this browser.</div></aside></div></div>`;
   }
 
+  function renderBookPath(mode){
+    const book=window.GERMAN_CURRICULUM;
+    if(!book||!Array.isArray(book.chapters)||!book.chapters.length)return '';
+    const isTeacher=mode==='teacher';
+    const renderCard=ch=>{
+      const info=(items,label)=>'<p class="book-detail"><b>'+label+':</b> '+escape((items||[]).join(' · '))+'</p>';
+      const originalGoal=isTeacher?ch.originalTeacherStudioActivity:ch.originalLessonGoal;
+      return '<details class="book-chapter card"><summary><span class="book-number">'+String(ch.number).padStart(2,'0')+'</span><span class="book-title"><strong>'+escape(ch.title)+'</strong><small>'+escape(originalGoal)+'</small></span><span class="book-expand" aria-hidden="true">⌄</span></summary><div class="book-chapter-details">'+info(ch.communicationOutcomes,'Communication')+info(ch.vocabularyThemes,'Vocabulary')+info(ch.grammarTopics,'Grammar')+'<p class="book-detail"><b>Pronunciation:</b> '+escape(ch.pronunciationFocus)+'</p><p class="book-detail"><b>Culture:</b> '+escape(ch.culturalContext)+'</p><p class="book-chapter-status">Curriculum mapped · '+(isTeacher?'teacher activity awaiting validation':'complete interactive chapter lessons not yet published')+'</p></div></details>';
+    };
+    const group=(stage)=>'<div class="book-level"><div class="book-level-heading"><h4>'+stage+'</h4><span>Chapters '+(stage==='A1.1'?'1–6':'7–12')+'</span></div><div class="book-list">'+book.chapters.filter(ch=>ch.stage===stage).map(renderCard).join('')+'</div></div>';
+    return '<section class="book-reference" aria-label="Netzwerk A1 curriculum route"><div class="book-reference-heading"><div><span class="eyebrow">Teacher-selected textbook reference</span><h3>Netzwerk A1 · Full chapter route</h3><p>'+ (isTeacher?'Use the chapter goals when composing sessions or assessment tasks. The mapped activities are original suggestions, not textbook exercises.':'Explore all 12 chapter goals. The five working lessons below remain prototype examples; these chapter outlines are not complete interactive lessons yet.') +'</p></div><span class="tag tag-warm">12 chapters · 4 checkpoints</span></div>'+group('A1.1')+group('A1.2')+'<p class="book-source-note">Mapped from the publisher\'s original Netzwerk A1 tables of contents. <a target="_blank" rel="noopener noreferrer" href="https://www.klett-sprachen.de/downloads/2624/inhaltsverzeichnis-netzwerk-a1-1/pdf">A1.1 source ↗</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.klett-sprachen.de/downloads/2622/inhaltsverzeichnis-netzwerk-a1-2/pdf">A1.2 source ↗</a>. Protected textbook activities, images and audio are not reproduced.</p></section>';
+  }
   function renderStudent(){
     const next=nextLesson();const pts=progress();const assignments=state.assigned;
     const skills=[['Listening',30],['Speaking',20],['Reading',35],['Writing',25]].map(([name,base])=>{const value=Math.min(100,base+Math.round(pts*.55));return `<div class="card skill"><div class="skill-top"><span>${name}</span><span class="tag tag-muted">First Steps demo</span></div><strong>${value}%</strong><div class="progress-shell"><div class="progress-fill" style="width:${value}%"></div></div></div>`;}).join('');
-    return `${ui.studentView==='home'?`<div class="dash-header"><div><span class="eyebrow">Learning · First Steps</span><h1>Guten Tag! Let's learn German.</h1><p class="lead">Start a lesson or pick up where you left off. Your practice and progress are in one place.</p></div><div class="workspace-shortcuts"><span class="tag tag-warm">Demo learner · Local browser</span><button class="btn btn-outline btn-small" data-route="teacher">I'm a teacher →</button><button class="btn btn-outline btn-small" data-watch-demo>▶ Watch studio demo</button></div></div>`:''}
+    return `${ui.studentView==='home'?`<div class="dash-header"><div><span class="eyebrow">Learning · First Steps</span><h1>Guten Tag! Let's learn German.</h1><p class="lead">Start a lesson or pick up where you left off. Your practice and progress are in one place.</p></div><div class="workspace-shortcuts"><span class="tag tag-warm">Demo learner · Local browser</span><button class="btn btn-outline btn-small" data-route="teacher">I'm a teacher →</button><button class="btn btn-outline btn-small" data-route="home">▶ Watch studio demo</button></div></div>`:''}
     <section class="view-pane" ${ui.studentView==='home'?'':'hidden'}><div class="dash-grid"><section class="learning-panel"><span class="tag tag-dark">First Steps · Beginner German</span><h2>Make the next conversation yours.</h2><p>${pts===100?'All sample lessons completed. Revisit a lesson or try a different example.':'Your path is ready. Listen, understand, check your knowledge and try saying it yourself.'}</p><div class="progress-shell"><div class="progress-fill" style="width:${pts}%"></div></div><div class="minor-progress"><span>${state.completed.length} of ${lessons.length} lessons finished</span><span>${pts}%</span></div>${lessonMilestones()}<button class="btn btn-white" data-lesson="${next.id}">${pts===100?'Revisit lessons':'Continue learning'} ${icon('arrow')}</button></section><section class="card card-pad"><div class="lesson-head"><h3>Your next steps</h3><span class="tag tag-muted">First Steps</span></div><p class="subtle" style="font-size:12px;margin:8px 0 19px">Small, useful steps towards confident conversations.</p><div class="next-list">${lessons.slice(0,4).map((l,i)=>`<div class="next-item"><span class="next-dot">${state.completed.includes(l.id)?'✓':i+1}</span><div><strong>${escape(l.title)}</strong><p>${escape(l.duration)} · ${escape(l.skill)}</p></div><button class="btn btn-ghost btn-small" data-lesson="${l.id}">Open →</button></div>`).join('')}</div></section></div>
     <section class="exam-home-card"><div><span class="eyebrow">New · Exam Preparation</span><h2>Ready for Goethe or telc?</h2><p>Practise the four skills, explore A1 mini-mocks, learn from explanations and bring writing or speaking notes to your teacher.</p></div><button class="btn btn-white" data-route="exam">Explore exam preparation →</button></section>
-    ${renderWalkthrough()}
     <div class="quick-paths" aria-label="Explore your learning"><button class="quick-path" data-route="student/lessons"><span class="eyebrow">01 · Lessons</span><strong>Learn the essentials</strong><small>Five guided beginner lessons →</small></button><button class="quick-path" data-route="student/practice"><span class="eyebrow">02 · Practice</span><strong>Use what you learn</strong><small>Teacher sessions, missions & feedback →</small></button></div></section>
-    <section class="view-pane" ${ui.studentView==='lessons'?'':'hidden'}><div class="pane-intro"><span class="eyebrow">Learning · First Steps</span><h2>Your First Steps lessons</h2><p>Follow the course in order or revisit any topic. Your progress stays saved in this browser.</p><button class="btn btn-primary" data-lesson="${next.id}">Continue learning →</button></div><div class="lesson-grid">${lessons.map(lessonCard).join('')}</div></section>
+    <section class="view-pane" ${ui.studentView==='lessons'?'':'hidden'}><div class="pane-intro"><span class="eyebrow">Learning · First Steps</span><h2>Your First Steps lessons</h2><p>Follow the course in order or revisit any topic. Your progress stays saved in this browser.</p><button class="btn btn-primary" data-lesson="${next.id}">Continue learning →</button></div>${renderBookPath('student')}<div class="pane-intro"><span class="eyebrow">Interactive demo · Existing lessons</span><h3>Try a guided lesson</h3><p>These five original lessons demonstrate the learning experience while full textbook-aligned chapters are developed and reviewed.</p></div><div class="lesson-grid">${lessons.map(lessonCard).join('')}</div></section>
     <section class="view-pane" ${ui.studentView==='practice'?'':'hidden'}><div class="pane-intro"><span class="eyebrow">Practice · Teacher guided</span><h2>Try it in German</h2><p>Work through assigned sessions, try a personal mission, and revisit your teacher's feedback.</p></div>${renderStudentSessions()}${renderStudentExperiences()}
     <div class="assignment-strip"><div><span class="upper">Quick lesson assignment</span><h3 style="margin-top:6px">${assignments?'Introduce yourself in two sentences':'No quick assignment'}</h3><p>${assignments?'Practise the first lesson, write your introduction and send it for demo teacher feedback.':'Your teacher can assign a writing task from the Teacher Studio view.'}</p></div><button class="btn btn-primary" data-lesson="hello">${assignments?'Start assignment':'Practise anyway'} ${icon('arrow')}</button></div>
     ${state.submissions.length?`<section class="card card-pad" style="margin-top:18px"><div class="lesson-head"><h3>Teacher feedback</h3><span class="tag tag-muted">Your submitted work</span></div><div class="queue" style="margin-top:17px">${state.submissions.slice(0,4).map(s=>`<div class="queue-item"><div class="queue-head"><strong>${escape(lessons.find(l=>l.id===s.lessonId)?.title||'Practice')}</strong><span class="tag ${state.reviews[s.id]?'tag-dark':'tag-warm'}">${state.reviews[s.id]?'Reviewed':'Awaiting review'}</span></div><blockquote>${escape(s.text)}</blockquote>${state.reviews[s.id]?`<div class="feedback"><b>From your teacher:</b> ${escape(state.reviews[s.id].note)}</div>`:'<p>A teacher can respond in the Teacher Studio demo.</p>'}</div>`).join('')}</div></section>`:''}
@@ -1301,7 +1955,7 @@ window.GERMAN_EXAM_DATA = Object.freeze({
     <section class="view-pane" ${ui.teacherView==='home'?'':'hidden'}><div class="teacher-stats"><div class="card teacher-stat"><span class="upper">Learners in cohort</span><strong>5</strong><p>4 fictional + current demo</p></div><div class="card teacher-stat"><span class="upper">Average completion</span><strong>${Math.round(demoStudents.reduce((a,s)=>a+s.progress,0)/demoStudents.length)}%</strong><p>Illustrative sample view</p></div><div class="card teacher-stat"><span class="upper">To review</span><strong>${pending.length}</strong><p>Lesson, session & mission writing</p></div><div class="card teacher-stat"><span class="upper">Sessions live</span><strong>${state.sessions.filter(s=>s.status==='published').length}</strong><p>Teacher-composed sequences</p></div></div>
     <div class="pane-intro"><span class="eyebrow">Your tools</span><h2>What would you like to do?</h2><p>Choose one part of your studio. You can return here whenever you need to switch tasks.</p></div><div class="quick-paths teacher-paths"><button class="quick-path" data-route="teacher/sessions"><span class="eyebrow">Design</span><strong>Build a lesson session</strong><small>Vocabulary, listening, quizzes & conversations →</small></button><button class="quick-path" data-route="teacher/missions"><span class="eyebrow">Create</span><strong>Assign a practice mission</strong><small>Role-plays, speaking & writing tasks →</small></button><button class="quick-path" data-route="teacher/exams"><span class="eyebrow">Assess</span><strong>Coach exam preparation</strong><small>Goethe, telc, questions & feedback →</small></button><button class="quick-path" data-route="teacher/learners"><span class="eyebrow">Guide</span><strong>Review learner progress</strong><small>Submissions, feedback & course materials →</small></button></div></section>
     <section class="view-pane" ${ui.teacherView==='exams'?'':'hidden'}><div id="exam-teacher-root">${window.GermanExamStudio?.renderTeacher()||''}</div></section>
-    <section class="view-pane" ${ui.teacherView==='sessions'?'':'hidden'}>${renderTeacherSessions()}</section>
+    <section class="view-pane" ${ui.teacherView==='sessions'?'':'hidden'}>${renderBookPath('teacher')}${renderTeacherSessions()}</section>
     <section class="view-pane" ${ui.teacherView==='missions'?'':'hidden'}>${renderExperienceStudio()}</section>
     <section class="view-pane" ${ui.teacherView==='learners'?'':'hidden'}><div class="pane-intro"><span class="eyebrow">Learners & reviews</span><h2>See who needs help</h2><p>Inspect demo learner progress, review practice and manage the introductory assignment.</p></div>
     <div class="teacher-grid"><section class="card teacher-panel"><h3>My beginner cohort</h3><p class="subtitle">Fictional example students demonstrate the layout. Only the Demo learner changes as you practise.</p><div class="table-wrap"><table class="roster"><thead><tr><th>Learner</th><th>Level</th><th>Course progress</th><th>Practice</th><th>Support</th></tr></thead><tbody>${demoStudents.map(s=>`<tr><td class="student-name"><span class="avatar">${s.initials}</span>${escape(s.name)}</td><td>${escape(learnerLevel(s.level))}</td><td><div class="bar-inline"><div class="progress-shell"><div class="progress-fill" style="width:${s.progress}%"></div></div><span>${s.progress}%</span></div></td><td>${s.score}%</td><td><span class="tag ${s.status==='Needs review'?'tag-warm':'tag-muted'}">${escape(s.status)}</span></td></tr>`).join('')}</tbody></table></div><div class="student-mobile-list">${demoStudents.map(s=>`<article class="student-mobile-row"><div class="student-mobile-top"><span class="student-mobile-name"><span class="avatar">${s.initials}</span><b>${escape(s.name)}</b></span><span class="tag ${s.status==='Needs review'?'tag-warm':'tag-muted'}">${escape(s.status)}</span></div><div class="student-mobile-meta"><span><small>Level</small><strong>${escape(learnerLevel(s.level))}</strong></span><span><small>Practice</small><strong>${s.score}%</strong></span><span><small>Progress</small><strong>${s.progress}%</strong></span></div><div class="progress-shell"><div class="progress-fill" style="width:${s.progress}%"></div></div></article>`).join('')}</div><div class="demo-warning">These names and historical results are fictional examples. This static prototype does not yet enrol real students or synchronise progress between devices.</div></section>
