@@ -222,7 +222,7 @@ window.GERMAN_WORKBOOK = {
             "Straight on"
           ],
           "correct": 0,
-          "why": "Links means left.",
+          "why": "Links means left. The other choices do not match the German expression used here.",
           "audio": "Gehen Sie geradeaus und dann links."
         },
         {
