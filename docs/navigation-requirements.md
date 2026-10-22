@@ -13,7 +13,7 @@ Use three clear top-level destinations: **Home** (public landing page), **Studen
 | Menu | Route | Contents |
 | --- | --- | --- |
 | My progress | `#student` | Current progress, next lessons, exam entry and shortcuts to learning activities |
-| Lessons | `#student/lessons` | All five beginner lessons with direct entry and progress |
+| Lessons | `#student/lessons` | Learner-facing Netzwerk A1.1/A1.2 journey: 12 chapter goals clearly marked in preparation, plus five currently playable introduction lessons |
 | Practice | `#student/practice` | Assigned sessions, teacher-created missions, short assignment, feedback and indicative skills |
 | Exam preparation | `#exam` | Goethe/telc A1 original practice, mocks, results and tips |
 
@@ -24,10 +24,10 @@ Lesson details retain a desktop outline, four stages and previous/next controls.
 | Menu | Route | Contents |
 | --- | --- | --- |
 | Overview | `#teacher` | Cohort summary and prominent links to studio activities |
-| Sessions | `#teacher/sessions` | Session composer, assigned sessions, previews and editing |
+| Sessions | `#teacher/sessions` | Chapter-based teaching planner (objectives, grammar, pronunciation, original activity suggestions), chapter-linked draft composer, assigned sessions, previews and editing |
 | Missions | `#teacher/missions` | Experience templates, authoring, publishing and preview |
 | Exam coaching | `#teacher/exams` | Question bank, publishing and exam response reviews |
-| Learners & reviews | `#teacher/learners` | Sample cohort, lesson/session/mission feedback, quick assignment and curriculum |
+| Learners & reviews | `#teacher/learners` | Sample cohort, lesson/session/mission feedback, quick assignment and content readiness review (no duplicate learner lesson cards) |
 
 Each destination is a real hash route, survives refresh, and highlights its menu. Keep data and browser-local persistence unchanged. Teacher exam review remains independent of lesson response review.
 
@@ -39,3 +39,11 @@ Each destination is a real hash route, survives refresh, and highlights its menu
 - Keep mobile navigation for Home, Student Studio and Teacher Studio, with the video displayed on the public home page.
 - No loss of lesson content, authoring forms, mock controls or existing reviews.
 - Run `node tests/smoke.mjs`, `node tests/exam.mjs`, `node tests/navigation.mjs` and check phone/desktop live pages after deploy.
+
+## Role differentiation and chapter-linked authoring
+
+- Learners see goals, course sequence, playable beginner lessons, practice, feedback and exam preparation. Chapter cards do not falsely behave like finished lessons.
+- Teachers see a separate chapter planner with actionable source-aligned objectives and a chapter navigator. Click **Create chapter session draft** to open a new local draft with the chapter tagged; edit original vocabulary, listening and role-play content before publishing.
+- Sessions store an optional numeric `chapterNumber`. Existing sessions remain valid without this field; teachers can change alignment in the session composer. Drafts remain teacher-only; published sessions appear in learner Practice on the same browser.
+- Full teacher validation, secure accounts and real cohorts are not implemented. A textbook reference is not automatically teacher-approved content.
+- Regression: `node tests/role-separation.mjs` alongside existing smoke, navigation and exam tests.
