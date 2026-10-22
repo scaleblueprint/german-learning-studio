@@ -66,7 +66,7 @@ The teacher requested that AmberTheory follow **Netzwerk A1 (original edition, n
 
 - Structured data: [dist/data/netzwerk-a1-reference.json](dist/data/netzwerk-a1-reference.json) and its browser equivalent [dist/curriculum.js](dist/curriculum.js).
 - Review trail and licensing boundaries: [docs/netzwerk-a1-source-reference.md](docs/netzwerk-a1-source-reference.md).
-- **Student Studio → Lessons** shows the mapped A1.1/A1.2 chapter route alongside the existing five *playable* demo lessons; **Teacher Studio → Sessions** shows the corresponding planning reference.
+- **Student Studio → Lessons** shows a learner-facing 12-chapter course journey with clear goals and honest *in preparation* labels, followed by the five playable demo lessons. **Teacher Studio → Sessions** is a different chapter planning workbench with communication objectives, language focus, original activity suggestions and a chapter-linked session composer.
 - The mapped outlines **are not 12 complete lessons**. Full original content, teacher approval and chapter-level assignment workflows are pending.
 - The Scribd upload's complete pages were not accessible and its exact edition is unconfirmed; the mapping is grounded in official publisher tables of contents. No protected book lessons, images, recordings or exercises have been imported.
 
