@@ -1,6 +1,8 @@
-# Netzwerk A1 as the German Studio curriculum reference
+# Historical record — original Netzwerk A1 curriculum mapping (superseded)
 
-## Decision (22 October 2026)
+**Update, 22 October 2026:** The user subsequently supplied the different *Netzwerk neu A1* Kursbuch (176 pages). That newer book is now the active shared curriculum mapping in `dist/curriculum.js`. This document and `dist/data/netzwerk-a1-reference.json` are preserved for historical reference only. See [the current source reference](netzwerk-neu-a1-source-reference.md).
+
+## Earlier decision (22 October 2026)
 
 The teacher-requested **Netzwerk A1** textbook is the primary A1 curriculum reference for AmberTheory German Studio. This is the original **Netzwerk** series, not **Netzwerk neu**. The publisher identifies a 160-page Kursbuch (ISBN 978-3-12-606128-5). The public Scribd URL was supplied by the user, but its full 174-page upload was inaccessible in this environment, so its exact edition cannot yet be independently confirmed.
 
@@ -14,7 +16,7 @@ The teacher-requested **Netzwerk A1** textbook is the primary A1 curriculum refe
 | [Publisher resources](https://www.klett-sprachen.de/netzwerk/r-388/187) | Existence of official vocabulary lists, transcripts, chapter tests, learning aids, code-protected recordings | Public catalogue; reuse rights NOT assumed |
 | [User-supplied Scribd upload](https://www.scribd.com/document/917795854/Netzwerk-A1-Kursbuch) | URL supplied; all pages NOT accessible | Restricted in this environment |
 
-The app's curriculum source data are `dist/data/netzwerk-a1-reference.json`, with identical browser-readable data in `dist/curriculum.js`. Their source fields make each chapter traceable. Do not manually edit only one copy: keep both in sync.
+The **historical original-edition** data are preserved in `dist/data/netzwerk-a1-reference.json`. The active `dist/curriculum.js` now comes from **the newer edition** `dist/data/netzwerk-neu-a1-reference.json`; do not resynchronise it from this older file.
 
 ## What is in the curriculum data
 
