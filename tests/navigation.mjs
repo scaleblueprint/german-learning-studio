@@ -34,7 +34,7 @@ assert.match(root.innerHTML,/class="brand-logo" src="\.\/ambertheory-lockup\.jpg
 assert.doesNotMatch(root.innerHTML,/class="brand-mark"/,'AT monogram must not replace the canonical logo');
 assert.match(root.innerHTML,/Watch studio walkthrough/,'Student view retains a route to the demo');
 assert.match(root.innerHTML,/Kursbuch · Chapters 1–6/,'Student dashboard follows the book');
-assert.equal((root.innerHTML.match(/class="textbook-chapter"/g)||[]).length,6,'Six verified textbook chapters');
+assert.equal((new Set([...root.innerHTML.matchAll(/id="course-chapter-(\d+)"/g)].map(x=>x[1]))).size,6,'Six verified textbook chapters');
 assert.match(root.innerHTML,/data-route="student\/lessons"/);
 assert.match(root.innerHTML,/data-route="student\/practice"/);
 
