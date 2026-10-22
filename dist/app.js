@@ -1,6 +1,11 @@
 (() => {
   'use strict';
   const lessons = window.GERMAN_LESSONS || [];
+  const textbookChapters=()=>window.GERMAN_CURRICULUM?.chapters?.filter(c=>c.chapterPdfAvailable&&c.number<=6)||[];
+  const textbookLessons=()=>lessons.filter(l=>textbookChapters().some(ch=>ch.number===l.chapterNumber));
+  const lessonsInChapter=n=>textbookLessons().filter(l=>l.chapterNumber===Number(n));
+  const chapterSessions=n=>state.sessions.filter(ss=>Number(ss.chapterNumber)===Number(n));
+  const chapterVisual=n=>window.GERMAN_VISUALS?.render(n)||'';
   const storageKey = 'ambertheory-german-studio-v1';
   const root = document.getElementById('app');
   const experienceTemplates = [
@@ -16,7 +21,7 @@
     {type:'roleplay',icon:'☕',name:'Role-play task',hint:'Apply the language in a real situation'},
     {type:'assessment',icon:'✓',name:'Final assessment',hint:'Check understanding before finishing'}
   ];
-  const initialSession = () => ({id:'sample-cafe-session',title:'At the café: Your first order',description:'Learn five useful expressions, hear a polite order, practise a conversation and complete a short check.',level:'A1',duration:'20',audience:'learner',status:'published',sample:true,blocks:[
+  const initialSession = () => ({chapterNumber:4,id:'sample-cafe-session',title:'At the café: Your first order',description:'Learn five useful expressions, hear a polite order, practise a conversation and complete a short check.',level:'A1',duration:'20',audience:'learner',status:'published',sample:true,blocks:[
     {id:'cafe-words',type:'vocabulary',title:'Five words for the café',entries:'der Kaffee | coffee\nder Tee | tea\ndas Wasser | water\nbitte | please\ndanke | thank you'},
     {id:'cafe-listen',type:'listening',title:'Hear a polite order',phrase:'Guten Tag! Ich hätte gern einen Kaffee, bitte.',instruction:'Listen twice. Repeat slowly, then say it naturally.'},
     {id:'cafe-quiz',type:'quiz',title:'Choose the polite request',question:'Which German phrase politely asks for a coffee?',options:'Ich hätte gern einen Kaffee, bitte.\nWo ist der Bahnhof?\nIch heiße Lena.',correct:'0',explanation:'Ich hätte gern ... is a courteous way to order.'},
@@ -46,17 +51,17 @@
   function save(){try{localStorage.setItem(storageKey,JSON.stringify(state));}catch{notify('Browser storage is unavailable; progress may not persist.');}}
   function notify(message){const el=document.getElementById('toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove('show'),3000);}
   function icon(name){const icons={arrow:'→',check:'✓',listen:'♫',back:'←',clock:'◷',book:'▤',teacher:'◉',source:'↗',record:'●',stop:'■'};return icons[name]||name;}
-  function progress(){return Math.round(100*state.completed.length/Math.max(lessons.length,1));}
+  function progress(){const list=textbookLessons();return Math.round(100*list.filter(l=>state.completed.includes(l.id)).length/Math.max(list.length,1));}
   function lessonMilestones(){
     const next=nextLesson();
-    return `<div class="milestone-heading">Your lesson milestones</div><div class="milestone-track" role="group" aria-label="Open a lesson milestone">${lessons.map((lesson,index)=>{
+    return `<div class="milestone-heading">Your lesson milestones</div><div class="milestone-track" role="group" aria-label="Open a lesson milestone">${textbookLessons().map((lesson,index)=>{
       const done=state.completed.includes(lesson.id);
       const current=!done&&lesson.id===next.id;
       const status=done?' done':current?' current':'';
       return `<button type="button" class="milestone${status}" data-lesson="${escape(lesson.id)}" aria-label="Lesson ${index+1}: ${escape(lesson.title)}${done?', completed':current?', next':''}" title="${escape(lesson.title)}">${done?'✓':index+1}</button>`;
     }).join('')}</div>`;
   }
-  function nextLesson(){return lessons.find(l=>!state.completed.includes(l.id))||lessons[0];}
+  function nextLesson(){const list=textbookLessons();return list.find(l=>!state.completed.includes(l.id))||list[0]||lessons[0];}
   function currentLesson(){return lessons.find(l=>l.id===ui.lessonId)||lessons[0];}
   function sourceNote(id){return `<a href="https://tatoeba.org/en/sentences/show/${id}" target="_blank" rel="noopener noreferrer">Tatoeba CC0 · sentence #${id} ↗</a>`;}
   function resetLessonUI(id){ui.lessonId=id;ui.stage='discover';ui.questionIndex=0;ui.selected=null;ui.checked=false;ui.answers={};}
@@ -233,10 +238,10 @@ function renderTeacherWorkbookInsights(){
     </section>`;
   }
 
-  function sidebar(){return `<aside class="course-sidebar card" aria-label="Lesson outline"><div class="sidebar-overline">Course outline</div><div class="sidebar-title">First Steps</div>${lessons.map(l=>`<button class="sidebar-lesson ${l.id===ui.lessonId?'active':''} ${state.completed.includes(l.id)?'done':''}" data-lesson="${l.id}"><span class="count">${state.completed.includes(l.id)?'✓':l.unit}</span><span><b>${escape(l.title)}</b><small>${escape(l.duration)} · ${escape(l.skill)}</small></span></button>`).join('')}</aside><details class="lesson-picker"><summary>Lesson ${escape(currentLesson().unit)} of ${lessons.length} · Choose another lesson</summary><div class="lesson-picker-list">${lessons.map(l=>`<button class="${l.id===ui.lessonId?'active':''}" data-lesson="${l.id}">${state.completed.includes(l.id)?'✓':l.unit}. ${escape(l.title)}</button>`).join('')}</div></details>`;}
+  function sidebar(){return `<aside class="course-sidebar card" aria-label="Lesson outline"><div class="sidebar-overline">Course outline</div><div class="sidebar-title">First Steps</div>${textbookLessons().map(l=>`<button class="sidebar-lesson ${l.id===ui.lessonId?'active':''} ${state.completed.includes(l.id)?'done':''}" data-lesson="${l.id}"><span class="count">${state.completed.includes(l.id)?'✓':l.unit}</span><span><b>${escape(l.title)}</b><small>${escape(l.duration)} · ${escape(l.skill)}</small></span></button>`).join('')}</aside><details class="lesson-picker"><summary>Lesson ${escape(currentLesson().unit)} of ${textbookLessons().length} · Choose another lesson</summary><div class="lesson-picker-list">${textbookLessons().map(l=>`<button class="${l.id===ui.lessonId?'active':''}" data-lesson="${l.id}">${state.completed.includes(l.id)?'✓':l.unit}. ${escape(l.title)}</button>`).join('')}</div></details>`;}
   const stageNames=[['discover','01 · Discover'],['understand','02 · Understand'],['check','03 · Check'],['apply','04 · Use it']];
   function renderLesson(){const l=currentLesson();if(!l)return '<p>No lessons available.</p>';const stage=stageNames.find(x=>x[0]===ui.stage)||stageNames[0];const done=state.completed.includes(l.id);
-    return `<div class="course-layout">${sidebar()}<div class="lesson-main"><div class="lesson-banner"><div><span class="eyebrow">${l.chapterNumber?`A1.1 · Chapter ${l.chapterNumber}`:'First Steps demo'} · Lesson ${escape(l.unit)}</span><h1>${escape(l.title)}</h1><p>${escape(l.subtitle)}</p>${l.sourcePdfPages?`<p class="lesson-source-note">Original AmberTheory practice · Reference: uploaded A1.1 PDF pp. ${l.sourcePdfPages[0]}–${l.sourcePdfPages[1]} · Teacher review pending</p>`:''}</div><span class="tag ${done?'tag-dark':'tag-warm'}">${done?'✓ Completed':escape(l.duration)}</span></div><nav class="lesson-stage" aria-label="Lesson stages">${stageNames.map(([id,label])=>`<button class="stage-tab ${id===ui.stage?'active':''}" data-stage="${id}">${label}</button>`).join('')}</nav><article class="lesson-body card"><span class="eyebrow">${escape(stage[1])}</span>${renderStage(l)}</article><div class="lesson-nav"><button data-route="student">← Learning dashboard</button><button data-lesson="${lessons[(lessons.indexOf(l)+1)%lessons.length].id}">Next lesson →</button></div></div></div>`;
+    return `<div class="course-layout">${sidebar()}<div class="lesson-main"><div class="lesson-banner"><div><span class="eyebrow">${l.chapterNumber?`A1.1 · Chapter ${l.chapterNumber}`:'Original A1.1'} · Lesson ${escape(l.unit)}</span><h1>${escape(l.title)}</h1><p>${escape(l.subtitle)}</p>${l.sourcePdfPages?`<p class="lesson-source-note">Original AmberTheory practice · Reference: uploaded A1.1 PDF pp. ${l.sourcePdfPages[0]}–${l.sourcePdfPages[1]} · Teacher review pending</p>`:''}</div><span class="tag ${done?'tag-dark':'tag-warm'}">${done?'✓ Completed':escape(l.duration)}</span></div>${l.chapterNumber?`<div class="lesson-topic-visual">${chapterVisual(l.chapterNumber)}</div>`:''}<nav class="lesson-stage" aria-label="Lesson stages">${stageNames.map(([id,label])=>`<button class="stage-tab ${id===ui.stage?'active':''}" data-stage="${id}">${label}</button>`).join('')}</nav><article class="lesson-body card"><span class="eyebrow">${escape(stage[1])}</span>${renderStage(l)}</article><div class="lesson-nav"><button data-route="student/lessons">← Book chapters</button><button data-lesson="${textbookLessons()[(textbookLessons().indexOf(l)+1)%textbookLessons().length]?.id||l.id}">Next topic →</button></div></div></div>`;
   }
   function renderStage(l){
     if(ui.stage==='discover')return `<h2>A moment from everyday life</h2><p class="explain">${escape(l.scene)}</p><div class="phrase-panel"><div><div class="upper">Hear the language</div><div class="phrase-de">${escape(l.phrase.de)}</div><div class="phrase-en">${escape(l.phrase.en)}</div>${l.phrase.sourceId?`<div class="phrase-source">${sourceNote(l.phrase.sourceId)}</div>`:''}</div><button class="sound-button" data-speak="${escape(l.phrase.de)}" aria-label="Play German pronunciation" title="Play browser German voice">♫</button></div><div class="study-note"><b>Listen and repeat.</b> Use the sound button to hear a German browser voice, then say the phrase aloud. Voice quality depends on the voices installed on your device.</div><div class="stage-foot"><p>Try to hear the rhythm before focusing on every word.</p><button class="btn btn-primary" data-stage="understand">Understand the words ${icon('arrow')}</button></div>`;
@@ -420,7 +425,7 @@ function renderTeacherWorkbookInsights(){
     if(button.hasAttribute('data-open-session'))return navigate('session',button.dataset.openSession);
     if(button.hasAttribute('data-teacher-chapter')){ui.teacherChapterNumber=Number(button.dataset.teacherChapter)||1;render();return;}
     if(button.hasAttribute('data-start-chapter-session'))return openSessionComposer(null,Number(button.dataset.startChapterSession));
-    if(button.hasAttribute('data-new-session'))return openSessionComposer(null);
+    if(button.hasAttribute('data-new-session'))return openSessionComposer(null,ui.teacherChapterNumber);
     if(button.hasAttribute('data-edit-session'))return openSessionComposer(button.dataset.editSession);
     if(button.hasAttribute('data-close-session-composer')){ui.sessionComposerOpen=false;ui.sessionDraft=null;ui.sessionPreviewDraft=false;render();return;}
     if(button.hasAttribute('data-add-session-block')){ui.sessionDraft?.blocks.push(sessionBlock(button.dataset.addSessionBlock));ui.sessionPreviewDraft=false;render();return;}
@@ -468,7 +473,7 @@ function renderTeacherWorkbookInsights(){
     if(button.hasAttribute('data-next-question')){ui.questionIndex++;ui.selected=null;ui.checked=false;render();return;}
     if(button.hasAttribute('data-retake')){ui.questionIndex=0;ui.selected=null;ui.checked=false;ui.answers={};render();return;}
     if(button.hasAttribute('data-submit-response')){const id=button.dataset.submitResponse;const draft=(state.drafts[id]||'').trim();if(draft.length<5){notify('Write a sentence before submitting.');return;}state.submissions.unshift({id:`entry-${Date.now()}-${Math.random().toString(36).slice(2,7)}`,lessonId:id,text:draft});save();notify('Response added to the demo teacher queue.');render();return;}
-    if(button.hasAttribute('data-finish-lesson')){const l=currentLesson();if(Object.keys(ui.answers).length<l.questions.length){ui.stage='check';notify('Complete the three practice questions to finish.');render();return;}if(!state.completed.includes(l.id))state.completed.push(l.id);state.scores[l.id]=Math.round(100*Object.values(ui.answers).filter(x=>x.correct).length/l.questions.length);save();notify('Lesson progress saved on this device.');navigate('student');return;}
+    if(button.hasAttribute('data-finish-lesson')){const l=currentLesson();if(Object.keys(ui.answers).length<l.questions.length){ui.stage='check';notify('Complete the three practice questions to finish.');render();return;}if(!state.completed.includes(l.id))state.completed.push(l.id);state.scores[l.id]=Math.round(100*Object.values(ui.answers).filter(x=>x.correct).length/l.questions.length);save();notify('Lesson progress saved on this device.');navigate('student/lessons');return;}
     if(button.hasAttribute('data-record')){toggleRecording();return;}
     if(button.hasAttribute('data-review')){const id=button.dataset.review;const note=(document.querySelector(`[data-feedback="${CSS.escape(id)}"]`)?.value||'').trim();if(note.length<5){notify('Write a short feedback note first.');return;}state.reviews[id]={note,at:new Date().toISOString()};save();notify('Review saved in this browser.');render();return;}
     if(button.hasAttribute('data-assignment')){state.assigned=button.dataset.assignment==='on';save();notify(state.assigned?'Assignment is visible to the demo learner.':'Demo assignment removed.');render();return;}
