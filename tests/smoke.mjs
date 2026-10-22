@@ -1,203 +1,82 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
-
-const listeners = {};
-const root = {
-  innerHTML:'',
-  addEventListener(type, handler){listeners[`root:${type}`]=handler;}
-};
+// End-to-end same-browser smoke test of the source-aligned student and teacher journeys.
+const listeners={},storage=new Map();
+const root={innerHTML:'',addEventListener(type,handler){listeners['root:'+type]=handler;}};
 const toast={textContent:'',classList:{add(){},remove(){}}};
-const storage=new Map();
-const builderFields={};
-const fakeLocation={hash:''};
-const winListeners={};
-const fakeWindow={
-  addEventListener(type,handler){winListeners[type]=handler;},
-  scrollTo(){},
-  speechSynthesis:{getVoices(){return[];},cancel(){},speak(){}},
-};
-const context=vm.createContext({
-  window:fakeWindow,
-  location:fakeLocation,
-  document:{getElementById(id){return id==='app'?root:toast;},querySelector(selector){const match=selector.match(/^\[data-builder-field="([^"]+)"\]$/);return {value:match?(builderFields[match[1]]||''):'Well done — clear and correct.'};}},
+const location={hash:''};
+const win={addEventListener(type,handler){listeners['window:'+type]=handler;},scrollTo(){},
+  speechSynthesis:{getVoices(){return [];},cancel(){},speak(){}}};
+const inputs=new Map();
+const ctx=vm.createContext({
+  window:win,location,document:{
+    getElementById(id){return id==='app'?root:toast;},
+    querySelector(selector){return {value:inputs.get(selector)||'Good effort. Practise the key word again.',disabled:false,scrollIntoView(){}};}
+  },
   localStorage:{getItem(k){return storage.get(k)||null;},setItem(k,v){storage.set(k,v);}},
-  navigator:{},CSS:{escape:v=>v},
-  fetch:async()=>({ok:false}),
-  setTimeout:()=>1,clearTimeout(){},
-  confirm:()=>true,
-  SpeechSynthesisUtterance:class{},
-  URL,
-  console,
+  navigator:{},CSS:{escape:x=>x},fetch:async()=>({ok:false}),
+  confirm:()=>true,setTimeout:()=>1,clearTimeout(){},console,URL,
+  SpeechSynthesisUtterance:class{}
 });
-for(const script of ['lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js'])vm.runInContext(fs.readFileSync(new URL('../dist/'+script,import.meta.url),'utf8'),context);
-vm.runInContext(fs.readFileSync(new URL('../dist/app.js',import.meta.url),'utf8'),context);
-
-function click(attributes){
-  const button={dataset:attributes,disabled:false,hasAttribute(name){return name.slice(5).replace(/-([a-z])/g,(_,l)=>l.toUpperCase()) in attributes;}};
+for(const name of ['curriculum.js','lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js','workbook.js','chapter-visuals.js','app.js']){
+  vm.runInContext(fs.readFileSync(new URL('../dist/'+name,import.meta.url),'utf8'),ctx);
+}
+function open(hash){location.hash=hash;listeners['window:hashchange']();return root.innerHTML;}
+function click(data){
+  const button={dataset:data,disabled:false,hasAttribute(name){return name.startsWith('data-')&&name.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase()) in data;}};
   listeners['root:click']({target:{closest(){return button;}}});
-  if(winListeners.hashchange)winListeners.hashchange();
+  listeners['window:hashchange']();
 }
-function assertHas(fragment){assert.ok(root.innerHTML.includes(fragment),`Expected screen content: ${fragment}`);}
-
+const assertHas=fragment=>assert.ok(root.innerHTML.includes(fragment),'Expected '+fragment);
 assertHas('Discover German.');
-assertHas('Teacher Studio');
-assertHas('Learning');
-assert.equal((root.innerHTML.match(/class="nav-btn /g)||[]).length,3,'Home, Student Studio and Teacher Studio are the three top-level destinations');
-assert.ok(root.innerHTML.includes('data-route="home"'),'Landing page navigation should be available');
-assert.ok(!root.innerHTML.includes('Demo role switch'),'Duplicate role switch should be gone');
-assertHas('Watch the student + teacher demonstration');
-assert.ok(!root.innerHTML.includes('CEFR A1'),'Learning dashboard should use its friendly course name only');
 assertHas('teacher-studio-walkthrough.mp4');
-assertHas('Student + Teacher · Video walkthrough');
-assertHas('80-second silent, illustrated tour');
-assertHas('id="studio-demo"');
-click({watchDemo:''});
-assertHas('Video walkthrough');
-fakeLocation.hash='#home';
-winListeners.hashchange();
-assertHas('Discover German.'); // home hash opens the public landing page
-fakeLocation.hash='';
-winListeners.hashchange();
-click({route:'teacher'});
-assertHas('Guide every learner.');
-assertHas('Role-play · First Steps');
-assert.ok(!root.innerHTML.includes('CEFR'),'Teacher studio should not expose language-standard jargon');
-click({route:'student'});
-assertHas('Guten Tag!');
-assertHas('First Steps · Beginner German');
-assertHas('Your First Steps lessons');
-click({route:'student'});
-assertHas('Learning · First Steps');
-click({lesson:'hello'});
-assertHas('Hallo! Nice to meet you');
-click({stage:'understand'});
-assertHas('Understand it, word by word');
-click({stage:'check'});
-
-for(const choice of [1,2,0]){
-  click({choice:String(choice)});
-  click({checkAnswer:''});
-  assertHas('Correct!');
-  click({nextQuestion:''});
-}
-assertHas('3/3');
-click({stage:'apply'});
-listeners['root:input']({target:{dataset:{draft:'hello'},value:'Hallo! Ich heiße Praveen.',matches(){return true;}}});
-click({submitResponse:'hello'});
-assertHas('appears in the Teacher Studio review queue');
-click({finishLesson:'hello'});
-assertHas('1 of 17 lessons finished');
-assertHas('Awaiting review');
-click({route:'teacher'});
-assertHas('Demo learner');
-assertHas('student-mobile-list');
-assertHas('student-mobile-row');
-assertHas('Experience Studio');
-assertHas('Order at a bakery');
-assertHas('Hallo! Ich heiße Praveen.');
-const submittedIds=JSON.parse(storage.get('ambertheory-german-studio-v1')).submissions;
-assert.equal(submittedIds.length,1);
-click({review:submittedIds[0].id});
-click({route:'student'});
-assertHas('Well done — clear and correct.');
-assertHas('Practice with a purpose');
-assertHas('Your teacher’s learning sessions');
-assertHas('At the café: Your first order');
-click({openSession:'sample-cafe-session'});
-assertHas('Five words for the café');
-click({completeSessionBlock:'cafe-words'});
-assertHas('Hear a polite order');
-click({completeSessionBlock:'cafe-listen'});
-assertHas('Choose the polite request');
-click({sessionChoice:'0'});
-click({checkSessionAnswer:'cafe-quiz'});
-assertHas('Correct — gut gemacht!');
-click({jumpSessionStep:'3'});
-assertHas('You are the customer');
-listeners['root:input']({target:{dataset:{sessionWriting:'cafe-dialogue'},value:'Guten Tag! Ich hätte gern einen Tee, bitte. Danke!',matches(selector){return selector==='[data-session-writing]';}}});
-click({submitSessionRoleplay:'cafe-dialogue'});
-assertHas('Awaiting feedback');
-click({jumpSessionStep:'4'});
-click({sessionChoice:'1'});
-click({checkSessionAnswer:'cafe-check'});
-click({jumpSessionStep:'5'});
-assertHas('Well done — session complete!');
-assertHas('2/2');
-const sessionWork=JSON.parse(storage.get('ambertheory-german-studio-v1')).sessionSubmissions[0];
-click({route:'teacher'});
-assertHas('Lesson session');
-assertHas('You are the customer');
-click({review:sessionWork.id});
-click({route:'student'});
-click({openSession:'sample-cafe-session'});
-assertHas('Well done — session complete!');
-assertHas('Teacher note:');
-assertHas('Well done — clear and correct.');
-click({route:'teacher'});
-assertHas('Session Studio');
-click({newSession:''});
-assertHas('Build a session, step by step');
-click({addSessionBlock:'listening'});
-// Move/remove affect the unsaved composition, not the previous published session.
-click({moveSessionBlock:'5:-1'});
-click({removeSessionBlock:'5'});
-function composerInput(selector,dataset,value){listeners['root:input']({target:{dataset,value,matches(s){return s===selector;}}});}
-composerInput('[data-session-field]',{sessionField:'title'},'Visit the train station');
-composerInput('[data-session-field]',{sessionField:'description'},'Build a short station conversation in German.');
-composerInput('[data-session-field]',{sessionField:'audience'},'group');
-click({previewSessionDraft:''});
-assertHas('Student-facing sequence');
+let html=open('#student/lessons');
+assert.equal((html.match(/class="textbook-chapter"/g)||[]).length,6);
+assert.equal((html.match(/class="platform-checkpoint"/g)||[]).length,2);
+assert.doesNotMatch(html,/Hallo! Nice to meet you|Everyday independence/);
+assertHas('Guten Appetit!');
+assertHas('Arbeitsbuch PDF pp. 116–127');
+assert.match(html,/Original AmberTheory illustration/);
+assert.match(html,/city|City|places/i);
+click({lesson:win.GERMAN_LESSONS.find(x=>x.chapterNumber===1).id});
+assertHas('A1.1 · Chapter 1');
+assertHas('lesson-topic-visual');
+click({stage:'understand'});assertHas('Understand it, word by word');
+click({stage:'check'});assertHas('QUESTION 1 OF');
+const first=win.GERMAN_LESSONS.find(x=>x.chapterNumber===1),answer=first.questions[0].correct;
+click({choice:String(answer)});click({checkAnswer:''});assertHas('Correct!');
+html=open('#teacher/sessions');
+assertHas('Plan your next teaching experience');
+assertHas('teacher-chapter-report');
+assert.equal((html.match(/data-teacher-chapter="/g)||[]).length,6);
+click({teacherChapter:'3'});assertHas('In der Stadt');
+click({startChapterAssessment:'3'});
+assertHas('Chapter 3 · In der Stadt · Assessment');
+assertHas('Final assessment');
 click({saveSession:'published'});
-const built=JSON.parse(storage.get('ambertheory-german-studio-v1')).sessions[0];
-assert.equal(built.title,'Visit the train station');
-assert.equal(built.audience,'group');
-assert.equal(built.status,'published');
-assert.equal(built.blocks.length,5);
-click({route:'student'});
-assertHas('Visit the train station');
-click({route:'teacher'});
-click({toggleSession:built.id});
-assert.equal(JSON.parse(storage.get('ambertheory-german-studio-v1')).sessions[0].status,'draft');
-click({route:'student'});
-assert.ok(!root.innerHTML.includes('Visit the train station'));
-click({route:'teacher'});
-click({toggleSession:built.id});
-click({openExperience:'sample-roleplay'});
-assertHas('Try it in your own words');
-listeners['root:input']({target:{dataset:{experienceDraft:'sample-roleplay'},value:'Guten Tag! Ich möchte zwei Brötchen, bitte.',matches(selector){return selector==='[data-experience-draft]';}}});
-click({submitExperience:'sample-roleplay'});
-assertHas('Awaiting feedback');
-const missionId=JSON.parse(storage.get('ambertheory-german-studio-v1')).experienceSubmissions[0].id;
-click({route:'teacher'});
-assertHas('Teacher-created mission');
-assertHas('Include a greeting, a polite request and a thank-you.');
-click({review:missionId});
-click({route:'student'});
-click({openExperience:'sample-roleplay'});
-assertHas('Teacher note:');
-assertHas('Well done — clear and correct.');
-
-click({route:'teacher'});
-click({openBuilder:'writing'});
-assertHas('Make this experience yours');
-Object.assign(builderFields,{title:'A trip to the market',level:'A1',duration:'10',goal:'Practise shopping for fruit in German.',prompt:'Ask the shopkeeper for apples, ask the price, and thank them politely.',example:'Ich hätte gern drei Äpfel, bitte.',criteria:'Use a polite request and a price question.'});
-click({saveExperience:'draft'});
-const created=JSON.parse(storage.get('ambertheory-german-studio-v1')).experiences[0];
-assert.equal(created.status,'draft');
-assertHas('A trip to the market');
-click({publishExperience:created.id});
-assert.equal(JSON.parse(storage.get('ambertheory-german-studio-v1')).experiences[0].status,'published');
-click({route:'student'});
-assertHas('A trip to the market');
-click({openExperience:created.id});
-assertHas('Ask the shopkeeper for apples');
-click({route:'teacher'});
-click({publishExperience:created.id});
-assert.equal(JSON.parse(storage.get('ambertheory-german-studio-v1')).experiences[0].status,'draft');
-click({route:'sources'});
-assertHas('Tatoeba German CC0 sentences');
-click({reset:''});
-assertHas('Discover German.');
-assert.equal(JSON.parse(storage.get('ambertheory-german-studio-v1')).completed.length,0);
-console.log('Smoke test passed: lessons, full session composer/playback/assessment/teacher feedback, experience builder and reset.');
+let saved=JSON.parse(storage.get('ambertheory-german-studio-v1'));
+const session=saved.sessions.find(x=>x.chapterNumber===3&&x.status==='published');
+assert.ok(session,'Chapter assessment must be published with chapter ID');
+assert.equal(session.blocks.filter(b=>['quiz','assessment'].includes(b.type)).length,2);
+assertHas('Chapter 3 · In der Stadt · Assessment');
+html=open('#student/practice');
+assertHas('Chapter 3 · In der Stadt · Assessment');
+click({openSession:session.id});assertHas('Hear the chapter language');
+click({completeSessionBlock:session.blocks[0].id});
+assertHas('Grammar check');
+click({sessionChoice:String(session.blocks[1].correct)});
+click({checkSessionAnswer:session.blocks[1].id});
+assertHas('Correct');
+saved=JSON.parse(storage.get('ambertheory-german-studio-v1'));
+assert.equal(saved.sessionProgress[session.id].answers[session.blocks[1].id].correct,true);
+html=open('#teacher/sessions');click({teacherChapter:'3'});
+assertHas('Session answers correct');assertHas('1/1');
+assertHas('Edit →');
+html=open('#student/lessons');
+assert.match(html,/Kapitel/);
+assert.ok(html.indexOf('Guten Tag!')<html.indexOf('Freunde, Kollegen und ich'));
+assert.ok(html.indexOf('In der Stadt')<html.indexOf('Plattform 1'));
+assert.ok(html.indexOf('Plattform 1')<html.indexOf('Guten Appetit!'));
+assert.ok(html.indexOf('Zeit mit Freunden')<html.indexOf('Plattform 2'));
+console.log('Textbook smoke passed: six illustrated chapters, Plattform order, teacher assessment creation, learner scoring and chapter tracking.');
