@@ -16,13 +16,12 @@ assert.equal(source.chapters.reduce((sum,c)=>sum+c.originalLessonBlueprints.leng
 assert.equal(source.chapters.every(c=>c.releaseStatus==='mapped-outline-only'&&!c.teacherValidated),true);
 assert.equal(source.chapters.filter(c=>c.reviewCheckpointAfter).length,4);
 assert.equal(source.pageIndex.every(p=>p.annotationLevel==='section-indexed'&&p.pageSpecificExerciseReview==='not-complete'),true);
-assert.equal(active.id,'netzwerk-neu-a1');
-assert.deepEqual(active.chapters,source.chapters,'Student and Teacher read identical chapter source');
-assert.deepEqual(active.checkpoints,source.checkpoints);
-assert.deepEqual(active.sections,source.sections);
+assert.equal(active.edition.series,'Netzwerk','Uploaded original A1.1, not Netzwerk neu, must now be active');
+assert.notEqual(active.id,source.id,'Previously linked Netzwerk neu reference must remain an archive');
+assert.equal(active.chapters[2].title,'In der Stadt');
 assert.notEqual(legacy.edition.series,source.edition.series,'Keep original Netzwerk archive distinct');
 assert.equal(legacy.chapters[6].title,'Kontakte','Prior edition must remain intact');
 assert.equal(source.chapters[6].title,'Arbeitsalltag');
 assert.equal(source.chapters[7].title,'Fit und gesund');
 assert.equal(source.chapters[8].title,'Meine Wohnung');
-console.log('Netzwerk neu reference passed: 176 section-indexed pages, 12 shared chapters, 60 outline-only lessons, legacy source preserved.');
+console.log('Archived Netzwerk neu map passed: 176 section-indexed pages retained and separate from uploaded original A1.1.');
