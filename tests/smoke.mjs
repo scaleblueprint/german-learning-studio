@@ -31,7 +31,7 @@ function click(data){
 const assertHas=fragment=>assert.ok(root.innerHTML.includes(fragment),'Expected '+fragment);
 assertHas('Discover German.');
 assertHas('teacher-studio-walkthrough.mp4');
-let html=open('#student/lessons');
+let html=open('#student/chapters');
 assert.equal((new Set([...html.matchAll(/id="course-chapter-(\d+)"/g)].map(x=>x[1]))).size,6);
 assert.ok(html.includes('data-workbook="review-3"')&&html.includes('data-workbook="review-6"'));
 assert.doesNotMatch(html,/Hallo! Nice to meet you|Everyday independence/);
@@ -71,7 +71,7 @@ const session=saved.sessions.find(x=>x.chapterNumber===3&&x.status==='published'
 assert.ok(session,'Chapter assessment must be published with chapter ID');
 assert.equal(session.blocks.filter(b=>['quiz','assessment'].includes(b.type)).length,2);
 assertHas('Chapter 3 · In der Stadt · Assessment');
-html=open('#student/practice');
+html=open('#student/chapters');
 assertHas('Chapter 3 · In der Stadt · Assessment');
 click({openSession:session.id});assertHas('Listen and repeat');
 click({completeSessionBlock:session.blocks[0].id});
@@ -84,11 +84,11 @@ assert.equal(saved.sessionProgress[session.id].answers[session.blocks[1].id].cor
 html=open('#teacher/sessions');click({teacherChapter:'3'});
 assertHas('Session answers correct');assertHas('1/1');
 assertHas('Edit →');
-click({route:'student/lessons'});
+click({route:'student/chapters'});
 click({lesson:win.GERMAN_LESSONS.find(x=>x.chapterNumber===5).id});
 click({stage:'understand'});assertHas('Clock showing');assertHas('halb acht');
-click({route:'student/lessons'});
-html=open('#student/lessons');
+click({route:'student/chapters'});
+html=open('#student/chapters');
 const bookPath=html.slice(html.indexOf('<section class="learner-book-route textbook-journey"'));
 assert.match(bookPath,/Kapitel/);
 assert.ok(bookPath.indexOf('Guten Tag!')<bookPath.indexOf('Freunde, Kollegen und ich'));
