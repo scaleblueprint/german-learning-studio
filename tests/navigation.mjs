@@ -39,14 +39,14 @@ assert.equal((new Set([...root.innerHTML.matchAll(/data-chapter-overview="(\d+)"
 assert.match(root.innerHTML,/class="student-chapter-map"/);
 assert.match(root.innerHTML,/class="studio-workspace"/);
 assert.match(root.innerHTML,/class="section-anchor-list"/);
-assert.match(root.innerHTML,/data-route="student\/lessons"/);
-assert.match(root.innerHTML,/data-route="student\/practice"/);
+assert.match(root.innerHTML,/data-route="student\/chapters"/);
+assert.doesNotMatch(root.innerHTML,/class="section-nav-item [^\"]*" data-route="student\/practice"/);
 
 open('#home');
 assert.match(root.innerHTML,/Discover German/);
 assert.match(root.innerHTML,/teacher-studio-walkthrough\.mp4/);
-open('#student/lessons');
-assert.equal(activeSection(),'Lessons');
+open('#student/chapters');
+assert.equal(activeSection(),'My chapters');
 assert.equal(visiblePanes(),1);
 assert.match(root.innerHTML,/Kursbuch, Arbeitsbuch and Plattform/);
 assert.equal((new Set([...root.innerHTML.matchAll(/id="course-chapter-(\d+)"/g)].map(x=>x[1]))).size,6);
@@ -55,22 +55,21 @@ assert.match(root.innerHTML,/data-jump-target="course-chapter-3"/);
 assert.doesNotMatch(root.innerHTML,/Hallo! Nice to meet you/);
 
 open('#student/practice');
-assert.equal(activeSection(),'Practice');
+assert.equal(activeSection(),'My chapters');
 assert.equal(visiblePanes(),1);
-assert.match(root.innerHTML,/Practice and assignments/);
-assert.match(root.innerHTML,/Your teacher’s learning sessions/);
+assert.match(root.innerHTML,/class="textbook-chapter"/);
 
 open('#exam');
 assert.equal(activeSection(),'Exam preparation');
 open('#lesson/hello');
-assert.equal(activeSection(),'Lessons');
+assert.equal(activeSection(),'My chapters');
 assert.match(root.innerHTML,/class="lesson-picker"/);
 clickRoute('student');
 assert.equal(location.hash,'student/lessons','Leaving a lesson should return to the lesson list');
 
 for(const [hash,label] of [
-  ['#teacher','Overview'],['#teacher/sessions','Sessions'],
-  ['#teacher/missions','Missions'],['#teacher/exams','Exam coaching'],
+  ['#teacher','Overview'],['#teacher/sessions','Chapter planner'],
+  ['#teacher/missions','Chapter activities'],['#teacher/exams','Exam coaching'],
   ['#teacher/learners','Learners & reviews'],
 ]){
   open(hash);
