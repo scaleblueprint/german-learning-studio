@@ -41,6 +41,9 @@ for(const c of data.chapters){
  assert.match(html,/Read the chapter in depth/);
  assert.match(html,/Worked|examples/);
  assert.equal((html.match(/class="reader-topic" /g)||[]).length,5);
+ assert.equal((html.match(/class="reader-topic"[^>]* open>/g)||[]).length,5,'Every topic must display its full text and exercises by default');
+ assert.match(html,/class="chapter-reader-shell"[^>]* open>/,'Chapter reader must show full content by default');
+ assert.equal((html.match(/data-reader-jump="c[2-6]-/g)||[]).length,5,'Provide direct navigation to every full topic');
  assert.equal(reader.stats(c.number,{}).answered,0);
 }
 assert.equal(reader.render(1,{}),'','No source expansion for Chapter 1 here');
@@ -48,6 +51,11 @@ assert.equal(reader.chapter(7),undefined,'Do not activate unavailable A1.2 Chapt
 let html=app.open('#student/chapters/2');
 assert.match(html,/Read the chapter in depth/);
 assert.match(html,/data-reader-choice="c2-hobbies\|/);
+assert.match(html,/id="reader-topic-c2-hobbies"[^>]* open>/,'Student must see Chapter 2 reading content expanded');
+assert.match(html,/data-reader-jump="c2-articles"/,'In-chapter navigation is available');
+html=app.click({readerJump:'c2-articles'});
+assert.match(html,/id="reader-topic-c2-articles"[^>]* open>/,'Navigating to another topic should not collapse its explanation');
+
 const item=reader.getTopic('c2-hobbies');
 const correct=item.check.correct;
 html=app.click({readerChoice:'c2-hobbies|'+correct});
@@ -61,5 +69,6 @@ app.click({readerChoice:'c2-hobbies|'+correct});
 html=app.open('#teacher/sessions');
 html=app.click({teacherChapter:'2'});
 assert.match(html,/Read the chapter in depth/,'Teacher should see the same textbook-aligned chapter reader after selecting Chapter 2');
+assert.match(html,/id="reader-topic-c2-calendar"[^>]* open>/,'Teacher sees the same expanded topic view');
 assert.equal(createApp().window.GERMAN_CHAPTER_READERS.stats(2,JSON.parse(storage.get('ambertheory-german-studio-v1')).chapterReaderProgress).answered,1);
 console.log('Chapter readers passed: 5 verified chapters, 25 independent topic explanations/checks, saved answers and shared teacher view.');
