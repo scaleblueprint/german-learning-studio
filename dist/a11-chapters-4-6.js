@@ -81,6 +81,10 @@ window.GERMAN_A11_LESSONS_PART2 = [
       {
         "heading": "Plan with haben and brauchen",
         "body": "The question Was brauchen wir? means 'What do we need?' The answer can start Wir brauchen … . Use Haben wir …? to check whether something is available. For an original shop dialogue, include the food item, a quantity and a polite request. German words for quantities, such as ein Kilo, zwei Stück or eine Flasche, help you say exactly what you want without using long, complicated sentences."
+      },
+      {
+        "heading": "Turn the food words into a usable shopping task",
+        "body": "A German food topic becomes practical when you combine nouns, articles and quantities. Compare das Brot, der Käse and die Tomate; then write eine Packung Milch, zwei Tomaten and ein Stück Käse on a shopping list. The units help distinguish one item from an amount. A conversation can begin at home with „Haben wir noch Brot?“ and „Nein, wir brauchen Brot.“ At the shop you can ask „Haben Sie Tomaten?“ and finish politely with „Danke.“ Different shops such as die Bäckerei and die Metzgerei name places, while Frühstück, Mittagessen and Abendessen name meals; do not confuse the categories. Reading a list, choosing the right shop and forming a request are three related skills."
       }
     ],
     "tip": "The German umlaut in Käse and Brötchen changes pronunciation. Listen to the word in a complete sentence before repeating it.",
@@ -210,6 +214,10 @@ window.GERMAN_A11_LESSONS_PART2 = [
       {
         "heading": "Make a polite shop exchange",
         "body": "Useful requests include Ich möchte … and Ich nehme …, followed by the item and bitte. Add Was kostet das? or Was macht das zusammen? for the price. A food conversation also needs responses such as Gern and Sonst noch etwas? Listening carefully helps you identify what the other person wants, even if you do not recognise every single word. After the purchase, finish with Danke and Auf Wiedersehen."
+      },
+      {
+        "heading": "Work through nominative and accusative",
+        "body": "Ask who or what performs an action, then ask what receives the action. In „Der Saft ist kalt“, der Saft is the subject. In „Ich kaufe den Saft“, ich is the subject and den Saft is the object. The masculine article changes: der → den, ein → einen, kein → keinen. Compare „Ich nehme einen Tee“, „Ich nehme eine Suppe“ and „Ich nehme ein Brötchen“ to see that the feminine and neuter article forms stay the same in these simple accusative examples. In a shop, attach the grammar to a real request: „Ich möchte einen Tee, bitte. Was kostet das?“ Treat this as a shopping exchange, not a separate restaurant unit; fuller restaurant interaction belongs to Chapter 6."
       }
     ],
     "tip": "Hear the slight ending difference between ein and einen. Practise the complete expressions einen Saft, eine Suppe and ein Brötchen.",
@@ -339,6 +347,10 @@ window.GERMAN_A11_LESSONS_PART2 = [
       {
         "heading": "Place the time in a sentence",
         "body": "For a precise time, use um: um sieben Uhr. For a time span, use von … bis: von neun bis fünf. For a weekday, use am Montag. A simple daily routine can be described with a sequence of short sentences. Try alternating the order: Ich arbeite um neun Uhr, or Um neun Uhr arbeite ich. Notice that the conjugated verb remains in the second position of a main statement."
+      },
+      {
+        "heading": "Read the clock, then place the action in time",
+        "body": "Read 07:30 as „sieben Uhr dreißig“ or in everyday language as „halb acht“. The word halb points to the next hour. Likewise 08:15 is „Viertel nach acht“ and 14:45 can be „Viertel vor drei“. For a timetable or appointment, first recognise the digital time, then say what happens: „Um acht Uhr beginne ich.“ A daily routine combines a time with a present-tense action: „Um sieben Uhr stehe ich auf; um acht Uhr frühstücke ich.“ The separable prefix auf in aufstehen moves to the sentence end. A schedule can also be narrated in order using morgens, mittags and abends. Check the clock visually before trying to memorise each phrase."
       }
     ],
     "tip": "Pay particular attention to halb: halb acht is 7:30, not 8:30. Say both the digital and conversational time aloud.",
@@ -468,6 +480,10 @@ window.GERMAN_A11_LESSONS_PART2 = [
       {
         "heading": "Modal verb plus action",
         "body": "German modal verbs express ability, obligation or intention. Compare Ich kann heute kommen (I can come), Ich muss arbeiten (I must work), and Ich will am Sonntag lernen (I want to study). With a modal, the main action often moves to the end in its infinitive form. A scheduling conversation includes a proposed day, a response, and a clear alternative. If you are late, entschuldigung and Es tut mir leid are useful ways to apologise."
+      },
+      {
+        "heading": "Use family details to arrange a meeting",
+        "body": "To say whose family member you mean, compare mein Vater, meine Mutter and mein Kind. The form changes with the noun, not with the speaker's gender. A short family profile might say „Das ist meine Schwester. Sie wohnt in Köln.“ For an appointment, modal verbs are helpful: „Ich kann am Dienstag kommen“ or „Ich muss am Mittwoch arbeiten.“ The conjugated modal stays in normal verb position, while the other verb appears as an infinitive near the end. A polite refusal is more useful than a bare nein: „Tut mir leid, am Dienstag kann ich nicht. Haben Sie am Donnerstag Zeit?“ Check both the calendar day and the clock time before confirming."
       }
     ],
     "tip": "Keep the conjugated modal verb near the beginning and the infinitive at the end: Ich kann heute nicht kommen.",
@@ -597,6 +613,10 @@ window.GERMAN_A11_LESSONS_PART2 = [
       {
         "heading": "Separable verbs in action",
         "body": "Some German verbs have a prefix that separates in a present-tense main clause. For example, einladen becomes Ich lade dich ein. The conjugated verb stays near the beginning while ein moves to the end. Similarly, anfangen becomes Die Feier fängt um fünf Uhr an. Notice the main action across the sentence. An invitation can then be answered with Ja, gern, or Leider kann ich nicht kommen."
+      },
+      {
+        "heading": "Find the essentials in an invitation",
+        "body": "A short invitation needs an occasion, date, time, place and reply. When reading one, find Geburtstag, a weekday, a time and the address before translating everything. „Ich lade dich am Samstag ein“ shows a separable verb: einladen becomes lade … ein in a simple present-tense statement. The listener can respond „Ja, gern!“ or decline with an explanation. Dates after am use an ordinal ending, for example „am dritten Mai“ or „am vierzehnten Juni“. If you are writing your own message, use a clear closing question: „Kommst du?“ Then rehearse both an accepting reply and a polite refusal. This brings vocabulary, reading and speaking into one practical task."
       }
     ],
     "tip": "Practise ei as in einladen: the spelling ei often sounds like English 'eye'. Dates need clear ordinal endings.",
@@ -726,6 +746,10 @@ window.GERMAN_A11_LESSONS_PART2 = [
       {
         "heading": "Talk about something that has happened",
         "body": "For short past descriptions at this level, the book introduces Präteritum forms of haben and sein. Ich hatte Geburtstag means 'I had a birthday', and Die Feier war schön means 'The celebration was nice'. The plural versions are wir hatten and wir waren. These forms are useful in everyday speaking. Start with one past-time event and one feeling about it, rather than attempting a long story with unfamiliar grammar."
+      },
+      {
+        "heading": "Keep a full restaurant exchange in order",
+        "body": "Begin a restaurant conversation with a greeting or reservation, look at the menu, place an order and finally ask to pay. For example: „Guten Abend. Ich möchte eine Suppe, bitte.“ Later: „Die Rechnung, bitte.“ Listening tasks become easier if you identify the stage of the conversation before choosing an answer. The chapter also introduces two useful past forms: „Gestern war ich im Restaurant“ and „Ich hatte Hunger.“ They are the simple past of sein and haben, not a rule for changing all verbs into the past. Compare „Heute bin ich hier“ with „Gestern war ich hier“. To finish, tell a partner where you were yesterday and what you had time for."
       }
     ],
     "tip": "The diphthongs ei, eu and au occur often in food and leisure expressions. Repeat bezahlen and heute at conversational speed.",
