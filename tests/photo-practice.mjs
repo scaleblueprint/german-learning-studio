@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';
 const listeners={},store=new Map(),root={innerHTML:'',addEventListener(t,f){listeners['root:'+t]=f;}},toast={textContent:'',classList:{add(){},remove(){}}},loc={hash:''},win={addEventListener(t,f){listeners['window:'+t]=f;},scrollTo(){}};
 const context=vm.createContext({window:win,location:loc,document:{getElementById(id){return id==='app'?root:toast;},querySelector(){return null;}},localStorage:{getItem(k){return store.get(k)||null;},setItem(k,v){store.set(k,v);}},navigator:{},fetch:async()=>({ok:false}),setTimeout:()=>1,clearTimeout(){},confirm:()=>true,console});
-for(const s of ['curriculum.js','lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js','workbook.js','rich-scenes.js','photo-practice.js','app.js'])vm.runInContext(fs.readFileSync(new URL('../dist/'+s,import.meta.url),'utf8'),context);
+for(const s of ['curriculum.js','lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js','workbook.js','rich-scenes.js','photo-practice.js','phase5-classroom.js','app.js'])vm.runInContext(fs.readFileSync(new URL('../dist/'+s,import.meta.url),'utf8'),context);
 const practice=win.GERMAN_PHOTO_PRACTICE;assert.ok(practice);
 for(let n=1;n<=6;n++){assert.equal(practice.stats(n).total,2);assert.equal((practice.render(n).match(/class="card photo-practice-card"/g)||[]).length,2);for(let i=0;i<2;i++){const q=practice.get(n,i);assert.equal(q.options.length,3);assert.equal(q.options[q.correct],q.photo.de);assert.match(q.photo.source,/pexels.com\/photo/);}}
 const open=hash=>{loc.hash=hash;listeners['window:hashchange']();return root.innerHTML;};

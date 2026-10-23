@@ -34,7 +34,7 @@ const window={
 const context=vm.createContext({window,document,location,localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},
   navigator:{},CSS:{escape:x=>x},setTimeout:()=>1,clearTimeout(){},setInterval:handler=>{timerTick=handler;return 1;},confirm:()=>true,Date:FakeDate,
   SpeechSynthesisUtterance:class{},fetch:async()=>({ok:false}),URL,console});
-for(const name of ['lessons.js','exam-data.js','exam.js','app.js']){
+for(const name of ['lessons.js','exam-data.js','exam.js','phase5-classroom.js','app.js']){
   vm.runInContext(fs.readFileSync(new URL(`../dist/${name}`,import.meta.url),'utf8'),context);
 }
 const contents=()=>window.GermanExamStudio.renderLearner();

@@ -5,7 +5,7 @@ const root={innerHTML:'',addEventListener(t,f){listeners['root:'+t]=f;}};
 const toast={textContent:'',classList:{add(){},remove(){}}};
 const listeners={},store=new Map(),location={hash:''},win={addEventListener(t,f){listeners['window:'+t]=f;},scrollTo(){}};
 const ctx=vm.createContext({window:win,location,document:{getElementById(id){return id==='app'?root:toast;},querySelector(){return null;}},localStorage:{getItem(k){return store.get(k)||null;},setItem(k,v){store.set(k,v);}},navigator:{},fetch:async()=>({ok:false}),setTimeout:()=>1,clearTimeout(){},confirm:()=>true,console});
-for(const f of ['curriculum.js','lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js','workbook.js','chapter-visuals.js','rich-scenes.js','learning-objects.js','phase3-scene-labs.js','app.js'])vm.runInContext(fs.readFileSync(new URL('../dist/'+f,import.meta.url),'utf8'),ctx,{filename:f});
+for(const f of ['curriculum.js','lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js','workbook.js','chapter-visuals.js','rich-scenes.js','learning-objects.js','phase3-scene-labs.js','phase5-classroom.js','app.js'])vm.runInContext(fs.readFileSync(new URL('../dist/'+f,import.meta.url),'utf8'),ctx,{filename:f});
 const data=win.GERMAN_PHASE3.data,ids=Object.keys(data);
 assert.equal(ids.length,12);
 assert.equal(ids.reduce((n,k)=>n+data[k].scenes.length,0),36);

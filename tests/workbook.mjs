@@ -16,7 +16,7 @@ const context=vm.createContext({
   navigator:{},fetch:async()=>({ok:false}),setTimeout:()=>1,clearTimeout(){},
   confirm:()=>true,CSS:{escape:v=>v},console,
 });
-for(const name of ['curriculum.js','lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js','workbook.js','app.js']){
+for(const name of ['curriculum.js','lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js','workbook.js','phase5-classroom.js','app.js']){
   vm.runInContext(fs.readFileSync(new URL('../dist/'+name,import.meta.url),'utf8'),context);
 }
 const book=JSON.parse(JSON.stringify(win.GERMAN_WORKBOOK));

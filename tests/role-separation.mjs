@@ -13,7 +13,7 @@ const ctx=vm.createContext({
   localStorage:{getItem(k){return store.get(k)||null;},setItem(k,v){store.set(k,v);}},
   navigator:{},fetch:async()=>({ok:false}),setTimeout:()=>1,clearTimeout(){},confirm:()=>true,console
 });
-for(const script of ['curriculum.js','lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js','workbook.js','chapter-visuals.js','app.js']){
+for(const script of ['curriculum.js','lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js','workbook.js','chapter-visuals.js','phase5-classroom.js','app.js']){
   vm.runInContext(fs.readFileSync(new URL('../dist/'+script,import.meta.url),'utf8'),ctx);
 }
 const open=hash=>{loc.hash=hash;listeners['window:hashchange']();return root.innerHTML;};

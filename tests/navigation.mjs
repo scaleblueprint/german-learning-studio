@@ -14,6 +14,7 @@ const context = vm.createContext({
 });
 vm.runInContext(fs.readFileSync(new URL('../dist/curriculum.js',import.meta.url),'utf8'),context);
 for(const script of ['lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js'])vm.runInContext(fs.readFileSync(new URL('../dist/'+script,import.meta.url),'utf8'),context);
+vm.runInContext(fs.readFileSync(new URL('../dist/phase5-classroom.js',import.meta.url),'utf8'),context);
 vm.runInContext(fs.readFileSync(new URL('../dist/app.js',import.meta.url),'utf8'),context);
 
 function open(hash){location.hash=hash;handlers['window:hashchange']();return root.innerHTML;}
