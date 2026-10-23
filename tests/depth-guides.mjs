@@ -23,7 +23,7 @@ const handles={},storage=new Map(),root={innerHTML:'',addEventListener(t,f){hand
 const app=vm.createContext({window:browser,location:loc,document:{getElementById(id){return id==='app'?root:toast;},querySelector(){return null;}},localStorage:{getItem(k){return storage.get(k)||null;},setItem(k,v){storage.set(k,v);}},navigator:{},fetch:async()=>({ok:false}),setTimeout:()=>1,clearTimeout(){},confirm:()=>true,console});
 for(const s of ['curriculum.js','lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js','workbook.js','chapter-visuals.js','rich-scenes.js','learning-objects.js','depth-guides.js','photo-practice.js','app.js'])vm.runInContext(fs.readFileSync(new URL('../dist/'+s,import.meta.url),'utf8'),app,{filename:s});
 const open=h=>{loc.hash=h;handles['window:hashchange']();return root.innerHTML;};
-const click=data=>{const b={dataset:data,disabled:false,hasAttribute(n){return n.startsWith('data-')&&n.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase()) in data;}};handles['root:click']({target:{closest(){return b;}}});};
+const click=data=>{const b={dataset:data,disabled:false,hasAttribute(n){return n.startsWith('data-')&&n.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase()) in data;}};handles['root:click']({target:{closest(){return b;}}});handles['window:hashchange']();};
 let html=open('#teacher/sessions');assert.match(html,/Same teaching content in both studios/);assert.match(html,/data-preview-guided="a11-greetings"/);
 click({previewGuided:'a11-greetings'});assert.equal(loc.hash,'lesson/a11-greetings');assert.match(root.innerHTML,/Return to Teacher Studio/);assert.match(root.innerHTML,/Sentence lab/);
 for(const i of browser.GERMAN_DEPTH_GUIDES.data['a11-greetings'].order)click({depthToken:'a11-greetings:'+i});
