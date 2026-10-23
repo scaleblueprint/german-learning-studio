@@ -678,3 +678,18 @@ h1 {letter-spacing:-.055em}
 .reader-source-note{font-size:10px;line-height:1.6;color:#85717a;margin:18px 0 0}
 @media(max-width:800px){.reader-example-grid{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:620px){.chapter-reader{margin:12px 12px 15px}.chapter-reader-shell-toggle{padding:13px 12px;gap:9px}.reader-book-symbol{width:32px;height:32px}.reader-progress{font-size:10px;padding:5px 7px}.reader-chapter-body{padding:11px}.reader-topic>summary{padding:11px;gap:8px}.reader-topic-content{padding:13px}.reader-choices{grid-template-columns:minmax(0,1fr)}}
+
+
+/* Full-reading default: chapter/topic navigation replaces mandatory expand-to-read clicks. */
+.reader-topic-nav{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 17px;padding:12px;background:#fff9f3;border:1px solid #edddd3;border-radius:12px}
+.reader-topic-nav button{font:inherit;font-size:11px;line-height:1.35;font-weight:700;text-align:left;border:1px solid #e1cfc5;border-radius:8px;background:#fff;color:#62374a;cursor:pointer;padding:9px 11px;max-width:100%}
+.reader-topic-nav button:hover,.reader-topic-nav button:focus-visible{background:#f9eadd;border-color:#ce957c}
+.reader-topic{scroll-margin-top:26px}
+.reader-topic[open]>summary{position:relative}
+.reader-topic[open] .reader-topic-content{display:block}
+.reader-topic-content .reader-explain{max-width:78ch}
+@media(max-width:620px){
+ .reader-topic-nav{display:flex;overflow-x:auto;flex-wrap:nowrap;scroll-snap-type:x proximity;padding:9px;scrollbar-width:thin}
+ .reader-topic-nav button{white-space:nowrap;flex:0 0 auto;scroll-snap-align:start}
+ .reader-topic{scroll-margin-top:12px}
+}
