@@ -81,6 +81,10 @@ window.GERMAN_A11_LESSONS_PART1 = [
       {
         "heading": "Du and Sie are different",
         "body": "For one friend, ask Wie heißt du? For a teacher or unfamiliar adult, ask Wie heißen Sie? In German, the verb and the pronoun change together: du heißt, but Sie heißen. To introduce yourself, say Ich heiße … or Ich bin … . Listen to the full expression instead of translating one word at a time. This distinction makes a conversation both accurate and polite."
+      },
+      {
+        "heading": "Read the whole exchange, not just a word",
+        "body": "Start with the situation. At school, Hallo can open a friendly conversation with a classmate; Guten Tag suits an unfamiliar adult. The reply often repeats the greeting before giving a name. For example: A: „Guten Tag. Ich heiße Nila. Wie heißen Sie?“ B: „Guten Tag, Nila. Ich heiße Herr Braun.“ Notice that Ich heiße introduces the speaker, but Wie heißen Sie? asks about the other person. With a classmate change the question to Wie heißt du? Finish with Auf Wiedersehen for a formal goodbye or Tschüss for an informal one. Practise both exchanges aloud rather than mixing their pronouns and verb endings."
       }
     ],
     "tip": "Listen for the final -st in heißt, and for the long vowel in heißen. Say each greeting with friendly, clear sentence stress.",
@@ -210,6 +214,10 @@ window.GERMAN_A11_LESSONS_PART1 = [
       {
         "heading": "Spell information reliably",
         "body": "When a name or email address is unclear, ask Können Sie das bitte buchstabieren? At A1, it helps to recognise the German letter names and to hear short number sequences separately. A phone number is usually spoken as groups of digits, and an email address uses special words such as Punkt for dot and at or Klammeraffe for @. Practise repeating the information aloud to confirm you heard it correctly."
+      },
+      {
+        "heading": "Numbers, letters and a complete contact exchange",
+        "body": "In the opening chapter, spelling and numbers 1–20 are practical communication tools, not an advanced maths exercise. Learn eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn, then elf, zwölf, dreizehn through neunzehn, and zwanzig. Notice that sixteen is sechzehn and seventeen is siebzehn. In a registration conversation you may hear: „Wie ist Ihre Telefonnummer?“ Say a phone number in short groups, and ask „Können Sie das bitte wiederholen?“ when unsure. With names, say „Wie schreibt man das?“ and listen to each German letter; German w, v and z do not sound like their English letter names. Finally connect contact details to three separate questions: Woher kommen Sie?, Wo wohnen Sie? and Welche Sprachen sprechen Sie?"
       }
     ],
     "tip": "German z is pronounced roughly like 'ts'; w is pronounced like English 'v'. Use the alphabet playback, and practise spelling a real name slowly.",
@@ -339,6 +347,10 @@ window.GERMAN_A11_LESSONS_PART1 = [
       {
         "heading": "Turn a statement into a plan",
         "body": "A yes/no question can start with the conjugated verb: Gehst du am Freitag ins Kino? The answer may be Ja, gern! or Nein, leider nicht. A specific weekday uses am: am Montag, am Samstag. To make a conversation useful, ask about the activity, propose a day, listen to the answer, and offer an alternative if your friend cannot come."
+      },
+      {
+        "heading": "From a hobby to a real invitation",
+        "body": "A simple profile can name an activity, but meaningful conversation adds when and with whom. Start with „Ich spiele gern Fußball.“ Ask your partner „Spielst du auch gern Fußball?“ Then move to a day: „Hast du am Mittwoch Zeit?“ A practical answer can accept or negotiate: „Ja, gern“ or „Am Mittwoch kann ich nicht. Geht Donnerstag?“ A German yes/no question puts the conjugated verb first; a statement normally puts it in second position. Keep the day expression together as am Montag, am Dienstag and so on. Rehearse an invitation and a polite refusal, not only the vocabulary list. This helps you use the same sentence patterns when hobbies change."
       }
     ],
     "tip": "Gern is short and stressed lightly. In questions, the intonation may rise; in ordinary statements, the voice usually falls.",
@@ -468,6 +480,10 @@ window.GERMAN_A11_LESSONS_PART1 = [
       {
         "heading": "Present tense and short profiles",
         "body": "To describe work, ask Was bist du von Beruf? and answer Ich bin Lehrerin or Ich bin Techniker. The verb arbeiten changes with the subject: ich arbeite, du arbeitest, er arbeitet, wir arbeiten. When preparing a profile, combine a profession, workplace and free day. Months and seasons add useful time details: im Sommer and im Winter, or im Mai. Keep the verb near the beginning of each statement."
+      },
+      {
+        "heading": "Articles, plurals and information in a profile",
+        "body": "A short occupational profile is easier to read if you look for Name, Beruf, Arbeitsort and Arbeitszeit before translating every word. For example: „Das ist Lena. Sie ist Ingenieurin. Sie arbeitet von acht bis sechzehn Uhr.“ After sein, a profession is commonly stated without ein/eine: „Er ist Koch.“ But ordinary object nouns still need their own article, such as der Computer or die Firma. The plural of a noun is not predictable from its singular article alone, so learn both when possible: der Tag – die Tage, die Kollegin – die Kolleginnen. Seasons can explain activities: „Im Sommer fahre ich Rad.“ Compare a statement with „Arbeitest du am Freitag?“ to notice subject–verb order. Numbers beyond 20 often appear in working hours and ages."
       }
     ],
     "tip": "Listen carefully to the -et ending in du arbeitest and er arbeitet. Make a short pause between words, not between a noun and its article.",
@@ -597,6 +613,10 @@ window.GERMAN_A11_LESSONS_PART1 = [
       {
         "heading": "Say what something is not",
         "body": "German often uses kein for a negative noun phrase with an indefinite article: Das ist kein Bahnhof and Das ist keine Kirche. The ending changes to match the noun. With a yes/no question such as Ist das ein Museum?, a useful answer is Nein, das ist kein Museum. You can also give the correct information in the second sentence. This makes a simple exchange more informative than a one-word answer."
+      },
+      {
+        "heading": "Choose ein, der or kein with a purpose",
+        "body": "Look at a city plan. When a place is new to the listener, introduce it: „Das ist ein Museum.“ Once both speakers know which museum they mean, say „Das Museum ist hier.“ A label like das Rathaus or der Bahnhof contains a grammatical article that should be learned with the noun. To state that something is absent, say „Hier ist kein Bahnhof“ rather than incorrectly negating with a new indefinite article. For feminine nouns the form is keine: „Hier ist keine Bank.“ Ask „Wo ist das Museum?“ when the landmark is known, or „Gibt es hier ein Museum?“ when you are not sure one exists. This distinction makes real map conversations easier to follow."
       }
     ],
     "tip": "Compare long and short vowels when you hear place words. Repeat the full chunk 'das Museum' rather than only 'Museum'.",
@@ -726,6 +746,10 @@ window.GERMAN_A11_LESSONS_PART1 = [
       {
         "heading": "Instructions with polite Sie",
         "body": "When speaking to a stranger, use the formal imperative Gehen Sie … or Fahren Sie … . The order is verb, Sie, then the extra information: Gehen Sie geradeaus. This differs from the ordinary statement Sie gehen geradeaus. Start with Entschuldigung to attract attention and finish with Danke schön or Vielen Dank. German polite directions are both grammatical and courteous."
+      },
+      {
+        "heading": "Use a map to make the instructions testable",
+        "body": "First identify a starting point (der Bahnhof) and a destination (das Museum). Then trace the route with your finger before speaking. A visitor might ask: „Entschuldigung, wie komme ich zum Museum?“ Reply in short steps: „Gehen Sie geradeaus. Biegen Sie an der nächsten Straße rechts ab. Das Museum ist links.“ The imperative with Sie is polite and useful with strangers. Pay attention to sequence words such as zuerst and dann; reversing them changes the route. Recognise everyday transport words such as Bus, Straßenbahn and Haltestelle when choosing where to begin. Finally let your partner repeat the directions. If they end at the wrong place, correct one instruction rather than giving a much longer speech."
       }
     ],
     "tip": "Speak links and rechts distinctly, especially the final consonants. Check the direction with your finger before saying it.",
