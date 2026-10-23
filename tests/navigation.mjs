@@ -35,7 +35,10 @@ assert.match(root.innerHTML,/class="brand-logo" src="\.\/ambertheory-lockup\.jpg
 assert.doesNotMatch(root.innerHTML,/class="brand-mark"/,'AT monogram must not replace the canonical logo');
 assert.match(root.innerHTML,/Watch studio walkthrough/,'Student view retains a route to the demo');
 assert.match(root.innerHTML,/Kursbuch · Chapters 1–6/,'Student dashboard follows the book');
-assert.equal((new Set([...root.innerHTML.matchAll(/id="course-chapter-(\d+)"/g)].map(x=>x[1]))).size,6,'Six verified textbook chapters');
+assert.equal((new Set([...root.innerHTML.matchAll(/data-chapter-overview="(\d+)"/g)].map(x=>x[1]))).size,6,'Student overview previews six textbook chapters without duplicating full content');
+assert.match(root.innerHTML,/class="student-chapter-map"/);
+assert.match(root.innerHTML,/class="studio-workspace"/);
+assert.match(root.innerHTML,/class="section-anchor-list"/);
 assert.match(root.innerHTML,/data-route="student\/lessons"/);
 assert.match(root.innerHTML,/data-route="student\/practice"/);
 
@@ -46,6 +49,9 @@ open('#student/lessons');
 assert.equal(activeSection(),'Lessons');
 assert.equal(visiblePanes(),1);
 assert.match(root.innerHTML,/Kursbuch, Arbeitsbuch and Plattform/);
+assert.equal((new Set([...root.innerHTML.matchAll(/id="course-chapter-(\d+)"/g)].map(x=>x[1]))).size,6);
+assert.equal((root.innerHTML.match(/class="chapter-fold"/g)||[]).length,6,'Each chapter can expand independently');
+assert.match(root.innerHTML,/data-jump-target="course-chapter-3"/);
 assert.doesNotMatch(root.innerHTML,/Hallo! Nice to meet you/);
 
 open('#student/practice');
@@ -72,12 +78,16 @@ for(const [hash,label] of [
   assert.equal(visiblePanes(),1,`${hash} should show only one teacher section`);
 }
 assert.match(root.innerHTML,/Practice to review/);
+assert.match(root.innerHTML,/data-jump-target="teacher-review-queue"/);
 assert.match(root.innerHTML,/Content quality & readiness/);
 open('#teacher/sessions');
 assert.match(root.innerHTML,/Plan your next teaching experience/);
 assert.match(root.innerHTML,/data-teacher-chapter="4"/);
 assert.doesNotMatch(root.innerHTML,/Kursbuch → Arbeitsbuch → Plattform/);
 assert.match(root.innerHTML,/Session Studio/);
+assert.match(root.innerHTML,/data-jump-target="teacher-chapter-planner"/);
+assert.match(root.innerHTML,/data-jump-target="session-studio"/);
+assert.match(root.innerHTML,/class="teacher-curriculum-expand"/);
 open('#teacher/missions');
 assert.match(root.innerHTML,/Experience Studio/);
 open('#teacher');
