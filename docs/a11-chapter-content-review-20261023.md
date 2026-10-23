@@ -72,3 +72,14 @@ Following feedback, the course now prioritises **expanded full-chapter reading**
 The guided lesson's four **Understand** sections now all open on first visit (rather than only the first). Students can collapse a section voluntarily; the lesson's in-memory view preserves their choice when checking local activities. In-depth topic content is shared with Teacher Studio. The top-level navigation continues to expand the *selected* chapter so students do not have to scroll through all six chapters simultaneously. Previously answered self-checks and all workbook, audio, assessment and teacher progress are preserved.
 
 Automated tests were extended to verify that all 25 reader topics are expanded by default, navigable via topic jump buttons and expanded for the teacher's selected chapter.
+
+
+## Chapter 1 prerequisite correction — 24 October 2026
+
+Feedback exposed a genuine content-sequencing issue: the initial "Try it" exercise asked learners to say a number between 1 and 20 and spell their name, but the guide only mentioned the number words without teaching them fully.
+
+**Implemented:** the fully expanded Chapter 1 reading now teaches every number **1–20**, individually with German playback; groups them as 1–10 and 11–20; explains the **-zehn** construction, the **sechzehn/siebzehn** exceptions and **zwanzig**; adds short original listening/speaking examples and answer-reveal checks. It also teaches the **26 German alphabet letter names** with approximate pronunciation cues, letter playback, spelling in dialogue, and notes on umlauts and Eszett.
+
+The teaching appears **before** the guided chapter "Try it" exercise, with direct in-page jump links **Learn numbers 1–20** and **Learn to spell your name**. The Chapter 1 second Kursbuch guided topic is now titled **Names, numbers 1–20 and spelling**, making counting discoverable from topic navigation. The sample answer now models greeting a classmate, greeting a teacher, stating a number and spelling a name. All original chapters, tasks and progress remain intact.
+
+Regression checks validate the complete number sequence, alphabet, audio buttons, prerequisite-before-task order and the two navigation links. German pronunciation and individual device text-to-speech voices still require a German teacher's manual listening check.
