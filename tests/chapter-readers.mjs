@@ -59,6 +59,7 @@ app.click({readerRetry:'c2-hobbies'});
 assert.equal(JSON.parse(storage.get('ambertheory-german-studio-v1')).chapterReaderProgress['c2-hobbies'],undefined);
 app.click({readerChoice:'c2-hobbies|'+correct});
 html=app.open('#teacher/sessions');
-assert.match(html,/Read the chapter in depth/,'Teacher should see the same textbook-aligned chapter reader');
+html=app.click({teacherChapter:'2'});
+assert.match(html,/Read the chapter in depth/,'Teacher should see the same textbook-aligned chapter reader after selecting Chapter 2');
 assert.equal(createApp().window.GERMAN_CHAPTER_READERS.stats(2,JSON.parse(storage.get('ambertheory-german-studio-v1')).chapterReaderProgress).answered,1);
 console.log('Chapter readers passed: 5 verified chapters, 25 independent topic explanations/checks, saved answers and shared teacher view.');
