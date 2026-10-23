@@ -29,7 +29,7 @@
     {type:'roleplay',icon:'☕',name:'Role-play task',hint:'Apply the language in a real situation'},
     {type:'assessment',icon:'✓',name:'Final assessment',hint:'Check understanding before finishing'}
   ];
-  const initialSession = () => ({chapterNumber:4,id:'sample-cafe-session',title:'At the café: Your first order',description:'Learn five useful expressions, hear a polite order, practise a conversation and complete a short check.',level:'A1',duration:'20',audience:'learner',status:'published',reviewStatus:'legacy-approved',sample:true,blocks:[
+  const initialSession = () => ({chapterNumber:6,id:'sample-cafe-session',title:'At the café: Your first order',description:'Learn five useful expressions, hear a polite order, practise a conversation and complete a short check.',level:'A1',duration:'20',audience:'learner',status:'published',reviewStatus:'legacy-approved',sample:true,blocks:[
     {id:'cafe-words',type:'vocabulary',title:'Five words for the café',entries:'der Kaffee | coffee\nder Tee | tea\ndas Wasser | water\nbitte | please\ndanke | thank you'},
     {id:'cafe-listen',type:'listening',title:'Hear a polite order',phrase:'Guten Tag! Ich hätte gern einen Kaffee, bitte.',instruction:'Listen twice. Repeat slowly, then say it naturally.'},
     {id:'cafe-quiz',type:'quiz',title:'Choose the polite request',question:'Which German phrase politely asks for a coffee?',options:'Ich hätte gern einen Kaffee, bitte.\nWo ist der Bahnhof?\nIch heiße Lena.',correct:'0',explanation:'Ich hätte gern ... is a courteous way to order.'},
@@ -44,6 +44,10 @@
   if(!Array.isArray(state.experienceSubmissions))state.experienceSubmissions=[];
   if(!state.experienceDrafts||typeof state.experienceDrafts!=='object')state.experienceDrafts={};
   if(!Array.isArray(state.sessions))state.sessions=[initialSession()];
+  // Reassign only our unchanged demo café sample to the restaurant chapter; leave learner attempts and custom sessions intact.
+  const misfiledCafe=state.sessions.find(ss=>ss.id==='sample-cafe-session'&&ss.sample===true&&Number(ss.chapterNumber)===4);
+  if(misfiledCafe){misfiledCafe.chapterNumber=6;try{localStorage.setItem(storageKey,JSON.stringify(state));}catch{}}
+
   if(!state.sessionProgress||typeof state.sessionProgress!=='object')state.sessionProgress={};
   if(!Array.isArray(state.sessionSubmissions))state.sessionSubmissions=[];
   if(!state.workbookProgress||typeof state.workbookProgress!=='object')state.workbookProgress={};
