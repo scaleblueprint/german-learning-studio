@@ -726,3 +726,9 @@ h1 {letter-spacing:-.055em}
 .a11-foundation-check summary{cursor:pointer;font-size:12px;font-weight:700;color:#7f414d}
 .a11-foundation-check details p{margin:10px 0 0}
 @media(max-width:650px){.a11-foundation{padding:15px 12px;margin:14px 0}.a11-number-groups{grid-template-columns:1fr;gap:10px}.a11-alphabet-list{grid-template-columns:repeat(4,minmax(0,1fr))}.a11-number-list li{padding:7px 5px}.a11-foundation-rule,.a11-foundation-check{padding:13px 11px}}
+
+
+.chapter-one-shortcuts{display:flex;flex-wrap:wrap;gap:8px;margin:0 19px 14px}
+.chapter-one-shortcuts button{font:inherit;line-height:1.35;font-size:12px;font-weight:750;padding:10px 13px;color:#653647;background:#fff6eb;border:1px solid #e8ccbb;border-radius:8px;cursor:pointer;text-align:left}
+.chapter-one-shortcuts button:hover,.chapter-one-shortcuts button:focus-visible{background:#f8e8d9;border-color:#ce9278}
+@media(max-width:620px){.chapter-one-shortcuts{margin:0 12px 12px}.chapter-one-shortcuts button{flex:1 1 155px;font-size:11px}}
