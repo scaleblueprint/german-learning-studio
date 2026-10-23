@@ -1118,6 +1118,53 @@ h1 {letter-spacing:-.055em}
 .chapter-expanded-visual+.textbook-chapter-content{margin-top:0}
 @media(max-width:600px){.chapter-review-summary{margin:12px 12px 15px;padding:13px}}
 
+
+/* Chapter-first reading companion: short visual summaries, then progressively disclosed study material. */
+.chapter-study-guide{margin:17px 20px 6px;border:1px solid #e7d6ce;border-radius:15px;background:#fffdf9;overflow:hidden;box-shadow:0 8px 24px rgba(63,35,45,.04)}
+.chapter-study-head{padding:20px 22px 17px;background:linear-gradient(125deg,#fff8ee,#fffaf8)}
+.chapter-study-head h5{font-size:20px;line-height:1.2;letter-spacing:-.035em;margin:6px 0 7px;color:#4b2d3b}
+.chapter-study-head p{font-size:13px;line-height:1.75;color:#63565f;max-width:70ch}
+.chapter-study-goal{font-size:12px;line-height:1.65;color:#744259;display:block;margin-top:12px;border-left:3px solid #d75e45;padding-left:12px}
+.chapter-study-patterns{border-top:1px solid #eedfd6}
+.chapter-study-patterns>summary{cursor:pointer;padding:15px 22px;list-style:none;font-size:13px;font-weight:700;color:#6e344b;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.chapter-study-patterns>summary::-webkit-details-marker{display:none}
+.chapter-study-patterns[open]>summary{background:#fff5eb}
+.chapter-study-pattern-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:13px 18px 19px}
+.chapter-study-pattern{background:#fff;border:1px solid #f0e3dc;border-radius:12px;padding:15px;min-width:0}
+.chapter-study-pattern>strong{display:block;font-size:15px;color:#4d3041;line-height:1.45}
+.chapter-study-pattern>span{display:block;color:#725d66;font-size:12px;margin-top:6px;line-height:1.5}
+.chapter-study-pattern p{font-size:12px;line-height:1.7;margin-top:10px}
+.chapter-study-pattern .view-link{display:inline-flex;margin-top:8px;font-size:12px}
+.chapter-study-selfcheck{padding:8px 22px 22px;font-size:13px;line-height:1.75}
+.chapter-study-selfcheck p{margin:12px 0}
+.chapter-study-selfcheck>details{border:1px solid #e9d6ce;border-radius:10px;padding:12px 14px;margin-top:12px}
+.chapter-study-selfcheck>details summary{font-size:12px;font-weight:700;cursor:pointer;color:#753b50}
+.chapter-study-selfcheck>details p{font-weight:600;color:#4b3643}
+.lesson-outline-hint{font-size:12px;line-height:1.6;color:#75616c;margin:8px 0 15px}
+.sidebar-return{display:block;text-align:left;font-size:12px;padding:13px 7px}
+.sidebar-other-chapters{border-top:1px solid #e9dbd3;padding:12px 4px}
+.sidebar-other-chapters summary{font-size:12px;font-weight:700;cursor:pointer;color:#6d3850}
+.sidebar-other-chapters .view-link{display:block;font-size:11px;text-align:left;padding:8px 3px}
+.lesson-reading-intro{font-size:13px;color:#70606b;line-height:1.7;margin:8px 0 18px}
+.lesson-reading-group{border:1px solid #ead9d0;background:#fffdfb;border-radius:13px;margin:11px 0;overflow:hidden}
+.lesson-reading-group>summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;gap:5px;padding:16px 19px;background:#fff8f0}
+.lesson-reading-group>summary::-webkit-details-marker{display:none}
+.lesson-reading-group>summary strong{font-size:15px;line-height:1.35;color:#623149}
+.lesson-reading-group>summary small{font-size:11px;line-height:1.5;color:#765e6b}
+.lesson-reading-group[open]>summary{background:#fff1e3;border-bottom:1px solid #ecd9ce}
+.lesson-reading-content{padding:20px;min-width:0}
+.lesson-reading-content .a11-theory-grid{margin-top:14px}
+.lesson-reading-content .lesson-visual-object{max-width:100%}
+@media(max-width:680px){
+ .chapter-study-guide{margin:12px 12px 6px}
+ .chapter-study-head{padding:16px}
+ .chapter-study-patterns>summary{padding:13px 16px}
+ .chapter-study-pattern-grid{grid-template-columns:minmax(0,1fr);padding:10px}
+ .chapter-study-selfcheck{padding:8px 16px 16px}
+ .lesson-reading-content{padding:13px}
+ .lesson-reading-group>summary{padding:13px 15px}
+}
+
 </style>
   </head>
   <body>
@@ -1907,92 +1954,6 @@ window.GERMAN_CURRICULUM = {
 
 </script>
 <script>
-/* Original prototype curriculum. Instructor review is required before classroom use. */
-window.GERMAN_LESSONS = [
-  {
-    id:'hello',unit:'01',title:'Hallo! Nice to meet you',subtitle:'Greetings and your first introduction',duration:'8 min',skill:'Speaking',
-    scene:'You are entering a German language class for the first time. A fellow learner smiles and says hello. How would you answer?',
-    phrase:{de:'Hallo! Ich heiße Mia.',en:'Hello! My name is Mia.'},
-    words:[['Hallo','hello (informal)'],['Guten Tag','good day (polite)'],['Ich heiße','my name is'],['Wie heißt du?','what is your name?'],['Danke','thank you'],['Tschüss','bye (informal)']],
-    dialogue:[['Mia','Hallo! Ich heiße Mia.','Hi! My name is Mia.'],['Alex','Hallo Mia! Ich heiße Alex.','Hi Mia! My name is Alex.'],['Mia','Freut mich!','Nice to meet you!']],
-    pattern:'Use <b>Ich heiße …</b> to tell someone your name. With a friend, ask <b>Wie heißt du?</b> The word <b>du</b> is informal; in polite situations you can ask <b>Wie heißen Sie?</b>',
-    tip:'The German letter ß is called Eszett and usually sounds like “ss”. Listen for the long vowel in heiße.',
-    apply:'Introduce yourself in German. Try two sentences: a greeting and your name.',
-    sample:'Hallo! Ich heiße Praveen.',
-    questions:[
-      {q:'You meet a classmate. Which greeting is natural?',options:['Tschüss!','Hallo!','Gute Nacht!'],correct:1,why:'Hallo is a friendly, everyday greeting. Tschüss is for saying goodbye.'},
-      {q:'What does “Ich heiße Mia” mean?',options:['I live with Mia.','I am looking for Mia.','My name is Mia.'],correct:2,why:'Ich heiße is the standard way to introduce your name.'},
-      {q:'How do you ask a friend for their name?',options:['Wie heißt du?','Wo wohnst du?','Wie alt bist du?'],correct:0,why:'Wie heißt du? asks “What is your name?” (informal).'}
-    ]
-  },
-  {
-    id:'origin',unit:'02',title:'Where are you from?',subtitle:'Countries, hometowns and simple statements',duration:'9 min',skill:'Grammar',
-    scene:'You meet another learner who asks where you come from and where you currently live. You can give two different answers.',
-    phrase:{de:'Ich komme aus Indien. Ich wohne in Bengaluru.',en:'I come from India. I live in Bengaluru.'},
-    words:[['ich','I'],['komme aus','come from'],['wohne in','live in'],['Indien','India'],['Deutschland','Germany'],['Woher?','from where?']],
-    dialogue:[['Lea','Woher kommst du?','Where are you from?'],['Ravi','Ich komme aus Indien.','I come from India.'],['Lea','Wo wohnst du?','Where do you live?'],['Ravi','Ich wohne in Bengaluru.','I live in Bengaluru.']],
-    pattern:'The verb changes with the person: <b>ich komme</b> (I come), <b>du kommst</b> (you come). Use <b>aus</b> for origin and <b>in</b> for location: <b>Ich komme aus Indien</b>, but <b>Ich wohne in Berlin</b>.',
-    tip:'Do not mix up “Woher?” (from where?) and “Wo?” (where?). The question itself helps you choose the right answer.',
-    apply:'Write where you come from and where you live. Use two short German sentences.',
-    sample:'Ich komme aus Indien. Ich wohne in Bengaluru.',
-    questions:[
-      {q:'Which sentence means “I live in Berlin”?',options:['Ich wohne in Berlin.','Ich komme in Berlin.','Ich heiße Berlin.'],correct:0,why:'wohne in expresses where you live.'},
-      {q:'Which question asks about your place of origin?',options:['Wie heißt du?','Woher kommst du?','Was machst du?'],correct:1,why:'Woher means “from where”.'},
-      {q:'Complete: Ich ___ aus Indien.',options:['wohnst','kommen','komme'],correct:2,why:'The ich form of kommen is komme.'}
-    ]
-  },
-  {
-    id:'numbers',unit:'03',title:'Numbers in everyday life',subtitle:'Count, recognise and ask about prices',duration:'10 min',skill:'Listening',
-    scene:'At a little market you see a price tag. Numbers help you understand what something costs, how many items you need and when to meet.',
-    phrase:{de:'Das kostet fünf Euro.',en:'That costs five euros.'},
-    words:[['eins','one'],['zwei','two'],['drei','three'],['vier','four'],['fünf','five'],['zehn','ten']],
-    dialogue:[['Kunde','Wie viel kostet das?','How much is that?'],['Verkäuferin','Das kostet fünf Euro.','That costs five euros.'],['Kunde','Danke schön!','Thank you very much!']],
-    pattern:'For a simple price, use <b>Das kostet … Euro.</b> To ask the price, use <b>Wie viel kostet das?</b> German numbers are worth practising aloud: <b>fünf</b> has an ü sound and <b>zwei</b> begins with a “ts” sound.',
-    tip:'Repeat numbers in mixed order rather than just counting from one to ten. This makes real-world listening easier.',
-    apply:'Imagine a price tag for a book. Write one complete sentence saying it costs five euros.',
-    sample:'Das kostet fünf Euro.',
-    questions:[
-      {q:'Which German number means five?',options:['vier','fünf','zwei'],correct:1,why:'fünf is five; vier is four and zwei is two.'},
-      {q:'What is being asked in “Wie viel kostet das?”',options:['What time is it?','Where is that?','How much does that cost?'],correct:2,why:'Wie viel = how much; kostet = costs.'},
-      {q:'Which phrase means “That costs ten euros”?',options:['Das kostet zehn Euro.','Das ist zehn Uhr.','Das heißt zehn.'],correct:0,why:'Use Das kostet for the price.'}
-    ]
-  },
-  {
-    id:'cafe',unit:'04',title:'A visit to the café',subtitle:'Order politely and recognise food words',duration:'10 min',skill:'Speaking',
-    scene:'You are seated in a café in Munich. The server comes to take your order. A small, polite phrase helps the conversation feel natural.',
-    phrase:{de:'Ich nehme bitte ein Wiener Schnitzel.',en:'I’ll have a Wiener schnitzel, please.',sourceId:8246323},
-    words:[['ich nehme','I’ll have / I take'],['bitte','please'],['ein Kaffee','a coffee (practice noun)'],['das Wasser','water'],['die Speisekarte','menu'],['die Rechnung','bill']],
-    dialogue:[['Kellnerin','Guten Tag! Was möchten Sie?','Good day! What would you like?'],['Gast','Ich möchte einen Kaffee, bitte.','I would like a coffee, please.'],['Kellnerin','Gerne!','Of course!']],
-    pattern:'Two useful structures are <b>Ich möchte …</b> (I would like …) and <b>Ich nehme …</b> (I’ll have …). Add <b>bitte</b> for politeness. Notice <b>einen Kaffee</b> versus <b>ein Schnitzel</b>; German articles change with the noun and its role in the sentence.',
-    tip:'Listen to the whole order and identify the important parts: the request phrase, the item, and bitte. You need not master every article on day one.',
-    apply:'Place a café order in German. Ask for a coffee politely in one complete sentence.',
-    sample:'Ich möchte einen Kaffee, bitte.',
-    questions:[
-      {q:'Which phrase is a polite way to order?',options:['Wo ist mein Haus?','Ich nehme bitte ein Schnitzel.','Ich komme aus Kaffee.'],correct:1,why:'Ich nehme … bitte works for a polite order.'},
-      {q:'What does “die Rechnung” mean?',options:['the menu','the kitchen','the bill'],correct:2,why:'Ask for die Rechnung when you want the bill.'},
-      {q:'Select the natural coffee order.',options:['Ich möchte einen Kaffee, bitte.','Ich wohnen Kaffee.','Ich heißen Kaffee.'],correct:0,why:'Ich möchte … is the correct pattern for “I would like …”.'}
-    ]
-  },
-  {
-    id:'city',unit:'05',title:'In the city together',subtitle:'Simple directions, invitations and polite forms',duration:'11 min',skill:'Conversation',
-    scene:'A visitor asks you which way to go. Later, a neighbour invites you for a walk. You will practise two useful moments from everyday life.',
-    phrase:{de:'Wollen Sie zusammen spazieren gehen?',en:'Would you like to go for a walk together?',sourceId:7047540},
-    words:[['Nach vorne!','Forward!'],['links','left'],['rechts','right'],['zusammen','together'],['spazieren gehen','to go for a walk'],['Sie','you (formal)']],
-    dialogue:[['Besucher','Entschuldigung, wo ist der Park?','Excuse me, where is the park?'],['Mara','Gehen Sie geradeaus, dann links.','Go straight ahead, then left.'],['Besucher','Vielen Dank!','Thank you very much!'],['Mara','Gerne!','You’re welcome!']],
-    pattern:'In polite situations, German commonly uses capitalised <b>Sie</b> for “you”. The invitation <b>Wollen Sie …?</b> is a formal question. For directions you may hear <b>geradeaus</b> (straight ahead), <b>links</b> (left) and <b>rechts</b> (right).',
-    tip:'“Wollen Sie …?” is understandable, but the precise tone of an invitation depends on context. Your teacher can help compare it with softer requests such as “Möchten Sie …?”',
-    apply:'Write a simple direction in German using geradeaus and links.',
-    sample:'Gehen Sie geradeaus, dann links.',
-    questions:[
-      {q:'What does “links” mean?',options:['straight ahead','left','right'],correct:1,why:'links means left; rechts means right.'},
-      {q:'Which pronoun is polite/formal “you”?',options:['ich','du','Sie'],correct:2,why:'Sie with a capital S is the formal address.'},
-      {q:'What does “zusammen” mean?',options:['together','tomorrow','slowly'],correct:0,why:'zusammen means together, as in going for a walk together.'}
-    ]
-  }
-];
-
-</script>
-<script>
 /* Independently authored guided practice aligned to the user's scanned original Netzwerk A1.1, chapters 1–3. No textbook activities, publisher audio, or illustrations are copied. Requires language-teacher review. */
 window.GERMAN_A11_LESSONS_PART1 = [
   {
@@ -2076,6 +2037,10 @@ window.GERMAN_A11_LESSONS_PART1 = [
       {
         "heading": "Du and Sie are different",
         "body": "For one friend, ask Wie heißt du? For a teacher or unfamiliar adult, ask Wie heißen Sie? In German, the verb and the pronoun change together: du heißt, but Sie heißen. To introduce yourself, say Ich heiße … or Ich bin … . Listen to the full expression instead of translating one word at a time. This distinction makes a conversation both accurate and polite."
+      },
+      {
+        "heading": "Read the whole exchange, not just a word",
+        "body": "Start with the situation. At school, Hallo can open a friendly conversation with a classmate; Guten Tag suits an unfamiliar adult. The reply often repeats the greeting before giving a name. For example: A: „Guten Tag. Ich heiße Nila. Wie heißen Sie?“ B: „Guten Tag, Nila. Ich heiße Herr Braun.“ Notice that Ich heiße introduces the speaker, but Wie heißen Sie? asks about the other person. With a classmate change the question to Wie heißt du? Finish with Auf Wiedersehen for a formal goodbye or Tschüss for an informal one. Practise both exchanges aloud rather than mixing their pronouns and verb endings."
       }
     ],
     "tip": "Listen for the final -st in heißt, and for the long vowel in heißen. Say each greeting with friendly, clear sentence stress.",
@@ -2205,6 +2170,10 @@ window.GERMAN_A11_LESSONS_PART1 = [
       {
         "heading": "Spell information reliably",
         "body": "When a name or email address is unclear, ask Können Sie das bitte buchstabieren? At A1, it helps to recognise the German letter names and to hear short number sequences separately. A phone number is usually spoken as groups of digits, and an email address uses special words such as Punkt for dot and at or Klammeraffe for @. Practise repeating the information aloud to confirm you heard it correctly."
+      },
+      {
+        "heading": "Numbers, letters and a complete contact exchange",
+        "body": "In the opening chapter, spelling and numbers 1–20 are practical communication tools, not an advanced maths exercise. Learn eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn, then elf, zwölf, dreizehn through neunzehn, and zwanzig. Notice that sixteen is sechzehn and seventeen is siebzehn. In a registration conversation you may hear: „Wie ist Ihre Telefonnummer?“ Say a phone number in short groups, and ask „Können Sie das bitte wiederholen?“ when unsure. With names, say „Wie schreibt man das?“ and listen to each German letter; German w, v and z do not sound like their English letter names. Finally connect contact details to three separate questions: Woher kommen Sie?, Wo wohnen Sie? and Welche Sprachen sprechen Sie?"
       }
     ],
     "tip": "German z is pronounced roughly like 'ts'; w is pronounced like English 'v'. Use the alphabet playback, and practise spelling a real name slowly.",
@@ -2334,6 +2303,10 @@ window.GERMAN_A11_LESSONS_PART1 = [
       {
         "heading": "Turn a statement into a plan",
         "body": "A yes/no question can start with the conjugated verb: Gehst du am Freitag ins Kino? The answer may be Ja, gern! or Nein, leider nicht. A specific weekday uses am: am Montag, am Samstag. To make a conversation useful, ask about the activity, propose a day, listen to the answer, and offer an alternative if your friend cannot come."
+      },
+      {
+        "heading": "From a hobby to a real invitation",
+        "body": "A simple profile can name an activity, but meaningful conversation adds when and with whom. Start with „Ich spiele gern Fußball.“ Ask your partner „Spielst du auch gern Fußball?“ Then move to a day: „Hast du am Mittwoch Zeit?“ A practical answer can accept or negotiate: „Ja, gern“ or „Am Mittwoch kann ich nicht. Geht Donnerstag?“ A German yes/no question puts the conjugated verb first; a statement normally puts it in second position. Keep the day expression together as am Montag, am Dienstag and so on. Rehearse an invitation and a polite refusal, not only the vocabulary list. This helps you use the same sentence patterns when hobbies change."
       }
     ],
     "tip": "Gern is short and stressed lightly. In questions, the intonation may rise; in ordinary statements, the voice usually falls.",
@@ -2463,6 +2436,10 @@ window.GERMAN_A11_LESSONS_PART1 = [
       {
         "heading": "Present tense and short profiles",
         "body": "To describe work, ask Was bist du von Beruf? and answer Ich bin Lehrerin or Ich bin Techniker. The verb arbeiten changes with the subject: ich arbeite, du arbeitest, er arbeitet, wir arbeiten. When preparing a profile, combine a profession, workplace and free day. Months and seasons add useful time details: im Sommer and im Winter, or im Mai. Keep the verb near the beginning of each statement."
+      },
+      {
+        "heading": "Articles, plurals and information in a profile",
+        "body": "A short occupational profile is easier to read if you look for Name, Beruf, Arbeitsort and Arbeitszeit before translating every word. For example: „Das ist Lena. Sie ist Ingenieurin. Sie arbeitet von acht bis sechzehn Uhr.“ After sein, a profession is commonly stated without ein/eine: „Er ist Koch.“ But ordinary object nouns still need their own article, such as der Computer or die Firma. The plural of a noun is not predictable from its singular article alone, so learn both when possible: der Tag – die Tage, die Kollegin – die Kolleginnen. Seasons can explain activities: „Im Sommer fahre ich Rad.“ Compare a statement with „Arbeitest du am Freitag?“ to notice subject–verb order. Numbers beyond 20 often appear in working hours and ages."
       }
     ],
     "tip": "Listen carefully to the -et ending in du arbeitest and er arbeitet. Make a short pause between words, not between a noun and its article.",
@@ -2592,6 +2569,10 @@ window.GERMAN_A11_LESSONS_PART1 = [
       {
         "heading": "Say what something is not",
         "body": "German often uses kein for a negative noun phrase with an indefinite article: Das ist kein Bahnhof and Das ist keine Kirche. The ending changes to match the noun. With a yes/no question such as Ist das ein Museum?, a useful answer is Nein, das ist kein Museum. You can also give the correct information in the second sentence. This makes a simple exchange more informative than a one-word answer."
+      },
+      {
+        "heading": "Choose ein, der or kein with a purpose",
+        "body": "Look at a city plan. When a place is new to the listener, introduce it: „Das ist ein Museum.“ Once both speakers know which museum they mean, say „Das Museum ist hier.“ A label like das Rathaus or der Bahnhof contains a grammatical article that should be learned with the noun. To state that something is absent, say „Hier ist kein Bahnhof“ rather than incorrectly negating with a new indefinite article. For feminine nouns the form is keine: „Hier ist keine Bank.“ Ask „Wo ist das Museum?“ when the landmark is known, or „Gibt es hier ein Museum?“ when you are not sure one exists. This distinction makes real map conversations easier to follow."
       }
     ],
     "tip": "Compare long and short vowels when you hear place words. Repeat the full chunk 'das Museum' rather than only 'Museum'.",
@@ -2721,6 +2702,10 @@ window.GERMAN_A11_LESSONS_PART1 = [
       {
         "heading": "Instructions with polite Sie",
         "body": "When speaking to a stranger, use the formal imperative Gehen Sie … or Fahren Sie … . The order is verb, Sie, then the extra information: Gehen Sie geradeaus. This differs from the ordinary statement Sie gehen geradeaus. Start with Entschuldigung to attract attention and finish with Danke schön or Vielen Dank. German polite directions are both grammatical and courteous."
+      },
+      {
+        "heading": "Use a map to make the instructions testable",
+        "body": "First identify a starting point (der Bahnhof) and a destination (das Museum). Then trace the route with your finger before speaking. A visitor might ask: „Entschuldigung, wie komme ich zum Museum?“ Reply in short steps: „Gehen Sie geradeaus. Biegen Sie an der nächsten Straße rechts ab. Das Museum ist links.“ The imperative with Sie is polite and useful with strangers. Pay attention to sequence words such as zuerst and dann; reversing them changes the route. Recognise everyday transport words such as Bus, Straßenbahn and Haltestelle when choosing where to begin. Finally let your partner repeat the directions. If they end at the wrong place, correct one instruction rather than giving a much longer speech."
       }
     ],
     "tip": "Speak links and rechts distinctly, especially the final consonants. Check the direction with your finger before saying it.",
@@ -2857,6 +2842,10 @@ window.GERMAN_A11_LESSONS_PART2 = [
       {
         "heading": "Plan with haben and brauchen",
         "body": "The question Was brauchen wir? means 'What do we need?' The answer can start Wir brauchen … . Use Haben wir …? to check whether something is available. For an original shop dialogue, include the food item, a quantity and a polite request. German words for quantities, such as ein Kilo, zwei Stück or eine Flasche, help you say exactly what you want without using long, complicated sentences."
+      },
+      {
+        "heading": "Turn the food words into a usable shopping task",
+        "body": "A German food topic becomes practical when you combine nouns, articles and quantities. Compare das Brot, der Käse and die Tomate; then write eine Packung Milch, zwei Tomaten and ein Stück Käse on a shopping list. The units help distinguish one item from an amount. A conversation can begin at home with „Haben wir noch Brot?“ and „Nein, wir brauchen Brot.“ At the shop you can ask „Haben Sie Tomaten?“ and finish politely with „Danke.“ Different shops such as die Bäckerei and die Metzgerei name places, while Frühstück, Mittagessen and Abendessen name meals; do not confuse the categories. Reading a list, choosing the right shop and forming a request are three related skills."
       }
     ],
     "tip": "The German umlaut in Käse and Brötchen changes pronunciation. Listen to the word in a complete sentence before repeating it.",
@@ -2986,6 +2975,10 @@ window.GERMAN_A11_LESSONS_PART2 = [
       {
         "heading": "Make a polite shop exchange",
         "body": "Useful requests include Ich möchte … and Ich nehme …, followed by the item and bitte. Add Was kostet das? or Was macht das zusammen? for the price. A food conversation also needs responses such as Gern and Sonst noch etwas? Listening carefully helps you identify what the other person wants, even if you do not recognise every single word. After the purchase, finish with Danke and Auf Wiedersehen."
+      },
+      {
+        "heading": "Work through nominative and accusative",
+        "body": "Ask who or what performs an action, then ask what receives the action. In „Der Saft ist kalt“, der Saft is the subject. In „Ich kaufe den Saft“, ich is the subject and den Saft is the object. The masculine article changes: der → den, ein → einen, kein → keinen. Compare „Ich nehme einen Tee“, „Ich nehme eine Suppe“ and „Ich nehme ein Brötchen“ to see that the feminine and neuter article forms stay the same in these simple accusative examples. In a shop, attach the grammar to a real request: „Ich möchte einen Tee, bitte. Was kostet das?“ Treat this as a shopping exchange, not a separate restaurant unit; fuller restaurant interaction belongs to Chapter 6."
       }
     ],
     "tip": "Hear the slight ending difference between ein and einen. Practise the complete expressions einen Saft, eine Suppe and ein Brötchen.",
@@ -3115,6 +3108,10 @@ window.GERMAN_A11_LESSONS_PART2 = [
       {
         "heading": "Place the time in a sentence",
         "body": "For a precise time, use um: um sieben Uhr. For a time span, use von … bis: von neun bis fünf. For a weekday, use am Montag. A simple daily routine can be described with a sequence of short sentences. Try alternating the order: Ich arbeite um neun Uhr, or Um neun Uhr arbeite ich. Notice that the conjugated verb remains in the second position of a main statement."
+      },
+      {
+        "heading": "Read the clock, then place the action in time",
+        "body": "Read 07:30 as „sieben Uhr dreißig“ or in everyday language as „halb acht“. The word halb points to the next hour. Likewise 08:15 is „Viertel nach acht“ and 14:45 can be „Viertel vor drei“. For a timetable or appointment, first recognise the digital time, then say what happens: „Um acht Uhr beginne ich.“ A daily routine combines a time with a present-tense action: „Um sieben Uhr stehe ich auf; um acht Uhr frühstücke ich.“ The separable prefix auf in aufstehen moves to the sentence end. A schedule can also be narrated in order using morgens, mittags and abends. Check the clock visually before trying to memorise each phrase."
       }
     ],
     "tip": "Pay particular attention to halb: halb acht is 7:30, not 8:30. Say both the digital and conversational time aloud.",
@@ -3244,6 +3241,10 @@ window.GERMAN_A11_LESSONS_PART2 = [
       {
         "heading": "Modal verb plus action",
         "body": "German modal verbs express ability, obligation or intention. Compare Ich kann heute kommen (I can come), Ich muss arbeiten (I must work), and Ich will am Sonntag lernen (I want to study). With a modal, the main action often moves to the end in its infinitive form. A scheduling conversation includes a proposed day, a response, and a clear alternative. If you are late, entschuldigung and Es tut mir leid are useful ways to apologise."
+      },
+      {
+        "heading": "Use family details to arrange a meeting",
+        "body": "To say whose family member you mean, compare mein Vater, meine Mutter and mein Kind. The form changes with the noun, not with the speaker's gender. A short family profile might say „Das ist meine Schwester. Sie wohnt in Köln.“ For an appointment, modal verbs are helpful: „Ich kann am Dienstag kommen“ or „Ich muss am Mittwoch arbeiten.“ The conjugated modal stays in normal verb position, while the other verb appears as an infinitive near the end. A polite refusal is more useful than a bare nein: „Tut mir leid, am Dienstag kann ich nicht. Haben Sie am Donnerstag Zeit?“ Check both the calendar day and the clock time before confirming."
       }
     ],
     "tip": "Keep the conjugated modal verb near the beginning and the infinitive at the end: Ich kann heute nicht kommen.",
@@ -3373,6 +3374,10 @@ window.GERMAN_A11_LESSONS_PART2 = [
       {
         "heading": "Separable verbs in action",
         "body": "Some German verbs have a prefix that separates in a present-tense main clause. For example, einladen becomes Ich lade dich ein. The conjugated verb stays near the beginning while ein moves to the end. Similarly, anfangen becomes Die Feier fängt um fünf Uhr an. Notice the main action across the sentence. An invitation can then be answered with Ja, gern, or Leider kann ich nicht kommen."
+      },
+      {
+        "heading": "Find the essentials in an invitation",
+        "body": "A short invitation needs an occasion, date, time, place and reply. When reading one, find Geburtstag, a weekday, a time and the address before translating everything. „Ich lade dich am Samstag ein“ shows a separable verb: einladen becomes lade … ein in a simple present-tense statement. The listener can respond „Ja, gern!“ or decline with an explanation. Dates after am use an ordinal ending, for example „am dritten Mai“ or „am vierzehnten Juni“. If you are writing your own message, use a clear closing question: „Kommst du?“ Then rehearse both an accepting reply and a polite refusal. This brings vocabulary, reading and speaking into one practical task."
       }
     ],
     "tip": "Practise ei as in einladen: the spelling ei often sounds like English 'eye'. Dates need clear ordinal endings.",
@@ -3502,6 +3507,10 @@ window.GERMAN_A11_LESSONS_PART2 = [
       {
         "heading": "Talk about something that has happened",
         "body": "For short past descriptions at this level, the book introduces Präteritum forms of haben and sein. Ich hatte Geburtstag means 'I had a birthday', and Die Feier war schön means 'The celebration was nice'. The plural versions are wir hatten and wir waren. These forms are useful in everyday speaking. Start with one past-time event and one feeling about it, rather than attempting a long story with unfamiliar grammar."
+      },
+      {
+        "heading": "Keep a full restaurant exchange in order",
+        "body": "Begin a restaurant conversation with a greeting or reservation, look at the menu, place an order and finally ask to pay. For example: „Guten Abend. Ich möchte eine Suppe, bitte.“ Later: „Die Rechnung, bitte.“ Listening tasks become easier if you identify the stage of the conversation before choosing an answer. The chapter also introduces two useful past forms: „Gestern war ich im Restaurant“ and „Ich hatte Hunger.“ They are the simple past of sein and haben, not a rule for changing all verbs into the past. Compare „Heute bin ich hier“ with „Gestern war ich hier“. To finish, tell a partner where you were yesterday and what you had time for."
       }
     ],
     "tip": "The diphthongs ei, eu and au occur often in food and leisure expressions. Repeat bezahlen and heute at conversational speed.",
@@ -3552,6 +3561,205 @@ window.GERMAN_A11_LESSONS_PART2 = [
   }
 ];
 window.GERMAN_LESSONS = [...(window.GERMAN_LESSONS || []), ...window.GERMAN_A11_LESSONS_PART2];
+
+</script>
+<script>
+/* Independent A1.1 chapter orientation. Paraphrased learning aims; no publisher exercises or images. Teacher QA pending. */
+(()=>{
+'use strict';
+const data=[
+  {
+    "number": 1,
+    "title": "Guten Tag!",
+    "intro": "Start with short, useful exchanges: greet someone, introduce yourself, ask where a person comes from and check a name or number. The aim is to understand how the words fit together, not just to memorise a greeting.",
+    "goal": "I can introduce myself, choose du or Sie, spell a name and recognise numbers 1–20.",
+    "patterns": [
+      [
+        "Hallo! Ich heiße Mina. Wie heißt du?",
+        "Hi! I'm Mina. What's your name?",
+        "Use du with a classmate; heißt agrees with du."
+      ],
+      [
+        "Guten Tag! Wie heißen Sie?",
+        "Good day! What is your name?",
+        "Formal Sie takes heißen, even for one person."
+      ],
+      [
+        "Ich komme aus Indien. Ich wohne in Bonn.",
+        "I come from India. I live in Bonn.",
+        "Woher asks origin; wo asks current location."
+      ],
+      [
+        "Meine Nummer ist zwölf: eins, zwei.",
+        "My number is twelve: one, two.",
+        "Practice both whole numbers and individual digits when checking contact details."
+      ]
+    ],
+    "pitfall": "Do not answer Wo wohnst du? with a language. It asks for a place. Woher kommst du? asks for origin; Welche Sprachen sprichst du? asks for languages.",
+    "tryIt": "Introduce yourself to a classmate, then to a teacher. Say a number between 1 and 20 and spell your first name.",
+    "model": "Hallo, ich heiße Mina. Ich komme aus Indien. Guten Tag, wie heißen Sie?"
+  },
+  {
+    "number": 2,
+    "title": "Freunde, Kollegen und ich",
+    "intro": "Talk about everyday interests and work, then use a weekday to make a simple plan. Notice the person–verb connection before trying longer sentences.",
+    "goal": "I can describe hobbies and work, read a simple profile and propose a day to meet.",
+    "patterns": [
+      [
+        "Ich höre gern Musik.",
+        "I enjoy listening to music.",
+        "The conjugated verb comes before gern."
+      ],
+      [
+        "Hast du am Freitag Zeit?",
+        "Are you free on Friday?",
+        "A yes/no question begins with the conjugated verb; weekdays take am."
+      ],
+      [
+        "Meine Freundin ist Ärztin. Sie arbeitet im Krankenhaus.",
+        "My friend is a doctor. She works in a hospital.",
+        "Professions after sein often have no indefinite article."
+      ],
+      [
+        "Im Winter lese ich gern. Im Sommer fahre ich Rad.",
+        "I like reading in winter. I cycle in summer.",
+        "A time expression may begin the sentence; the finite verb remains second."
+      ]
+    ],
+    "pitfall": "Der, die and das are part of the noun, not optional decorations. Remember the article with a new noun, and do not form every plural in the same way.",
+    "tryIt": "Describe a friend's job and hobby, then ask whether they are free on a particular day.",
+    "model": "Meine Freundin ist Lehrerin. Sie liest gern. Hast du am Samstag Zeit?"
+  },
+  {
+    "number": 3,
+    "title": "In der Stadt",
+    "intro": "Learn the language of places and movement through a short city visit. First identify a landmark, then ask where it is, and finally give simple, polite directions.",
+    "goal": "I can identify buildings, choose articles and direct someone using a simple route.",
+    "patterns": [
+      [
+        "Das ist ein Bahnhof. Der Bahnhof ist groß.",
+        "That is a train station. The station is big.",
+        "First introduce an object with ein, then refer to it with der."
+      ],
+      [
+        "Hier ist kein Museum.",
+        "There is no museum here.",
+        "Kein negates a noun phrase with an indefinite sense."
+      ],
+      [
+        "Wo ist die Haltestelle?",
+        "Where is the stop?",
+        "Wo requests a location."
+      ],
+      [
+        "Gehen Sie geradeaus und biegen Sie dann links ab.",
+        "Go straight ahead and then turn left.",
+        "Use formal Sie with the polite imperative."
+      ]
+    ],
+    "pitfall": "Rechts and links change the route completely; check the map before speaking. Also distinguish nicht for a general negation from kein for 'no/not a' noun phrases.",
+    "tryIt": "Start at the Bahnhof. Tell a visitor how to reach the Museum in two steps.",
+    "model": "Entschuldigung, gehen Sie bitte geradeaus. Dann biegen Sie rechts ab."
+  },
+  {
+    "number": 4,
+    "title": "Guten Appetit!",
+    "intro": "Connect food words to real needs: what is in the kitchen, what to buy and how to ask politely in a shop. The key grammar idea is how a noun changes when it becomes the object of a sentence.",
+    "goal": "I can understand a shopping list, ask for food and use basic accusative articles.",
+    "patterns": [
+      [
+        "Wir brauchen Brot und zwei Tomaten.",
+        "We need bread and two tomatoes.",
+        "Brauchen expresses need; quantities make a list useful."
+      ],
+      [
+        "Der Käse ist frisch. Ich kaufe den Käse.",
+        "The cheese is fresh. I buy the cheese.",
+        "A masculine subject der becomes object den."
+      ],
+      [
+        "Ich möchte einen Saft und eine Suppe.",
+        "I'd like a juice and a soup.",
+        "Masculine ein becomes einen; feminine eine stays eine."
+      ],
+      [
+        "Was kostet das zusammen?",
+        "How much does that cost altogether?",
+        "Add a price question to finish a realistic purchase."
+      ]
+    ],
+    "pitfall": "For a masculine noun, Ich kaufe ein Käse is wrong: say Ich kaufe einen Käse. Learn nominative and accusative with complete pairs, not detached endings.",
+    "tryIt": "Write a shopping list with three quantities; then order one masculine and one feminine item politely.",
+    "model": "Ich möchte einen Saft und eine Suppe, bitte. Was kostet das?"
+  },
+  {
+    "number": 5,
+    "title": "Tag für Tag",
+    "intro": "Use clocks, daily actions and calendars to explain when things happen. Build from one time expression to a routine, then to arranging or declining an appointment.",
+    "goal": "I can describe my day, talk about my family and make an appointment using modal verbs.",
+    "patterns": [
+      [
+        "Es ist halb acht. Um halb acht stehe ich auf.",
+        "It's 7:30. I get up at 7:30.",
+        "Halb acht means half an hour before eight; um marks an activity's time."
+      ],
+      [
+        "Mein Bruder arbeitet heute.",
+        "My brother is working today.",
+        "Mein shows possession before a masculine noun in nominative."
+      ],
+      [
+        "Ich kann am Dienstag nicht kommen.",
+        "I cannot come on Tuesday.",
+        "With kann, the full verb kommen goes at the end."
+      ],
+      [
+        "Haben Sie am Mittwoch um elf Uhr Zeit?",
+        "Do you have time on Wednesday at eleven?",
+        "Use am for days and um for a precise time."
+      ]
+    ],
+    "pitfall": "Halb acht is 7:30, not 8:30. In Ich muss heute arbeiten, do not place arbeiten directly after muss: the infinitive normally comes at the end.",
+    "tryIt": "Create three lines: when you get up, who is in your family and when you can meet.",
+    "model": "Um sieben Uhr stehe ich auf. Mein Bruder arbeitet. Am Mittwoch kann ich kommen."
+  },
+  {
+    "number": 6,
+    "title": "Zeit mit Freunden",
+    "intro": "Bring earlier language together in a social plan: invite someone, agree on a date, order politely and describe a simple past situation using war and hatte.",
+    "goal": "I can write an invitation, react to a plan, order at a restaurant and describe a recent event.",
+    "patterns": [
+      [
+        "Ich lade dich am Samstag ein.",
+        "I invite you on Saturday.",
+        "Einladen separates in a normal present-tense statement."
+      ],
+      [
+        "Kommst du am vierzehnten Juni?",
+        "Are you coming on 14 June?",
+        "Dates after am use ordinal forms."
+      ],
+      [
+        "Ich nehme eine Suppe, bitte. Die Rechnung, bitte.",
+        "I'll have a soup, please. The bill, please.",
+        "Move from ordering to paying in a short restaurant exchange."
+      ],
+      [
+        "Gestern war ich im Café. Ich hatte Zeit.",
+        "Yesterday I was at the café. I had time.",
+        "War and hatte are frequent simple past forms of sein and haben."
+      ]
+    ],
+    "pitfall": "Do not say Ich einlade dich in a normal statement: say Ich lade dich ein. Also avoid using war or hatte for every past-tense verb; these are two specific past forms.",
+    "tryIt": "Send a short invitation with a date and place, then add one sentence about where you were yesterday.",
+    "model": "Ich lade dich am Samstag ein. Wir treffen uns um vier Uhr. Gestern war ich zu Hause."
+  }
+];
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function render(number){const ch=data.find(x=>x.number===Number(number));if(!ch)return '';
+return `<section class="chapter-study-guide" aria-label="Chapter ${ch.number} study guide"><div class="chapter-study-head"><span class="eyebrow">Start here · Chapter understanding</span><h5>The big idea</h5><p>${esc(ch.intro)}</p><strong class="chapter-study-goal">${esc(ch.goal)}</strong></div><details class="chapter-study-patterns"><summary>See four useful sentence patterns <span aria-hidden="true">↓</span></summary><div class="chapter-study-pattern-grid">${ch.patterns.map(([de,en,why])=>`<div class="chapter-study-pattern"><strong lang="de">${esc(de)}</strong><span>${esc(en)}</span><p>${esc(why)}</p><button type="button" class="view-link" data-speak="${esc(de)}" aria-label="Hear German example">♫ Listen</button></div>`).join('')}</div></details><details class="chapter-study-patterns"><summary>Check your understanding <span aria-hidden="true">↓</span></summary><div class="chapter-study-selfcheck"><p><strong>Common mix-up:</strong> ${esc(ch.pitfall)}</p><p><strong>Try it:</strong> ${esc(ch.tryIt)}</p><details><summary>Reveal an original model answer</summary><p lang="de">${esc(ch.model)}</p></details></div></details></section>`;}
+window.GERMAN_CHAPTER_STUDY={data,render};
+})();
 
 </script>
 <script>
@@ -6030,6 +6238,101 @@ window.GERMAN_PHASE3={data,stats,render};
 })();
 </script>
 <script>
+/* Phase 4: independently authored A1.1 audio-first learning prompts. Device-generated German speech; no publisher or human recordings. */
+(()=>{
+'use strict';
+const data={"a11-greetings":{"chapter":1,"title":"Greet a classmate and a teacher","questions":[{"audio":"Guten Tag. Ich heiße Eva. Wie heißen Sie?","prompt":"Is the speaker addressing someone politely?","options":["Yes, formally","No, informally","She is asking the time"],"correct":0,"explanation":"The phrase Wie heißen Sie? uses the formal address."},{"audio":"Hallo, ich bin Tim. Wie heißt du?","prompt":"How does the speaker ask for a name?","options":["With a formal Sie question","With an informal du question","By asking a price"],"correct":1,"explanation":"Wie heißt du? uses the informal form."}],"phrase":"Guten Tag! Ich heiße Emma. Wie heißen Sie?","checklist":["I use a suitable greeting.","I use Sie for a polite question.","I say heißen clearly."]},"a11-origin-spelling":{"chapter":1,"title":"Understand origins, residence and spelling","questions":[{"audio":"Ich komme aus Nepal, aber ich wohne in München.","prompt":"Where does the person live?","options":["In Nepal","In München","In Hamburg"],"correct":1,"explanation":"Wohne in München tells us where the person lives, not where they come from."},{"audio":"Ich spreche Deutsch und Englisch. Mein Name ist Lea.","prompt":"Which languages does the person speak?","options":["German and English","Only English","French and German"],"correct":0,"explanation":"Deutsch und Englisch names the two languages."}],"phrase":"Ich komme aus Indien. Ich wohne in Berlin.","checklist":["I distinguish komme aus and wohne in.","I say the country and city clearly.","I pause between sentences."]},"a11-hobbies":{"chapter":2,"title":"Listen for hobbies and plans","questions":[{"audio":"Ich spiele gern Fußball, aber heute muss ich lernen.","prompt":"What does the speaker like doing?","options":["Reading","Playing football","Cycling"],"correct":1,"explanation":"Spiele gern Fußball expresses enjoyment of playing football."},{"audio":"Am Freitag habe ich keine Zeit. Am Samstag gehe ich ins Kino.","prompt":"When is the cinema plan?","options":["On Thursday","On Friday","On Saturday"],"correct":2,"explanation":"Am Samstag is when the speaker goes to the cinema."}],"phrase":"Hast du am Samstag Zeit? Wir können ins Kino gehen.","checklist":["I ask about a day using am.","I put the question verb first.","I pronounce Samstag clearly."]},"a11-jobs-seasons":{"chapter":2,"title":"Recognise jobs, hours and seasons","questions":[{"audio":"Meine Schwester ist Ärztin. Sie arbeitet im Krankenhaus.","prompt":"Where does the sister work?","options":["At a school","At a hospital","At a restaurant"],"correct":1,"explanation":"Im Krankenhaus identifies the workplace."},{"audio":"Im Winter arbeite ich von neun bis fünfzehn Uhr.","prompt":"When does the workday end?","options":["At nine","At twelve","At fifteen o'clock"],"correct":2,"explanation":"Von neun bis fünfzehn Uhr means from 9 until 15:00."}],"phrase":"Ich bin Koch. Ich arbeite von zehn bis achtzehn Uhr.","checklist":["I say the occupation without an extra article.","I use von … bis for hours.","I speak the numbers distinctly."]},"a11-city-places":{"chapter":3,"title":"Listen for city places and negation","questions":[{"audio":"Hier gibt es ein Museum und eine Bank.","prompt":"Which two places are mentioned?","options":["A museum and a bank","A station and a bank","A museum and a station"],"correct":0,"explanation":"Ein Museum und eine Bank names both places."},{"audio":"In dieser Straße gibt es keinen Bahnhof.","prompt":"What is missing in the street?","options":["A bank","A train station","A café"],"correct":1,"explanation":"Keinen Bahnhof says that there is no station."}],"phrase":"Hier gibt es einen Bahnhof und ein Museum.","checklist":["I use einen with Bahnhof after es gibt.","I pronounce the place names clearly.","I separate the two destinations."]},"a11-city-directions":{"chapter":3,"title":"Follow simple instructions","questions":[{"audio":"Entschuldigung! Gehen Sie geradeaus und dann nach links.","prompt":"What happens after going straight?","options":["Turn right","Turn left","Take a bus"],"correct":1,"explanation":"Nach links means turn left."},{"audio":"Fahren Sie mit dem Bus zum Museum. Die Haltestelle ist dort.","prompt":"How should the visitor travel?","options":["By train","On foot","By bus"],"correct":2,"explanation":"Mit dem Bus indicates bus travel."}],"phrase":"Gehen Sie geradeaus und dann nach rechts.","checklist":["I say the polite command Gehen Sie.","I distinguish rechts from links.","I speak each step in order."]},"a11-food-shops":{"chapter":4,"title":"Recognise food and shopping needs","questions":[{"audio":"Zum Mittagessen brauchen wir Brot, Käse und Tomaten.","prompt":"Which food is not mentioned?","options":["Bread","Tomatoes","Rice"],"correct":2,"explanation":"The list includes Brot, Käse and Tomaten but no Reis."},{"audio":"Ich kaufe zwei Brötchen in der Bäckerei.","prompt":"Where is the shopping happening?","options":["At a bakery","At a pharmacy","At a museum"],"correct":0,"explanation":"In der Bäckerei names the bakery."}],"phrase":"Wir brauchen Brot, Käse und zwei Tomaten.","checklist":["I say each food clearly.","I keep the noun articles in mind.","I pronounce zwei Tomaten as a quantity."]},"a11-accusative-restaurant":{"chapter":4,"title":"Listen for polite purchases","questions":[{"audio":"Ich möchte einen Tee und ein Brötchen, bitte.","prompt":"What drink does the customer order?","options":["Coffee","Tea","Water"],"correct":1,"explanation":"Einen Tee refers to tea."},{"audio":"Was kostet ein Kilo Äpfel? Drei Euro, bitte.","prompt":"How much is one kilogram of apples?","options":["Two euros","Four euros","Three euros"],"correct":2,"explanation":"Drei Euro is the stated price."}],"phrase":"Ich möchte einen Apfel und einen Tee, bitte.","checklist":["I use the accusative einen.","I say bitte politely.","I pronounce both items distinctly."]},"a11-daily-time":{"chapter":5,"title":"Hear clock times and daily routines","questions":[{"audio":"Es ist halb acht. Ich muss jetzt zur Arbeit.","prompt":"What time is it?","options":["07:30","08:30","07:45"],"correct":0,"explanation":"Halb acht is 07:30, halfway to eight."},{"audio":"Um acht Uhr fahre ich zur Arbeit. Um sechs Uhr bin ich wieder zu Hause.","prompt":"When does the person leave for work?","options":["At six","At eight","At nine"],"correct":1,"explanation":"Um acht Uhr is the departure time."}],"phrase":"Um halb acht frühstücke ich. Dann fahre ich zur Arbeit.","checklist":["I understand halb acht means 07:30.","I keep the verb after an opening time phrase.","I speak the routine naturally."]},"a11-family-appointments":{"chapter":5,"title":"Listen for family and appointments","questions":[{"audio":"Meine Schwester heißt Lara. Sie wohnt in Köln.","prompt":"Who lives in Cologne?","options":["The speaker's brother","The speaker's sister","The speaker's teacher"],"correct":1,"explanation":"Meine Schwester refers to the sister."},{"audio":"Am Mittwoch habe ich keine Zeit. Können wir uns am Donnerstag treffen?","prompt":"Which day is suggested instead?","options":["Tuesday","Wednesday","Thursday"],"correct":2,"explanation":"Am Donnerstag is the proposed alternative day."}],"phrase":"Hast du am Donnerstag um fünfzehn Uhr Zeit?","checklist":["I use am for the day.","I use um for the clock time.","I ask clearly whether the person is available."]},"a11-birthdays-invitations":{"chapter":6,"title":"Listen for dates and invitations","questions":[{"audio":"Meine Geburtstagsparty ist am zwölften Mai um achtzehn Uhr.","prompt":"When does the party start?","options":["At 18:00","At 12:00","At 20:00"],"correct":0,"explanation":"Um achtzehn Uhr is 6 p.m."},{"audio":"Kommst du am Samstag? Leider kann ich nicht. Ich komme am Sonntag.","prompt":"When can the second speaker come?","options":["Saturday","Sunday","Friday"],"correct":1,"explanation":"Ich komme am Sonntag gives the alternative day."}],"phrase":"Kommst du am Samstag zu meiner Party?","checklist":["I use the verb-first invitation question.","I pronounce Samstag and Party clearly.","I use zu meiner Party correctly."]},"a11-restaurant-past":{"chapter":6,"title":"Understand a meal and the past","questions":[{"audio":"Die Rechnung, bitte. Wir möchten jetzt zahlen.","prompt":"What does the guest want?","options":["The menu","The bill","A map"],"correct":1,"explanation":"Die Rechnung and zahlen indicate payment."},{"audio":"Gestern war ich im Restaurant. Ich hatte eine Suppe.","prompt":"What did the speaker have yesterday?","options":["A soup","A salad","A tea"],"correct":0,"explanation":"Ich hatte eine Suppe reports the past meal."}],"phrase":"Gestern war ich im Restaurant. Das Essen war gut.","checklist":["I use war for the past.","I pronounce gestern distinctly.","I keep the two sentences fluent."]}};
+const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function stats(id,byLesson){const d=data[id],p=byLesson?.[id]||{},answers=p.answers||{};return {total:d?.questions.length||0,answered:d?.questions.filter((q,i)=>!!answers[i]).length||0,correct:d?.questions.filter((q,i)=>answers[i]?.correct).length||0,reflected:!!p.reflected};}
+function render(id,byLesson,choices,rate,voiceURI,voices,recording,recordedURL){
+ const d=data[id];if(!d)return '';
+ const p=byLesson?.[id]||{},answers=p.answers||{},score=stats(id,byLesson);
+ const speed=rate==='slow'?'slow':'normal';
+ const germanVoices=Array.isArray(voices)?voices.filter(v=>/^de(-|$)/i.test(v.lang||'')):[];
+ const voiceOptions=germanVoices.map(v=>'<option value="'+esc(v.voiceURI||v.name)+'" '+((v.voiceURI||v.name)===voiceURI?'selected':'')+'>'+esc(v.name)+' ('+esc(v.lang)+')</option>').join('');
+ return '<section class="p4-lab" aria-label="German listening and speaking practice"><header class="p4-header"><span class="eyebrow">Original A1.1 listening and speaking · Chapter '+d.chapter+'</span><h2>Hear it. Say it. Make it yours.</h2><p>'+esc(d.title)+'. Complete two short listening tasks and practise one spoken response. This is not an official pronunciation score.</p></header>'+
+ '<section class="p4-control"><div><strong>German playback</strong><span>Listen at a comfortable pace. Playback uses a German speech voice installed in your browser or device.</span></div><div class="p4-speeds" role="group" aria-label="Playback speed"><button type="button" data-p4-speed="slow" aria-pressed="'+(speed==='slow')+'" class="'+(speed==='slow'?'selected':'')+'">Slow · 0.7×</button><button type="button" data-p4-speed="normal" aria-pressed="'+(speed==='normal')+'" class="'+(speed==='normal'?'selected':'')+'">Normal · 0.95×</button></div>'+
+ (germanVoices.length?'<label class="p4-voice">German voice<select data-p4-voice><option value="">Device default</option>'+voiceOptions+'</select></label>':'<p class="p4-voice-note">A German voice might not be installed. If playback fails, check your device speech-language settings.</p>')+'</section>'+
+ '<section class="p4-listen"><div class="p4-section-title"><div><span class="eyebrow">01 · Listen and understand</span><h3>What did you hear?</h3></div><span>'+score.correct+'/'+score.total+' correct</span></div>'+
+ d.questions.map((q,i)=>{const a=answers[i],selected=choices?.[id+':'+i];return '<article class="p4-question"><div class="p4-qhead"><b>Listening '+(i+1)+'</b><span>'+(a?(a.correct?'✓ Correct':'Review and retry'):'Audio first')+'</span></div><div class="p4-play"><button type="button" class="btn btn-primary btn-small" data-p4-play="'+id+'|'+i+'">♫ Play phrase</button><button type="button" class="btn btn-outline btn-small" data-p4-play-slow="'+id+'|'+i+'">♫ Play slowly</button><small>Listen before reading. The transcript appears after you check.</small></div><h4>'+esc(q.prompt)+'</h4><div class="p4-options" role="group" aria-label="'+esc(q.prompt)+'">'+q.options.map((o,j)=>'<button type="button" data-p4-choice="'+id+'|'+i+'|'+j+'" class="p4-option '+(selected===j?'selected ':'')+(a&&j===q.correct?'correct ':'')+(a&&a.chosen===j&&!a.correct?'incorrect':'')+'" aria-pressed="'+(selected===j)+'" '+(a?'disabled':'')+'>'+esc(o)+'</button>').join('')+'</div>'+
+ (a?'<div class="p4-feedback '+(a.correct?'':'needs-review')+'" role="status"><b>'+(a.correct?'Correct.':'Not quite.')+'</b> '+esc(q.explanation)+'<p><b>Transcript:</b> <span lang="de">'+esc(q.audio)+'</span></p><button type="button" class="view-link" data-p4-retry="'+id+'|'+i+'">Retry this question</button></div>':'<button type="button" class="btn btn-primary btn-small" data-p4-check="'+id+'|'+i+'" '+(selected===undefined?'disabled':'')+'>Check answer</button>')+'</article>';}).join('')+'</section>'+
+ '<section class="p4-speaking"><span class="eyebrow">02 · Practise speaking</span><h3>Repeat, record, and reflect</h3><p>Listen to the model phrase. Say it slowly, then at normal speed. Optionally record yourself and replay it for comparison.</p><div class="p4-speaking-model"><div><span>Model sentence</span><strong lang="de">'+esc(d.phrase)+'</strong></div><div><button type="button" class="btn btn-outline btn-small" data-p4-model="'+id+'">♫ Listen</button><button type="button" class="btn btn-outline btn-small" data-p4-model-slow="'+id+'">♫ Slow replay</button></div></div>'+
+ '<div class="p4-record-row"><button type="button" class="btn btn-outline btn-small" data-p4-record="'+id+'">'+(recording?'■ Stop recording':'● Record my voice')+'</button>'+(recordedURL?'<audio controls preload="none" src="'+esc(recordedURL)+'" aria-label="Play your local speaking recording"></audio>':'<span>Optional. Your recording is kept only in memory on this device, not uploaded or saved in the browser database.</span>')+'</div>'+
+ '<fieldset class="p4-checklist"><legend>My self-review · select what you practised</legend>'+d.checklist.map((c,i)=>'<label><input type="checkbox" data-p4-reflect="'+id+'|'+i+'" '+(p.reflection?.[i]?'checked':'')+' /> <span>'+esc(c)+'</span></label>').join('')+'</fieldset><p class="p4-note">These checkmarks are self-reported rehearsal steps, not automatic pronunciation accuracy or certification results. Your teacher can see the checklist completion in this same-browser demo.</p></section></section>';
+}
+window.GERMAN_AUDIO_LABS={data,render,stats};
+})();
+</script>
+<script>
+/* Phase 5 teacher authoring: independent, original classroom demo workflows. Browser local, never actual enrolment. */
+(()=>{
+'use strict';
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const templates=[
+{id:'conversation',title:'Everyday conversation',description:'Vocabulary, listen, role-play and a quick check'},
+{id:'listening',title:'Listening workshop',description:'Hear, select and speak in familiar chapter situations'},
+{id:'grammar',title:'Grammar in action',description:'Find a pattern, choose an answer, use it in context'},
+{id:'assessment',title:'Chapter assessment',description:'Skill check, language in context and final review'}
+];
+const defaultRubric=['Meaning and task completion','Relevant A1 vocabulary and grammar','Clarity and appropriate register'];
+const validDate=v=>!v||/^\d{4}-\d{2}-\d{2}$/.test(v);
+const localToday=()=>{const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');};
+function windowState(s,today=localToday()){
+ if(s.status!=='published')return 'draft';
+ if(s.releaseFrom&&today<s.releaseFrom)return 'upcoming';
+ if(s.releaseUntil&&today>s.releaseUntil)return 'closed';
+ return 'available';
+}
+function rubric(s){return (Array.isArray(s.rubric)&&s.rubric.length===3?s.rubric:defaultRubric).map(x=>String(x||''));}
+function validate(s){if(!['supported','core','challenge'].includes(s.difficulty||'core'))return 'Select a supported practice difficulty.';if(!['learner','group'].includes(s.audience))return 'Choose an available demo audience.';if(!validDate(s.releaseFrom)||!validDate(s.releaseUntil))return 'Use valid YYYY-MM-DD assignment dates.';if(s.releaseFrom&&s.releaseUntil&&s.releaseFrom>s.releaseUntil)return 'The assignment closing date must not precede its opening date.';if(rubric(s).some(x=>x.trim().length<10))return 'Write three meaningful rubric criteria before submitting for approval.';return null;}
+function templatesHtml(ch){return '<section class="p5-template-panel" aria-label="Reusable chapter activity templates"><div><span class="eyebrow">Quick-start experiences</span><h3>Build from Chapter '+ch.number+'</h3><p>Start with independently written exercises based on this chapter, then edit and review before publication.</p></div><div class="p5-template-grid">'+templates.map(t=>'<button type="button" data-p5-template="'+t.id+'" data-p5-chapter="'+ch.number+'"><strong>'+esc(t.title)+'</strong><span>'+esc(t.description)+'</span><small>Use template →</small></button>').join('')+'</div></section>';}
+function makeBlocks(mode,ch,lesson,fromBlock,pick){
+ const words=(lesson?.words||[]).slice(0,5).map(([de,en])=>de+' | '+en).join('\n');
+ const phrase=lesson?.phrase?.de||'Guten Tag. Wie geht es Ihnen?';
+ const qGrammar=pick('Grammar')||pick('Vocabulary')||pick('Listening');
+ const qVocab=pick('Vocabulary')||pick('Grammar');
+ const mkQ=(type,q)=>({...fromBlock(type),title:type==='assessment'?'Final chapter check':'Check the language',question:q?.prompt||'Which answer is correct?',options:(q?.options||['Ja','Nein','Danke']).join('\n'),correct:String(q?.correct??0),explanation:q?.why||'Review the example and the relevant phrase.'});
+ const vocab={...fromBlock('vocabulary'),title:'Notice useful chapter words',entries:words||'Hallo | hello\nDanke | thank you'};
+ const listen={...fromBlock('listening'),title:'Listen and repeat the chapter model',phrase,instruction:'Listen twice. Repeat slowly, then explain the meaning in your own words.'};
+ const dialog={...fromBlock('roleplay'),title:'Use this chapter in conversation',prompt:ch.originalTeacherStudioActivity||ch.originalLessonGoal,starter:phrase,criteria:'Complete the conversation; use accurate chapter language and suitable politeness.'};
+ if(mode==='listening')return [listen,vocab,{...listen,id:fromBlock('listening').id,title:'Repeat with a new purpose',instruction:'Listen again. Identify the important nouns and verbs, then repeat the complete phrase.'},mkQ('assessment',qVocab)];
+ if(mode==='grammar')return [vocab,mkQ('quiz',qGrammar),dialog,mkQ('assessment',qVocab)];
+ if(mode==='assessment')return [listen,mkQ('quiz',qGrammar),dialog,mkQ('assessment',qVocab)];
+ return [vocab,listen,dialog,mkQ('assessment',qVocab)];
+}
+function composerFields(s){
+ const options=[['supported','Guided · more support'],['core','Standard · independent'],['challenge','Extension · extra challenge']];
+ const select='<label class="composer-field"><span>Practice difficulty</span><select data-session-field="difficulty">'+options.map(([key,label])=>'<option value="'+key+'" '+((s.difficulty||'core')===key?'selected':'')+'>'+label+'</option>').join('')+'</select><small>Changes hints and expected independence, not the textbook level.</small></label>';
+ const date=(key,label)=>'<label class="composer-field"><span>'+label+'</span><input type="date" data-session-field="'+key+'" value="'+esc(s[key]||'')+'" /><small>Optional · dates apply in the learner browser’s local time.</small></label>';
+ const r=rubric(s);
+ return '<section class="p5-config"><div class="p5-config-title"><h4>Classroom configuration</h4><p>All audiences are illustrative in this demo. Date windows control visibility; no invitations or notifications are sent.</p></div><div class="composer-meta-grid">'+select+date('releaseFrom','Open assignment from')+date('releaseUntil','Close assignment after')+'</div><h4>Three-part assessment rubric</h4><p>Reviewers use these criteria when grading a written role-play. No automatic speech scoring is performed.</p><div class="p5-rubric-editor">'+r.map((v,i)=>'<label class="composer-field"><span>Criterion '+(i+1)+'</span><input data-p5-rubric="'+i+'" maxlength="140" value="'+esc(v)+'" /></label>').join('')+'</div><p class="p5-review-rule"><b>Review workflow:</b> Save draft → Submit for review → Approve content → Publish to demo learner/group. Editing resets approval. Existing published demonstration sessions are retained.</p></section>';
+}
+function shelfInfo(s){
+ const status=s.status==='published'?'Assigned':s.reviewStatus==='approved'?'Approved':s.reviewStatus==='pending'?'Awaiting content review':'Draft';
+ const availability=windowState(s);
+ return '<div class="p5-shelf-meta"><span>'+esc(status)+'</span> · <span>'+esc((s.difficulty||'core'))+' practice</span>'+ (s.releaseFrom?' · Opens '+esc(s.releaseFrom):'')+(s.releaseUntil?' · Closes '+esc(s.releaseUntil):'')+(availability==='upcoming'?' · Not yet visible to learner':availability==='closed'?' · Closed to learner':'')+'</div>';
+}
+function shelfActions(s){
+ if(s.status==='published')return '';
+ return '<div class="p5-approval-actions">'+(s.reviewStatus==='pending'?'<button type="button" class="btn btn-primary btn-small" data-p5-approve="'+esc(s.id)+'">Approve content</button><button type="button" class="btn btn-outline btn-small" data-p5-changes="'+esc(s.id)+'">Request changes</button>':s.reviewStatus==='approved'?'<span class="p5-approved">✓ Content approved for demo publication</span>':'<span class="p5-pending">Save and submit the completed session for review.</span>')+'</div>';
+}
+function difficultyInfo(s){
+ const level=s.difficulty||'core';
+ const guidance=level==='supported'?'Supported: follow the model phrase, keep sentences short and use the provided vocabulary.':level==='challenge'?'Extension: add two relevant original sentences and justify your choice of wording.':'Standard: complete the conversation independently using your chapter language.';
+ return '<div class="p5-difficulty-note"><b>'+esc(level.charAt(0).toUpperCase()+level.slice(1))+' practice</b><p>'+esc(guidance)+'</p></div>';
+}
+function reviewInputs(s,id){
+ return '<fieldset class="p5-score-form"><legend>Teacher rubric · 1–4 for each criterion</legend>'+rubric(s).map((criterion,i)=>'<label><span>'+esc(criterion)+'</span><select data-p5-grade="'+esc(id)+'|'+i+'"><option value="">Select score</option>'+[[1,'1 · Emerging'],[2,'2 · Developing'],[3,'3 · Meets goal'],[4,'4 · Strong']].map(([n,desc])=>'<option value="'+n+'">'+desc+'</option>').join('')+'</select></label>').join('')+'</fieldset>';
+}
+function feedbackText(s,review){
+ if(!review?.rubricScores)return '';
+ const score=review.rubricScores.reduce((a,b)=>a+Number(b),0);
+ return '<div class="p5-graded"><strong>Teacher rubric: '+score+'/12 (practice only)</strong>'+rubric(s).map((c,i)=>'<p>'+esc(c)+': '+Number(review.rubricScores[i])+'/4</p>').join('')+'</div>';
+}
+window.GERMAN_CLASSROOM={templates,defaultRubric,rubric,validate,windowState,templatesHtml,makeBlocks,composerFields,shelfInfo,shelfActions,difficultyInfo,reviewInputs,feedbackText};
+})();
+</script>
+<script>
 // Original demonstration questions. These are not Goethe/telc examination items.
 // A qualified German teacher must review language, answers and suitability.
 window.GERMAN_EXAM_DATA = Object.freeze({
@@ -6320,7 +6623,7 @@ window.GERMAN_EXAM_DATA = Object.freeze({
   if(!state.phase3Progress||typeof state.phase3Progress!=='object')state.phase3Progress={};
   if(!state.audioPractice||typeof state.audioPractice!=='object')state.audioPractice={};
   if(!state.audioSettings||typeof state.audioSettings!=='object')state.audioSettings={speed:'normal',voice:''};
-  let ui = {route:'home',studentView:'home',studentChapterNumber:null,teacherView:'home',teacherChapterNumber:1,lessonId:'hello',experienceId:'',stage:'discover',questionIndex:0,selected:null,checked:false,answers:{},builderKind:'roleplay',editingExperienceId:null,previewExperienceId:null,builderOpen:false,sessionComposerOpen:false,editingSessionId:null,sessionDraft:null,sessionPreviewId:null,sessionPreviewDraft:false,sessionId:'',sessionBlockIndex:0,sessionSelection:{},workbookId:'1',workbookQuestion:0,workbookSelected:null,photoSelected:{},depthSelections:{},depthChecked:{},phase3Choices:{},audioChoices:{},previewFromTeacher:false};
+  let ui = {route:'home',studentView:'home',studentChapterNumber:null,teacherView:'home',teacherChapterNumber:1,lessonId:'hello',experienceId:'',stage:'discover',questionIndex:0,selected:null,checked:false,answers:{},builderKind:'roleplay',editingExperienceId:null,previewExperienceId:null,builderOpen:false,sessionComposerOpen:false,editingSessionId:null,sessionDraft:null,sessionPreviewId:null,sessionPreviewDraft:false,sessionId:'',sessionBlockIndex:0,sessionSelection:{},workbookId:'1',workbookQuestion:0,workbookSelected:null,photoSelected:{},depthSelections:{},depthChecked:{},readingPanels:{},phase3Choices:{},audioChoices:{},previewFromTeacher:false};
   let mediaRecorder = null;
   let mediaStream = null;
   let recording = false;
@@ -6474,6 +6777,7 @@ function renderTeacherWorkbookInsights(){
             <p>${escape((ch.communicationOutcomes||[]).join(' · '))}</p>
             <small>Kursbuch PDF pp. ${ch.sourcePages.coursebookPdfStart}–${ch.sourcePages.coursebookPdfEnd} · Arbeitsbuch PDF pp. ${ch.sourcePages.workbookPdfStart}–${ch.sourcePages.workbookPdfEnd}</small></div>
             </div></div><details class="chapter-fold" ${ch.number===(ui.studentChapterNumber||nextLesson()?.chapterNumber)?'open':''}><summary class="chapter-fold-toggle"><span>Lessons, workbook and teacher practice</span><strong>Explore chapter ${ch.number} ↓</strong></summary><div class="chapter-expanded-visual">${realPhotos(ch.number,{compact:true,heading:false})||chapterVisual(ch.number)}</div>
+          ${window.GERMAN_CHAPTER_STUDY?.render(ch.number)||''}
           <div class="textbook-chapter-content">
             <div class="textbook-learning-block"><span class="eyebrow">01 · Kursbuch</span><h5>Learn the ideas</h5><p>Vocabulary, grammar, pronunciation and original dialogue practice.</p>
             ${linked.map((l,i)=>`<button class="chapter-topic-button" data-lesson="${escape(l.id)}"><span>${ch.number}.${i+1}</span><strong>${escape(l.title)}</strong><small>${state.completed.includes(l.id)?'✓ Finished':'Open lesson'} ↗</small></button>`).join('')}
@@ -6550,7 +6854,7 @@ function renderTeacherWorkbookInsights(){
           <section class="teacher-planner-panel"><h4>Listening, pronunciation & culture</h4><p><strong>Pronunciation:</strong> ${escape(ch.pronunciationFocus)}</p><p><strong>Culture:</strong> ${escape(ch.culturalContext)}</p><p>Check learners' listening, speaking, reading and writing with your own original tasks.</p></section>
           <section class="teacher-planner-panel teacher-planner-activity"><h4>Suggested original class activity</h4><p>${escape(ch.originalTeacherStudioActivity)}</p>${(ch.originalLessonBlueprints||[]).length?`<h4>Original guided lesson sequence</h4><ol>${ch.originalLessonBlueprints.map(bp=>`<li>${escape(bp.title)}</li>`).join('')}</ol>`:''}${ch.originalPracticeTypes?.length?`<h4>Workbook-inspired skill formats</h4>${topics(ch.originalPracticeTypes)}`:''}<p class="teacher-planner-hint">A starting suggestion for the teacher, not a copied textbook exercise or a finished lesson.</p></section>
         </div></details>
-        ${renderChapterTeacherReport(ch)}${window.GERMAN_CLASSROOM.templatesHtml(ch)}<div class="teacher-planner-actions"><button class="btn btn-primary" data-start-chapter-session="${ch.number}">Create chapter session draft →</button>
+        ${window.GERMAN_CHAPTER_STUDY?.render(ch.number)||''}${renderChapterTeacherReport(ch)}${window.GERMAN_CLASSROOM.templatesHtml(ch)}<div class="teacher-planner-actions"><button class="btn btn-primary" data-start-chapter-session="${ch.number}">Create chapter session draft →</button>
         <button class="btn btn-outline" data-route="teacher/missions">Open Mission Studio</button>
         <button class="btn btn-outline" data-route="teacher/exams">Open Exam Coaching</button></div>
         <p class="teacher-planner-source">Teaching alignment: ${ch.chapterPdfAvailable?'uploaded original Netzwerk A1.1 coursebook and workbook page images':'original Netzwerk A1.2 publisher outline only; PDF pending'}. Original lesson content and answer keys must be checked by the German teacher before use with real learners.</p>
@@ -6587,14 +6891,30 @@ function renderTeacherWorkbookInsights(){
       </section>
 `;
   }
-  function sidebar(){return `<aside class="course-sidebar card" aria-label="Lesson outline"><div class="sidebar-overline">Course outline</div><div class="sidebar-title">First Steps</div>${textbookLessons().map(l=>`<button class="sidebar-lesson ${l.id===ui.lessonId?'active':''} ${state.completed.includes(l.id)?'done':''}" data-lesson="${l.id}"><span class="count">${state.completed.includes(l.id)?'✓':l.unit}</span><span><b>${escape(l.title)}</b><small>${escape(l.duration)} · ${escape(l.skill)}</small></span></button>`).join('')}</aside><details class="lesson-picker"><summary>Lesson ${escape(currentLesson().unit)} of ${textbookLessons().length} · Choose another lesson</summary><div class="lesson-picker-list">${textbookLessons().map(l=>`<button class="${l.id===ui.lessonId?'active':''}" data-lesson="${l.id}">${state.completed.includes(l.id)?'✓':l.unit}. ${escape(l.title)}</button>`).join('')}</div></details>`;}
+  function sidebar(){
+    const ch=textbookChapters().find(c=>c.number===Number(currentLesson().chapterNumber));
+    const topics=lessonsInChapter(ch?.number||1);
+    const lesson=currentLesson();
+    return '<aside class="course-sidebar card" aria-label="Lesson outline">'+
+      '<div class="sidebar-overline">Kursbuch · Chapter '+escape(ch?.number||1)+'</div>'+
+      '<div class="sidebar-title">'+escape(ch?.title||'My chapter')+'</div>'+
+      '<p class="lesson-outline-hint">Two connected topics. Focus on the current chapter before moving on.</p>'+
+      topics.map((l,i)=>'<button class="sidebar-lesson '+(l.id===lesson.id?'active ':'')+(state.completed.includes(l.id)?'done':'')+'" data-lesson="'+escape(l.id)+'"><span class="count">'+(state.completed.includes(l.id)?'✓':(i+1))+'</span><span><b>'+escape(l.title)+'</b><small>'+escape(l.skill)+'</small></span></button>').join('')+
+      '<button type="button" class="view-link sidebar-return" data-route="student/chapters/'+(ch?.number||1)+'">← Chapter overview & workbook</button>'+
+      '<details class="sidebar-other-chapters"><summary>Other chapters ↓</summary>'+
+      textbookChapters().filter(c=>c.number!==ch?.number).map(c=>'<button type="button" class="view-link" data-route="student/chapters/'+c.number+'">Chapter '+c.number+' · '+escape(c.title)+'</button>').join('')+
+      '</details></aside>'+
+      '<details class="lesson-picker"><summary>Chapter '+escape(ch?.number||1)+' · '+escape(lesson.title)+' · Choose a topic</summary><div class="lesson-picker-list">'+
+      topics.map((l,i)=>'<button class="'+(l.id===lesson.id?'active':'')+'" data-lesson="'+escape(l.id)+'">'+(state.completed.includes(l.id)?'✓':i+1)+'. '+escape(l.title)+'</button>').join('')+
+      '</div></details>';
+  }
   const stageNames=[['discover','01 · Discover'],['understand','02 · Understand'],['hear','03 · Hear & speak'],['check','04 · Check'],['apply','05 · Use it']];
   function renderLesson(){const l=currentLesson();if(!l)return '<p>No lessons available.</p>';const stage=stageNames.find(x=>x[0]===ui.stage)||stageNames[0];const done=state.completed.includes(l.id);
-    return `<div class="course-layout">${sidebar()}<div class="lesson-main"><div class="lesson-banner"><div><span class="eyebrow">${l.chapterNumber?`A1.1 · Chapter ${l.chapterNumber}`:'Original A1.1'} · Lesson ${escape(l.unit)}</span><h1>${escape(l.title)}</h1><p>${escape(l.subtitle)}</p>${l.sourcePdfPages?`<p class="lesson-source-note">Original AmberTheory practice · Reference: uploaded A1.1 PDF pp. ${l.sourcePdfPages[0]}–${l.sourcePdfPages[1]} · Teacher review pending</p>`:''}</div><span class="tag ${done?'tag-dark':'tag-warm'}">${done?'✓ Completed':escape(l.duration)}</span></div>${l.chapterNumber?`<div class="lesson-topic-visual">${chapterVisual(l.chapterNumber)}</div>`:''}<nav class="lesson-stage" aria-label="Lesson stages">${stageNames.map(([id,label])=>`<button class="stage-tab ${id===ui.stage?'active':''}" data-stage="${id}">${label}</button>`).join('')}</nav><article class="lesson-body card"><span class="eyebrow">${escape(stage[1])}</span>${renderStage(l)}</article><div class="lesson-nav"><button data-route="${ui.previewFromTeacher?'teacher/sessions':`student/chapters/${l.chapterNumber||1}`}">${ui.previewFromTeacher?'← Return to Teacher Studio':'← My chapter'}</button><button data-lesson="${textbookLessons()[(textbookLessons().indexOf(l)+1)%textbookLessons().length]?.id||l.id}">Next topic →</button></div></div></div>`;
+    return `<div class="course-layout">${sidebar()}<div class="lesson-main"><div class="lesson-banner"><div><span class="eyebrow">${l.chapterNumber?`A1.1 · Chapter ${l.chapterNumber}`:'Original A1.1'} · Topic ${lessonsInChapter(l.chapterNumber).indexOf(l)+1} of ${lessonsInChapter(l.chapterNumber).length}</span><h1>${escape(l.title)}</h1><p>${escape(l.subtitle)}</p>${l.sourcePdfPages?`<p class="lesson-source-note">Independent learning material · Kursbuch reference pp. ${l.sourcePdfPages[0]}–${l.sourcePdfPages[1]}</p>`:''}</div><span class="tag ${done?'tag-dark':'tag-warm'}">${done?'✓ Completed':escape(l.duration)}</span></div>${l.chapterNumber?`<div class="lesson-topic-visual">${chapterVisual(l.chapterNumber)}</div>`:''}<nav class="lesson-stage" aria-label="Lesson stages">${stageNames.map(([id,label])=>`<button class="stage-tab ${id===ui.stage?'active':''}" data-stage="${id}">${label}</button>`).join('')}</nav><article class="lesson-body card"><span class="eyebrow">${escape(stage[1])}</span>${renderStage(l)}</article><div class="lesson-nav"><button data-route="${ui.previewFromTeacher?'teacher/sessions':`student/chapters/${l.chapterNumber||1}`}">${ui.previewFromTeacher?'← Return to Teacher Studio':'← My chapter'}</button><button data-lesson="${textbookLessons()[(textbookLessons().indexOf(l)+1)%textbookLessons().length]?.id||l.id}">Next topic →</button></div></div></div>`;
   }
   function renderStage(l){
     if(ui.stage==='discover')return `<h2>A moment from everyday life</h2><p class="explain">${escape(l.scene)}</p>${l.chapterNumber?realPhotos(l.chapterNumber):''}<div class="phrase-panel"><div><div class="upper">Hear the language</div><div class="phrase-de">${escape(l.phrase.de)}</div><div class="phrase-en">${escape(l.phrase.en)}</div>${l.phrase.sourceId?`<div class="phrase-source">${sourceNote(l.phrase.sourceId)}</div>`:''}</div><button class="sound-button" data-speak="${escape(l.phrase.de)}" aria-label="Play German pronunciation" title="Play browser German voice">♫</button></div><div class="study-note"><b>Listen and repeat.</b> Use the sound button to hear a German browser voice, then say the phrase aloud. Voice quality depends on the voices installed on your device.</div><div class="stage-foot"><p>Try to hear the rhythm before focusing on every word.</p><button class="btn btn-primary" data-stage="understand">Understand the words ${icon('arrow')}</button></div>`;
-    if(ui.stage==='understand')return `<h2>Understand it, word by word</h2><p class="explain">${l.pattern||''}</p>${l.theorySections?.length?`<div class="a11-theory-grid">${l.theorySections.map(section=>`<section class="a11-theory-card"><h3>${escape(section.heading)}</h3><p>${escape(section.body)}</p></section>`).join('')}</div>`:'' }${l.chapterNumber?window.GERMAN_DEPTH_GUIDES?.render(l.id,ui.depthSelections[l.id]||[],!!ui.depthChecked[l.id])||'':''}${l.chapterNumber?languageExamples(l):''}${l.chapterNumber?window.GERMAN_LEARNING_OBJECTS?.render(l.id)||'':''}${l.chapterNumber?window.GERMAN_PHASE3?.render(l.id,state.phase3Progress,ui.phase3Choices)||'':''}<div class="word-list">${l.words.map(([de,en])=>`<div class="word"><b>${escape(de)}</b><p>${escape(en)}</p><button class="view-link" data-speak="${escape(de)}" aria-label="Hear ${escape(de)}" style="font-size:11px;margin-top:7px">♫ Listen</button></div>`).join('')}</div><div class="tip"><b>Pronunciation and usage tip:</b> ${escape(l.tip)}</div><div class="dialogue">${l.dialogue.map(([name,de,en])=>`<div class="speech"><span>${escape(name)}</span><strong>${escape(de)}</strong><div class="muted" style="font-size:11px;margin-top:5px">${escape(en)}</div></div>`).join('')}</div><div class="stage-foot"><button class="btn btn-outline" data-stage="discover">← Back</button><button class="btn btn-primary" data-stage="hear">Hear and speak ${icon('arrow')}</button></div>`;
+    if(ui.stage==='understand')return `<h2>Understand it, word by word</h2><p class="lesson-reading-intro">Read the idea first, then open the original examples, situations and vocabulary when you need them.</p><details class="lesson-reading-group" data-reading-panel="concept" ${ui.readingPanels[l.id]?.concept===false?'':'open'}><summary><strong>1 · Understand the idea</strong><small>Explanation and worked sentence practice</small></summary><div class="lesson-reading-content"><p class="explain">${l.pattern||''}</p>${l.theorySections?.length?`<div class="a11-theory-grid">${l.theorySections.map(section=>`<section class="a11-theory-card"><h3>${escape(section.heading)}</h3><p>${escape(section.body)}</p></section>`).join('')}</div>`:'' }${l.chapterNumber?window.GERMAN_DEPTH_GUIDES?.render(l.id,ui.depthSelections[l.id]||[],!!ui.depthChecked[l.id])||'':''}</div></details><details class="lesson-reading-group" data-reading-panel="examples" ${ui.readingPanels[l.id]?.examples?'open':''}><summary><strong>2 · See it in context</strong><small>German–English examples and a useful real-world object</small></summary><div class="lesson-reading-content">${l.chapterNumber?languageExamples(l):''}${l.chapterNumber?window.GERMAN_LEARNING_OBJECTS?.render(l.id)||'':''}</div></details><details class="lesson-reading-group" data-reading-panel="situations" ${ui.readingPanels[l.id]?.situations?'open':''}><summary><strong>3 · Practise situations</strong><small>Real-world decisions with feedback</small></summary><div class="lesson-reading-content">${l.chapterNumber?window.GERMAN_PHASE3?.render(l.id,state.phase3Progress,ui.phase3Choices)||'':''}</div></details><details class="lesson-reading-group" data-reading-panel="vocabulary" ${ui.readingPanels[l.id]?.vocabulary?'open':''}><summary><strong>4 · Words and conversation</strong><small>Pronunciation, useful phrases and dialogue</small></summary><div class="lesson-reading-content"><div class="word-list">${l.words.map(([de,en])=>`<div class="word"><b>${escape(de)}</b><p>${escape(en)}</p><button class="view-link" data-speak="${escape(de)}" aria-label="Hear ${escape(de)}" style="font-size:11px;margin-top:7px">♫ Listen</button></div>`).join('')}</div><div class="tip"><b>Pronunciation and usage tip:</b> ${escape(l.tip)}</div><div class="dialogue">${l.dialogue.map(([name,de,en])=>`<div class="speech"><span>${escape(name)}</span><strong>${escape(de)}</strong><div class="muted" style="font-size:11px;margin-top:5px">${escape(en)}</div></div>`).join('')}</div></div></details><div class="stage-foot"><button class="btn btn-outline" data-stage="discover">← Back</button><button class="btn btn-primary" data-stage="hear">Hear and speak ${icon('arrow')}</button></div>`;
     if(ui.stage==='hear')return `${window.GERMAN_AUDIO_LABS?.render(l.id,state.audioPractice,ui.audioChoices,state.audioSettings.speed,state.audioSettings.voice,window.speechSynthesis?.getVoices?.()||[],recording&&recordingContext==='hear'&&recordingLessonId===l.id,recordingContext==='hear'&&recordingLessonId===l.id?recordedURL:null)||'<p>Audio practice is not available for this lesson.</p>'}<div class="stage-foot"><button class="btn btn-outline" data-stage="understand">← Review topic</button><button class="btn btn-primary" data-stage="check">Check understanding →</button></div>`;
     if(ui.stage==='check')return renderQuiz(l);
     return renderApply(l);
@@ -6889,6 +7209,13 @@ function renderTeacherWorkbookInsights(){
     if(target.matches('[data-session-answer-index]')&&ui.sessionDraft){const b=ui.sessionDraft.blocks[Number(target.dataset.sessionAnswerIndex)];if(b)b.correct=String(Number(target.value)-1);}
     if(target.matches('[data-session-writing]')){const p=mutableSessionProgress(ui.sessionId);p.drafts[target.dataset.sessionWriting]=target.value;save();const submit=document.querySelector('[data-submit-session-roleplay]');if(submit)submit.disabled=target.value.trim().length<5;}
   }
+  root.addEventListener('toggle',event=>{
+    const target=event.target;
+    if(!target?.matches?.('[data-reading-panel]')||ui.route!=='lesson'||ui.stage!=='understand')return;
+    const id=currentLesson().id;
+    const stored=ui.readingPanels[id]||(ui.readingPanels[id]={});
+    stored[target.dataset.readingPanel]=target.open;
+  },true);
   root.addEventListener('input',handleInput);
   root.addEventListener('change',handleInput);
   window.addEventListener('hashchange',()=>{render();if(ui.route==='student'&&ui.studentView==='chapters'&&ui.studentChapterNumber){document.getElementById('course-chapter-'+ui.studentChapterNumber)?.scrollIntoView?.({block:'start'});}else window.scrollTo({top:0,behavior:'instant'});});
