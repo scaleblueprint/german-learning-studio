@@ -64,3 +64,11 @@ Completed in the source-controlled app after the six-chapter alignment release. 
 **Safety and correctness boundaries:** chapters 7–12 are in the A1.2 volume, not the user's uploaded 166-page A1.1 scan, and remain inactive. These new exercises are independently authored and require German-teacher language, register and pedagogical sign-off. Real mobile device tests, voice clarity, image endpoint access and student usability remain manual checks. This is still a same-browser prototype.
 
 **Automated validation:** `tests/chapter-readers.mjs` checks all five chapters, page boundaries, 25 substantive topics and their examples/checks, learner answer/retry persistence and teacher preview; the regression suite includes the test.
+
+## Reading UX update — 24 October 2026
+
+Following feedback, the course now prioritises **expanded full-chapter reading** instead of requiring learners to open every heading. Inside the selected chapter, the five detailed Chapters 2–6 topics display their full explanations, examples, common mistakes and comprehension checks by default. A direct chapter-topic jump menu helps learners move among the complete sections without losing content. The original chapter introduction's sentence patterns and self-check are also open by default; the model answer is still reveal-on-demand.
+
+The guided lesson's four **Understand** sections now all open on first visit (rather than only the first). Students can collapse a section voluntarily; the lesson's in-memory view preserves their choice when checking local activities. In-depth topic content is shared with Teacher Studio. The top-level navigation continues to expand the *selected* chapter so students do not have to scroll through all six chapters simultaneously. Previously answered self-checks and all workbook, audio, assessment and teacher progress are preserved.
+
+Automated tests were extended to verify that all 25 reader topics are expanded by default, navigable via topic jump buttons and expanded for the teacher's selected chapter.
