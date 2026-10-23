@@ -33,4 +33,22 @@ assert.equal(classroom.windowState({...s,releaseFrom:'2099-01-01'},'2026-10-23')
 assert.equal(classroom.windowState({...s,releaseUntil:'2020-01-01'},'2026-10-23'),'closed');
 assert.equal(classroom.validate({...s,releaseFrom:'2026-10-25',releaseUntil:'2026-10-24'}).includes('closing'),true);
 assert.equal(classroom.rubric(s).length,3);
+// Complete a teacher-created role-play and return structured feedback to the demo learner.
+open('#session/'+s.id);
+const role=s.blocks.find(b=>b.type==='roleplay');
+const idx=s.blocks.indexOf(role);
+click({jumpSessionStep:String(idx)});
+events['root:input']({target:{dataset:{sessionWriting:role.id},value:'Hallo! Ich heiße Lea. Was machst du gern?',matches(q){return q==='[data-session-writing]';}}});
+click({submitSessionRoleplay:role.id});
+const submission=state().sessionSubmissions.find(x=>x.sessionId===s.id);
+assert.ok(submission);
+open('#teacher/learners');
+assert.match(root.innerHTML,/Teacher rubric/);
+q.set('[data-feedback="'+submission.id+'"]','Good use of greetings. Practise the final question.');
+click({review:submission.id});
+assert.equal(state().reviews[submission.id].rubricScores.length,3);
+assert.equal(state().reviews[submission.id].rubricScores.reduce((n,v)=>n+v,0),9);
+open('#session/'+s.id);
+click({jumpSessionStep:String(s.blocks.length)});
+assert.match(root.innerHTML,/Teacher rubric: 9\/12/);
 console.log('Phase 5 passed: four templates, chapter isolation, approval gate, published version preservation, schedule limits and rubrics.');
