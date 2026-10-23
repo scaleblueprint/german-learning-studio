@@ -47,3 +47,13 @@ Each destination is a real hash route, survives refresh, and highlights its menu
 - Sessions store an optional numeric `chapterNumber`. Existing sessions remain valid without this field; teachers can change alignment in the session composer. Drafts remain teacher-only; published sessions appear in learner Practice on the same browser.
 - Full teacher validation, secure accounts and real cohorts are not implemented. A textbook reference is not automatically teacher-approved content.
 - Regression: `node tests/role-separation.mjs` alongside existing smoke, navigation and exam tests.
+
+## October 2026 — section discovery and shorter chapter pages
+
+- Both studios use the same persistent, descriptive **workspace navigation** on desktop. It lists every destination, explains its purpose and marks the current section.
+- On tablets and phones, all studio destinations remain visible in a compact responsive grid immediately above the content; the existing fixed Home / Student / Teacher switch is retained.
+- Long pages offer **On this page** jump links (chapters in learner Lessons, workbook and sessions in Practice, chapter planner/session composer in Teacher Sessions, missions and review panels). Jumping never changes the selected hash route or discards local work.
+- The Student overview now uses a six-chapter compact progress map rather than duplicating the entire textbook listing. The full Lessons route holds six **expandable** chapter panels, with the next unfinished chapter initially expanded.
+- The Teacher chapter planner collapses detailed objective, grammar and activity cards behind an explicit disclosure while keeping its core chapter tools and learner reports available.
+- Preserve direct deep links, lesson navigation, editor/review state, browser-local storage and published-session approval gates. Avoid separate navigation systems for the student and teacher.
+- Regression: `tests/navigation.mjs`, `tests/smoke.mjs`, `tests/role-separation.mjs`, `tests/phase5.mjs`, and the existing course/exam suites.
