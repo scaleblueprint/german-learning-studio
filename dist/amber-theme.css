@@ -732,3 +732,31 @@ h1 {letter-spacing:-.055em}
 .chapter-one-shortcuts button{font:inherit;line-height:1.35;font-size:12px;font-weight:750;padding:10px 13px;color:#653647;background:#fff6eb;border:1px solid #e8ccbb;border-radius:8px;cursor:pointer;text-align:left}
 .chapter-one-shortcuts button:hover,.chapter-one-shortcuts button:focus-visible{background:#f8e8d9;border-color:#ce9278}
 @media(max-width:620px){.chapter-one-shortcuts{margin:0 12px 12px}.chapter-one-shortcuts button{flex:1 1 155px;font-size:11px}}
+
+
+/* Six-chapter prerequisite audit: expanded, readable original teaching before tasks. */
+.a11-prerequisites{padding:20px 20px 22px;border-top:1px solid #e9d5c9;border-bottom:1px solid #e9d5c9;background:#fffdf9}
+.a11-prerequisite-head h5{font-size:clamp(19px,2.2vw,23px);line-height:1.35;margin:9px 0;color:#61364a}
+.a11-prerequisite-head p{font-size:13px;line-height:1.75;color:#63535c;margin:0}
+.a11-prerequisite-nav{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0}
+.a11-prerequisite-nav button{font:inherit;font-size:11px;line-height:1.4;font-weight:700;border-radius:9px;padding:10px 12px;background:#fef2e7;color:#703d4e;border:1px solid #e7cec0;cursor:pointer;text-align:left}
+.a11-prerequisite-nav button:hover,.a11-prerequisite-nav button:focus-visible{background:#f7e3d4;border-color:#c99075}
+.a11-prerequisite-lessons{display:grid;gap:17px}
+.a11-prerequisite-block{scroll-margin-top:24px;border:1px solid #ead7ce;border-radius:13px;background:#fff;padding:18px}
+.a11-prerequisite-block header{display:flex;gap:12px;align-items:start;padding-bottom:11px;border-bottom:1px solid #f0e1da}
+.a11-prerequisite-index{font-size:13px;font-weight:800;background:#f8e5d8;border-radius:9px;color:#7f3f50;padding:9px;white-space:nowrap}
+.a11-prerequisite-block h6{font-size:16px;line-height:1.4;color:#553249;margin:1px 0 5px}
+.a11-prerequisite-block header p{font-size:12px;line-height:1.6;color:#6d5a65;margin:0}
+.a11-prerequisite-explain{font-size:13px;line-height:1.88;color:#4b3e45;margin:14px 0}
+.a11-prerequisite-examples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:15px 0}
+.a11-prerequisite-examples>div{border:1px solid #eadace;background:#fff8f1;border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:5px;min-width:0}
+.a11-prerequisite-examples strong{font-size:13px;line-height:1.55;color:#4b2b3e}
+.a11-prerequisite-examples span{font-size:12px;line-height:1.5;color:#6a5b63}
+.a11-prerequisite-examples button{align-self:start;font-size:11px}
+.a11-prerequisite-note,.a11-prerequisite-check{font-size:12px;line-height:1.7;padding:12px 14px;border-radius:9px;margin:11px 0;background:#fdf1e6}
+.a11-prerequisite-check{background:#f1f7f1}
+.a11-prerequisite-check strong{color:#416d4f}
+.a11-prerequisite-check p{font-size:12px;line-height:1.7;margin:5px 0 9px}
+.a11-prerequisite-check details{background:#fff;border:1px solid #d0e4d3;border-radius:8px;padding:9px 11px}
+.a11-prerequisite-check summary{cursor:pointer;font-weight:700;color:#416d4f}
+@media(max-width:700px){.a11-prerequisites{padding:14px 11px}.a11-prerequisite-nav{display:flex;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:thin}.a11-prerequisite-nav button{flex:0 0 auto;white-space:nowrap}.a11-prerequisite-block{padding:12px}.a11-prerequisite-examples{grid-template-columns:minmax(0,1fr)}}
