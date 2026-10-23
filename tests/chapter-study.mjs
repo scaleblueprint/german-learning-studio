@@ -20,6 +20,8 @@ assert.equal(chapterOne.numbers[19],'zwanzig');
 const chapterOneHtml=chapterStudy.render(1);
 assert.match(chapterOneHtml,/Numbers 1–20/,'Chapter 1 must teach counting before asking for it');
 assert.match(chapterOneHtml,/German alphabet/,'Chapter 1 must explicitly teach spelling');
+assert.match(chapterOneHtml,/data-jump-target="chapter-1-numbers"/,"Chapter overview must offer a direct jump to number lesson");
+assert.match(chapterOneHtml,/data-jump-target="chapter-1-spelling"/,"Chapter overview must offer a direct jump to alphabet lesson");
 assert.ok(chapterOneHtml.indexOf('Numbers 1–20')<chapterOneHtml.indexOf('Try it:'),'Number teaching must come before the application prompt');
 assert.ok(chapterOneHtml.indexOf('German alphabet')<chapterOneHtml.indexOf('Try it:'),'Letter teaching must come before the spelling prompt');
 assert.equal((chapterOneHtml.match(/class="a11-number-digit"/g)||[]).length,20);
