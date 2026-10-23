@@ -10,7 +10,7 @@ for(const id of ids){
  assert.equal(d.steps.length,3);
  assert.ok(d.steps.every(s=>s.length===4&&s[1].split(/\s+/).length>=20&&s[2].length>=10));
  assert.equal(d.mistake.length,3);
- assert.deepEqual([...d.order].sort((a,b)=>a-b),d.bank.map((_,i)=>i));
+ assert.deepEqual([...d.order].sort((a,b)=>a-b),Array.from(d.bank,(_,i)=>i));
  assert.equal(d.order.map(i=>d.bank[i]).join(' '),d.answer);
  assert.ok(guides.valid(id,d.order));
  assert.match(guides.render(id),/Sentence lab/);
