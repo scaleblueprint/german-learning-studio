@@ -6606,7 +6606,7 @@ window.GERMAN_EXAM_DATA = Object.freeze({
     {id:'cafe-dialogue',type:'roleplay',title:'You are the customer',prompt:'The waiter greets you. Order tea or water politely, and say thank you. Write two short lines of dialogue.',starter:'Guten Tag! Ich hätte gern einen Tee, bitte.',criteria:'Include a greeting, a polite order and a thank-you.'},
     {id:'cafe-check',type:'assessment',title:'Final check: respond politely',question:'The waiter says: „Was möchten Sie?“ What is a suitable answer?',options:'Ich komme aus Indien.\nEin Wasser, bitte.\nGute Nacht!',correct:'1',explanation:'Ein Wasser, bitte is a suitable short, polite order.'}
   ]});
-  const defaultState = () => ({completed:[],scores:{},drafts:{},submissions:[],reviews:{},assigned:true,experiences:startingExperiences(),experienceDrafts:{},experienceSubmissions:[],sessions:[initialSession()],sessionProgress:{},sessionSubmissions:[],workbookProgress:{},workbookSubmissions:[],photoPractice:{},depthProgress:{},phase3Progress:{},audioPractice:{},audioSettings:{speed:'normal',voice:''}});
+  const defaultState = () => ({completed:[],scores:{},drafts:{},submissions:[],reviews:{},assigned:true,experiences:startingExperiences(),experienceDrafts:{},experienceSubmissions:[],sessions:[initialSession()],sessionProgress:{},sessionSubmissions:[],workbookProgress:{},workbookSubmissions:[],photoPractice:{},depthProgress:{},phase3Progress:{},chapterReaderProgress:{},audioPractice:{},audioSettings:{speed:'normal',voice:''}});
   const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const stored = (() => {try{return JSON.parse(localStorage.getItem(storageKey));}catch{return null;}})();
   let state = {...defaultState(),...(stored && typeof stored === 'object' ? stored : {})};
@@ -6625,9 +6625,10 @@ window.GERMAN_EXAM_DATA = Object.freeze({
   if(!state.photoPractice||typeof state.photoPractice!=='object')state.photoPractice={};
   if(!state.depthProgress||typeof state.depthProgress!=='object')state.depthProgress={};
   if(!state.phase3Progress||typeof state.phase3Progress!=='object')state.phase3Progress={};
+  if(!state.chapterReaderProgress||typeof state.chapterReaderProgress!=='object')state.chapterReaderProgress={};
   if(!state.audioPractice||typeof state.audioPractice!=='object')state.audioPractice={};
   if(!state.audioSettings||typeof state.audioSettings!=='object')state.audioSettings={speed:'normal',voice:''};
-  let ui = {route:'home',studentView:'home',studentChapterNumber:null,teacherView:'home',teacherChapterNumber:1,lessonId:'hello',experienceId:'',stage:'discover',questionIndex:0,selected:null,checked:false,answers:{},builderKind:'roleplay',editingExperienceId:null,previewExperienceId:null,builderOpen:false,sessionComposerOpen:false,editingSessionId:null,sessionDraft:null,sessionPreviewId:null,sessionPreviewDraft:false,sessionId:'',sessionBlockIndex:0,sessionSelection:{},workbookId:'1',workbookQuestion:0,workbookSelected:null,photoSelected:{},depthSelections:{},depthChecked:{},readingPanels:{},phase3Choices:{},audioChoices:{},previewFromTeacher:false};
+  let ui = {route:'home',studentView:'home',studentChapterNumber:null,teacherView:'home',teacherChapterNumber:1,lessonId:'hello',experienceId:'',stage:'discover',questionIndex:0,selected:null,checked:false,answers:{},builderKind:'roleplay',editingExperienceId:null,previewExperienceId:null,builderOpen:false,sessionComposerOpen:false,editingSessionId:null,sessionDraft:null,sessionPreviewId:null,sessionPreviewDraft:false,sessionId:'',sessionBlockIndex:0,sessionSelection:{},workbookId:'1',workbookQuestion:0,workbookSelected:null,photoSelected:{},depthSelections:{},depthChecked:{},readingPanels:{},readerShellOpen:{},readerTopicOpenKey:'',phase3Choices:{},audioChoices:{},previewFromTeacher:false};
   let mediaRecorder = null;
   let mediaStream = null;
   let recording = false;
@@ -6782,6 +6783,7 @@ function renderTeacherWorkbookInsights(){
             <small>Kursbuch PDF pp. ${ch.sourcePages.coursebookPdfStart}–${ch.sourcePages.coursebookPdfEnd} · Arbeitsbuch PDF pp. ${ch.sourcePages.workbookPdfStart}–${ch.sourcePages.workbookPdfEnd}</small></div>
             </div></div><details class="chapter-fold" ${ch.number===(ui.studentChapterNumber||nextLesson()?.chapterNumber)?'open':''}><summary class="chapter-fold-toggle"><span>Lessons, workbook and teacher practice</span><strong>Explore chapter ${ch.number} ↓</strong></summary><div class="chapter-expanded-visual">${realPhotos(ch.number,{compact:true,heading:false})||chapterVisual(ch.number)}</div>
           ${window.GERMAN_CHAPTER_STUDY?.render(ch.number)||''}
+          ${window.GERMAN_CHAPTER_READERS?.render(ch.number,state.chapterReaderProgress,ui.readerTopicOpenKey,!!ui.readerShellOpen[ch.number])||''}
           <div class="textbook-chapter-content">
             <div class="textbook-learning-block"><span class="eyebrow">01 · Kursbuch</span><h5>Learn the ideas</h5><p>Vocabulary, grammar, pronunciation and original dialogue practice.</p>
             ${linked.map((l,i)=>`<button class="chapter-topic-button" data-lesson="${escape(l.id)}"><span>${ch.number}.${i+1}</span><strong>${escape(l.title)}</strong><small>${state.completed.includes(l.id)?'✓ Finished':'Open lesson'} ↗</small></button>`).join('')}
@@ -6858,7 +6860,7 @@ function renderTeacherWorkbookInsights(){
           <section class="teacher-planner-panel"><h4>Listening, pronunciation & culture</h4><p><strong>Pronunciation:</strong> ${escape(ch.pronunciationFocus)}</p><p><strong>Culture:</strong> ${escape(ch.culturalContext)}</p><p>Check learners' listening, speaking, reading and writing with your own original tasks.</p></section>
           <section class="teacher-planner-panel teacher-planner-activity"><h4>Suggested original class activity</h4><p>${escape(ch.originalTeacherStudioActivity)}</p>${(ch.originalLessonBlueprints||[]).length?`<h4>Original guided lesson sequence</h4><ol>${ch.originalLessonBlueprints.map(bp=>`<li>${escape(bp.title)}</li>`).join('')}</ol>`:''}${ch.originalPracticeTypes?.length?`<h4>Workbook-inspired skill formats</h4>${topics(ch.originalPracticeTypes)}`:''}<p class="teacher-planner-hint">A starting suggestion for the teacher, not a copied textbook exercise or a finished lesson.</p></section>
         </div></details>
-        ${window.GERMAN_CHAPTER_STUDY?.render(ch.number)||''}${renderChapterTeacherReport(ch)}${window.GERMAN_CLASSROOM.templatesHtml(ch)}<div class="teacher-planner-actions"><button class="btn btn-primary" data-start-chapter-session="${ch.number}">Create chapter session draft →</button>
+        ${window.GERMAN_CHAPTER_STUDY?.render(ch.number)||''}${window.GERMAN_CHAPTER_READERS?.render(ch.number,state.chapterReaderProgress,ui.readerTopicOpenKey,!!ui.readerShellOpen[ch.number])||''}${renderChapterTeacherReport(ch)}${window.GERMAN_CLASSROOM.templatesHtml(ch)}<div class="teacher-planner-actions"><button class="btn btn-primary" data-start-chapter-session="${ch.number}">Create chapter session draft →</button>
         <button class="btn btn-outline" data-route="teacher/missions">Open Mission Studio</button>
         <button class="btn btn-outline" data-route="teacher/exams">Open Exam Coaching</button></div>
         <p class="teacher-planner-source">Teaching alignment: ${ch.chapterPdfAvailable?'uploaded original Netzwerk A1.1 coursebook and workbook page images':'original Netzwerk A1.2 publisher outline only; PDF pending'}. Original lesson content and answer keys must be checked by the German teacher before use with real learners.</p>
@@ -7107,6 +7109,8 @@ function renderTeacherWorkbookInsights(){
     if(button.hasAttribute('data-watch-demo')){document.getElementById('studio-demo')?.scrollIntoView?.({behavior:'smooth',block:'start'});return;}
     if(button.hasAttribute('data-route')){const route=button.dataset.route;const chapter=textbookChapters().some(c=>c.number===Number(currentLesson().chapterNumber))?Number(currentLesson().chapterNumber):1;return navigate(route==='student'&&ui.route==='lesson'?`student/chapters/${chapter}`:route==='student'&&['experience','session','workbook'].includes(ui.route)?`student/chapters/${ui.route==='experience'?missionChapter(state.experiences.find(x=>x.id===ui.experienceId)):ui.route==='session'?Number(state.sessions.find(x=>x.id===ui.sessionId)?.chapterNumber)||1:Number(ui.workbookId)||1}`:route);}
     if(button.hasAttribute('data-role'))return navigate(button.dataset.role==='teacher'?'teacher':'student');
+    if(button.hasAttribute('data-reader-choice')){const [id,chosenRaw]=button.dataset.readerChoice.split('|');const topic=window.GERMAN_CHAPTER_READERS?.getTopic(id),chosen=Number(chosenRaw);if(!topic||!Number.isInteger(chosen)||chosen<0||chosen>=topic.check.options.length||state.chapterReaderProgress[id])return;state.chapterReaderProgress[id]={chosen,correct:chosen===topic.check.correct};ui.readerTopicOpenKey=id;ui.readerShellOpen[Number(id.slice(1,2))]=true;save();render();return;}
+    if(button.hasAttribute('data-reader-retry')){const id=button.dataset.readerRetry;if(!window.GERMAN_CHAPTER_READERS?.getTopic(id))return;delete state.chapterReaderProgress[id];ui.readerTopicOpenKey=id;ui.readerShellOpen[Number(id.slice(1,2))]=true;save();render();return;}
     if(button.hasAttribute('data-depth-token')){const value=button.dataset.depthToken,sep=value.lastIndexOf(':'),id=value.slice(0,sep),index=Number(value.slice(sep+1)),guide=window.GERMAN_DEPTH_GUIDES?.data[id];if(!guide||ui.depthChecked[id]||!Number.isInteger(index)||index<0||index>=guide.bank.length)return;const selected=ui.depthSelections[id]||(ui.depthSelections[id]=[]);if(!selected.includes(index)){selected.push(index);render();}return;}
     if(button.hasAttribute('data-depth-clear')){const id=button.dataset.depthClear;if(!window.GERMAN_DEPTH_GUIDES?.data[id]||ui.depthChecked[id])return;ui.depthSelections[id]=[];render();return;}
     if(button.hasAttribute('data-depth-check')){const id=button.dataset.depthCheck,guide=window.GERMAN_DEPTH_GUIDES?.data[id],selected=ui.depthSelections[id]||[];if(!guide||ui.depthChecked[id]||selected.length!==guide.bank.length)return;const correct=window.GERMAN_DEPTH_GUIDES.valid(id,selected),past=state.depthProgress[id]||{attempts:0,bestCorrect:false};state.depthProgress[id]={attempts:past.attempts+1,bestCorrect:past.bestCorrect||correct,lastCorrect:correct};ui.depthChecked[id]=true;save();render();return;}
@@ -7215,6 +7219,8 @@ function renderTeacherWorkbookInsights(){
   }
   root.addEventListener('toggle',event=>{
     const target=event.target;
+    if(target?.matches?.('[data-reader-shell]')){ui.readerShellOpen[Number(target.dataset.readerShell)]=target.open;return;}
+    if(target?.matches?.('[data-reader-topic]')&&target.open){ui.readerTopicOpenKey=target.dataset.readerTopic;return;}
     if(!target?.matches?.('[data-reading-panel]')||ui.route!=='lesson'||ui.stage!=='understand')return;
     const id=currentLesson().id;
     const stored=ui.readingPanels[id]||(ui.readingPanels[id]={});
