@@ -62,10 +62,12 @@ assert.match(root.innerHTML,/class="textbook-chapter"/);
 open('#exam');
 assert.equal(activeSection(),'Exam preparation');
 open('#lesson/hello');
+assert.match(root.innerHTML,/id="public-title"/,'Outdated sample lesson links are not part of the textbook course');
+open('#lesson/'+window.GERMAN_LESSONS.find(l=>l.chapterNumber===1).id);
 assert.equal(activeSection(),'My chapters');
 assert.match(root.innerHTML,/class="lesson-picker"/);
 clickRoute('student');
-assert.equal(location.hash,'student/lessons','Leaving a lesson should return to the lesson list');
+assert.equal(location.hash,'student/chapters/1','Leaving a lesson should return to its chapter');
 
 for(const [hash,label] of [
   ['#teacher','Overview'],['#teacher/sessions','Chapter planner'],
