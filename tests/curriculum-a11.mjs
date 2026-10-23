@@ -34,7 +34,7 @@ for(let chapter=1;chapter<=6;chapter++){
  assert.ok(ref.workbookPdfStart<ref.workbookPdfEnd);
  for(const task of tasks){
   assert.ok(task.scene.length>80,'Lesson should have contextual setup');
-  assert.ok(task.theorySections.length===2&&task.theorySections.every(x=>x.body.split(/\s+/).length>=45),'Require substantive original explanations');
+  assert.ok(task.theorySections.length>=3&&task.theorySections.every(x=>x.body.split(/\s+/).length>=45),'Require rich, substantive original explanations throughout all verified topics');
   assert.ok(task.words.length>=8);
   assert.ok(task.dialogue.length>=4);
   assert.equal(task.questions.length,4);
