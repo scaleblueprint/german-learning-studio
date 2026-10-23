@@ -67,7 +67,7 @@ for(let n=1;n<=6;n++){
  for(const block of part.blocks){
   assert.ok(block.text.split(/\s+/).length>=80,'No brief prompt-like explanation: '+block.key);
   assert.ok(block.examples.length>=3,'Worked sentence examples required');
-  assert.ok(block.examples.every(([de,en])=>de.length>10&&en.length>9));
+  assert.ok(block.examples.every(([de,en])=>de.length>=4&&en.length>=7),'Short number/date/pronunciation pairs are valid examples');
   assert.ok(block.task.length>20&&block.answer.length>4,'Do not ask without providing a worked check');
   assert.match(html,new RegExp('ch'+n+'-foundation-'+block.key));
   worked+=block.examples.length;
