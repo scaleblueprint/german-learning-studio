@@ -29,6 +29,7 @@ jobs:
           node tests/phase3.mjs
           node tests/phase4.mjs
           node tests/phase5.mjs
+          node tests/textbook-alignment.mjs
       - name: Run student and teacher regression checks
         run: |
           node tests/smoke.mjs
