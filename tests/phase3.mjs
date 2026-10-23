@@ -9,7 +9,7 @@ for(const f of ['curriculum.js','lessons.js','a11-chapters-1-3.js','a11-chapters
 const data=win.GERMAN_PHASE3.data,ids=Object.keys(data);
 assert.equal(ids.length,12);
 assert.equal(ids.reduce((n,k)=>n+data[k].scenes.length,0),36);
-for(const id of ids){assert.ok(win.GERMAN_LESSONS.some(l=>l.id===id&&l.chapterNumber===data[id].chapter));assert.equal(data[id].tiles.length,3);for(const scene of data[id].scenes){assert.equal(scene.options.length,3);assert.ok(scene.context.length>55&&scene.insight.length>70);assert.ok(scene.correct>=0&&scene.correct<3);}}
+for(const id of ids){assert.ok(win.GERMAN_LESSONS.some(l=>l.id===id&&l.chapterNumber===data[id].chapter));assert.equal(data[id].tiles.length,3);for(const scene of data[id].scenes){assert.equal(scene.options.length,3);assert.ok(scene.context.length>55&&scene.insight.length>=70);assert.ok(scene.correct>=0&&scene.correct<3);}}
 const open=hash=>{location.hash=hash;listeners['window:hashchange']();return root.innerHTML;};
 const click=d=>{let b={dataset:d,disabled:false,hasAttribute(n){return n.startsWith('data-')&&n.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase()) in d;}};listeners['root:click']({target:{closest(){return b;}}});listeners['window:hashchange']();};
 let html=open('#lesson/a11-greetings');click({stage:'understand'});assert.match(root.innerHTML,/p3-lab/);assert.match(root.innerHTML,/data-phase3-choice/);
