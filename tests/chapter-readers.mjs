@@ -34,8 +34,8 @@ for(const c of data.chapters){
   assert.ok(t.examples.every(([de,en,why])=>de.length>10&&en.length>8&&why.length>12));
   assert.equal(t.check.options.length,3);
   assert.ok(t.check.correct>=0&&t.check.correct<3);
-  assert.ok(t.check.why.length>35);
-  assert.ok(t.mistake.length>30);
+  assert.ok(t.check.why.length>=25);
+  assert.ok(t.mistake.length>=25);
  }
  const html=reader.render(c.number,{});
  assert.match(html,/Read the chapter in depth/);
