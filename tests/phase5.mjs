@@ -23,7 +23,7 @@ click({editSession:s.id});click({saveSession:'review'});s=state().sessions.find(
 assert.equal(s.reviewStatus,'pending');
 click({toggleSession:s.id});assert.equal(state().sessions.find(x=>x.id===s.id).status,'draft','pending review cannot publish');
 click({p5Approve:s.id});assert.equal(state().sessions.find(x=>x.id===s.id).reviewStatus,'approved');
-click({toggleSession:s.id});assert.equal(state().sessions.find(x=>x.id===s.id).status,'published');
+click({toggleSession:s.id});assert.equal(state().sessions.find(x=>x.id===s.id).status,'published');s=state().sessions.find(x=>x.id===s.id);
 html=open('#student/practice');assert.match(html,/Chapter 2/);
 open('#teacher/sessions');click({teacherChapter:'2'});click({editSession:s.id});assert.match(root.innerHTML,/Classroom configuration/);
 click({saveSession:'draft'});let copy=state().sessions.find(x=>x.chapterNumber===2&&x.id!==s.id);assert.ok(copy&&copy.reviewStatus==='draft');
