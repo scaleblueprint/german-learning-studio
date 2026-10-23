@@ -585,3 +585,50 @@ h1 {letter-spacing:-.055em}
 .chapter-review-summary p{font-size:12px;line-height:1.65;margin-top:4px;padding-top:10px;border-top:1px solid #ecd8cc;color:#663f4c}
 .chapter-expanded-visual+.textbook-chapter-content{margin-top:0}
 @media(max-width:600px){.chapter-review-summary{margin:12px 12px 15px;padding:13px}}
+
+
+/* Chapter-first reading companion: short visual summaries, then progressively disclosed study material. */
+.chapter-study-guide{margin:17px 20px 6px;border:1px solid #e7d6ce;border-radius:15px;background:#fffdf9;overflow:hidden;box-shadow:0 8px 24px rgba(63,35,45,.04)}
+.chapter-study-head{padding:20px 22px 17px;background:linear-gradient(125deg,#fff8ee,#fffaf8)}
+.chapter-study-head h5{font-size:20px;line-height:1.2;letter-spacing:-.035em;margin:6px 0 7px;color:#4b2d3b}
+.chapter-study-head p{font-size:13px;line-height:1.75;color:#63565f;max-width:70ch}
+.chapter-study-goal{font-size:12px;line-height:1.65;color:#744259;display:block;margin-top:12px;border-left:3px solid #d75e45;padding-left:12px}
+.chapter-study-patterns{border-top:1px solid #eedfd6}
+.chapter-study-patterns>summary{cursor:pointer;padding:15px 22px;list-style:none;font-size:13px;font-weight:700;color:#6e344b;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.chapter-study-patterns>summary::-webkit-details-marker{display:none}
+.chapter-study-patterns[open]>summary{background:#fff5eb}
+.chapter-study-pattern-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:13px 18px 19px}
+.chapter-study-pattern{background:#fff;border:1px solid #f0e3dc;border-radius:12px;padding:15px;min-width:0}
+.chapter-study-pattern>strong{display:block;font-size:15px;color:#4d3041;line-height:1.45}
+.chapter-study-pattern>span{display:block;color:#725d66;font-size:12px;margin-top:6px;line-height:1.5}
+.chapter-study-pattern p{font-size:12px;line-height:1.7;margin-top:10px}
+.chapter-study-pattern .view-link{display:inline-flex;margin-top:8px;font-size:12px}
+.chapter-study-selfcheck{padding:8px 22px 22px;font-size:13px;line-height:1.75}
+.chapter-study-selfcheck p{margin:12px 0}
+.chapter-study-selfcheck>details{border:1px solid #e9d6ce;border-radius:10px;padding:12px 14px;margin-top:12px}
+.chapter-study-selfcheck>details summary{font-size:12px;font-weight:700;cursor:pointer;color:#753b50}
+.chapter-study-selfcheck>details p{font-weight:600;color:#4b3643}
+.lesson-outline-hint{font-size:12px;line-height:1.6;color:#75616c;margin:8px 0 15px}
+.sidebar-return{display:block;text-align:left;font-size:12px;padding:13px 7px}
+.sidebar-other-chapters{border-top:1px solid #e9dbd3;padding:12px 4px}
+.sidebar-other-chapters summary{font-size:12px;font-weight:700;cursor:pointer;color:#6d3850}
+.sidebar-other-chapters .view-link{display:block;font-size:11px;text-align:left;padding:8px 3px}
+.lesson-reading-intro{font-size:13px;color:#70606b;line-height:1.7;margin:8px 0 18px}
+.lesson-reading-group{border:1px solid #ead9d0;background:#fffdfb;border-radius:13px;margin:11px 0;overflow:hidden}
+.lesson-reading-group>summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;gap:5px;padding:16px 19px;background:#fff8f0}
+.lesson-reading-group>summary::-webkit-details-marker{display:none}
+.lesson-reading-group>summary strong{font-size:15px;line-height:1.35;color:#623149}
+.lesson-reading-group>summary small{font-size:11px;line-height:1.5;color:#765e6b}
+.lesson-reading-group[open]>summary{background:#fff1e3;border-bottom:1px solid #ecd9ce}
+.lesson-reading-content{padding:20px;min-width:0}
+.lesson-reading-content .a11-theory-grid{margin-top:14px}
+.lesson-reading-content .lesson-visual-object{max-width:100%}
+@media(max-width:680px){
+ .chapter-study-guide{margin:12px 12px 6px}
+ .chapter-study-head{padding:16px}
+ .chapter-study-patterns>summary{padding:13px 16px}
+ .chapter-study-pattern-grid{grid-template-columns:minmax(0,1fr);padding:10px}
+ .chapter-study-selfcheck{padding:8px 16px 16px}
+ .lesson-reading-content{padding:13px}
+ .lesson-reading-group>summary{padding:13px 15px}
+}
