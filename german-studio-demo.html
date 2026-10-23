@@ -3657,8 +3657,8 @@ const data=[
       ]
     ],
     "pitfall": "Do not answer Wo wohnst du? with a language. It asks for a place. Woher kommst du? asks for origin; Welche Sprachen sprichst du? asks for languages.",
-    "tryIt": "Introduce yourself to a classmate, then to a teacher. Say a number between 1 and 20 and spell your first name.",
-    "model": "Hallo, ich heiße Mina. Ich komme aus Indien. Guten Tag, wie heißen Sie?"
+    "tryIt": "After the number and alphabet lessons above, introduce yourself to a classmate, then to a teacher. Say a number between 1 and 20 and spell your first name.",
+    "model": "Classmate: Hallo, ich heiße Mina. Wie heißt du? Teacher: Guten Tag, ich heiße Mina. Wie heißen Sie? Number: sechzehn. Spelling: M – I – N – A."
   },
   {
     "number": 2,
@@ -3818,7 +3818,7 @@ const data=[
 ];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function render(number){const ch=data.find(x=>x.number===Number(number));if(!ch)return '';
-return `<section class="chapter-study-guide" aria-label="Chapter ${ch.number} study guide"><div class="chapter-study-head"><span class="eyebrow">Start here · Chapter understanding</span><h5>The big idea</h5><p>${esc(ch.intro)}</p><strong class="chapter-study-goal">${esc(ch.goal)}</strong></div><details class="chapter-study-patterns" open><summary>See four useful sentence patterns <span aria-hidden="true">↓</span></summary><div class="chapter-study-pattern-grid">${ch.patterns.map(([de,en,why])=>`<div class="chapter-study-pattern"><strong lang="de">${esc(de)}</strong><span>${esc(en)}</span><p>${esc(why)}</p><button type="button" class="view-link" data-speak="${esc(de)}" aria-label="Hear German example">♫ Listen</button></div>`).join('')}</div></details><details class="chapter-study-patterns" open><summary>Check your understanding <span aria-hidden="true">↓</span></summary><div class="chapter-study-selfcheck"><p><strong>Common mix-up:</strong> ${esc(ch.pitfall)}</p><p><strong>Try it:</strong> ${esc(ch.tryIt)}</p><details><summary>Reveal an original model answer</summary><p lang="de">${esc(ch.model)}</p></details></div></details></section>`;}
+return `<section class="chapter-study-guide" aria-label="Chapter ${ch.number} study guide"><div class="chapter-study-head"><span class="eyebrow">Start here · Chapter understanding</span><h5>The big idea</h5><p>${esc(ch.intro)}</p><strong class="chapter-study-goal">${esc(ch.goal)}</strong></div><details class="chapter-study-patterns" open><summary>See four useful sentence patterns <span aria-hidden="true">↓</span></summary><div class="chapter-study-pattern-grid">${ch.patterns.map(([de,en,why])=>`<div class="chapter-study-pattern"><strong lang="de">${esc(de)}</strong><span>${esc(en)}</span><p>${esc(why)}</p><button type="button" class="view-link" data-speak="${esc(de)}" aria-label="Hear German example">♫ Listen</button></div>`).join('')}</div></details>${ch.number===1?window.GERMAN_CHAPTER_ONE?.render()||'':''}<details class="chapter-study-patterns" open><summary>Check your understanding <span aria-hidden="true">↓</span></summary><div class="chapter-study-selfcheck"><p><strong>Common mix-up:</strong> ${esc(ch.pitfall)}</p><p><strong>Try it:</strong> ${esc(ch.tryIt)}</p><details><summary>Reveal an original model answer</summary><p lang="de">${esc(ch.model)}</p></details></div></details></section>`;}
 window.GERMAN_CHAPTER_STUDY={data,render};
 })();
 
