@@ -1,3 +1,7 @@
+## Textbook-first Student Studio navigation (23 October 2026)
+
+The six verified original-edition A1.1 chapters now integrate coursebook explanations, independent workbook practice, teacher-created original supplements, progress and feedback in one chapter journey. **Plattform 1** follows Chapter 3 and **Plattform 2** follows Chapter 6; Goethe/telc exam preparation remains separate. Earlier standalone demo lessons, unsupported A1.2 previews and disconnected phrase examples are excluded from the active learner course. Teacher missions require a valid source chapter; new authoring is restricted to A1.1. No saved learner work was cleared. See [textbook alignment audit](docs/textbook-experience-alignment-20261023.md). The public walkthrough is an illustrative earlier prototype and may show old menu labels.
+
 # AmberTheory German Studio — teacher-led prototype
 
 A portable, buildless static prototype demonstrating the student-facing **First Steps** course (mapped to CEFR A1), independent **Goethe/telc A1 exam preparation**, a teacher coaching workspace, a teacher-created Experience Studio and a visual **Session Studio** for composing complete lessons. All source required for the demo is in `dist/`; no build tooling or credentials are needed.
@@ -29,7 +33,7 @@ The Learning homepage includes an 80-second, silent illustrated walkthrough of t
 
 ## Demo behavior and limitations
 
-- The homepage opens directly into **Learning**. A single, two-option header switch moves between **Learning** and **Teacher Studio** (on mobile the same two options appear at the bottom). A contextual section menu keeps the content manageable: **Home / Lessons / Practice / Exam preparation** for learners, and **Overview / Sessions / Missions / Exam coaching / Learners & reviews** for teachers. Every section has a bookmarkable hash route. There is no extra landing page or duplicate role toggle. The previous `#home` deep link still opens the learner dashboard. Materials & credits remain available from the footer. See [`docs/navigation-requirements.md`](docs/navigation-requirements.md).
+- The public **Home** page introduces Student and Teacher Studio and hosts the silent walkthrough. Student primary navigation is **My progress / My chapters / Exam preparation**. Each A1.1 chapter contains its own Kursbuch learning, Arbeitsbuch practice, approved teacher supplements and progress; there is no separate learner Practice section. Teacher Studio provides **Overview / Chapter planner / Chapter activities / Exam coaching / Learners & reviews**. Old `#student/lessons` and `#student/practice` links display the integrated chapters. Materials and credits are available from the footer. See [`docs/textbook-experience-alignment-20261023.md`](docs/textbook-experience-alignment-20261023.md).
 - The Learning dashboard links to **Exam Preparation** with Goethe/telc A1 mini-mocks, four skill practices, browser-generated listening, an 18-minute demo timer with pause, original explanations, results, history and study tips. Levels A2–C2 are clearly listed as **planned**, not offered as unreviewed exercises.
 - Teacher Studio has a **Question Bank** to draft, review and publish original A1 listening/reading checks and a response-review panel for writing and speaking-rehearsal notes. The learner sees qualitative teacher feedback on the completed attempt. Teacher-approved items appear only in newly started practice attempts.
 - Teachers can select a **role-play**, **writing mission**, or **speaking rehearsal** template, customise a learning goal, instructions, German example and success criteria, and save a draft or publish it to the demo learner.
@@ -49,7 +53,7 @@ The Learning homepage includes an 80-second, silent illustrated walkthrough of t
 1. Switch to **Teacher Studio → Missions** to open Experience Studio.
 2. Select **Role-play**, **Writing mission**, or **Speaking rehearsal** to populate the builder.
 3. Personalise the teaching instructions and success criteria, then **Publish to demo learner** (or save as a draft).
-4. Switch to **Learning → Practice**, open the mission under **Practice with a purpose**, and submit a German response.
+4. Switch to **Student Studio → My chapters**, expand the linked chapter, open the assigned teacher mission and submit a German response.
 5. Return to **Teacher Studio → Learners & reviews**, add feedback to the new mission entry, and switch back to Learning to read it.
 
 This demonstrates the workflow only. Publication does not notify students or synchronize anything between devices.
@@ -59,7 +63,7 @@ This demonstrates the workflow only. Publication does not notify students or syn
 1. Open **Teacher Studio → Sessions** and preview the published **At the café: Your first order** example.
 2. Select **Create lesson session**. Edit its title, learning goal and audience; change the text or answer key in each step, add a new block from the library, and use the ↑ / ↓ buttons to reorder it.
 3. Select **Preview as student**, then **Publish & assign** (or **Save draft**).
-4. Switch to **Learning → Practice** and open the assigned lesson session. Follow the cards, pronunciation, quiz, dialogue submission and final assessment through the summary.
+4. Switch to **Student Studio → My chapters** and open the assigned session under its corresponding chapter. Follow the cards, pronunciation, quiz, dialogue submission and final assessment through the summary.
 5. Return to **Teacher Studio → Learners & reviews**, respond to the submitted dialogue, then revisit the learner session summary to see that feedback.
 
 The sample A1 group is only a presentation of how group assignment would work later. It does not enroll or notify real learners. No external lesson books, recordings or protected exercises are copied into the composer.
@@ -88,7 +92,7 @@ The teacher's uploaded `netzwerk-a1-1pdf_compress.pdf` is **original Netzwerk A1
 
 The six PDF-grounded chapters now include **48 independently authored multiple-choice tasks** split across browser-TTS listening, original reading passages, grammar and vocabulary; there are also guided **writing and speaking-rehearsal prompts** in every chapter. **Plattform 1 (after Chapter 3)** and **Plattform 2 (after Chapter 6)** each provide a nine-question cross-chapter revision assembled from the corresponding original tasks. Exercises have replay, explanation, per-question retries, browser-local persistence and submission to the existing teacher review queue. This is original supplemental practice; neither the scanned exercise pages nor publisher media are copied, and teacher QA remains mandatory.
 
-The new materials are in `dist/workbook.js`, presented under **Student Studio → Lessons → Chapter practice** and **Student Studio → Practice → Workbook & revision**. Teacher Studio → Learners & reviews shows actual demo-browser chapter attempts and writing/speaking submissions. All data stay in local browser storage; there are no real student accounts or cross-device synchronisation. Run `node tests/workbook.mjs` along with the existing regression tests.
+The new materials are in `dist/workbook.js`, presented inside each corresponding **Student Studio → My chapters → Arbeitsbuch** section. Teacher Studio → Learners & reviews shows actual demo-browser chapter attempts and writing/speaking submissions. All data stay in local browser storage; there are no real student accounts or cross-device synchronisation. Run `node tests/workbook.mjs` along with the existing regression tests.
 
 ## Next steps before a real pilot
 
