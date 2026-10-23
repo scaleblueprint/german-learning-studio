@@ -1109,6 +1109,15 @@ h1 {letter-spacing:-.055em}
 }
 @media(prefers-reduced-motion:reduce){.studio-workspace .section-anchor-link,.student-chapter-mini{transition:none}}
 
+
+/* Chapter-centred learner activity feedback: supplemental practice stays near the source topic. */
+.chapter-review-summary{display:flex;flex-direction:column;gap:5px;margin:16px 20px 20px;padding:17px 19px;background:#fff6ee;border:1px solid #f1dfd2;border-radius:12px;color:#563849}
+.chapter-review-summary strong{font-size:13px;line-height:1.4}
+.chapter-review-summary span{font-size:11px;line-height:1.6;color:#765d68}
+.chapter-review-summary p{font-size:12px;line-height:1.65;margin-top:4px;padding-top:10px;border-top:1px solid #ecd8cc;color:#663f4c}
+.chapter-expanded-visual+.textbook-chapter-content{margin-top:0}
+@media(max-width:600px){.chapter-review-summary{margin:12px 12px 15px;padding:13px}}
+
 </style>
   </head>
   <body>
