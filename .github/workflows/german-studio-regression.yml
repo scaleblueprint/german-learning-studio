@@ -21,6 +21,7 @@ jobs:
       - name: Validate uploaded textbook source and archived editions
         run: |
           node tests/curriculum-a11.mjs
+          node tests/chapter-study.mjs
           node tests/curriculum-neu.mjs
           node tests/workbook.mjs
           node tests/rich-lessons.mjs
