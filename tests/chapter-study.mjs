@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const ctx=vm.createContext({window:{}});
-for(const name of ['a11-chapters-1-3.js','a11-chapters-4-6.js','chapter-one-foundations.js','chapter-study.js']){
+for(const name of ['a11-chapters-1-3.js','a11-chapters-4-6.js','chapter-one-foundations.js','chapter-prerequisites.js','chapter-study.js']){
  vm.runInContext(fs.readFileSync(new URL('../dist/'+name,import.meta.url),'utf8'),ctx,{filename:name});
 }
 const lessons=ctx.window.GERMAN_LESSONS;
@@ -32,9 +32,18 @@ assert.doesNotMatch(chapterStudy.render(2),/Numbers 1–20/,'Do not leak Chapter
 
 assert.equal(lessons.length,12,'Only twelve source-scoped A1.1 lessons are needed at runtime');
 assert.equal(chapterStudy.data.length,6,'Every verified textbook chapter has an understanding guide');
+assert.equal(ctx.window.GERMAN_PREREQUISITES.chapters.length,5,'Chapters 2–6 each need prerequisite teaching');
 assert.deepEqual([...chapterStudy.data].map(c=>c.number),[1,2,3,4,5,6]);
 for(const chapter of chapterStudy.data){
  const html=chapterStudy.render(chapter.number);
+ if(chapter.number>=2){
+  assert.match(html,/Learn this before the chapter challenge/,'Chapter '+chapter.number+' must have prerequisites before Try it');
+  assert.ok(html.indexOf('Learn this before the chapter challenge')<html.indexOf('Try it:'),'Teaching should precede assessment in chapter '+chapter.number);
+  const p=ctx.window.GERMAN_PREREQUISITES.get(chapter.number);
+  assert.equal(p.blocks.length,3);
+  assert.equal((html.match(/class="a11-prerequisite-block"/g)||[]).length,3);
+ }
+
  assert.ok(chapter.intro.split(/\s+/).length>=20);
  assert.equal(chapter.patterns.length,4,'Include four original real-world language patterns');
  assert.ok(chapter.patterns.every(([de,en,why])=>de.length>15&&en.length>10&&why.length>25));
