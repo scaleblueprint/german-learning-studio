@@ -466,3 +466,20 @@ h1 {letter-spacing:-.055em}
 .p4-speaking>p{line-height:1.6}.p4-speaking-model{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;background:#2a202c;color:white;border-radius:16px;padding:17px;gap:12px}.p4-speaking-model>div{display:grid;gap:7px}.p4-speaking-model span{font-size:11px;color:#ffd9ad}.p4-speaking-model strong{font-size:20px;line-height:1.5}.p4-speaking-model .btn{color:#30232a;background:#fff9f2}
 .p4-record-row{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:16px 0}.p4-record-row audio{max-width:100%;width:260px}.p4-checklist{border:1px solid #e6d8d1;border-radius:12px;padding:14px;display:grid;gap:12px}.p4-checklist legend{font-size:13px;font-weight:800;padding:0 8px}.p4-checklist label{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.5}.p4-checklist input{margin-top:2px;accent-color:#72344b;width:16px;height:16px}.p4-note{margin-top:12px}
 @media(max-width:600px){.p4-question,.p4-control,.p4-speaking{padding:12px}.p4-options{grid-template-columns:1fr}.p4-speaking-model strong{font-size:17px}}
+
+
+/* Phase 5 chapter templates, approval workflow, and rubrics */
+.p5-template-panel{margin:22px 0;padding:20px;border:1px solid #e7d6c9;border-radius:18px;background:#fffaf6}
+.p5-template-panel h3{margin:7px 0;font-size:21px}.p5-template-panel p,.p5-config p{font-size:13px;line-height:1.6;color:#655760}
+.p5-template-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:15px}
+.p5-template-grid button{background:#fff;border:1px solid #e7d6c9;border-radius:13px;padding:14px;text-align:left;display:grid;gap:7px;cursor:pointer;color:#422b39}
+.p5-template-grid button:hover{border-color:#a45f53;background:#fff3e9}.p5-template-grid strong{font-size:15px}.p5-template-grid span{font-size:12px;line-height:1.4}.p5-template-grid small{font-weight:800;color:#9b4a3f}
+.p5-config{margin:22px 0;border:1px solid #e2d3c7;border-radius:15px;padding:18px;background:#fffdfb}
+.p5-config-title h4{font-size:20px;margin:0}.p5-config .composer-meta-grid{margin:14px 0}.p5-rubric-editor{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin-top:12px}.p5-rubric-editor input{min-width:0;width:100%}
+.p5-review-rule{margin-top:14px;padding:12px;border-radius:10px;background:#fff0de}.p5-shelf-meta{color:#704b5b;font-size:12px;line-height:1.7}
+.p5-approval-actions{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:10px}.p5-pending,.p5-approved{font-size:12px;color:#67535b}
+.p5-approved{color:#167e61;font-weight:800}.p5-difficulty-note{padding:12px 15px;margin:14px 0;border-radius:12px;background:#fff3e5;color:#4d3544}.p5-difficulty-note p{font-size:13px;line-height:1.5;margin:5px 0 0}
+.p5-score-form{border:1px solid #dcd1cb;border-radius:12px;display:grid;gap:9px;margin:12px 0;padding:13px}
+.p5-score-form legend{font-weight:800;font-size:13px;padding:0 5px}.p5-score-form label{display:flex;flex-wrap:wrap;gap:9px;align-items:center;justify-content:space-between;font-size:12px}
+.p5-score-form select{background:white;border:1px solid #ccb9b5;padding:9px;border-radius:8px}.p5-graded{margin-top:9px;border-radius:12px;background:#e9f4ed;padding:12px}.p5-graded p{font-size:12px;margin:6px 0}
+@media(max-width:700px){.p5-template-grid,.p5-rubric-editor{grid-template-columns:1fr}.p5-config{padding:12px}}
