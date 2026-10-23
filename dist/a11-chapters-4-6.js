@@ -145,7 +145,7 @@ window.GERMAN_A11_LESSONS_PART2 = [
       44,
       50
     ],
-    "scene": "At a neighbourhood market, you want one juice and a small cheese. Later you order a drink at a café. You use the same basic grammar for both requests.",
+    "scene": "At a neighbourhood grocery shop, you choose juice, soup and cheese. The shopkeeper asks what you need, and you request each item politely. Notice how the noun article changes in the object position.",
     "phrase": {
       "de": "Ich nehme einen Apfelsaft und ein Brötchen, bitte.",
       "en": "I'll take an apple juice and a bread roll, please."
