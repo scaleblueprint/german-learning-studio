@@ -483,3 +483,96 @@ h1 {letter-spacing:-.055em}
 .p5-score-form legend{font-weight:800;font-size:13px;padding:0 5px}.p5-score-form label{display:flex;flex-wrap:wrap;gap:9px;align-items:center;justify-content:space-between;font-size:12px}
 .p5-score-form select{background:white;border:1px solid #ccb9b5;padding:9px;border-radius:8px}.p5-graded{margin-top:9px;border-radius:12px;background:#e9f4ed;padding:12px}.p5-graded p{font-size:12px;margin:6px 0}
 @media(max-width:700px){.p5-template-grid,.p5-rubric-editor{grid-template-columns:1fr}.p5-config{padding:12px}}
+
+
+/* Discoverable Student/Teacher workspace navigation — both studios share this frame. */
+.studio-workspace{display:grid;grid-template-columns:235px minmax(0,1fr);align-items:start;gap:26px}
+.studio-content{min-width:0}
+.studio-workspace .section-nav{position:sticky;top:103px;max-height:calc(100dvh - 120px);overflow-y:auto;overscroll-behavior:contain;background:#fffaf6;border:1px solid #eddcd2;border-radius:18px;box-shadow:0 8px 30px rgba(51,28,39,.055);min-width:0}
+.studio-workspace .section-nav-heading{padding:20px 18px 12px}
+.studio-workspace .section-nav-heading .eyebrow{font-size:9px;color:#b75c41}
+.studio-workspace .section-nav-heading strong{display:block;margin:6px 0 5px;font-size:18px;font-weight:800;color:#4b2a3d}
+.studio-workspace .section-nav-heading p{margin:0;font-size:12px;line-height:1.5;color:#856b70}
+.studio-workspace .section-nav-current{display:none}
+.studio-workspace .section-nav-inner{display:grid;grid-template-columns:minmax(0,1fr);gap:5px;padding:8px 10px 14px;max-width:none;width:100%}
+.studio-workspace .section-nav-entry{min-width:0;padding:1px;border-radius:11px;border:1px solid transparent}
+.studio-workspace .section-nav-entry.selected{background:#faece3;border-color:#f0d4c1}
+.studio-workspace .section-nav-entry:hover{background:#fff0e7}
+.studio-workspace .section-nav-item{display:block;width:100%;min-height:0;border:0!important;box-shadow:none!important;border-radius:10px;text-align:left;white-space:normal;font-size:13px;line-height:1.35;font-weight:800;padding:10px 12px 4px;background:transparent;color:#594555}
+.studio-workspace .section-nav-item:hover,.studio-workspace .section-nav-item.active{background:transparent;color:#853b3d}
+.studio-workspace .section-nav-entry small{display:block;padding:0 12px 10px;font-size:11px;line-height:1.4;color:#89737a}
+.studio-workspace .section-nav-entry.selected small{color:#875e65}
+.studio-workspace .section-anchor-list{border-top:1px solid #eeded7;padding:17px 12px 12px;display:grid;gap:3px}
+.studio-workspace .section-anchor-label{text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:10px;color:#ae634d;margin:0 8px 7px}
+.studio-workspace .section-anchor-link{display:flex;align-items:center;justify-content:space-between;gap:7px;width:100%;background:transparent;padding:8px 9px;border-radius:8px;text-align:left;font-size:11px;font-weight:700;color:#655560;line-height:1.4}
+.studio-workspace .section-anchor-link:hover{background:#f8ede5;color:#583044}
+.studio-workspace .section-anchor-link span{color:#bf8571;flex:0 0 auto}
+.studio-workspace .section-nav-foot{border-top:1px solid #f0e7e1;margin:0;padding:12px 18px 17px;font-size:10px;line-height:1.5;color:#927c81}
+.studio-content [id]{scroll-margin-top:112px}
+.student-chapter-map{margin:23px 0 27px}
+.student-chapter-map-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:15px}
+.student-chapter-map-head h2{font-size:clamp(22px,2.7vw,29px);margin:8px 0;color:#4b2d3d}
+.student-chapter-map-head p{font-size:13px;line-height:1.6;color:#816b75;max-width:600px}
+.student-chapter-map-head .btn{flex-shrink:0}
+.student-chapter-map-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.student-chapter-mini{min-height:116px;text-align:left;background:#fffaf7;border:1px solid #efdbce;border-radius:14px;display:flex;flex-direction:column;gap:6px;padding:16px;min-width:0}
+.student-chapter-mini:hover{background:#fff2e7;border-color:#ce9882}
+.student-chapter-mini span{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:#b1604f}
+.student-chapter-mini strong{font-size:14px;line-height:1.3;color:#513044;overflow-wrap:anywhere}
+.student-chapter-mini small{font-size:11px;color:#907681;line-height:1.4;margin-top:auto}
+.textbook-journey .textbook-chapter{scroll-margin-top:105px}
+.textbook-journey .textbook-chapter-intro{grid-template-columns:minmax(0,1fr);padding:19px 22px}
+.textbook-journey .textbook-chapter-intro .textbook-chapter-heading{min-width:0}
+.chapter-fold{border-top:1px solid #eee2dc}
+.chapter-fold-toggle{cursor:pointer;display:flex;justify-content:space-between;gap:15px;align-items:center;padding:12px 22px;color:#664453;list-style:none}
+.chapter-fold-toggle::-webkit-details-marker{display:none}
+.chapter-fold-toggle span{font-size:12px;font-weight:700}
+.chapter-fold-toggle strong{font-size:11px;color:#b15d46;white-space:nowrap}
+.chapter-fold[open]>.chapter-fold-toggle{background:#fff4eb}
+.chapter-expanded-visual{padding:17px 21px;background:#fffaf5;border-bottom:1px solid #eee2dc}
+.chapter-expanded-visual .real-photo-gallery{margin:0;max-width:100%}
+.chapter-expanded-visual .chapter-visual{max-width:100%}
+.teacher-curriculum-expand{margin:15px 0;background:#fdf8f4;border:1px solid #eeded5;border-radius:12px}
+.teacher-curriculum-expand>summary{cursor:pointer;list-style:none;padding:15px 17px;color:#613e4c;font-size:13px;font-weight:800;line-height:1.5}
+.teacher-curriculum-expand>summary::-webkit-details-marker{display:none}
+.teacher-curriculum-expand>summary span{float:right;color:#ae6956}
+.teacher-curriculum-expand[open]>summary{border-bottom:1px solid #eddcd3}
+.teacher-curriculum-expand>.teacher-planner-panels{padding:13px}
+@media(max-width:1120px){
+  .studio-workspace{grid-template-columns:205px minmax(0,1fr);gap:17px}
+  .studio-workspace .section-nav-item{font-size:12px}
+  .studio-workspace .section-nav-entry small{font-size:10px}
+  .student-chapter-map-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .studio-content .teacher-planner-layout{grid-template-columns:minmax(0,1fr)}
+  .studio-content .teacher-chapter-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
+  .studio-content .teacher-chapter-list h3,.studio-content .teacher-chapter-list p{grid-column:1/-1}
+}
+@media(max-width:900px){
+  .studio-workspace{grid-template-columns:minmax(0,1fr);gap:15px}
+  .studio-workspace .section-nav{position:static;max-height:none;overflow:visible}
+  .studio-workspace .section-nav-heading{padding:13px 16px 5px}
+  .studio-workspace .section-nav-heading p{display:none}
+  .studio-workspace .section-nav-heading strong{font-size:15px}
+  .studio-workspace .section-nav-current{display:block;padding:0 16px 6px;font-size:11px;color:#816775}
+  .studio-workspace .section-nav-current strong{color:#643a4e}
+  .studio-workspace .section-nav-inner{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;padding:7px 11px 12px}
+  .studio-workspace .teacher-section-nav .section-nav-inner{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .studio-workspace .section-nav-entry{border:1px solid #f2e7e0}
+  .studio-workspace .section-nav-item{padding:9px 10px 3px;min-height:0;font-size:12px}
+  .studio-workspace .section-nav-entry small{padding:0 10px 8px}
+  .studio-workspace .section-anchor-list{display:flex;overflow-x:auto;align-items:center;gap:4px;padding:10px 11px;scrollbar-width:thin}
+  .studio-workspace .section-anchor-label{flex:0 0 auto;margin:0 9px 0 3px}
+  .studio-workspace .section-anchor-link{white-space:nowrap;width:auto;flex:0 0 auto;padding:8px 10px;border:1px solid #eaded8}
+  .studio-workspace .section-nav-foot{display:none}
+}
+@media(max-width:600px){
+  .student-chapter-map-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .student-chapter-mini{padding:13px;min-height:125px}
+  .student-chapter-map-head{align-items:flex-start;flex-direction:column}
+  .student-chapter-map-head .btn{width:100%}
+  .chapter-fold-toggle{padding:13px;align-items:flex-start;flex-direction:column;gap:4px}
+  .chapter-expanded-visual{padding:12px}
+  .textbook-journey .textbook-chapter-intro{padding:15px}
+  .studio-workspace .section-nav-entry small{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){.studio-workspace .section-anchor-link,.student-chapter-mini{transition:none}}
