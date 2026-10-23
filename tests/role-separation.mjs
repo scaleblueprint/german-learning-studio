@@ -25,7 +25,7 @@ const input=(field,value)=>{
   listeners['root:input']({target:{dataset:{sessionBlockField:field},value,matches(selector){return selector==='[data-session-block-field]';}}});
 };
 
-let html=open('#student/lessons');
+let html=open('#student/chapters');
 assert.match(html,/Kursbuch → Arbeitsbuch → Plattform/);
 assert.equal((new Set([...html.matchAll(/id="course-chapter-(\d+)"/g)].map(x=>x[1]))).size,6);
 assert.doesNotMatch(html,/Create chapter session draft/);
@@ -51,8 +51,8 @@ click({saveSession:'draft'});
 let sessions=JSON.parse(store.get('ambertheory-german-studio-v1')).sessions;
 assert.equal(sessions[0].chapterNumber,4);
 assert.equal(sessions[0].status,'draft');
-html=open('#student/practice');
-assert.ok(!html.includes('Chapter 4 · Guten Appetit!'),'Draft stays teacher-only');
+html=open('#student/chapters');
+assert.ok(!html.includes('Chapter 4 · Guten Appetit! · Practice'),'Draft stays teacher-only');
 
 // Teacher can reopen the chapter draft and publish once original content is entered.
 open('#teacher/sessions');
@@ -67,7 +67,7 @@ click({toggleSession:pending.id});
 sessions=JSON.parse(store.get('ambertheory-german-studio-v1')).sessions;
 assert.equal(sessions[0].status,'published',JSON.stringify(sessions[0].blocks));
 assert.equal(sessions[0].chapterNumber,4);
-html=open('#student/practice');
+html=open('#student/chapters');
 assert.match(html,/Chapter 4 · Guten Appetit!/,'Published chapter-tagged session is now assigned');
 
 html=open('#teacher/learners');
