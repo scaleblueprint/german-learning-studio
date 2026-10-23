@@ -257,7 +257,7 @@ window.GERMAN_WORKBOOK = {
             "A pharmacy"
           ],
           "correct": 0,
-          "why": "Rathaus means town hall."
+          "why": "Rathaus names a town hall, while Bahnhof names a railway station."
         },
         {
           "skill": "Listening",
@@ -358,7 +358,7 @@ window.GERMAN_WORKBOOK = {
             "die Apotheke"
           ],
           "correct": 0,
-          "why": "A Bäckerei is a bakery."
+          "why": "Bäckerei means bakery: a shop where bread and other baked goods are sold."
         },
         {
           "skill": "Listening",
