@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+const events={},storage=new Map(),root={innerHTML:'',addEventListener(t,f){events['root:'+t]=f;}},toast={textContent:'',classList:{add(){},remove(){}}},location={hash:''};
+const voiced=[],window={addEventListener(t,f){events['win:'+t]=f;},scrollTo(){},speechSynthesis:{getVoices(){return [{lang:'de-DE',voiceURI:'de-test',name:'German demo'}]},cancel(){},speak(u){voiced.push({text:u.text,rate:u.rate,lang:u.lang,voice:u.voice?.name})}},SpeechSynthesisUtterance:class{constructor(t){this.text=t;}}};
+const ctx=vm.createContext({window,location,document:{getElementById(id){return id==='app'?root:toast;},querySelector(){return null;}},localStorage:{getItem(k){return storage.get(k)||null;},setItem(k,v){storage.set(k,v);}},navigator:{},fetch:async()=>({ok:false}),setTimeout:()=>1,clearTimeout(){},confirm:()=>true,console});
+for(const f of ['curriculum.js','lessons.js','a11-chapters-1-3.js','a11-chapters-4-6.js','workbook.js','chapter-visuals.js','rich-scenes.js','learning-objects.js','photo-practice.js','depth-guides.js','phase3-scene-labs.js','phase4-audio-labs.js','app.js'])vm.runInContext(fs.readFileSync(new URL('../dist/'+f,import.meta.url),'utf8'),ctx,{filename:f});
+const data=window.GERMAN_AUDIO_LABS.data,ids=Object.keys(data);
+assert.equal(ids.length,12);assert.equal(ids.reduce((n,k)=>n+data[k].questions.length,0),24);
+for(const id of ids){assert.ok(window.GERMAN_LESSONS.some(x=>x.id===id&&x.chapterNumber===data[id].chapter));assert.equal(data[id].questions.length,2);assert.equal(data[id].checklist.length,3);assert.ok(data[id].phrase.length>25);for(const q of data[id].questions){assert.equal(q.options.length,3);assert.ok(q.audio.length>25&&q.correct>=0&&q.correct<3);}}
+const open=hash=>{location.hash=hash;events['win:hashchange']();return root.innerHTML;};
+const click=d=>{const b={dataset:d,disabled:false,hasAttribute(n){return n.startsWith('data-')&&n.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase()) in d;}};events['root:click']({target:{closest(){return b;}}});events['win:hashchange']();};
+let html=open('#lesson/a11-greetings');assert.match(html,/03 · Hear & speak/);
+click({stage:'hear'});html=root.innerHTML;assert.match(html,/What did you hear/);
+assert.ok(!html.includes('Guten Tag. Ich heiße Eva.'),'Transcript is hidden before checking');
+click({p4Play:'a11-greetings|0'});assert.equal(voiced.at(-1).rate,.95);
+click({p4PlaySlow:'a11-greetings|0'});assert.equal(voiced.at(-1).rate,.70);
+click({p4Choice:'a11-greetings|0|0'});click({p4Check:'a11-greetings|0'});html=root.innerHTML;assert.match(html,/Transcript:/);
+let s=JSON.parse(storage.get('ambertheory-german-studio-v1'));assert.equal(s.audioPractice['a11-greetings'].answers[0].correct,true);
+const cb={dataset:{p4Reflect:'a11-greetings|0'},checked:true,value:'',matches(sel){return sel==='[data-p4-reflect]';}};
+events['root:change']({target:cb});s=JSON.parse(storage.get('ambertheory-german-studio-v1'));assert.equal(s.audioPractice['a11-greetings'].reflection[0],true);
+click({p4Speed:'slow'});click({p4Model:'a11-greetings'});assert.equal(voiced.at(-1).rate,.70);
+open('#teacher/sessions');assert.match(root.innerHTML,/Listening: 1\/4 correct/);
+open('#lesson/a11-greetings');click({stage:'hear'});click({p4Retry:'a11-greetings|0'});
+s=JSON.parse(storage.get('ambertheory-german-studio-v1'));assert.equal(window.GERMAN_AUDIO_LABS.stats('a11-greetings',s.audioPractice).answered,0);
+console.log('Phase 4 passed: 12 speaking prompts, 24 audio-first checks, TTS pace, answers, reflection, retry and teacher progress.');

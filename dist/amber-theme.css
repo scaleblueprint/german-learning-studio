@@ -448,3 +448,21 @@ h1 {letter-spacing:-.055em}
 .p3-option:disabled{cursor:default;opacity:1}.p3-feedback{padding:12px 14px;border-radius:10px;background:#e6f5ee;color:#174e3c;line-height:1.55}.p3-feedback.p3-review{background:#fff0e1;color:#573929}
 .p3-foot{margin:14px 0 0}
 @media(max-width:600px){.p3-lab{padding:12px}.p3-lab-header{flex-wrap:wrap}.p3-score{text-align:left}.p3-tiles{gap:4px}.p3-tile{padding:10px 6px}.p3-arrow{font-size:11px}.p3-options{grid-template-columns:1fr}.p3-example{flex-wrap:wrap}}
+
+
+/* Phase 4: listening, pronunciation, and private-speaking practice */
+.p4-lab{display:grid;gap:20px}.p4-header h2{font-size:clamp(23px,3vw,32px);margin:10px 0}.p4-header p{line-height:1.65;color:#65555d}
+.p4-control,.p4-question,.p4-speaking{padding:18px;border:1px solid #e7dbd2;border-radius:18px;background:#fffdfb}
+.p4-control{display:grid;gap:12px;background:#fff3e9}.p4-control>div:first-child{display:grid;gap:5px}.p4-control>div:first-child span,.p4-voice-note,.p4-record-row>span,.p4-note{font-size:12px;color:#695b60;line-height:1.6}
+.p4-speeds{display:flex;flex-wrap:wrap;gap:8px}.p4-speeds button{padding:9px 13px;background:#fff;border:1px solid #bb9e97;border-radius:24px;color:#573b4d;cursor:pointer}.p4-speeds button.selected{background:#72344b;color:white;border-color:#72344b}
+.p4-voice{font-size:12px;font-weight:700;display:grid;gap:5px;max-width:380px}.p4-voice select{border:1px solid #d8b9a7;background:white;padding:9px;border-radius:10px;max-width:100%}
+.p4-listen{display:grid;gap:12px}.p4-section-title{display:flex;gap:12px;align-items:center;justify-content:space-between}.p4-section-title h3,.p4-speaking h3{font-size:20px;margin:7px 0}.p4-section-title>span{font-size:12px;font-weight:800;color:#72344b}
+.p4-qhead{display:flex;gap:12px;justify-content:space-between;align-items:center}.p4-qhead span{font-size:12px;color:#795768}
+.p4-play{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:13px 0}.p4-play small{font-size:12px;color:#796764;flex-basis:100%}.p4-question h4{font-size:16px;margin:15px 0}
+.p4-options{display:grid;gap:8px;grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:14px}
+.p4-option{border:1px solid #decac2;border-radius:10px;padding:12px;background:white;color:#30232a;text-align:left;cursor:pointer;min-height:48px;font-size:13px}
+.p4-option.selected{background:#fff0df;border-color:#b97448}.p4-option.correct{background:#e1f3e9;border-color:#167e61}.p4-option.incorrect{border-color:#c85854}.p4-option:disabled{opacity:1;cursor:default}
+.p4-feedback{padding:12px;background:#e8f7ef;border-radius:12px;line-height:1.6;font-size:13px}.p4-feedback.needs-review{background:#fff1e4}.p4-feedback p{margin:8px 0}
+.p4-speaking>p{line-height:1.6}.p4-speaking-model{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;background:#2a202c;color:white;border-radius:16px;padding:17px;gap:12px}.p4-speaking-model>div{display:grid;gap:7px}.p4-speaking-model span{font-size:11px;color:#ffd9ad}.p4-speaking-model strong{font-size:20px;line-height:1.5}.p4-speaking-model .btn{color:#30232a;background:#fff9f2}
+.p4-record-row{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:16px 0}.p4-record-row audio{max-width:100%;width:260px}.p4-checklist{border:1px solid #e6d8d1;border-radius:12px;padding:14px;display:grid;gap:12px}.p4-checklist legend{font-size:13px;font-weight:800;padding:0 8px}.p4-checklist label{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.5}.p4-checklist input{margin-top:2px;accent-color:#72344b;width:16px;height:16px}.p4-note{margin-top:12px}
+@media(max-width:600px){.p4-question,.p4-control,.p4-speaking{padding:12px}.p4-options{grid-template-columns:1fr}.p4-speaking-model strong{font-size:17px}}
