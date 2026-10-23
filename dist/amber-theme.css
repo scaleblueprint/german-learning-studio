@@ -421,3 +421,30 @@ h1 {letter-spacing:-.055em}
 .milestone-track{flex-wrap:wrap;gap:5px}
 @media(max-width:800px){.a11-theory-grid{grid-template-columns:1fr}.course-sidebar{max-height:none;overflow:visible}}
 @media(max-width:540px){.learner-book-lesson-links .view-link{padding:13px}.a11-theory-card{padding:15px}.a11-theory-card p{font-size:13px}}
+
+
+/* Phase 3 — scoped visual situation learning labs */
+.p3-lab{margin:26px 0;padding:20px;border:1px solid #e5d7ca;border-radius:22px;background:#fffdf9}
+.p3-lab-header{display:flex;align-items:flex-start;gap:14px;justify-content:space-between}
+.p3-lab-header h3{font-size:clamp(20px,2.6vw,27px);line-height:1.2;margin:8px 0}
+.p3-lab-header p,.p3-foot{font-size:13px;line-height:1.6;color:#6a5b56;max-width:650px}
+.p3-score{flex-shrink:0;font-weight:800;font-size:23px;color:#72344b;text-align:right}.p3-score small{display:block;font-weight:500;font-size:11px;color:#6d6060}
+.p3-visual{background:#241d26;color:#fff8ee;border-radius:17px;padding:20px;margin:16px 0 20px;overflow:hidden}
+.p3-visual-label{text-transform:uppercase;letter-spacing:.1em;color:#ffca83;font-size:11px;font-weight:800}
+.p3-tiles{display:flex;gap:8px;align-items:stretch;margin-top:14px}.p3-tile{flex:1;min-width:0;border:1px solid #62505b;border-radius:12px;background:#41303e;padding:16px 10px;display:flex;flex-direction:column;gap:7px}
+.p3-tile span{font-size:11px;color:#f1bdbc}.p3-tile strong{font-size:clamp(13px,2vw,19px);overflow-wrap:anywhere}.p3-tile small{font-size:11px;color:#f0d6c6}
+.p3-arrow{color:#ffc76b;align-self:center;font-weight:bold}.p3-visual p{font-size:12px;color:#e5ccca;margin:12px 0 0}
+.p3-scenes{display:grid;gap:10px}.p3-scene{border:1px solid #e7ded7;border-radius:14px;overflow:hidden;background:#fff}
+.p3-scene summary{display:flex;align-items:center;gap:12px;cursor:pointer;padding:14px 16px;list-style:none}.p3-scene summary::-webkit-details-marker{display:none}
+.p3-scene summary:focus-visible,.p3-option:focus-visible{outline:3px solid #df6252;outline-offset:2px}
+.p3-scene-no{width:29px;height:29px;border-radius:50%;background:#f7e1d7;display:grid;place-items:center;flex-shrink:0;color:#72344b;font-weight:800}
+.p3-scene-status{margin-left:auto;font-size:12px;color:#795664;white-space:nowrap}.p3-scene-body{border-top:1px solid #efe8df;padding:18px;display:grid;gap:14px}.p3-scene-body>p{line-height:1.65;margin:0}
+.p3-example{padding:14px 16px;border-left:4px solid #df6252;border-radius:10px;background:#fff4ec;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.p3-example div{display:grid;gap:5px}.p3-example strong{color:#532b40;font-size:17px}.p3-example span{font-size:13px;color:#675a5b}
+.p3-rule{background:#f8f3ed;padding:14px;border-radius:10px}.p3-scene h4{margin:0;font-size:16px}
+.p3-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.p3-option{padding:13px 10px;border:1px solid #decfc8;background:#fff;border-radius:10px;text-align:left;cursor:pointer;color:#3b292d;font:inherit;font-size:13px;min-height:52px}
+.p3-option.selected{background:#fff1df;border-color:#c8764b}.p3-option.correct{background:#e6f5ee;border-color:#167e61}.p3-option.incorrect{border-color:#b14848}
+.p3-option:disabled{cursor:default;opacity:1}.p3-feedback{padding:12px 14px;border-radius:10px;background:#e6f5ee;color:#174e3c;line-height:1.55}.p3-feedback.p3-review{background:#fff0e1;color:#573929}
+.p3-foot{margin:14px 0 0}
+@media(max-width:600px){.p3-lab{padding:12px}.p3-lab-header{flex-wrap:wrap}.p3-score{text-align:left}.p3-tiles{gap:4px}.p3-tile{padding:10px 6px}.p3-arrow{font-size:11px}.p3-options{grid-template-columns:1fr}.p3-example{flex-wrap:wrap}}

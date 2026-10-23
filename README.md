@@ -110,3 +110,7 @@ A1.1 Chapters 1–6 now each have two independently authored photo-to-German-phr
 
 ## Phase 2 — deeper guided lessons (23 October 2026)
 All 12 verified original A1.1 topics have three original step-by-step worked examples, a common-error grammar comparison and an interactive sentence-order lab in Understand. Attempts and mastery are tracked locally in the Teacher Studio chapter panel. A teacher can preview the same learner lesson from the planner. Photo-choice distractors now stay within the current chapter and a shopping package quantity was clarified. See [Phase 2 content audit](docs/phase2-lesson-depth-audit.md). Original practice requires qualified German-teacher QA.
+
+## Phase 3 — complete visual situation practice (23 October 2026)
+
+Every one of the 12 guided original-edition A1.1 lessons now contains three additional independently authored real-life scenes with topical visual boards, longer usage explanations, contextual German/English examples, 36 new answerable checks, specific feedback and retry. Learner answers are saved in this browser and shown in the matching Teacher Studio chapter report. The scenes build on existing photographs, teaching objects, 48 workbook checks and the Plattform revisions, without reproducing copyrighted textbook materials. See [Phase 3 implementation and limitations](docs/phase3-visual-situation-audit.md). Real student accounts, licensed natural audio, teacher content QA, mobile browser review and A1.2 source verification remain outstanding.
