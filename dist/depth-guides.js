@@ -503,7 +503,7 @@
     "bank": [
       "war",
       "Das",
-      "schön.",
+      "gut.",
       "Essen"
     ],
     "order": [
@@ -512,7 +512,7 @@
       0,
       2
     ],
-    "answer": "Das Essen war schön.",
+    "answer": "Das Essen war gut.",
     "explain": "Das Essen is a singular subject. Use war for the past of sein with a singular subject."
   }
 };

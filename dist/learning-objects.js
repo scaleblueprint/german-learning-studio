@@ -162,7 +162,7 @@
       ],
       [
         "🥛",
-        "eine Milch"
+        "eine Packung Milch"
       ],
       [
         "🍅",

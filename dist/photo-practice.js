@@ -6,7 +6,8 @@
  const get=(chapter,index)=>{
    const n=Number(chapter),i=Number(index),photo=data()[n]?.[indices[n]?.[i]];
    if(!photo||!Number.isInteger(i)||i<0||i>1)return null;
-   const wrong1=data()[(n%6)+1]?.[0]?.de,wrong2=data()[((n+2)%6)+1]?.[0]?.de;
+   const chapterScenes=data()[n]||[],other=chapterScenes.filter((_,j)=>j!==indices[n][i]);
+   const wrong1=other[0]?.de,wrong2=other[1]?.de;
    if(!wrong1||!wrong2)return null;
    const correct=(n+i)%3,options=[wrong1,wrong2];options.splice(correct,0,photo.de);
    return {photo,question:'Look at the picture. Which German sentence fits this everyday situation?',options,correct,why:photo.cue+'. '+photo.de};

@@ -106,3 +106,7 @@ Run `node tests/workbook.mjs` for workbook/question coverage and learner-teacher
 ## Phase 1 continuation — image-led practice and reading repair (23 October 2026)
 
 A1.1 Chapters 1–6 now each have two independently authored photo-to-German-phrase checks (12 total), using the existing credited Pexels photography. Learners can check and retry answers, hear the model sentence through their browser and retain progress locally; Teacher Studio reports each chapter's photo-practice results. Separately, Reading workbook questions now show their original German passage rather than incorrectly being rendered as a hidden listening transcript. Listening tasks retain their audio-first interaction. CI runs a new photo and reading regression. These features are original supplementary practice requiring qualified German-teacher QA; they are not republished textbook exercises. All saved progress is limited to this browser.
+
+
+## Phase 2 — deeper guided lessons (23 October 2026)
+All 12 verified original A1.1 topics have three original step-by-step worked examples, a common-error grammar comparison and an interactive sentence-order lab in Understand. Attempts and mastery are tracked locally in the Teacher Studio chapter panel. A teacher can preview the same learner lesson from the planner. Photo-choice distractors now stay within the current chapter and a shopping package quantity was clarified. See [Phase 2 content audit](docs/phase2-lesson-depth-audit.md). Original practice requires qualified German-teacher QA.

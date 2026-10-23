@@ -495,3 +495,23 @@
 .photo-practice-choices{display:grid;gap:8px;margin-bottom:15px}.photo-practice-choices .choice{text-align:left;min-height:46px}
 .photo-practice-content .feedback .view-link{display:block;margin-top:8px}
 @media(max-width:720px){.photo-practice-grid{grid-template-columns:1fr}.photo-practice-card img{height:215px}}
+
+/* Phase 2 textbook-depth guides and accessible sentence-builder activities */
+.depth-guide{margin:28px 0 34px;border:1px solid #eadacc;background:#fffcf8;border-radius:20px;overflow:hidden}
+.depth-guide-heading{padding:27px 24px 10px}.depth-guide-heading h2{font-size:clamp(23px,3vw,31px);margin:6px 0 9px}.depth-guide-heading p{color:var(--muted);max-width:74ch}
+.depth-worked-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:10px 20px 24px}
+.depth-worked-card{min-width:0;border:1px solid #e8d9cf;background:white;border-radius:13px;padding:18px;display:flex;flex-direction:column;align-items:flex-start}
+.depth-step{font-size:11px;letter-spacing:.1em;font-weight:800;color:#a45441}.depth-worked-card h3{font-size:17px;line-height:1.35;margin:7px 0 9px}.depth-worked-card p{font-size:14px;line-height:1.62;margin:0 0 15px;flex:1}
+.depth-phrase{font-size:16px;font-weight:700;color:#6d3449;line-height:1.4}.depth-worked-card small{font-size:12px;line-height:1.4;color:#666;margin:6px 0 12px}
+.depth-compare{display:grid;grid-template-columns:minmax(120px,1fr) 2fr;gap:18px;padding:24px;background:#fcefe7;border-block:1px solid #e9d4c7}.depth-compare h3{font-size:21px;margin-top:7px}
+.depth-compare del{display:block;color:#7a5652;text-decoration-thickness:2px;margin-bottom:6px}.depth-compare strong{display:block;color:#145f48;font-size:18px}.depth-compare p{margin:10px 0 0;font-size:14px;line-height:1.55}
+.depth-builder{padding:24px}.depth-builder h3{font-size:21px;margin:6px 0}.depth-builder p{margin:0 0 16px;line-height:1.55}
+.depth-slots{display:flex;align-items:center;align-content:flex-start;flex-wrap:wrap;gap:8px;background:#fff;border:2px dashed #ddcbbf;min-height:70px;padding:12px;border-radius:11px;margin-bottom:12px}
+.depth-slots span:not(.depth-slot-empty){padding:8px 11px;border-radius:8px;background:#e9f4ed;color:#174d37;font-weight:700}.depth-slot-empty{color:#736a69;font-size:14px}
+.depth-wordbank{display:flex;flex-wrap:wrap;gap:8px}.depth-word{border:1px solid #bca59d;border-radius:10px;padding:10px 15px;background:#fff;font:inherit;font-weight:700;color:#64384a;min-height:44px;cursor:pointer}
+.depth-word:hover:not(:disabled){background:#fff0e5}.depth-word:disabled{opacity:.42;cursor:default}.depth-controls{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.depth-model{font-size:18px;font-weight:700;padding:10px 0;color:#1f6047}
+.depth-caption{display:block;padding:0 24px 22px;color:#756762}
+.teacher-shared-course{margin:15px 0;border:1px solid var(--line);border-radius:15px;background:#fff7f1;padding:21px}.teacher-shared-course h4{font-size:18px;margin:6px 0}
+.teacher-shared-course p{font-size:14px;line-height:1.55;margin:0 0 14px}.teacher-shared-links{display:flex;gap:8px;flex-wrap:wrap}
+@media(max-width:950px){.depth-worked-grid{grid-template-columns:1fr}.depth-worked-card p{flex:initial}.depth-compare{grid-template-columns:1fr}}
+@media(max-width:540px){.depth-guide-heading,.depth-builder{padding:19px}.depth-worked-grid{padding:8px 14px 18px}.depth-compare{padding:19px}}

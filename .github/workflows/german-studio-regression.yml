@@ -25,6 +25,7 @@ jobs:
           node tests/workbook.mjs
           node tests/rich-lessons.mjs
           node tests/photo-practice.mjs
+          node tests/depth-guides.mjs
       - name: Run student and teacher regression checks
         run: |
           node tests/smoke.mjs
