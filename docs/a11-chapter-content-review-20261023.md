@@ -43,3 +43,24 @@ The six verified A1.1 chapter scope maps from the previously reviewed scan were 
 - Extend comprehension beyond closed choice: more short authentic-style notices, independently created role-play variations, dictation/number listening and map or calendar interactions where they improve comprehension.
 - Verify all image links, examples, pronunciation playback and mobile expandable layouts with students and teacher.
 - Add authentic/licensed speaking-listening content only with explicit recording rights. Never copy publisher illustrations or audio from the scanned coursebook.
+
+
+## Follow-up: Chapters 2–6 full reading expansion
+
+Completed in the source-controlled app after the six-chapter alignment release. The previously audited 166-page uploaded original A1.1 scan underpins the **chapter boundaries and verified high-level objectives**. The scan's page images were not reattached for this follow-up; therefore this expansion is not a fresh page-by-page review or a claim to reproduce the full publisher book.
+
+**New learner section:** *Read the chapter in depth*, placed under each verified chapter's Start here guide, before the Kursbuch's two longer guided lessons and the corresponding Arbeitsbuch practice. Each of Chapters 2–6 has **five independently written reading topics**, a topic-specific explanation of at least 85 words, three original bilingual sentence examples with usage explanations and pronunciation playback, a common error comparison, and a three-choice understanding check with feedback/retry. There are **25 added topics, 75 worked examples and 25 new checks**. All results are saved in a new additive browser-local `chapterReaderProgress` field without touching previous lesson/workbook scores.
+
+| Chapter | Coursebook PDF | Five newly developed reading topics |
+| --- | --- | --- |
+| 2 · Freunde, Kollegen und ich | 17–26 | Hobbies & `gern`; weekdays and meetings; occupations and hours; nouns, articles and plurals; seasons and profiles |
+| 3 · In der Stadt | 27–36 | City landmarks; definite/indefinite articles; negation with `kein`; public transport; polite map directions |
+| 4 · Guten Appetit! | 41–50 | Mealtimes/food groups; food shops; quantities/prices; masculine accusative; polite shop dialogue |
+| 5 · Tag für Tag | 51–60 | Clock reading; daily routines; family/possessives; modal verbs; appointments |
+| 6 · Zeit mit Freunden | 61–70 | Dates/invitations; separable verbs/leisure plans; restaurant exchanges; accusative personal pronouns; `war` and `hatte` |
+
+**Learner experience:** closed-by-default sections prevent lengthy scrolling; each detailed topic can be opened individually. A simple completion count, independently authored practice and answer explanations help learners move from meaning to examples to recall. The same content is available to teachers through the chapter planner. The previously implemented photographs, original visual language objects, audio, workbook practice, Plattform revisions and teacher sessions remain intact.
+
+**Safety and correctness boundaries:** chapters 7–12 are in the A1.2 volume, not the user's uploaded 166-page A1.1 scan, and remain inactive. These new exercises are independently authored and require German-teacher language, register and pedagogical sign-off. Real mobile device tests, voice clarity, image endpoint access and student usability remain manual checks. This is still a same-browser prototype.
+
+**Automated validation:** `tests/chapter-readers.mjs` checks all five chapters, page boundaries, 25 substantive topics and their examples/checks, learner answer/retry persistence and teacher preview; the regression suite includes the test.
