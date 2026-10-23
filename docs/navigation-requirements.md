@@ -57,3 +57,9 @@ Each destination is a real hash route, survives refresh, and highlights its menu
 - The Teacher chapter planner collapses detailed objective, grammar and activity cards behind an explicit disclosure while keeping its core chapter tools and learner reports available.
 - Preserve direct deep links, lesson navigation, editor/review state, browser-local storage and published-session approval gates. Avoid separate navigation systems for the student and teacher.
 - Regression: `tests/navigation.mjs`, `tests/smoke.mjs`, `tests/role-separation.mjs`, `tests/phase5.mjs`, and the existing course/exam suites.
+
+## Revised textbook-first navigation (23 October 2026)
+
+The original **Lessons / Practice** learner split is superseded. The only learner primary destinations are **My progress**, **My chapters**, and **Exam preparation**. Within **My chapters**, each of the six source-verified A1.1 chapters integrates independently written Kursbuch explanations, Arbeitsbuch practice, teacher-published chapter exercises, progress and teacher feedback; Plattform 1 and 2 remain after Chapters 3 and 6. Legacy `#student/lessons` and `#student/practice` bookmarks resolve to this unified view.
+
+Student course routes accept `#student/chapters/N` for N=1–6; lesson/workbook return links preserve chapter context. Standalone legacy lesson IDs are not navigable as textbook lessons. Teacher authoring is chapter-scoped and remains separate from independent Goethe/telc exam coaching. See [textbook alignment audit](textbook-experience-alignment-20261023.md) for content decisions and continuing limitations. This section takes precedence over the old navigation table above.
