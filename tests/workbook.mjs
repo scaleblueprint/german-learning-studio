@@ -44,8 +44,10 @@ assert.ok(!html.includes('data-workbook="7"')&&!html.includes('data-workbook="12
 assert.doesNotMatch(html,/A1\.2 · source PDF pending/,'A1.2 previews are removed from the active course');
 assert.equal((new Set([...html.matchAll(/id="course-chapter-(\d+)"/g)].map(x=>x[1]))).size,6,'Six verified book chapters only');
 assert.ok(html.includes('data-workbook="review-3"')&&html.includes('data-workbook="review-6"'),"Both textbook review checkpoints are present");
-html=open('#student/practice');
-assert.equal((html.match(/class="workbook-tile"/g)||[]).length,8,'6 chapters + 2 checkpoints');
+html=open('#student/chapters');
+assert.equal((html.match(/class="textbook-chapter"/g)||[]).length,6,'six chapter workspaces');
+assert.equal((html.match(/class="platform-checkpoint"/g)||[]).length,2,'two Plattform checkpoints');
+assert.equal((html.match(/class="chapter-fold"/g)||[]).length,6,'workbooks accessible within chapter disclosures');
 assert.match(html,/Plattform 1/);
 assert.match(html,/Plattform 2/);
 click({workbook:'1'});
