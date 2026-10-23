@@ -22,6 +22,7 @@ jobs:
         run: |
           node tests/curriculum-a11.mjs
           node tests/chapter-study.mjs
+          node tests/prerequisite-audit.mjs
           node tests/chapter-readers.mjs
           node tests/curriculum-neu.mjs
           node tests/workbook.mjs
