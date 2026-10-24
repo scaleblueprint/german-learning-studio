@@ -21,12 +21,11 @@
    const score=stats(n,progress);
    return '<section class="photo-practice" aria-label="Chapter '+n+' picture practice"><div class="visual-section-title">'+
      '<span class="eyebrow">Look · Choose · Say</span><h2>German through real-life pictures</h2>'+
-     '<p>Look at each photograph, choose a phrase that belongs in the situation, and listen to the model after checking. Original exercises awaiting German-teacher review.</p>'+
+     '<p>Explore each original illustrated situation, choose a German phrase that fits, and listen to the model after checking. Teacher language review is pending.</p>'+
      '<strong>'+score.answered+'/'+score.total+' attempted · '+score.correct+' correct</strong></div><div class="photo-practice-grid">'+
      tasks.map((q,i)=>{
        const key=n+':'+i,answer=progress[key],selected=answer?answer.chosen:selection[key],p=q.photo;
-       return '<article class="card photo-practice-card"><figure><img src="'+esc(p.src)+'" alt="'+esc(p.alt)+'" loading="lazy" decoding="async" referrerpolicy="no-referrer"/>'+
-         '<figcaption>Photo: <a href="'+esc(p.source)+'" target="_blank" rel="noopener noreferrer">Pexels / '+esc(p.credit)+'</a></figcaption></figure>'+
+       return '<article class="card photo-practice-card"><figure class="a11-workbook-scene" role="img" aria-label="'+esc(p.alt)+'"><div class="a11-workbook-scene-art" aria-hidden="true">'+({1:['👥','🏫'],2:['🚲','💼'],3:['🚋','🧭'],4:['🥖','🛒'],5:['⏰','📅'],6:['🎂','🍽️']}[n]?.[i]||'📖')+'</div><figcaption>'+esc(p.title)+' · Original visual practice</figcaption></figure>'+
          '<div class="photo-practice-content"><span class="eyebrow">Scene '+(i+1)+'</span><h3>'+esc(q.question)+'</h3>'+
          '<div class="photo-practice-choices">'+q.options.map((phrase,j)=>'<button type="button" lang="de" class="choice '+(selected===j?'selected ':'')+
          (answer&&j===q.correct?'correct ':'')+(answer&&j===answer.chosen&&!answer.correct?'incorrect':'')+
@@ -36,7 +35,7 @@
            '<button type="button" class="view-link" data-photo-retry="'+key+'">Retry scene</button>':
            '<button type="button" class="btn btn-primary btn-small" data-photo-check="'+key+'" '+(selected===undefined?'disabled':'')+'>Check phrase</button>')+
          '</div></article>';
-     }).join('')+'</div><p class="workbook-disclaimer">Photographs require internet access. Alternative text describes the scene. Scores remain in this browser only.</p></section>';
+     }).join('')+'</div><p class="workbook-disclaimer">Original illustrated practice, distinct from the photographic chapter gallery. Scores remain in this browser only.</p></section>';
  };
  window.GERMAN_PHOTO_PRACTICE={get,stats,render};
 })();
