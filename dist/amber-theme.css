@@ -793,15 +793,15 @@ h1 {letter-spacing:-.055em}
 .has-chapter-toolbar .studio-content [id]{scroll-margin-top:242px}
 .has-chapter-toolbar .textbook-chapter{scroll-margin-top:242px}
 .has-chapter-toolbar .learner-book-route{margin-top:14px}
-.has-chapter-toolbar .textbook-chapter.is-selected{border-color:#dda995;box-shadow:0 8px 25px rgba(95,53,64,.065)}
-.has-chapter-toolbar .textbook-chapter:not(.is-selected) .textbook-chapter-intro{padding:12px 16px;background:#fffaf5}
-.has-chapter-toolbar .textbook-chapter:not(.is-selected) .textbook-chapter-index{min-width:36px;width:42px;height:46px}
-.has-chapter-toolbar .textbook-chapter:not(.is-selected) .textbook-chapter-index strong{font-size:17px}
-.has-chapter-toolbar .textbook-chapter:not(.is-selected) .textbook-chapter-heading p,
-.has-chapter-toolbar .textbook-chapter:not(.is-selected) .textbook-chapter-heading small{display:none}
-.has-chapter-toolbar .textbook-chapter:not(.is-selected) .textbook-chapter-heading h4{font-size:14px;margin:3px 0}
-.has-chapter-toolbar .textbook-chapter:not(.is-selected) .chapter-fold-toggle{padding:9px 16px}
-.has-chapter-toolbar .textbook-chapter:not(.is-selected) .chapter-fold-toggle span{font-size:11px}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="true"]{border-color:#dda995;box-shadow:0 8px 25px rgba(95,53,64,.065)}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .textbook-chapter-intro{padding:12px 16px;background:#fffaf5}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .textbook-chapter-index{min-width:36px;width:42px;height:46px}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .textbook-chapter-index strong{font-size:17px}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .textbook-chapter-heading p,
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .textbook-chapter-heading small{display:none}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .textbook-chapter-heading h4{font-size:14px;margin:3px 0}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .chapter-fold-toggle{padding:9px 16px}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .chapter-fold-toggle span{font-size:11px}
 .has-chapter-toolbar .textbook-chapter-list{gap:12px}
 @media(max-width:1020px){
  .chapter-toolbar{top:73px;padding:7px 12px;gap:6px}
