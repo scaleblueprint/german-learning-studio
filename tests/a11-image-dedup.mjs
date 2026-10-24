@@ -22,7 +22,7 @@ assert.ok(!app.includes('realPhotos(unit.number,{compact:true,heading:false})'),
 assert.ok(!app.includes('realPhotos(l.chapterNumber)'),'Lesson header duplicates gallery');
 const story=read('dist/a11-storyboards.js');
 assert.ok(!story.includes('photoMarkup=photo?'),'Storyboards must not repeat photo gallery');
-for(let n=1;n<=6;n++)assert.ok(story.includes('  '+n+':'), 'Original chapter-specific illustration missing: '+n);
+for(let n=1;n<=6;n++)assert.ok(story.includes(n+':{title:'), 'Original chapter-specific illustration missing: '+n);
 assert.ok(!read('dist/photo-practice.js').includes('esc(p.src)'), 'Workbook repeats chapter photo asset');
 const ext=read('dist/a11-visual-extensions.js');
 assert.ok(ext.includes('const photoByExactTerm={};'),'Context photos must not be repeated in vocabulary cards');
