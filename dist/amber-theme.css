@@ -760,3 +760,76 @@ h1 {letter-spacing:-.055em}
 .a11-prerequisite-check details{background:#fff;border:1px solid #d0e4d3;border-radius:8px;padding:9px 11px}
 .a11-prerequisite-check summary{cursor:pointer;font-weight:700;color:#416d4f}
 @media(max-width:700px){.a11-prerequisites{padding:14px 11px}.a11-prerequisite-nav{display:flex;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:thin}.a11-prerequisite-nav button{flex:0 0 auto;white-space:nowrap}.a11-prerequisite-block{padding:12px}.a11-prerequisite-examples{grid-template-columns:minmax(0,1fr)}}
+
+
+/* Chapter reader navigation: stays with learners while they scroll long A1.1 topics. */
+.chapter-toolbar{
+ position:sticky;top:85px;z-index:29;max-width:100%;background:#fff9f3;
+ border-bottom:1px solid #e7d7ce;box-shadow:0 8px 20px rgba(53,31,40,.09);
+ padding:8px max(16px,calc((100vw - 1280px)/2)) 9px;
+ display:grid;gap:7px
+}
+.chapter-toolbar button{font:inherit;cursor:pointer;transition:background-color .16s,border-color .16s}
+.chapter-toolbar button:focus-visible{outline:2px solid #a95540;outline-offset:2px}
+.chapter-toolbar-main{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px}
+.chapter-toolbar-back{font-size:11px!important;font-weight:750!important;color:#704b5a;background:#fff;border:1px solid #e7d3ca;border-radius:8px;padding:8px 11px;white-space:nowrap}
+.chapter-toolbar-back:hover{background:#f8e8e0}
+.chapter-toolbar-title{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0;text-align:center}
+.chapter-toolbar-title span{font-size:10px;font-weight:800;letter-spacing:.04em;color:#9b6454}
+.chapter-toolbar-title strong{font-size:13px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#4e293e;max-width:100%}
+.chapter-toolbar-steps{display:flex;gap:5px;align-items:center}
+.chapter-toolbar-steps button{background:#763b4e;color:#fff;font-size:11px;font-weight:750;border:1px solid #763b4e;border-radius:8px;padding:8px 11px;white-space:nowrap}
+.chapter-toolbar-steps button:hover:not(:disabled){background:#5e3041}
+.chapter-toolbar-steps button:disabled{opacity:.4;cursor:not-allowed}
+.chapter-toolbar-links,.chapter-toolbar-contents{display:flex;gap:6px;align-items:center;overflow-x:auto;scrollbar-width:thin;overscroll-behavior-x:contain;padding:1px 0 4px}
+.chapter-toolbar-links button{min-width:0;flex:0 0 auto;border:1px solid #e8d6cd;background:#fff;border-radius:7px;padding:7px 12px;color:#654854;font-size:11px;font-weight:700;white-space:nowrap}
+.chapter-toolbar-links button.is-current{background:#683246;color:#fff;border-color:#683246}
+.chapter-toolbar-links button:hover:not(.is-current){background:#f4e5da}
+.chapter-toolbar-contents{border-top:1px solid #eddfd7;padding-top:7px;padding-bottom:2px}
+.chapter-toolbar-contents>span{white-space:nowrap;font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:#9f6758;font-weight:800;flex:0 0 auto;padding-right:3px}
+.chapter-toolbar-contents button{white-space:nowrap;flex:0 0 auto;padding:5px 9px;font-size:11px;font-weight:700;background:transparent;border:1px solid transparent;border-radius:7px;color:#6f4b60}
+.chapter-toolbar-contents button:hover{background:#f5e7dc;border-color:#ead1c4}
+.has-chapter-toolbar .studio-workspace .section-nav{top:245px;max-height:calc(100dvh - 263px)}
+.has-chapter-toolbar .studio-content [id]{scroll-margin-top:242px}
+.has-chapter-toolbar .textbook-chapter{scroll-margin-top:242px}
+.has-chapter-toolbar .learner-book-route{margin-top:14px}
+.has-chapter-toolbar .textbook-chapter.is-selected{border-color:#dda995;box-shadow:0 8px 25px rgba(95,53,64,.065)}
+.has-chapter-toolbar .textbook-chapter:not(.is-selected) .textbook-chapter-intro{padding:12px 16px;background:#fffaf5}
+.has-chapter-toolbar .textbook-chapter:not(.is-selected) .textbook-chapter-index{min-width:36px;width:42px;height:46px}
+.has-chapter-toolbar .textbook-chapter:not(.is-selected) .textbook-chapter-index strong{font-size:17px}
+.has-chapter-toolbar .textbook-chapter:not(.is-selected) .textbook-chapter-heading p,
+.has-chapter-toolbar .textbook-chapter:not(.is-selected) .textbook-chapter-heading small{display:none}
+.has-chapter-toolbar .textbook-chapter:not(.is-selected) .textbook-chapter-heading h4{font-size:14px;margin:3px 0}
+.has-chapter-toolbar .textbook-chapter:not(.is-selected) .chapter-fold-toggle{padding:9px 16px}
+.has-chapter-toolbar .textbook-chapter:not(.is-selected) .chapter-fold-toggle span{font-size:11px}
+.has-chapter-toolbar .textbook-chapter-list{gap:12px}
+@media(max-width:1020px){
+ .chapter-toolbar{top:73px;padding:7px 12px;gap:6px}
+ .chapter-toolbar-title strong{font-size:12px}
+ .chapter-link-title{display:none}
+ .chapter-toolbar-links button{min-width:38px;text-align:center}
+ .has-chapter-toolbar .studio-workspace .section-nav{top:206px;max-height:calc(100dvh - 222px)}
+ .has-chapter-toolbar .studio-content [id],.has-chapter-toolbar .textbook-chapter{scroll-margin-top:205px}
+}
+@media(max-width:760px){
+ .chapter-toolbar{top:73px;padding:6px 10px;gap:5px}
+ .chapter-toolbar-main{gap:6px}
+ .chapter-toolbar-back{font-size:10px!important;padding:7px 8px}
+ .chapter-toolbar-title span{font-size:9px}
+ .chapter-toolbar-title strong{font-size:11px}
+ .chapter-toolbar-steps button{font-size:10px;padding:7px 9px}
+ .chapter-toolbar-links button{font-size:10px;padding:6px 10px;min-width:34px}
+ .chapter-toolbar-contents>span{font-size:9px}
+ .chapter-toolbar-contents button{font-size:10px;padding:5px 7px}
+ .has-chapter-toolbar .studio-workspace .section-nav{position:static;top:auto;max-height:none}
+ .has-chapter-toolbar .studio-content [id],.has-chapter-toolbar .textbook-chapter{scroll-margin-top:203px}
+}
+@media(max-width:420px){
+ .chapter-toolbar-main{grid-template-columns:auto minmax(0,1fr);grid-template-areas:"back steps" "title title"}
+ .chapter-toolbar-back{grid-area:back;justify-self:start}
+ .chapter-toolbar-steps{grid-area:steps;justify-self:end}
+ .chapter-toolbar-title{grid-area:title;flex-direction:row;gap:7px;justify-content:center}
+ .chapter-toolbar-title span{font-size:9px}
+ .chapter-toolbar-title strong{font-size:11px;max-width:47vw}
+ .has-chapter-toolbar .studio-content [id],.has-chapter-toolbar .textbook-chapter{scroll-margin-top:217px}
+}
