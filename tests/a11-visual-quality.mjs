@@ -1,5 +1,5 @@
 /* Static visual-content guard: avoid showing unrelated photographs as vocabulary objects. */
-const fs=require('node:fs');const assert=require('node:assert/strict');
+import fs from 'node:fs';import assert from 'node:assert/strict';
 const ext=fs.readFileSync('dist/a11-visual-extensions.js','utf8');
 const studio=fs.readFileSync('dist/a11-photo-studio.js','utf8');
 const page=fs.readFileSync('dist/index.html','utf8');
