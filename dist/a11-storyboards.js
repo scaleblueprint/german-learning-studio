@@ -12,7 +12,7 @@ const STORIES={
 };
 const fallback={1:'🎓',2:'🚴',3:'🧭',4:'🥬',5:'📅',6:'☕'};
 function render(n){const d=STORIES[n];if(!d)return '';const photo=window.GERMAN_RICH_SCENES?.data?.chapters?.[n]?.[d.photo];
-const photoMarkup=photo?'<div class="a11-sb-photo"><img src="'+esc(photo.src)+'" loading="lazy" alt="'+esc(photo.alt)+'" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="a11-sb-photo-fallback" hidden aria-hidden="true">'+fallback[n]+'</div><a href="'+esc(photo.source)+'" target="_blank" rel="noopener noreferrer">Photo: '+esc(photo.credit)+'</a></div>':'<div class="a11-sb-photo-fallback" aria-hidden="true">'+fallback[n]+'</div>';
+const photoMarkup='<div class="a11-sb-photo a11-sb-original-scene" role="img" aria-label="Original visual scene for '+esc(d.title)+'"><div class="a11-sb-scene-symbol" aria-hidden="true">'+fallback[n]+'</div><strong>'+esc(d.title)+'</strong><small>'+esc(d.focus)+'</small></div>';
 return '<section class="a11-storyboard" data-storyboard="'+n+'" aria-label="Chapter '+n+' visual dialogue">'+
 '<div class="a11-sb-head"><span class="eyebrow">Practice in a real situation · Chapter '+n+'</span><h5>'+esc(d.title)+'</h5><p>'+esc(d.focus)+'. Reveal the conversation one turn at a time, then listen and check each meaning.</p></div>'+
 '<div class="a11-sb-layout">'+photoMarkup+'<div class="a11-sb-turns">'+d.turns.map((turn,i)=>
