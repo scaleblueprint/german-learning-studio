@@ -1,0 +1,26 @@
+/* Compact mobile-first A1.1 photographic storyboards. */
+.a11-storyboard{margin:24px 0;padding:clamp(16px,2.6vw,26px);border-radius:20px;border:1px solid #e5d0bd;background:#fffaf5;color:#372e36}
+.a11-sb-head h5{font-size:clamp(22px,2.9vw,29px);margin:7px 0}
+.a11-sb-head p{max-width:690px;line-height:1.55}
+.a11-sb-layout{display:grid;grid-template-columns:minmax(220px,.9fr) minmax(0,1.4fr);gap:18px;align-items:start;margin-top:16px}
+.a11-sb-photo{min-width:0;border-radius:15px;overflow:hidden;border:1px solid #e2d3c6;background:#f7ebdf}
+.a11-sb-photo img{width:100%;height:250px;display:block;object-fit:cover}
+.a11-sb-photo a{display:block;padding:9px 11px;font-size:11px;color:#745567;background:white}
+.a11-sb-photo-fallback{min-height:180px;display:grid;place-items:center;font-size:72px;background:#e7e8dd}
+.a11-sb-photo-fallback[hidden]{display:none}
+.a11-sb-turns{min-width:0}
+.a11-sb-turn{margin:0 0 12px;padding:13px 16px;background:#e5f1ed;border-radius:14px 14px 14px 3px}
+.a11-sb-turn.a11-sb-reply{background:#f5e9df;border-radius:14px 14px 3px 14px;margin-left:12px}
+.a11-sb-turn[hidden]{display:none}
+.a11-sb-speaker{display:block;color:#70535e;font-size:12px;font-weight:800;margin-bottom:5px}
+.a11-sb-turn strong{display:block;font-size:clamp(15px,2vw,18px);line-height:1.5}
+.a11-sb-tools{display:flex;align-items:start;flex-wrap:wrap;gap:12px;margin-top:9px}
+.a11-sb-tools button{font:inherit;background:transparent;color:#70465b;text-decoration:underline;cursor:pointer;border:0;padding:0}
+.a11-sb-tools details summary{cursor:pointer;font-size:13px;text-decoration:underline}
+.a11-sb-tools details p{margin:5px 0 0;font-size:13px;color:#67575f}
+.a11-sb-actions{display:flex;flex-wrap:wrap;gap:11px}
+.a11-sb-actions button{font:inherit;cursor:pointer;border-radius:9px;padding:10px 12px;border:1px solid #b89aa5;background:white;color:#58394a}
+.a11-sb-actions button:first-child{background:#723a53;color:white;border-color:#723a53}
+.a11-sb-actions button:disabled{opacity:.7;cursor:not-allowed}
+.a11-sb-progress{font-size:12px;font-weight:700;color:#80646f}
+@media(max-width:750px){.a11-sb-layout{grid-template-columns:1fr}.a11-sb-photo img{height:190px}.a11-sb-photo-fallback{min-height:150px}}
