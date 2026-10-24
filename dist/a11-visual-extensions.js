@@ -10,7 +10,7 @@ const data={
 6:{title:'Leisure, invitations and restaurants',intro:'Read leisure activity cards, arrange a date and practise a restaurant invitation.',cards:[['🚴','Fahrrad fahren','cycle'],['🎬','ins Kino gehen','go to the cinema'],['🎂','der Geburtstag','birthday'],['✉️','die Einladung','invitation'],['🍽️','das Restaurant','restaurant'],['📖','lesen','read'],['⚽','Fußball spielen','play football'],['🎫','die Eintrittskarte','ticket']],activity:{kind:'invitation',title:'Create an invitation using a day and activity',choices:['Samstag','Sonntag','Freitag','Mittwoch'],stem:'Hast du am {value} Zeit?',reply:'Ja, gern! Danke für die Einladung.'},check:{q:'What is the correct invitation sentence?',answers:['Ich lade dich ein.','Ich einlade dich.','Ich dich lade ein.'],correct:0,why:'In a present-tense statement, the prefix of einladen moves to the end.'}}
 };
 const speak=t=>{if(!('speechSynthesis' in window))return false;try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='de-DE';u.rate=.85;speechSynthesis.speak(u);return true;}catch(_){return false;}};
-const photoByExactTerm={2:{'Rad fahren':0},4:{'das Brot':0},5:{'die Uhrzeit':0},6:{'der Geburtstag':0,'das Restaurant':1}};
+const photoByExactTerm={}; // Context photographs are displayed only once in the chapter photo studio.
 /* Independently verified single-subject Wikimedia Commons files.
    These are direct file URLs; the original SVG remains when a network image fails. */
 const objectPhotos={
