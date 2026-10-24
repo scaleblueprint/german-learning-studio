@@ -833,3 +833,12 @@ h1 {letter-spacing:-.055em}
  .chapter-toolbar-title strong{font-size:11px;max-width:47vw}
  .has-chapter-toolbar .studio-content [id],.has-chapter-toolbar .textbook-chapter{scroll-margin-top:217px}
 }
+
+
+/* The chapter toolbar replaces the general studio sidebar while inside chapter content. */
+.has-chapter-toolbar .studio-workspace{grid-template-columns:minmax(0,1fr);gap:0}
+.has-chapter-toolbar .studio-workspace>.section-nav{display:none}
+.has-chapter-toolbar .studio-content{width:100%;min-width:0}
+.has-chapter-toolbar .learner-book-head{padding:19px 23px}
+.has-chapter-toolbar .learner-book-head h3{font-size:clamp(21px,2.1vw,27px);margin:5px 0}
+@media(max-width:620px){.has-chapter-toolbar .learner-book-head{padding:16px}.has-chapter-toolbar .learner-book-head h3{font-size:20px}}
