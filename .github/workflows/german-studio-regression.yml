@@ -37,6 +37,7 @@ jobs:
         run: |
           node tests/smoke.mjs
           node tests/navigation.mjs
+          node tests/chapter-navigation.mjs
           node tests/role-separation.mjs
           node tests/exam.mjs
       - name: Regenerate and validate standalone demo
