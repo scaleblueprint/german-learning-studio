@@ -35,7 +35,7 @@ for(let n=1;n<=6;n++){
  for(const pic of media[n]){assert.ok(pic.source.startsWith('https://www.pexels.com/'));assert.ok(pic.alt&&pic.credit&&pic.src);}
  const storyboard=w.GERMAN_A11_STORYBOARDS.render(n);
  assert.equal((storyboard.match(/data-sb-turn=/g)||[]).length,4,'Chapter '+n+' must have four sequential conversational turns');
- assert.ok(storyboard.includes('Photo: '),'Chapter '+n+' must credit scenario photo');
+ assert.ok(storyboard.includes('a11-sb-original-scene')||storyboard.includes('Photo: '),'Chapter '+n+' must contain an original illustrated scene or a credited photo');
  assert.ok(w.GERMAN_CHAPTER_STUDY.render(n).includes('data-storyboard="'+n+'"'),'Chapter '+n+' storyboard must appear in reader');
  count+=found;
 }
