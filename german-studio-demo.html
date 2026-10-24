@@ -1293,6 +1293,88 @@ h1 {letter-spacing:-.055em}
 .a11-prerequisite-check summary{cursor:pointer;font-weight:700;color:#416d4f}
 @media(max-width:700px){.a11-prerequisites{padding:14px 11px}.a11-prerequisite-nav{display:flex;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:thin}.a11-prerequisite-nav button{flex:0 0 auto;white-space:nowrap}.a11-prerequisite-block{padding:12px}.a11-prerequisite-examples{grid-template-columns:minmax(0,1fr)}}
 
+
+/* Chapter reader navigation: stays with learners while they scroll long A1.1 topics. */
+.chapter-toolbar{
+ position:sticky;top:85px;z-index:29;max-width:100%;background:#fff9f3;
+ border-bottom:1px solid #e7d7ce;box-shadow:0 8px 20px rgba(53,31,40,.09);
+ padding:8px max(16px,calc((100vw - 1280px)/2)) 9px;
+ display:grid;gap:7px
+}
+.chapter-toolbar button{font:inherit;cursor:pointer;transition:background-color .16s,border-color .16s}
+.chapter-toolbar button:focus-visible{outline:2px solid #a95540;outline-offset:2px}
+.chapter-toolbar-main{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px}
+.chapter-toolbar-back{font-size:11px!important;font-weight:750!important;color:#704b5a;background:#fff;border:1px solid #e7d3ca;border-radius:8px;padding:8px 11px;white-space:nowrap}
+.chapter-toolbar-back:hover{background:#f8e8e0}
+.chapter-toolbar-title{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0;text-align:center}
+.chapter-toolbar-title span{font-size:10px;font-weight:800;letter-spacing:.04em;color:#9b6454}
+.chapter-toolbar-title strong{font-size:13px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#4e293e;max-width:100%}
+.chapter-toolbar-steps{display:flex;gap:5px;align-items:center}
+.chapter-toolbar-steps button{background:#763b4e;color:#fff;font-size:11px;font-weight:750;border:1px solid #763b4e;border-radius:8px;padding:8px 11px;white-space:nowrap}
+.chapter-toolbar-steps button:hover:not(:disabled){background:#5e3041}
+.chapter-toolbar-steps button:disabled{opacity:.4;cursor:not-allowed}
+.chapter-toolbar-links,.chapter-toolbar-contents{display:flex;gap:6px;align-items:center;overflow-x:auto;scrollbar-width:thin;overscroll-behavior-x:contain;padding:1px 0 4px}
+.chapter-toolbar-links button{min-width:0;flex:0 0 auto;border:1px solid #e8d6cd;background:#fff;border-radius:7px;padding:7px 12px;color:#654854;font-size:11px;font-weight:700;white-space:nowrap}
+.chapter-toolbar-links button.is-current{background:#683246;color:#fff;border-color:#683246}
+.chapter-toolbar-links button:hover:not(.is-current){background:#f4e5da}
+.chapter-toolbar-contents{border-top:1px solid #eddfd7;padding-top:7px;padding-bottom:2px}
+.chapter-toolbar-contents>span{white-space:nowrap;font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:#9f6758;font-weight:800;flex:0 0 auto;padding-right:3px}
+.chapter-toolbar-contents button{white-space:nowrap;flex:0 0 auto;padding:5px 9px;font-size:11px;font-weight:700;background:transparent;border:1px solid transparent;border-radius:7px;color:#6f4b60}
+.chapter-toolbar-contents button:hover{background:#f5e7dc;border-color:#ead1c4}
+.has-chapter-toolbar .studio-workspace .section-nav{top:245px;max-height:calc(100dvh - 263px)}
+.has-chapter-toolbar .studio-content [id]{scroll-margin-top:242px}
+.has-chapter-toolbar .textbook-chapter{scroll-margin-top:242px}
+.has-chapter-toolbar .learner-book-route{margin-top:14px}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="true"]{border-color:#dda995;box-shadow:0 8px 25px rgba(95,53,64,.065)}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .textbook-chapter-intro{padding:12px 16px;background:#fffaf5}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .textbook-chapter-index{min-width:36px;width:42px;height:46px}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .textbook-chapter-index strong{font-size:17px}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .textbook-chapter-heading p,
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .textbook-chapter-heading small{display:none}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .textbook-chapter-heading h4{font-size:14px;margin:3px 0}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .chapter-fold-toggle{padding:9px 16px}
+.has-chapter-toolbar .textbook-chapter[data-selected-chapter="false"] .chapter-fold-toggle span{font-size:11px}
+.has-chapter-toolbar .textbook-chapter-list{gap:12px}
+@media(max-width:1020px){
+ .chapter-toolbar{top:73px;padding:7px 12px;gap:6px}
+ .chapter-toolbar-title strong{font-size:12px}
+ .chapter-link-title{display:none}
+ .chapter-toolbar-links button{min-width:38px;text-align:center}
+ .has-chapter-toolbar .studio-workspace .section-nav{top:206px;max-height:calc(100dvh - 222px)}
+ .has-chapter-toolbar .studio-content [id],.has-chapter-toolbar .textbook-chapter{scroll-margin-top:205px}
+}
+@media(max-width:760px){
+ .chapter-toolbar{top:73px;padding:6px 10px;gap:5px}
+ .chapter-toolbar-main{gap:6px}
+ .chapter-toolbar-back{font-size:10px!important;padding:7px 8px}
+ .chapter-toolbar-title span{font-size:9px}
+ .chapter-toolbar-title strong{font-size:11px}
+ .chapter-toolbar-steps button{font-size:10px;padding:7px 9px}
+ .chapter-toolbar-links button{font-size:10px;padding:6px 10px;min-width:34px}
+ .chapter-toolbar-contents>span{font-size:9px}
+ .chapter-toolbar-contents button{font-size:10px;padding:5px 7px}
+ .has-chapter-toolbar .studio-workspace .section-nav{position:static;top:auto;max-height:none}
+ .has-chapter-toolbar .studio-content [id],.has-chapter-toolbar .textbook-chapter{scroll-margin-top:203px}
+}
+@media(max-width:420px){
+ .chapter-toolbar-main{grid-template-columns:auto minmax(0,1fr);grid-template-areas:"back steps" "title title"}
+ .chapter-toolbar-back{grid-area:back;justify-self:start}
+ .chapter-toolbar-steps{grid-area:steps;justify-self:end}
+ .chapter-toolbar-title{grid-area:title;flex-direction:row;gap:7px;justify-content:center}
+ .chapter-toolbar-title span{font-size:9px}
+ .chapter-toolbar-title strong{font-size:11px;max-width:47vw}
+ .has-chapter-toolbar .studio-content [id],.has-chapter-toolbar .textbook-chapter{scroll-margin-top:217px}
+}
+
+
+/* The chapter toolbar replaces the general studio sidebar while inside chapter content. */
+.has-chapter-toolbar .studio-workspace{grid-template-columns:minmax(0,1fr);gap:0}
+.has-chapter-toolbar .studio-workspace>.section-nav{display:none}
+.has-chapter-toolbar .studio-content{width:100%;min-width:0}
+.has-chapter-toolbar .learner-book-head{padding:19px 23px}
+.has-chapter-toolbar .learner-book-head h3{font-size:clamp(21px,2.1vw,27px);margin:5px 0}
+@media(max-width:620px){.has-chapter-toolbar .learner-book-head{padding:16px}.has-chapter-toolbar .learner-book-head h3{font-size:20px}}
+
 </style>
   </head>
   <body>
@@ -3939,7 +4021,7 @@ const data=[
 ];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function render(number){const ch=data.find(x=>x.number===Number(number));if(!ch)return '';
-return `<section class="chapter-study-guide" aria-label="Chapter ${ch.number} study guide"><div class="chapter-study-head"><span class="eyebrow">Start here · Chapter understanding</span><h5>The big idea</h5><p>${esc(ch.intro)}</p><strong class="chapter-study-goal">${esc(ch.goal)}</strong></div>${ch.number===1?'<nav class="chapter-one-shortcuts" aria-label="Chapter 1 learning sections"><button type="button" data-jump-target="chapter-1-numbers">Learn numbers 1–20 ↓</button><button type="button" data-jump-target="chapter-1-spelling">Learn to spell your name ↓</button></nav>':''}<details class="chapter-study-patterns" open><summary>See four useful sentence patterns <span aria-hidden="true">↓</span></summary><div class="chapter-study-pattern-grid">${ch.patterns.map(([de,en,why])=>`<div class="chapter-study-pattern"><strong lang="de">${esc(de)}</strong><span>${esc(en)}</span><p>${esc(why)}</p><button type="button" class="view-link" data-speak="${esc(de)}" aria-label="Hear German example">♫ Listen</button></div>`).join('')}</div></details>${ch.number===1?window.GERMAN_CHAPTER_ONE?.render()||'':window.GERMAN_PREREQUISITES?.render(ch.number)||''}<details class="chapter-study-patterns" open><summary>Check your understanding <span aria-hidden="true">↓</span></summary><div class="chapter-study-selfcheck"><p><strong>Common mix-up:</strong> ${esc(ch.pitfall)}</p><p><strong>Try it:</strong> ${esc(ch.tryIt)}</p><details><summary>Reveal an original model answer</summary><p lang="de">${esc(ch.model)}</p></details></div></details></section>`;}
+return `<section class="chapter-study-guide" id="chapter-${ch.number}-start" aria-label="Chapter ${ch.number} study guide"><div class="chapter-study-head"><span class="eyebrow">Start here · Chapter understanding</span><h5>The big idea</h5><p>${esc(ch.intro)}</p><strong class="chapter-study-goal">${esc(ch.goal)}</strong></div>${ch.number===1?'<nav class="chapter-one-shortcuts" aria-label="Chapter 1 learning sections"><button type="button" data-jump-target="chapter-1-numbers">Learn numbers 1–20 ↓</button><button type="button" data-jump-target="chapter-1-spelling">Learn to spell your name ↓</button></nav>':''}<details class="chapter-study-patterns" open><summary>See four useful sentence patterns <span aria-hidden="true">↓</span></summary><div class="chapter-study-pattern-grid">${ch.patterns.map(([de,en,why])=>`<div class="chapter-study-pattern"><strong lang="de">${esc(de)}</strong><span>${esc(en)}</span><p>${esc(why)}</p><button type="button" class="view-link" data-speak="${esc(de)}" aria-label="Hear German example">♫ Listen</button></div>`).join('')}</div></details>${ch.number===1?window.GERMAN_CHAPTER_ONE?.render()||'':window.GERMAN_PREREQUISITES?.render(ch.number)||''}<details class="chapter-study-patterns" open><summary>Check your understanding <span aria-hidden="true">↓</span></summary><div class="chapter-study-selfcheck"><p><strong>Common mix-up:</strong> ${esc(ch.pitfall)}</p><p><strong>Try it:</strong> ${esc(ch.tryIt)}</p><details><summary>Reveal an original model answer</summary><p lang="de">${esc(ch.model)}</p></details></div></details></section>`;}
 window.GERMAN_CHAPTER_STUDY={data,render};
 })();
 
@@ -3955,7 +4037,7 @@ function stats(n,progress){const c=chapter(n);if(!c)return {correct:0,answered:0
 function render(number,progress={},topicOpen={},expanded=true){
  const c=chapter(number);if(!c)return '';
  const counts=stats(number,progress);
- return `<section class="chapter-reader" aria-label="Extended chapter ${c.number} reading"><details class="chapter-reader-shell" data-reader-shell="${c.number}" ${expanded!==false?'open':''}><summary class="chapter-reader-shell-toggle"><span class="reader-book-symbol" aria-hidden="true">▤</span><span><strong>Read the chapter in depth</strong><small>${c.topics.length} source-aligned explanations, worked examples and comprehension checks</small></span><span class="reader-progress">${counts.answered}/${counts.total} tried</span></summary><div class="reader-chapter-body"><p class="reader-intro">Read the complete explanations below. Use the topic navigation to move directly to the part you need. These are original explanations and exercises, not copied workbook pages.</p><nav class="reader-topic-nav" aria-label="Chapter ${c.number} topic navigation">${c.topics.map((topic,i)=>`<button type="button" data-reader-jump="${esc(topic.id)}">${c.number}.${i+1} · ${esc(topic.title)}</button>`).join('')}</nav><div class="reader-topic-list">${c.topics.map((t,i)=>{const answer=progress?.[t.id];return `<details class="reader-topic" id="reader-topic-${esc(t.id)}" data-reader-topic="${esc(t.id)}" ${topicOpen[t.id]!==false?'open':''}><summary><span class="reader-topic-index">${c.number}.${i+1}</span><span><strong>${esc(t.title)}</strong><small>${esc(t.goal)}</small></span><span class="reader-topic-status">${answer?(answer.correct?'✓ Checked':'↺ Review'):'Full lesson ↓'}</span></summary><div class="reader-topic-content"><p class="reader-explain">${esc(t.explain)}</p><h6>Work through the examples</h6><div class="reader-example-grid">${t.examples.map(([de,en,why])=>`<div class="reader-example"><strong lang="de">${esc(de)}</strong><span>${esc(en)}</span><p>${esc(why)}</p><button type="button" class="view-link" data-speak="${esc(de)}">♫ Listen</button></div>`).join('')}</div><p class="reader-mistake"><strong>Watch out:</strong> ${esc(t.mistake)}</p><div class="reader-selfcheck"><span class="eyebrow">Check your understanding</span><h6>${esc(t.check.question)}</h6><div class="reader-choices">${t.check.options.map((o,j)=>`<button type="button" data-reader-choice="${esc(t.id)}|${j}" ${answer?'disabled':''} class="${answer&&j===t.check.correct?'right':answer&&j===answer.chosen?'wrong':''}" aria-pressed="${answer?String(j===answer.chosen):'false'}">${esc(o)}</button>`).join('')}</div>${answer?`<p class="reader-feedback ${answer.correct?'right':'review'}"><strong>${answer.correct?'Correct.':'Review the pattern.'}</strong> ${esc(t.check.why)} <button type="button" class="view-link" data-reader-retry="${esc(t.id)}">Try again</button></p>`:''}</div></div></details>`;}).join('')}</div><p class="reader-source-note">Reference: original A1.1 Kursbuch PDF pages ${c.coursebook[0]}–${c.coursebook[1]}; corresponding Arbeitsbuch pages ${c.workbook[0]}–${c.workbook[1]}. No publisher text, artwork or audio reproduced.</p></div></details></section>`;
+ return `<section class="chapter-reader" id="chapter-reader-${c.number}" aria-label="Extended chapter ${c.number} reading"><details class="chapter-reader-shell" data-reader-shell="${c.number}" ${expanded!==false?'open':''}><summary class="chapter-reader-shell-toggle"><span class="reader-book-symbol" aria-hidden="true">▤</span><span><strong>Read the chapter in depth</strong><small>${c.topics.length} source-aligned explanations, worked examples and comprehension checks</small></span><span class="reader-progress">${counts.answered}/${counts.total} tried</span></summary><div class="reader-chapter-body"><p class="reader-intro">Read the complete explanations below. Use the topic navigation to move directly to the part you need. These are original explanations and exercises, not copied workbook pages.</p><nav class="reader-topic-nav" aria-label="Chapter ${c.number} topic navigation">${c.topics.map((topic,i)=>`<button type="button" data-reader-jump="${esc(topic.id)}">${c.number}.${i+1} · ${esc(topic.title)}</button>`).join('')}</nav><div class="reader-topic-list">${c.topics.map((t,i)=>{const answer=progress?.[t.id];return `<details class="reader-topic" id="reader-topic-${esc(t.id)}" data-reader-topic="${esc(t.id)}" ${topicOpen[t.id]!==false?'open':''}><summary><span class="reader-topic-index">${c.number}.${i+1}</span><span><strong>${esc(t.title)}</strong><small>${esc(t.goal)}</small></span><span class="reader-topic-status">${answer?(answer.correct?'✓ Checked':'↺ Review'):'Full lesson ↓'}</span></summary><div class="reader-topic-content"><p class="reader-explain">${esc(t.explain)}</p><h6>Work through the examples</h6><div class="reader-example-grid">${t.examples.map(([de,en,why])=>`<div class="reader-example"><strong lang="de">${esc(de)}</strong><span>${esc(en)}</span><p>${esc(why)}</p><button type="button" class="view-link" data-speak="${esc(de)}">♫ Listen</button></div>`).join('')}</div><p class="reader-mistake"><strong>Watch out:</strong> ${esc(t.mistake)}</p><div class="reader-selfcheck"><span class="eyebrow">Check your understanding</span><h6>${esc(t.check.question)}</h6><div class="reader-choices">${t.check.options.map((o,j)=>`<button type="button" data-reader-choice="${esc(t.id)}|${j}" ${answer?'disabled':''} class="${answer&&j===t.check.correct?'right':answer&&j===answer.chosen?'wrong':''}" aria-pressed="${answer?String(j===answer.chosen):'false'}">${esc(o)}</button>`).join('')}</div>${answer?`<p class="reader-feedback ${answer.correct?'right':'review'}"><strong>${answer.correct?'Correct.':'Review the pattern.'}</strong> ${esc(t.check.why)} <button type="button" class="view-link" data-reader-retry="${esc(t.id)}">Try again</button></p>`:''}</div></div></details>`;}).join('')}</div><p class="reader-source-note">Reference: original A1.1 Kursbuch PDF pages ${c.coursebook[0]}–${c.coursebook[1]}; corresponding Arbeitsbuch pages ${c.workbook[0]}–${c.workbook[1]}. No publisher text, artwork or audio reproduced.</p></div></details></section>`;
 }
 window.GERMAN_CHAPTER_READERS={data:DATA,chapter,getTopic,stats,render};
 })();
@@ -6827,7 +6909,7 @@ window.GERMAN_EXAM_DATA = Object.freeze({
   if(!state.chapterReaderProgress||typeof state.chapterReaderProgress!=='object')state.chapterReaderProgress={};
   if(!state.audioPractice||typeof state.audioPractice!=='object')state.audioPractice={};
   if(!state.audioSettings||typeof state.audioSettings!=='object')state.audioSettings={speed:'normal',voice:''};
-  let ui = {route:'home',studentView:'home',studentChapterNumber:null,teacherView:'home',teacherChapterNumber:1,lessonId:'hello',experienceId:'',stage:'discover',questionIndex:0,selected:null,checked:false,answers:{},builderKind:'roleplay',editingExperienceId:null,previewExperienceId:null,builderOpen:false,sessionComposerOpen:false,editingSessionId:null,sessionDraft:null,sessionPreviewId:null,sessionPreviewDraft:false,sessionId:'',sessionBlockIndex:0,sessionSelection:{},workbookId:'1',workbookQuestion:0,workbookSelected:null,photoSelected:{},depthSelections:{},depthChecked:{},readingPanels:{},readerShellOpen:{},readerTopicsOpen:{},phase3Choices:{},audioChoices:{},previewFromTeacher:false};
+  let ui = {route:'home',studentView:'home',studentChapterNumber:null,teacherView:'home',teacherChapterNumber:1,lessonId:'hello',experienceId:'',stage:'discover',questionIndex:0,selected:null,checked:false,answers:{},builderKind:'roleplay',editingExperienceId:null,previewExperienceId:null,builderOpen:false,sessionComposerOpen:false,editingSessionId:null,sessionDraft:null,sessionPreviewId:null,sessionPreviewDraft:false,sessionId:'',sessionBlockIndex:0,sessionSelection:{},workbookId:'1',workbookQuestion:0,workbookSelected:null,photoSelected:{},depthSelections:{},depthChecked:{},readingPanels:{},collapsedChapter:null,pendingChapterSection:null,readerShellOpen:{},readerTopicsOpen:{},phase3Choices:{},audioChoices:{},previewFromTeacher:false};
   let mediaRecorder = null;
   let mediaStream = null;
   let recording = false;
@@ -6860,10 +6942,48 @@ window.GERMAN_EXAM_DATA = Object.freeze({
   }
   function routeFromHash(){const hash=decodeURIComponent(location.hash.replace(/^#/,''));if(hash.startsWith('workbook/')){const id=hash.slice(9);if(workbookUnit(id)){ui.route='workbook';if(ui.workbookId!==id){ui.workbookId=id;ui.workbookQuestion=0;ui.workbookSelected=null;}return;}}if(hash.startsWith('lesson/')){const id=hash.slice(7);if(textbookLessons().some(l=>l.id===id)){ui.route='lesson';if(ui.lessonId!==id)resetLessonUI(id);return;}}if(hash.startsWith('experience/')){const id=hash.slice(11);if(state.experiences.some(x=>x.id===id&&x.status==='published'&&missionChapter(x))){ui.route='experience';ui.experienceId=id;return;}}if(hash.startsWith('session/')){const id=hash.slice(8);if(state.sessions.some(x=>x.id===id&&x.level==='A1'&&textbookChapters().some(ch=>ch.number===Number(x.chapterNumber))&&window.GERMAN_CLASSROOM.windowState(x)==='available')){ui.route='session';if(ui.sessionId!==id)resumeSession(id);return;}}if(hash.startsWith('student/')){const target=hash.slice(8);ui.route='student';ui.studentView=target==='home'?'home':'chapters';ui.studentChapterNumber=/^chapters\/[1-6]$/.test(target)?Number(target.slice(-1)):null;return;}if(hash.startsWith('teacher/')){ui.route='teacher';ui.teacherView=['home','sessions','missions','exams','learners'].includes(hash.slice(8))?hash.slice(8):'home';return;}ui.route=['home','student','teacher','sources','exam'].includes(hash)?hash:'home';if(ui.route==='teacher')ui.teacherView='home';if(ui.route==='student'){ui.studentView='home';ui.studentChapterNumber=null;}}
   function navigate(route,id){const target=route==='lesson'?`lesson/${id}`:route==='experience'?`experience/${id}`:route==='session'?`session/${id}`:route==='workbook'?`workbook/${id}`:route;if(route==='session')resumeSession(id);if(location.hash.slice(1)===target){if(route==='lesson'&&ui.lessonId!==id)resetLessonUI(id);if(route==='experience')ui.experienceId=id;ui.route=route;render();}else{location.hash=target;}window.scrollTo({top:0,behavior:'instant'});}
+  const selectedChapterNumber=()=>{
+    const fallback=Number(nextLesson()?.chapterNumber)||1;
+    const number=ui.route==='student'&&ui.studentView==='chapters'?Number(ui.studentChapterNumber||fallback):
+      ui.route==='lesson'?Number(currentLesson().chapterNumber):
+      ui.route==='workbook'?Number(String(ui.workbookId).replace('review-','')):
+      ui.route==='session'?Number(state.sessions.find(x=>x.id===ui.sessionId)?.chapterNumber):
+      ui.route==='experience'?Number(missionChapter(state.experiences.find(x=>x.id===ui.experienceId))):fallback;
+    return textbookChapters().some(ch=>ch.number===number)?number:fallback;
+  };
+  const chapterSections=n=>[
+    ['chapter-'+n+'-start','Introduction'],
+    [n===1?'chapter-1-numbers':'chapter-'+n+'-foundations','Foundations'],
+    ...(n===1?[]:[['chapter-reader-'+n,'Read in depth']]),
+    ['chapter-'+n+'-lessons','Kursbuch lessons'],
+    ['chapter-'+n+'-workbook','Arbeitsbuch'],
+    ['chapter-'+n+'-teacher','Teacher activities'],
+    ['chapter-'+n+'-progress','Progress'],
+    ...(n===3||n===6?[['chapter-'+n+'-platform','Plattform review']]:[])
+  ];
+  function renderChapterToolbar(){
+    if(!((ui.route==='student'&&ui.studentView==='chapters')||['lesson','workbook','session','experience'].includes(ui.route)))return '';
+    const chapters=textbookChapters(),n=selectedChapterNumber(),ch=chapters.find(c=>c.number===n),index=chapters.findIndex(c=>c.number===n);
+    return `<nav class="chapter-toolbar" aria-label="Course chapter navigation">
+      <div class="chapter-toolbar-main"><button type="button" class="chapter-toolbar-back" data-route="student/chapters/${n}">↖ My chapters</button>
+        <div class="chapter-toolbar-title"><span>Netzwerk A1.1 · Chapter ${n} of ${chapters.length}</span><strong>${escape(ch?.title)}</strong></div>
+        <div class="chapter-toolbar-steps"><button type="button" aria-label="Previous chapter" data-chapter-nav="${chapters[index-1]?.number||''}" ${index===0?'disabled':''}>← Previous</button><button type="button" aria-label="Next chapter" data-chapter-nav="${chapters[index+1]?.number||''}" ${index===chapters.length-1?'disabled':''}>Next →</button></div>
+      </div>
+      <div class="chapter-toolbar-links" role="group" aria-label="Select a chapter">${chapters.map(c=>`<button type="button" data-chapter-nav="${c.number}" class="${c.number===n?'is-current':''}" ${c.number===n?'aria-current="page"':''} title="Chapter ${c.number}: ${escape(c.title)}">${String(c.number).padStart(2,'0')}<span class="chapter-link-title"> ${escape(c.title)}</span></button>`).join('')}</div>
+      <div class="chapter-toolbar-contents" role="group" aria-label="Navigate within Chapter ${n}"><span>In this chapter</span>${chapterSections(n).map(([id,label])=>`<button type="button" data-chapter-section="${id}">${escape(label)}</button>`).join('')}</div>
+    </nav>`;
+  }
+  function scrollToChapterSection(id){
+    if(!/^chapter-[1-6]-(start|numbers|foundations|lessons|workbook|teacher|progress|platform)$/.test(id)&&!/^chapter-reader-[2-6]$/.test(id))return;
+    const target=document.getElementById(id);
+    if(!target)return;
+    for(let node=target;node;node=node.parentElement){if(node.tagName==='DETAILS')node.open=true;}
+    target.scrollIntoView?.({behavior:'smooth',block:'start'});
+  }
   function navButton(route,label){const selected=(route==='student'&&['student','lesson','experience','session','workbook','exam'].includes(ui.route))||ui.route===route;return `<button type="button" class="nav-btn ${selected?'active':''}" data-route="${route}" aria-pressed="${selected}">${label}</button>`;}
   function studioPageLinks(){
     if(ui.route==='student'&&ui.studentView==='home')return [['learning-dashboard','Your progress'],['learning-chapters','Chapters at a glance']];
-    if(ui.route==='student'&&ui.studentView==='chapters')return textbookChapters().map(ch=>['course-chapter-'+ch.number,'Chapter '+ch.number+' · '+ch.title]);
+    if(ui.route==='student'&&ui.studentView==='chapters')return [];
     if(ui.route==='teacher'&&ui.teacherView==='sessions')return [['teacher-chapter-planner','Chapter planner'],['session-studio','Create & manage sessions'],...(ui.sessionComposerOpen?[['session-composer','Session editor']]:[])];
     if(ui.route==='teacher'&&ui.teacherView==='missions')return [['experience-studio','Mission builder'],['experience-shelf','Published & draft missions']];
     if(ui.route==='teacher'&&ui.teacherView==='learners')return [['teacher-learning-results','Chapter insights'],['teacher-cohort','Demo learners'],['teacher-review-queue','Review responses'],['teacher-content-check','Content readiness']];
@@ -6883,11 +7003,12 @@ window.GERMAN_EXAM_DATA = Object.freeze({
     const isTeacher=ui.route==='teacher';
     const isLanding=ui.route==='home';
     const pageContent=isLanding||ui.route==='sources'?content:`<div class="studio-workspace">${sectionNav()}<div class="studio-content" id="studio-main-content">${content}</div></div>`;
+    const toolbar=renderChapterToolbar();
     root.innerHTML=`${isLanding?'':'<div class="top-notice"><span>Interactive concept preview</span> Sample learners · Local progress · No real accounts</div>'}
       <header class="site-header"><div class="head-inner"><a class="brand" href="#home" aria-label="AmberTheory German Studio home"><img class="brand-logo" src="./dist/ambertheory-lockup.jpg" alt="AmberTheory" width="210" height="65" /><span class="brand-product">German Studio</span></a>
-      <nav class="primary-nav simplified-nav" aria-label="Main navigation">${navButton('home','Home')}${navButton('student','Student Studio')}${navButton('teacher','Teacher Studio')}</nav></div></header>
+      <nav class="primary-nav simplified-nav" aria-label="Main navigation">${navButton('home','Home')}${navButton('student','Student Studio')}${navButton('teacher','Teacher Studio')}</nav></div></header>${toolbar}
       <nav class="mobile-nav simplified-mobile-nav" aria-label="Main navigation"><button type="button" data-route="home" class="${isLanding?'active':''}"><span>⌂</span>Home</button><button type="button" data-route="student" class="${['student','lesson','experience','session','workbook','exam'].includes(ui.route)?'active':''}"><span>▤</span>Student</button><button type="button" data-route="teacher" class="${isTeacher?'active':''}"><span>◎</span>Teacher</button></nav>
-      <main class="shell page ${isLanding?'public-shell':''}">${pageContent}</main><footer class="footer"><div class="shell footer-inner"><span>AmberTheory · German Studio concept · Teacher-led learning</span><div class="footer-links"><a href="#home">Home</a><a href="#sources">Open materials & credits</a><span>Demo only · No real accounts</span></div></div></footer>`;
+      <main class="shell page ${isLanding?'public-shell':''} ${toolbar?'has-chapter-toolbar':''}">${pageContent}</main><footer class="footer"><div class="shell footer-inner"><span>AmberTheory · German Studio concept · Teacher-led learning</span><div class="footer-links"><a href="#home">Home</a><a href="#sources">Open materials & credits</a><span>Demo only · No real accounts</span></div></div></footer>`;
   }
   function render(){routeFromHash();let page='';if(ui.route==='home')page=renderPublicLanding();else if(ui.route==='student')page=renderStudent();else if(ui.route==='lesson')page=renderLesson();else if(ui.route==='workbook')page=renderWorkbook();else if(ui.route==='experience')page=renderExperience();else if(ui.route==='session')page=renderSession();else if(ui.route==='exam')page=`<div id="exam-root">${window.GermanExamStudio?.renderLearner()||'<p>Exam preparation is loading.</p>'}</div>`;else if(ui.route==='teacher')page=renderTeacher();else if(ui.route==='sources')page=renderSources();else page=renderPublicLanding();renderShell(page);}
   
@@ -6968,31 +7089,32 @@ function renderTeacherWorkbookInsights(){
 
   function renderLearnerBookPath(){
     const chapters=textbookChapters();
+    const selected=selectedChapterNumber();
     return `<section class="learner-book-route textbook-journey" aria-label="Original Netzwerk A1.1 textbook chapters">
       <div class="learner-book-head"><span class="eyebrow">Your book · Netzwerk A1.1</span><h3>Kursbuch → Arbeitsbuch → Plattform</h3>
-      <p>Six source-verified textbook chapters in order. Open a guided topic, consolidate it in the workbook, and finish the chapter with your teacher’s assigned sessions and assessments.</p></div>
+      <p>Choose a chapter using the navigation above, then open its contents, guided lessons and workbook practice.</p></div>
       <div class="textbook-chapter-list">${chapters.map(ch=>{
         const linked=lessonsInChapter(ch.number), sessions=chapterSessions(ch.number).filter(ss=>ss.level==='A1'&&window.GERMAN_CLASSROOM.windowState(ss)==='available'), missions=state.experiences.filter(x=>x.status==='published'&&missionChapter(x)===ch.number);
         const done=linked.filter(l=>state.completed.includes(l.id)).length, wb=workbookResult(String(ch.number));
-        return `<article class="textbook-chapter" id="course-chapter-${ch.number}">
+        return `<article class="textbook-chapter" data-selected-chapter="${ch.number===selected}" id="course-chapter-${ch.number}">
           <div class="textbook-chapter-intro"><div class="textbook-chapter-heading">
             <div class="textbook-chapter-index"><span>Kapitel</span><strong>${String(ch.number).padStart(2,'0')}</strong></div>
             <div><span class="eyebrow">A1.1 · ${escape(ch.title)}</span><h4>${escape(ch.originalLessonGoal)}</h4>
             <p>${escape((ch.communicationOutcomes||[]).join(' · '))}</p>
             <small>Kursbuch PDF pp. ${ch.sourcePages.coursebookPdfStart}–${ch.sourcePages.coursebookPdfEnd} · Arbeitsbuch PDF pp. ${ch.sourcePages.workbookPdfStart}–${ch.sourcePages.workbookPdfEnd}</small></div>
-            </div></div><details class="chapter-fold" ${ch.number===(ui.studentChapterNumber||nextLesson()?.chapterNumber)?'open':''}><summary class="chapter-fold-toggle"><span>Lessons, workbook and teacher practice</span><strong>Explore chapter ${ch.number} ↓</strong></summary><div class="chapter-expanded-visual">${realPhotos(ch.number,{compact:true,heading:false})||chapterVisual(ch.number)}</div>
+            </div></div><details class="chapter-fold" ${ch.number===selected&&ui.collapsedChapter!==selected?'open':''} data-chapter-fold="${ch.number}"><summary class="chapter-fold-toggle" data-chapter-select="${ch.number}"><span>Chapter contents, lessons and practice</span><strong>${ch.number===selected&&ui.collapsedChapter!==selected?'Hide chapter ↑':'Expand chapter ↓'}</strong></summary><div class="chapter-expanded-visual">${realPhotos(ch.number,{compact:true,heading:false})||chapterVisual(ch.number)}</div>
           ${window.GERMAN_CHAPTER_STUDY?.render(ch.number)||''}
           ${window.GERMAN_CHAPTER_READERS?.render(ch.number,state.chapterReaderProgress,ui.readerTopicsOpen,ui.readerShellOpen[ch.number]!==false)||''}
           <div class="textbook-chapter-content">
-            <div class="textbook-learning-block"><span class="eyebrow">01 · Kursbuch</span><h5>Learn the ideas</h5><p>Vocabulary, grammar, pronunciation and original dialogue practice.</p>
+            <div id="chapter-${ch.number}-lessons" class="textbook-learning-block"><span class="eyebrow">01 · Kursbuch</span><h5>Learn the ideas</h5><p>Vocabulary, grammar, pronunciation and original dialogue practice.</p>
             ${linked.map((l,i)=>`<button class="chapter-topic-button" data-lesson="${escape(l.id)}"><span>${ch.number}.${i+1}</span><strong>${escape(l.title)}</strong><small>${state.completed.includes(l.id)?'✓ Finished':'Open lesson'} ↗</small></button>`).join('')}
             <span class="textbook-meta">${done}/${linked.length} topics complete</span></div>
-            <div class="textbook-learning-block"><span class="eyebrow">02 · Arbeitsbuch</span><h5>Practise the chapter</h5><p>Original listening, reading, grammar and vocabulary checks, plus writing and speaking rehearsal.</p>
+            <div id="chapter-${ch.number}-workbook" class="textbook-learning-block"><span class="eyebrow">02 · Arbeitsbuch</span><h5>Practise the chapter</h5><p>Original listening, reading, grammar and vocabulary checks, plus writing and speaking rehearsal.</p>
             <div class="textbook-score">${wb.answered}/${wb.total}<span> checked · ${wb.correct} correct</span></div><button class="btn btn-outline btn-small" data-workbook="${ch.number}">Open practice →</button></div>
-            <div class="textbook-learning-block"><span class="eyebrow">03 · Teacher sessions</span><h5>More practice & assessment</h5><p>Chapter-specific sessions designed and published by your teacher.</p>
+            <div id="chapter-${ch.number}-teacher" class="textbook-learning-block"><span class="eyebrow">03 · Teacher sessions</span><h5>More practice & assessment</h5><p>Chapter-specific sessions designed and published by your teacher.</p>
             ${sessions.length?sessions.map(ss=>`<button class="chapter-topic-button" data-open-session="${escape(ss.id)}"><strong>${escape(ss.title)}</strong><small>${sessionDoneCount(ss)}/${ss.blocks.length} steps ↗</small></button>`).join(''):''}${missions.map(m=>`<button class="chapter-topic-button" data-open-experience="${escape(m.id)}"><strong>${escape(m.title)}</strong><small>Teacher-created ${escape(experienceTemplate(m.kind).name.toLowerCase())} ↗</small></button>`).join('')}${!sessions.length&&!missions.length?'<p class="textbook-meta">No extra teacher activities assigned for this chapter yet.</p>':''}</div>
           </div>
-          <div class="chapter-review-summary"><strong>Chapter ${ch.number} progress & feedback</strong><span>${done}/${linked.length} Kursbuch lessons complete · ${wb.answered}/${wb.total} Arbeitsbuch answers checked</span>${(()=>{
+          <div id="chapter-${ch.number}-progress" class="chapter-review-summary"><strong>Chapter ${ch.number} progress & feedback</strong><span>${done}/${linked.length} Kursbuch lessons complete · ${wb.answered}/${wb.total} Arbeitsbuch answers checked</span>${(()=>{
             const recorded=[...state.submissions.filter(x=>linked.some(l=>l.id===x.lessonId)),...state.workbookSubmissions.filter(x=>x.workbookChapter===String(ch.number)),...state.sessionSubmissions.filter(x=>sessions.some(ss=>ss.id===x.sessionId)),...state.experienceSubmissions.filter(x=>missions.some(m=>m.id===x.experienceId))];
             const checked=recorded.filter(x=>state.reviews[x.id]);
             return `<span>${checked.length} teacher-reviewed response${checked.length===1?'':'s'} · ${recorded.length-checked.length} awaiting feedback</span>${checked.length?`<p>Latest teacher note: ${escape(state.reviews[checked[checked.length-1].id].note)}</p>`:''}`;
@@ -7002,7 +7124,7 @@ function renderTeacherWorkbookInsights(){
              <div><h6>Grammar</h6><ul>${(ch.grammarTopics||[]).map(x=>`<li>${escape(x)}</li>`).join('')}</ul></div>
              <div><h6>Pronunciation & culture</h6><p>${escape(ch.pronunciationFocus)}</p><p>${escape(ch.culturalContext)}</p></div></div></details></details>
           </article>
-          ${ch.reviewCheckpointAfter?`<article class="platform-checkpoint"><div><span class="eyebrow">Plattform ${ch.number===3?1:2} · Textbook review milestone</span><h4>Revisit chapters ${ch.number-2}–${ch.number}</h4><p>Original mixed-skill revision in the order of your textbook.</p></div><button class="btn btn-primary" data-workbook="review-${ch.number}">Open review →</button></article>`:''}`;
+          ${ch.reviewCheckpointAfter?`<article id="chapter-${ch.number}-platform" class="platform-checkpoint"><div><span class="eyebrow">Plattform ${ch.number===3?1:2} · Textbook review milestone</span><h4>Revisit chapters ${ch.number-2}–${ch.number}</h4><p>Original mixed-skill revision in the order of your textbook.</p></div><button class="btn btn-primary" data-workbook="review-${ch.number}">Open review →</button></article>`:''}`;
       }).join('')}</div>
       <p class="learner-book-foot">The 166-page original Netzwerk A1.1 PDF is used for high-level topics and structure, not to reproduce publisher text or artwork. All new exercises and illustrations need teacher approval. The unprovided A1.2 chapters are not included.</p>
     </section>`;
@@ -7304,6 +7426,8 @@ function renderTeacherWorkbookInsights(){
   }
   function handleAction(target){
     const button=target.closest('button');if(!button||button.disabled)return;
+    if(button.hasAttribute('data-chapter-nav')){const n=Number(button.dataset.chapterNav);if(textbookChapters().some(ch=>ch.number===n)){ui.collapsedChapter=null;navigate('student/chapters/'+n);}return;}
+    if(button.hasAttribute('data-chapter-section')){const id=button.dataset.chapterSection;const n=selectedChapterNumber();if(!chapterSections(n).some(([allowed])=>allowed===id))return;if(ui.route==='student'&&ui.studentView==='chapters'){ui.collapsedChapter=null;scrollToChapterSection(id);}else{ui.pendingChapterSection=id;ui.collapsedChapter=null;navigate('student/chapters/'+n);}return;}
     if(button.hasAttribute('data-jump-target')){const id=button.dataset.jumpTarget;if(/^[a-z0-9-]+$/.test(id))document.getElementById(id)?.scrollIntoView?.({behavior:'smooth',block:'start'});return;}
     if(button.hasAttribute('data-watch-demo')){document.getElementById('studio-demo')?.scrollIntoView?.({behavior:'smooth',block:'start'});return;}
     if(button.hasAttribute('data-route')){const route=button.dataset.route;const chapter=textbookChapters().some(c=>c.number===Number(currentLesson().chapterNumber))?Number(currentLesson().chapterNumber):1;return navigate(route==='student'&&ui.route==='lesson'?`student/chapters/${chapter}`:route==='student'&&['experience','session','workbook'].includes(ui.route)?`student/chapters/${ui.route==='experience'?missionChapter(state.experiences.find(x=>x.id===ui.experienceId)):ui.route==='session'?Number(state.sessions.find(x=>x.id===ui.sessionId)?.chapterNumber)||1:Number(ui.workbookId)||1}`:route);}
@@ -7403,7 +7527,7 @@ function renderTeacherWorkbookInsights(){
     if(button.hasAttribute('data-assignment')){state.assigned=button.dataset.assignment==='on';save();notify(state.assigned?'Assignment is visible to the demo learner.':'Demo assignment removed.');render();return;}
     if(button.hasAttribute('data-reset')){if(confirm('Clear learning progress, exam attempts, teacher questions and local demo reviews from this browser?')){state=defaultState();save();window.GermanExamStudio?.reset();resetLessonUI('hello');navigate('home');notify('Demo reset.');}return;}
   }
-  root.addEventListener('click',e=>handleAction(e.target));
+  root.addEventListener('click',e=>{const summary=e.target.closest?.('[data-chapter-select]');const n=Number(summary?.dataset?.chapterSelect);if(ui.route==='student'&&ui.studentView==='chapters'&&textbookChapters().some(ch=>ch.number===n)&&n!==selectedChapterNumber()){e.preventDefault?.();ui.collapsedChapter=null;navigate('student/chapters/'+n);return;}handleAction(e.target);});
   function handleInput(e){
     const target=e.target;
     if(target.matches?.('[data-p4-voice]')){state.audioSettings.voice=target.value||'';save();return;}
@@ -7419,6 +7543,7 @@ function renderTeacherWorkbookInsights(){
   }
   root.addEventListener('toggle',event=>{
     const target=event.target;
+    if(target?.matches?.('[data-chapter-fold]')){if(Number(target.dataset.chapterFold)===selectedChapterNumber())ui.collapsedChapter=target.open?null:Number(target.dataset.chapterFold);return;}
     if(target?.matches?.('[data-reader-shell]')){ui.readerShellOpen[Number(target.dataset.readerShell)]=target.open;return;}
     if(target?.matches?.('[data-reader-topic]')){ui.readerTopicsOpen[target.dataset.readerTopic]=target.open;return;}
     if(!target?.matches?.('[data-reading-panel]')||ui.route!=='lesson'||ui.stage!=='understand')return;
@@ -7428,7 +7553,7 @@ function renderTeacherWorkbookInsights(){
   },true);
   root.addEventListener('input',handleInput);
   root.addEventListener('change',handleInput);
-  window.addEventListener('hashchange',()=>{render();if(ui.route==='student'&&ui.studentView==='chapters'&&ui.studentChapterNumber){document.getElementById('course-chapter-'+ui.studentChapterNumber)?.scrollIntoView?.({block:'start'});}else window.scrollTo({top:0,behavior:'instant'});});
+  window.addEventListener('hashchange',()=>{render();if(ui.pendingChapterSection){const id=ui.pendingChapterSection;ui.pendingChapterSection=null;scrollToChapterSection(id);}else if(ui.route==='student'&&ui.studentView==='chapters'&&ui.studentChapterNumber){document.getElementById('course-chapter-'+ui.studentChapterNumber)?.scrollIntoView?.({block:'start'});}else window.scrollTo({top:0,behavior:'instant'});});
   window.addEventListener('beforeunload',()=>{if(recordedURL)URL.revokeObjectURL(recordedURL);mediaStream?.getTracks().forEach(t=>t.stop());});
   render();
 })();
