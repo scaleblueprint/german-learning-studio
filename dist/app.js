@@ -251,7 +251,7 @@ function renderTeacherWorkbookInsights(){
             <div><span class="eyebrow">A1.1 · ${escape(ch.title)}</span><h4>${escape(ch.originalLessonGoal)}</h4>
             <p>${escape((ch.communicationOutcomes||[]).join(' · '))}</p>
             <small>Kursbuch PDF pp. ${ch.sourcePages.coursebookPdfStart}–${ch.sourcePages.coursebookPdfEnd} · Arbeitsbuch PDF pp. ${ch.sourcePages.workbookPdfStart}–${ch.sourcePages.workbookPdfEnd}</small></div>
-            </div></div><details class="chapter-fold" data-chapter-fold="${ch.number}" ${ch.number===selected&&ui.collapsedChapter!==selected?'open':''}><summary class="chapter-fold-toggle" data-chapter-select="${ch.number}"><span>Chapter contents, lessons and practice</span><strong>${ch.number===selected&&ui.collapsedChapter!==selected?'Hide chapter ↑':'Expand chapter ↓'}</strong></summary><div class="chapter-expanded-visual">${realPhotos(ch.number,{compact:true,heading:false})||chapterVisual(ch.number)}</div>
+            </div></div><details class="chapter-fold" ${ch.number===selected&&ui.collapsedChapter!==selected?'open':''} data-chapter-fold="${ch.number}"><summary class="chapter-fold-toggle" data-chapter-select="${ch.number}"><span>Chapter contents, lessons and practice</span><strong>${ch.number===selected&&ui.collapsedChapter!==selected?'Hide chapter ↑':'Expand chapter ↓'}</strong></summary><div class="chapter-expanded-visual">${realPhotos(ch.number,{compact:true,heading:false})||chapterVisual(ch.number)}</div>
           ${window.GERMAN_CHAPTER_STUDY?.render(ch.number)||''}
           ${window.GERMAN_CHAPTER_READERS?.render(ch.number,state.chapterReaderProgress,ui.readerTopicsOpen,ui.readerShellOpen[ch.number]!==false)||''}
           <div class="textbook-chapter-content">
