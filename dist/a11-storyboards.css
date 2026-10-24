@@ -24,3 +24,9 @@
 .a11-sb-actions button:disabled{opacity:.7;cursor:not-allowed}
 .a11-sb-progress{font-size:12px;font-weight:700;color:#80646f}
 @media(max-width:750px){.a11-sb-layout{grid-template-columns:1fr}.a11-sb-photo img{height:190px}.a11-sb-photo-fallback{min-height:150px}}
+
+/* Each dialogue has its own original teaching scene, not a second copy of the chapter photograph. */
+.a11-sb-original-scene{min-height:250px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:12px;padding:22px;background:linear-gradient(145deg,#f4e1d1,#dfeee9)}
+.a11-sb-original-scene .a11-sb-scene-symbol{font-size:70px;line-height:1.1}
+.a11-sb-original-scene strong{font-size:19px;color:#542c3c}
+.a11-sb-original-scene small{line-height:1.5;color:#664e5c}
