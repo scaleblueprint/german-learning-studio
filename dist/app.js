@@ -95,7 +95,7 @@
     const fallback=Number(nextLesson()?.chapterNumber)||1;
     const number=ui.route==='student'&&ui.studentView==='chapters'?Number(ui.studentChapterNumber||fallback):
       ui.route==='lesson'?Number(currentLesson().chapterNumber):
-      ui.route==='workbook'?Number(ui.workbookId):
+      ui.route==='workbook'?Number(String(ui.workbookId).replace('review-','')):
       ui.route==='session'?Number(state.sessions.find(x=>x.id===ui.sessionId)?.chapterNumber):
       ui.route==='experience'?Number(missionChapter(state.experiences.find(x=>x.id===ui.experienceId))):fallback;
     return textbookChapters().some(ch=>ch.number===number)?number:fallback;
@@ -245,7 +245,7 @@ function renderTeacherWorkbookInsights(){
       <div class="textbook-chapter-list">${chapters.map(ch=>{
         const linked=lessonsInChapter(ch.number), sessions=chapterSessions(ch.number).filter(ss=>ss.level==='A1'&&window.GERMAN_CLASSROOM.windowState(ss)==='available'), missions=state.experiences.filter(x=>x.status==='published'&&missionChapter(x)===ch.number);
         const done=linked.filter(l=>state.completed.includes(l.id)).length, wb=workbookResult(String(ch.number));
-        return `<article class="textbook-chapter ${ch.number===selected?'is-selected':''}" id="course-chapter-${ch.number}">
+        return `<article class="textbook-chapter" data-selected-chapter="${ch.number===selected}" id="course-chapter-${ch.number}">
           <div class="textbook-chapter-intro"><div class="textbook-chapter-heading">
             <div class="textbook-chapter-index"><span>Kapitel</span><strong>${String(ch.number).padStart(2,'0')}</strong></div>
             <div><span class="eyebrow">A1.1 · ${escape(ch.title)}</span><h4>${escape(ch.originalLessonGoal)}</h4>
