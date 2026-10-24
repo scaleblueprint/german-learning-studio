@@ -39,7 +39,14 @@ for(let n=1;n<=6;n++){
  assert.ok(w.GERMAN_CHAPTER_STUDY.render(n).includes('data-storyboard="'+n+'"'),'Chapter '+n+' storyboard must appear in reader');
  count+=found;
 }
+const ch4=w.GERMAN_A11_VISUAL_EXTENSIONS.render(4);
+assert.equal((ch4.match(/commons.wikimedia.org\/wiki\/File:/g)||[]).length,5,'Five Wikimedia Commons object-photo credits must be present');
+for(const term of ['das Brot','die Milch','der Käse','die Tomate','die Gurke'])assert.ok(ch4.includes(term),'Missing visual food object '+term);
+for(const number of [3,6]){
+ const review=w.GERMAN_A11_VISUAL_EXTENSIONS.renderReview(number);
+ assert.equal((review.match(/class="a11-atlas-svg"/g)||[]).length,3,'Each Plattform review must contain three original visual cards');
+}
 assert.ok(w.GERMAN_A11_ATLAS.render('der Bahnhof').includes('BAHNHOF'),'Station must be specifically illustrated');
 assert.ok(w.GERMAN_A11_ATLAS.render('die Milch').includes('MILCH'),'Milk must be individually illustrated');
 assert.ok(!source('dist/a11-visual-extensions.js').includes("'die U-Bahn':1"),'Do not label a tram image as U-Bahn');
-console.log('A1.1 visual release checks passed: '+count+' original illustrated uses, 18 contextual photographs, 6 storyboards and 5 picture exercises.');
+console.log('A1.1 visual release checks passed: '+count+' original illustrated uses, 18 contextual photos, 5 verified Wikimedia object photos, 6 storyboards, 2 illustrated Plattform reviews and 5 picture exercises.');
