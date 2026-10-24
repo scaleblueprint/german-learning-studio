@@ -51,7 +51,9 @@ assert.equal(visiblePanes(),1);
 assert.match(root.innerHTML,/Kursbuch, Arbeitsbuch and Plattform/);
 assert.equal((new Set([...root.innerHTML.matchAll(/id="course-chapter-(\d+)"/g)].map(x=>x[1]))).size,6);
 assert.equal((root.innerHTML.match(/class="chapter-fold"/g)||[]).length,6,'Each chapter can expand independently');
-assert.match(root.innerHTML,/data-jump-target="course-chapter-3"/);
+assert.match(root.innerHTML,/data-chapter-nav="3"/,"Sticky header should offer chapter navigation");
+assert.match(root.innerHTML,/data-chapter-section="chapter-1-numbers"/,"Header should jump directly to Chapter 1 foundations");
+assert.match(root.innerHTML,/aria-label="Previous chapter"/);
 assert.doesNotMatch(root.innerHTML,/Hallo! Nice to meet you/);
 
 open('#student/practice');
