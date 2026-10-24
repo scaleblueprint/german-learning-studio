@@ -24,5 +24,5 @@ assert.ok(!app.includes('realPhotos(ch.number,{compact:true,heading:false})'),'D
 assert.ok(!app.includes('realPhotos(unit.number,{compact:true,heading:false})'),'Duplicate workbook carousel');
 assert.ok(!app.includes('realPhotos(l.chapterNumber)'),'Duplicate lesson carousel');
 assert.ok(!storyboards.includes('photoMarkup=photo?'),'Storyboards must not repeat a chapter photo');
-assert.ok(!workbook.includes('src="'+esc(p.src)'),'Workbook must use independent scene illustrations');
+assert.ok(!workbook.includes('esc(p.src)'), 'Workbook must use independent scene illustrations');
 console.log('Visual content mapping, no-repeat-photo guard and component wiring checks passed.');
