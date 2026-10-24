@@ -26,6 +26,7 @@ const ticket=()=>path('M28 34H152V55Q136 65 152 75V101H28V75Q44 65 28 55Z',color
 const person=(role)=>circle(90,30,20,colors.gold)+rect(55,53,70,56,role==='doctor'?'#e9f4ee':colors.blue,13)+(role==='doctor'?rect(85,66,10,32,colors.red,1)+rect(73,78,34,10,colors.red,1):role==='chef'?path('M55 52Q35 31 55 20Q66 10 77 20Q92 3 108 19Q130 19 127 40Z','#fff',colors.dark,2):'');
 const sport=kind=>kind==='swim'?circle(98,43,14,colors.gold)+path('M50 81Q84 46 127 70','none',colors.red,10)+path('M15 99Q30 88 45 99T75 99T105 99T135 99T165 99','none',colors.blue,4):kind==='run'?circle(106,24,14,colors.gold)+path('M95 39L76 69L101 78L126 61M77 68L42 101M100 78L128 103','none',colors.dark,9):bicycle();
 const objects={
+'Begrüßung':()=>circle(55,42,19,colors.gold)+circle(126,42,19,colors.gold)+rect(27,68,59,40,colors.red,16)+rect(97,68,59,40,colors.blue,16)+path('M63 13H117V34H87L74 45V34H63Z','#fff',colors.dark,2)+label('Hi!',90,28,14),
 'Wasser':()=>rect(74,25,33,84,'#b9deeb',6)+rect(83,17,15,12,colors.dark,2),
 'Rucksack':()=>rect(56,30,69,81,colors.red,18)+rect(64,72,52,26,colors.gold,9)+path('M74 32Q73 10 90 10Q108 10 108 32','none',colors.dark,5),
 'Frühstück':plate,'Apfel':()=>fruit('apple'),'Brot':()=>path('M25 86Q22 42 68 39Q102 21 133 44Q160 56 145 96H35Z',colors.gold,colors.dark,3),
