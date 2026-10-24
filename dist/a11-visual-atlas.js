@@ -1,7 +1,7 @@
 /* Original, independently drawn A1.1 vocabulary illustrations. Not publisher imagery. */
 (()=>{'use strict';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]));
-const shape=(name,extra='')=>'<svg viewBox="0 0 180 126" role="img" aria-label="'+esc(name)+' illustration" xmlns="http://www.w3.org/2000/svg"><rect width="180" height="126" rx="18" fill="#f7f3eb"/><circle cx="156" cy="21" r="43" fill="#f0e4d5" opacity=".6"/>'+extra+'</svg>';
+const shape=(name,extra='')=>'<svg class="a11-atlas-svg" viewBox="0 0 180 126" role="img" aria-label="'+esc(name)+' illustration" xmlns="http://www.w3.org/2000/svg"><rect width="180" height="126" rx="18" fill="#f7f3eb"/><circle cx="156" cy="21" r="43" fill="#f0e4d5" opacity=".6"/>'+extra+'</svg>';
 const rect=(x,y,w,h,c,r=6)=>'<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+r+'" fill="'+c+'"/>';
 const path=(d,c,stroke='none',sw=3)=>'<path d="'+d+'" fill="'+c+'" stroke="'+stroke+'" stroke-width="'+sw+'" stroke-linecap="round" stroke-linejoin="round"/>';
 const circle=(x,y,r,c)=>'<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+c+'"/>';
