@@ -525,7 +525,7 @@ window.GERMAN_A11_LESSONS_PART2 = [
         "options": [
           "Gute Nacht. Ich heiße Paul.",
           "Leider nicht. Ich muss arbeiten.",
-          "Drei und zwanzig Bücher."
+          "Dreiundzwanzig Bücher."
         ],
         "correct": 1,
         "why": "Leider nicht declines gently and gives a reason."
