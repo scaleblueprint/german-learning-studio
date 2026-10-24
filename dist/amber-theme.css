@@ -842,3 +842,8 @@ h1 {letter-spacing:-.055em}
 .has-chapter-toolbar .learner-book-head{padding:19px 23px}
 .has-chapter-toolbar .learner-book-head h3{font-size:clamp(21px,2.1vw,27px);margin:5px 0}
 @media(max-width:620px){.has-chapter-toolbar .learner-book-head{padding:16px}.has-chapter-toolbar .learner-book-head h3{font-size:20px}}
+
+/* Unique offline-friendly workbook scenario cards; prevents repeated chapter photographs. */
+.a11-workbook-scene{border-radius:17px;overflow:hidden;background:linear-gradient(140deg,#e4edf0,#fbe9d1);min-height:195px;display:flex;flex-direction:column;justify-content:space-between;margin:0}
+.a11-workbook-scene-art{min-height:150px;display:grid;place-items:center;font-size:72px;text-align:center}
+.a11-workbook-scene figcaption{padding:10px 15px;font-size:12px;color:#583847;background:#fff8ee}
