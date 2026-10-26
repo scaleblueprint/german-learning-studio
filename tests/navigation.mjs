@@ -26,7 +26,8 @@ assert.match(root.innerHTML,/id="public-title"/,'Default route opens a distinct 
 assert.match(root.innerHTML,/data-route="student"/,'Public page opens Student Studio');
 assert.match(root.innerHTML,/data-route="teacher"/,'Public page opens Teacher Studio');
 assert.match(root.innerHTML,/teacher-studio-walkthrough\.mp4/,'Landing page includes the two-role demonstration');
-assert.match(root.innerHTML,/class="brand" href="#home"/,'Brand takes the user back to the landing page');
+assert.match(root.innerHTML,/class="brand" href="https:\/\/ambertheory-home\.onrender\.com\/" aria-label="Go to AmberTheory homepage"/,'Header logo links to the AmberTheory parent homepage');
+assert.match(root.innerHTML,/data-route="home"/,'Internal Home navigation remains available within German Studio');
 assert.equal(visiblePanes(),0,'Landing page must not display a studio dashboard');
 open('#student');
 assert.equal(activeSection(),'My progress');
